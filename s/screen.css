@@ -11,7 +11,7 @@ A {
 /* Page
 ---------------------------------------- */
 #page {
-	border-left:450px solid #153543;
+	border-left:400px solid #153543;
 	}
 
 /* Header
@@ -19,7 +19,7 @@ A {
 #header {
 	position:fixed;
 	top:53px;
-	left:78px;
+	left:49px;
 	overflow:hidden;
 	width:302px;
 	height:213px;
@@ -40,7 +40,7 @@ A {
 #next {
 	position:absolute;
 	top:146px;
-	left:829px;
+	left:805px;
 	width:177px;
 	height:184px;
 	overflow:hidden;
@@ -69,7 +69,11 @@ A {
 		border-radius:20px;
 		color:#8AB219;
 		}
+	#navigation LI A {
+		border:1px solid #EEE;
+		}
 	#navigation LI A:hover {
+		border-color:#9ECB1D;
 		background:#9ECB1D;
 		color:#FFF;
 		}
@@ -139,7 +143,7 @@ A {
 .article {
 	position:relative;
 	padding:63px 70px 41px;
-	border-bottom:1px dotted #CCC;
+	border-bottom:1px solid #EEE;
 	}
 	.article HEADER {
 		margin:0 0 22px;
@@ -176,7 +180,7 @@ A {
 	}
 .article HR {
 	margin:0 0 22px;
-	border-top:1px dotted #BBB;
+	border-top:1px solid #EEE;
 	}
 .article UL {
 	padding-left:15px;
@@ -227,7 +231,7 @@ A {
 		padding:2px 6px;
 		vertical-align:top;
 		text-align:left;
-		border:1px solid #DDD;
+		border:1px solid #EEE;
 		color:#2E5A75;
 		font-weight:normal;
 		}
@@ -304,9 +308,9 @@ A {
 ---------------------------------------- */
 #twitter {
 	position:fixed;
-	top:320px;
+	top:310px;
 	bottom:63px;
-	left:140px;
+	left:85px;
 	padding:20px;
 	width:200px;
 	-webkit-border-radius:20px;
@@ -316,8 +320,8 @@ A {
 	}
 #twitter:after {
 	position:absolute;
-	top:-36px;
-	left:-61px;
+	top:-55px;
+	left:-35px;
 	width:67px;
 	height:46px;
 	background:url(../i/twitter.png) repeat-x;
