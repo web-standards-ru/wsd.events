@@ -1,0 +1,367 @@
+@import url(reset.css);
+
+BODY {
+	background:#2E5A75 url(../i/back.png) repeat-y;
+	font:13px/22px 'Helvetica Neue','Helvetica','Arial',sans-serif;
+	}
+A {
+	text-decoration:none;
+	}
+
+/* Page
+---------------------------------------- */
+#page {
+	border-left:450px solid #153543;
+	}
+
+/* Header
+---------------------------------------- */
+#header {
+	position:fixed;
+	top:53px;
+	left:78px;
+	overflow:hidden;
+	width:302px;
+	height:213px;
+	background:url(../i/header.png) no-repeat;
+	text-indent:-9999px;
+	}
+	#header A {
+		position:absolute;
+		top:0;
+		left:0;
+		display:block;
+		width:100%;
+		height:100%;
+		}
+
+/* Navigation
+---------------------------------------- */
+#navigation {
+	margin:0 0 -1px;
+	padding:63px 54px 30px;
+	width:392px;
+	background:url(../i/shadow.png) 0 100% no-repeat;
+	font:24px/1 'Trebuchet MS',sans-serif;
+	}
+	#navigation LI {
+		margin:-8px 0 0;
+		height:65px;
+		}
+	#navigation LI * {
+		display:block;
+		padding:8px 16px;
+		-webkit-border-radius:20px;
+		-moz-border-radius:20px;
+		border-radius:20px;
+		color:#8AB219;
+		}
+	#navigation LI A:hover {
+		background:#9ECB1D;
+		color:#FFF;
+		}
+	#navigation LI SPAN {
+		color:#CCC;
+		}
+
+/* Main
+---------------------------------------- */
+#main {
+	width:500px;
+	border-left:10px solid #9ECB1D;
+	background:#FFF;
+	}
+
+/* Content Primary
+---------------------------------------- */
+.content {
+	}
+	.content A[target='_blank']:after {
+		display:inline-block;
+		margin-left:3px;
+		width:8px;
+		height:8px;
+		background:url(../i/external.gif) no-repeat;
+		content:'';
+		}
+
+/* Content Primary
+---------------------------------------- */
+.content-primary {
+	color:#262626;
+	}
+	.content-primary A[target='_blank']:after {
+		background-position:0 0;
+		}
+	.content-primary A[target='_blank']:hover:after {
+		background-position:-8px 0;
+		}
+	.content-primary A {
+		color:#2B8BAD;
+		}
+	.content-primary A:hover {
+		color:#8AB219;
+		}
+
+/* Content Secondary
+---------------------------------------- */
+.content-secondary {
+	color:#FFF;
+	}
+	.content-secondary A[target='_blank']:after {
+		background-position:0 -8px;
+		}
+	.content-secondary A[target='_blank']:hover:after {
+		background-position:-8px -8px;
+		}
+	.content-secondary A {
+		color:#63BBDB;
+		}
+	.content-secondary A:hover {
+		color:#B2DB35;
+		}
+
+/* Article
+---------------------------------------- */
+.article {
+	position:relative;
+	padding:63px 70px 41px;
+	border-bottom:1px dotted #CCC;
+	}
+	.article HEADER {
+		margin:0 0 22px;
+		}
+		.article HEADER H2 {
+			color:#2E5A75;
+			font:20px/1 'Trebuchet MS',sans-serif;
+			}
+		.article HEADER A {
+			position:absolute;
+			top:20px;
+			right:20px;
+			display:none;
+			width:14px;
+			height:14px;
+			background:#9ECB1D url(../i/up.gif) no-repeat;
+			text-indent:-9999px;
+			}
+		.article:hover HEADER A {
+			display:block;
+			}
+
+/* First */
+.article:last-child {
+	border-bottom:none;
+	}
+	.article:first-child:hover HEADER A {
+		display:none;
+		}
+
+/* Elements */
+.article .anchor {
+	border-bottom:1px dotted;
+	}
+.article HR {
+	margin:0 0 22px;
+	border-top:1px dotted #BBB;
+	}
+.article UL {
+	padding-left:15px;
+	margin-bottom:22px;
+	}
+	.article UL LI {
+		padding-left:15px;
+		background:url(../i/bullet.gif) 0 7px no-repeat;
+		}
+.article P {
+	margin:0 0 22px;
+	}
+.article STRONG {
+	font-weight:bold;
+	}
+.article EM {
+	font-style:italic;
+	}
+
+/* Intro
+---------------------------------------- */
+#intro {
+	padding-bottom:37px;
+	}
+
+/* Share Buttons
+---------------------------------------- */
+.share-buttons {
+	}
+	.share-buttons .twitter-share-button {
+		}
+	.share-buttons .facebook-like-button {
+		overflow:hidden;
+		width:140px;
+		height:20px;
+		border:none;
+		}
+
+/* Schedule
+---------------------------------------- */
+.schedule {
+	margin:0 0 22px;
+	width:360px;
+	border-collapse:collapse;
+	}
+	.schedule TD,
+	.schedule TH {
+		padding:2px 6px;
+		vertical-align:top;
+		text-align:left;
+		border:1px solid #DDD;
+		color:#2E5A75;
+		font-weight:normal;
+		}
+	.schedule-break {
+		background:#EBF7FB;
+		}
+	.schedule-hour {
+		white-space:nowrap;
+		}
+
+/* Card
+---------------------------------------- */
+.card {
+	position:relative;
+	margin:-22px 0 22px;
+	padding:22px 0 0 120px;
+	min-height:125px;
+	}
+	.card DT {
+		margin:0 0 15px;
+		line-height:1;
+		font-weight:bold;
+		}
+	.card DD {
+		line-height:18px;
+		}
+	.card IMG {
+		position:absolute;
+		top:22px;
+		left:0;
+		width:100px;
+		}
+
+/* Register
+---------------------------------------- */
+.register {
+	margin:0 0 22px;
+	width:360px;
+	}
+	.register LABEL {
+		display:block;
+		color:#456375;
+		}
+	.register INPUT {
+		display:block;
+		margin:0 0 11px;
+		width:350px;
+		}
+	.register INPUT[type=submit] {
+		margin:22px 0 0;
+		width:auto;
+		}
+	.register .note {
+		font-size:11px;
+		}
+
+/* Map
+---------------------------------------- */
+#map,
+#map IMG {
+	width:360px;
+	height:360px;
+	}
+#map {
+	overflow:hidden;
+	background:#F1EEE8;
+	line-height:1.2;
+	}
+	#map A[target='_blank']:after {
+		display:none;
+		}
+
+/* Twitter
+---------------------------------------- */
+#twitter {
+	position:fixed;
+	top:320px;
+	bottom:63px;
+	left:140px;
+	padding:20px;
+	width:200px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	background:#122E39;
+	}
+#twitter:after {
+	position:absolute;
+	top:0;
+	left:-40px;
+	width:26px;
+	height:35px;
+	background:url(../i/twitter.png) repeat-x;
+	content:'';
+	}
+	#twitter DIV {
+		position:absolute;
+		top:0;
+		bottom:0;
+		overflow:hidden;
+		width:200px;
+		}
+	#twitter DIV:before,
+	#twitter DIV:after {
+		position:absolute;
+		right:0;
+		left:0;
+		z-index:2;
+		height:20px;
+		background:url(../i/fade.png) repeat-x;
+		content:'';
+		}
+	#twitter DIV:before {
+		top:0;
+		background-position:0 -20px;
+		}
+	#twitter DIV:after {
+		bottom:0;
+		background-position:0 0;
+		}
+		#twitter DIV UL {
+			position:absolute;
+			top:0;
+			bottom:0;
+			overflow:auto;
+			padding-top:20px;
+			width:400px;
+			}
+		#twitter DIV LI {
+			position:relative;
+			padding:0 0 20px 58px;
+			width:142px;
+			min-height:48px;
+			line-height:16px;
+			}
+		#twitter DIV IMG {
+			position:absolute;
+			top:0;
+			left:0;
+			width:48px;
+			height:48px;
+			}
+	#twitter P {
+		position:absolute;
+		bottom:-40px;
+		left:0;
+		width:240px;
+		text-align:center;
+		font-size:12px;
+		}
