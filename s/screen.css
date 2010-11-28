@@ -316,10 +316,10 @@ A {
 	}
 #twitter:after {
 	position:absolute;
-	top:0;
-	left:-40px;
-	width:26px;
-	height:35px;
+	top:-36px;
+	left:-61px;
+	width:67px;
+	height:46px;
 	background:url(../i/twitter.png) repeat-x;
 	content:'';
 	}
