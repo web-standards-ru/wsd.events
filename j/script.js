@@ -99,15 +99,15 @@ $(function(){
 		);
 		var icon = new google.maps.MarkerImage(
 			'/i/map-logo.png',
-			new google.maps.Size( 64, 63 ),
+			new google.maps.Size( 93, 83 ),
 			new google.maps.Point( 0, 0 ),
-			new google.maps.Point( 32, 63 )
+			new google.maps.Point( 24, 83 )
 		);
 		var shadow = new google.maps.MarkerImage(
 			'/i/map-shadow.png',
-			new google.maps.Size( 124, 65 ),
+			new google.maps.Size( 93, 83 ),
 			new google.maps.Point( 0, 0 ),
-			new google.maps.Point( 32, 63 )
+			new google.maps.Point( 24, 83 )
 		);
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng( markerCoords.lat, markerCoords.lng ),
