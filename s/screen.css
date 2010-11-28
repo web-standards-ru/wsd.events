@@ -35,6 +35,19 @@ A {
 		height:100%;
 		}
 
+/* Next
+---------------------------------------- */
+#next {
+	position:absolute;
+	top:146px;
+	left:829px;
+	width:177px;
+	height:184px;
+	overflow:hidden;
+	background:url(../i/next.png) no-repeat;
+	text-indent:-9999px;
+	}
+
 /* Navigation
 ---------------------------------------- */
 #navigation {
