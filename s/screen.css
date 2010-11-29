@@ -69,11 +69,7 @@ A {
 		border-radius:20px;
 		color:#8AB219;
 		}
-	#navigation LI A {
-		border:1px solid #EEE;
-		}
 	#navigation LI A:hover {
-		border-color:#9ECB1D;
 		background:#9ECB1D;
 		color:#FFF;
 		}
