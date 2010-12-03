@@ -74,22 +74,25 @@ $(function(){
 	$.fn.map = function() {
 		var map = document.getElementById( this.selector.substr( 1 ) ),
 			query = map.firstChild.src.split('&'),
-			centerCoords = {}, markerCoords = {}, coords;
+			centerCoords = {}, markerCoords = {}, coords, zoomLevel;
 		for(var i=0, queryLength = query.length; i < queryLength; i++ ) {
 			var current = query[i];
-			if( !current.indexOf('center')+1 ) {
+			if( current.indexOf('center')+1 ) {
 				coords = current.split('=')[1].split(',');
 				centerCoords.lat = coords[0];
 				centerCoords.lng = coords[1];
 			}
-			if( !current.indexOf('markers')+1 ) {
+			if( current.indexOf('markers')+1 ) {
 				coords = current.split('=')[1].split(',');
 				markerCoords.lat = coords[0];
 				markerCoords.lng = coords[1];
 			}
+			if( current.indexOf('zoom')+1 ) {
+				zoomLevel = parseInt(current.split('=')[1]);
+			}
 		}
 		var options = {
-			zoom: 15,
+			zoom: zoomLevel,
 			center: new google.maps.LatLng( centerCoords.lat, centerCoords.lng ),
 			mapTypeControl: false,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
