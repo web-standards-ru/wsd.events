@@ -7,3 +7,6 @@
 # Require valid-user
 # </limit>
 # END Auth
+
+RewriteEngine On
+RewriteRule \.git - [F,L]
