@@ -189,6 +189,10 @@ A {
 .article P {
 	margin:0 0 22px;
 	}
+.article IMG {
+	display:block;
+	margin:0 0 22px;
+	}
 .article STRONG {
 	font-weight:bold;
 	}
