@@ -48,6 +48,24 @@ A {
 	text-indent:-9999px;
 	}
 
+/* Browser War
+---------------------------------------- */
+#browser-war {
+	position:absolute;
+	top:146px;
+	left:805px;
+	width:181px;
+	height:186px;
+	overflow:hidden;
+	background:url(/browser-war/images/badge.png) no-repeat;
+	text-indent:-9999px;
+	}
+	#browser-war A {
+		display:block;
+		width:100%;
+		height:100%;
+		}
+
 /* Navigation
 ---------------------------------------- */
 #navigation {
