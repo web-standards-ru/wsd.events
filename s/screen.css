@@ -107,26 +107,12 @@ A {
 ---------------------------------------- */
 .content {
 	}
-	.content A[target='_blank']:after {
-		display:inline-block;
-		margin-left:3px;
-		width:8px;
-		height:8px;
-		background:url(../i/external.gif) no-repeat;
-		content:'';
-		}
 
 /* Content Primary
 ---------------------------------------- */
 .content-primary {
 	color:#262626;
 	}
-	.content-primary A[target='_blank']:after {
-		background-position:0 0;
-		}
-	.content-primary A[target='_blank']:hover:after {
-		background-position:-8px 0;
-		}
 	.content-primary A {
 		color:#2B8BAD;
 		}
@@ -139,12 +125,6 @@ A {
 .content-secondary {
 	color:#FFF;
 	}
-	.content-secondary A[target='_blank']:after {
-		background-position:0 -8px;
-		}
-	.content-secondary A[target='_blank']:hover:after {
-		background-position:-8px -8px;
-		}
 	.content-secondary A {
 		color:#63BBDB;
 		}
@@ -219,24 +199,16 @@ A {
 	font-style:italic;
 	}
 
+/* Share */
+.article .share-buttons {
+	margin-left:-4px;
+	}
+
 /* Intro
 ---------------------------------------- */
 #intro {
 	padding-bottom:37px;
 	}
-
-/* Share Buttons
----------------------------------------- */
-.share-buttons {
-	}
-	.share-buttons .twitter-share-button {
-		}
-	.share-buttons .facebook-like-button {
-		overflow:hidden;
-		width:140px;
-		height:20px;
-		border:none;
-		}
 
 /* Schedule
 ---------------------------------------- */
@@ -319,9 +291,6 @@ A {
 	background:#F1EEE8;
 	line-height:1.2;
 	}
-	#map A[target='_blank']:after {
-		display:none;
-		}
 
 /* Twitter
 ---------------------------------------- */
