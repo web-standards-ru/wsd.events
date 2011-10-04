@@ -162,6 +162,7 @@ A {
 	.article HEADER {
 		margin:0 0 22px;
 		}
+		.article HEADER H1,
 		.article HEADER H2 {
 			color:#2E5A75;
 			font:20px/1 'Trebuchet MS',sans-serif;
