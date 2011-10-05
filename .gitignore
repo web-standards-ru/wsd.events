@@ -1,2 +1,5 @@
 *.tmproj
 favicon.gif
+.project
+.DS_Store
+.idea
