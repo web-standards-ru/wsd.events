@@ -162,6 +162,10 @@ A {
 	.article HEADER {
 		margin:0 0 22px;
 		}
+<<<<<<< HEAD
+=======
+		.article HEADER H1,
+>>>>>>> 073ce5531701c42e5366612e790a5b763db5874a
 		.article HEADER H2 {
 			color:#2E5A75;
 			font:20px/1 'Trebuchet MS',sans-serif;
