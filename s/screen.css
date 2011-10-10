@@ -211,6 +211,7 @@ A {
 	padding:0;
 	}
 	.article .speakers LI {
+		position:relative;
 		float:left;
 		padding:0;
 		overflow:hidden;
@@ -218,6 +219,20 @@ A {
 		height:125px;
 		background:#000;
 		}
+		.article .speakers LI SPAN {
+			position:absolute;
+			right:0;
+			bottom:0;
+			left:0;
+			display:none;
+			padding:5px;
+			line-height:1;
+			background:rgba(0, 0, 0, 0.5);
+			color:#FFF;
+			}
+		.article .speakers LI:hover SPAN {
+			display:block;
+			}
 	.article .speakers IMG {
 		display:block;
 		margin:0;
