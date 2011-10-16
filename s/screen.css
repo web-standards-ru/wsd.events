@@ -207,7 +207,7 @@ A {
 /* Speakers */
 .article .speakers {
 	overflow:hidden;
-	margin:70px -70px -41px;
+	margin:0 -70px -41px;
 	padding:0;
 	}
 	.article .speakers LI {
@@ -217,7 +217,7 @@ A {
 		overflow:hidden;
 		width:100px;
 		height:125px;
-		background:#000;
+		background:none;
 		}
 		.article .speakers LI SPAN {
 			position:absolute;
@@ -233,6 +233,12 @@ A {
 		.article .speakers LI:hover SPAN {
 			display:block;
 			}
+	.article .speakers .speakers-join {
+		padding:20px 0 0 100px;
+		width:180px;
+		height:105px;
+		background:url(../speakers/unknown.png) 13px 0 no-repeat;
+		}
 	.article .speakers IMG {
 		display:block;
 		margin:0;
@@ -267,6 +273,38 @@ A {
 	.schedule-hour {
 		white-space:nowrap;
 		}
+	.schedule-caption {
+		background:#E3F4FA;
+		}
+	.schedule-current TD {
+		border-color:#c4ea88;
+		background:#d3f0a5;
+		color:#608000;
+		}
+	.schedule-current .schedule-caption TD {
+		border-color:#b5e070;
+		background:#b5e070;
+		}
+	.schedule-wide {
+		width:70%;
+		}
+	.schedule UL {
+		margin-bottom:5px;
+		padding-left:0;
+		line-height:1.7;
+		font-size:11px;
+		}
+		.schedule UL LI {
+			padding-left:0;
+			background:none;
+			}
+
+/* Video Player
+---------------------------------------- */
+.video-player {
+	display:block;
+	margin:0 0 22px;
+	}
 
 /* Card
 ---------------------------------------- */
