@@ -281,7 +281,7 @@ A {
 		background:#d3f0a5;
 		color:#608000;
 		}
-	.schedule-current .schedule-caption TD {
+	.schedule-caption.schedule-current TD {
 		border-color:#b5e070;
 		background:#b5e070;
 		}
