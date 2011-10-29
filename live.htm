@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<title>Web Standards Days</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1000">
+	<link rel="icon" sizes="16x16" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/favicon.png">
+	<link rel="stylesheet" href="/s/screen.css">
+	<!--[if lte IE 7]><link rel="stylesheet" href="/s/ie.css"><![endif]-->
+	<!--[if IE]><script src="/j/html5.js"></script><![endif]-->
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="http://yandex.st/jquery/1.6.2/jquery.min.js"></script>
+	<script src="/j/script.js"></script>
+
+    <script type="text/javascript" src="http://www.avalon.ru/_js/flowplayer3/flowplayer/example/flowplayer-3.2.6.min.js"></script>
+    <script type="text/javascript" src="http://www.avalon.ru/_js/flowplayer3/flowplayer.controls/flowplayer.controls-3.0.2.min.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+    flowplayer("camera", { src: "/_js/flowplayer3/flowplayer/flowplayer-3.2.7.swf", wmode: "opaque" }, {
+
+    clip: {
+      autoPlay: false,
+
+
+      live: true,
+      provider: 'rtmp',
+      url: 'live',
+      netConnectionUrl: 'rtmp://109.234.152.119/wsd/',
+
+    },
+
+    plugins: {
+      controls: {
+        autoHide: 'never',
+        play: false,
+        volume: true,
+        mute: true,
+        time: true,
+        stop: false,
+        playlist: false,
+        fullscreen: false,
+        scrubber: true
+      },
+      rtmp: {
+        url: 'http://www.avalon.ru/_js/flowplayer3/flowplayer.rtmp/flowplayer.rtmp-3.2.3.swf'
+      }
+    }
+
+    });
+    });
+    
+
+    </script>
+</head>
+<body>
+	<div id="page">
+		<header id="header" role="banner">
+			<h1>Web Standards Days</h1>
+		</header>
+		<section id="main" role="main" class="content content-primary">
+			<p id="browser-war"><a href="/browser-war/">Конкурс «Война браузеров»</a></p>
+			<article id="live" class="article">
+				<header>
+					<h2>Трансляция WSD в Минске</h2>
+					<a href="#page" title="Наверх" class="top">Наверх</a>
+				</header>
+                <div id="camera" style="widoth:320px; height:200px;"></div>
+                
+			</article>
+		</section>
+		<aside id="twitter" class="content content-secondary">
+			<div>
+				<ul></ul>
+			</div>
+			<p><a href="http://twitter.com/home?status=%23wstdays" target="_blank">Написать про Web Standards Days</a></p>
+		</aside>
+	</div>
+	<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter545187=new Ya.Metrika(545187);yaCounter545187.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
+	<script src="//mc.yandex.ru/metrika/watch.js" defer="defer"></script>
+	<noscript><img src="//mc.yandex.ru/watch/545187" alt="" style="position:absolute"></noscript>
+</body>
+</html>
