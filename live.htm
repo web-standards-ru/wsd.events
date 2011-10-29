@@ -13,8 +13,8 @@
 	<script src="http://yandex.st/jquery/1.6.2/jquery.min.js"></script>
 	<script src="/j/script.js"></script>
 
-    <script type="text/javascript" src="/j/flowplayer/flowplayer-3.2.7.swf"></script>
-    <script type="text/javascript" src="/j/flowplayer/flowplayer.controls-3.2.5.swf"></script>
+    <script type="text/javascript" src="/j/flowplayer/example/flowplayer-3.2.6.min.js"></script>
+    <!--<script type="text/javascript" src="/j/flowplayer/flowplayer.controls-3.2.5.swf"></script>-->
 
     <script type="text/javascript">
     $(function() {
@@ -27,12 +27,12 @@
       live: true,
       provider: 'rtmp',
       url: 'live',
-      netConnectionUrl: 'rtmp://109.234.152.119/wsd/',
-
+      netConnectionUrl: 'rtmp://109.234.152.119/wsd/'
     },
 
     plugins: {
       controls: {
+        url: '/j/flowplayer/flowplayer.controls-3.2.5.swf',
         autoHide: 'never',
         play: false,
         volume: true,
@@ -40,7 +40,7 @@
         time: true,
         stop: false,
         playlist: false,
-        fullscreen: false,
+        fullscreen: true,
         scrubber: true
       },
       rtmp: {
