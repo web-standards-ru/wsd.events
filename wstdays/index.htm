@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Standards Days</title>
+	<meta charset="UTF-8">
+	<style>
+		HTML, BODY {
+			height:100%;
+			}
+		BODY {
+			overflow:hidden;
+			margin:0;
+			padding:0;
+			background:#153543;
+			font-size:20px;
+			}
+		DIV {
+			margin:auto;
+			}
+	</style>
+</head>
+<body>
+	<div>
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+			version: 2,
+			type: 'search',
+			search: '#wstdays',
+			interval: 6000,
+			title: 'Хештег #wstdays',
+			subject: '',
+			width: 500,
+			height: document.body.clientHeight-40,
+			theme: {
+				shell: {
+					background: '#153543',
+					color: '#ffffff'
+				},
+				tweets: {
+					background: '#ffffff',
+					color: '#444444',
+					links: '#1985b5'
+				}
+			},
+			features: {
+				scrollbar: false,
+				loop: true,
+				live: true,
+				hashtags: true,
+				timestamp: true,
+				avatars: true,
+				toptweets: true,
+				behavior: 'default'
+			}
+		}).render().start();
+		</script>
+	</div>
+</body>
+</html>
