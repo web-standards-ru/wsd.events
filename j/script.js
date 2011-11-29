@@ -72,8 +72,9 @@ $(function(){
 	// Map
 
 	$.fn.map = function() {
-		var map = document.getElementById( this.selector.substr( 1 ) ),
-			query,
+		var map = document.getElementById( this.selector.substr( 1 ) );
+		if(!map) return;
+		var query = map.firstChild.src.split('&'),
 			centerCoords = {}, markerCoords = {}, coords, zoomLevel;
 		if (map != null) {
 			for(var i=0, queryLength = query.length; i < queryLength; i++ ) {
