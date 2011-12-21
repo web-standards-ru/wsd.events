@@ -1,0 +1,79 @@
+/* Common */
+.author {
+    position:absolute;
+    bottom:3%;
+    font-family:'PT Sans Narrow', sans-serif;
+    }
+    #Cover .author {
+        padding-left:30px;
+        }
+    .caption .author {
+        padding-left:0;
+        }
+    .author SPAN {
+        color:red;
+        }
+    .author A {
+        color:#000;
+        border:0;
+        }
+    .author A:hover {
+        color:#0174A7;
+        border-bottom:0.1em solid;
+        }
+
+.github-octocat {
+    position:relative;
+    top:10px;
+    left:-10px;
+    vertical-align:bottom;
+    }
+
+.slide .good,
+.slide .good a {
+    color:green !important;
+    background:none !important;
+    box-shadow:none !important;
+    line-height:1.5 !important;
+    }
+
+.slide .code {
+    color:#333 !important;
+    }
+    .slide .code span {
+        color:#70952d;
+        }
+        .slide .code span span {
+            color:#bd9630;
+            }
+
+
+/* Слайды */
+#Cover {
+    background-color:#fff;
+    }
+
+#Github H2 {
+    margin-top:-0.5em;
+    font-size:75px;
+    }
+
+#vimi H2 {
+    background:transparent;
+    box-shadow:none;
+    margin-top:-0.55em;
+    margin-left:-0.9em;
+    padding-left:0;
+    }
+
+#betterthangrep H2 {
+    font-size:75px;
+    }
+
+.links {
+    margin-bottom:1em;
+    }
+    .links th {
+        padding-right:1em;
+        text-align:left;
+        }
