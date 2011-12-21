@@ -1,2 +1,3 @@
-*.tmproj
+.gitignore
+*.esproj
 favicon.gif
