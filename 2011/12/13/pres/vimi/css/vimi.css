@@ -14,12 +14,12 @@
         color:red;
         }
     .author A {
-        color:#000;
         border:0;
+        color:#000;
         }
     .author A:hover {
-        color:#0174A7;
         border-bottom:0.1em solid;
+        color:#0174A7;
         }
 
 .github-octocat {
@@ -30,15 +30,16 @@
     }
 
 .slide .good,
+.slide.shout .good,
 .slide .good a {
-    color:green !important;
-    background:none !important;
-    box-shadow:none !important;
-    line-height:1.5 !important;
+    background:none;
+    box-shadow:none;
+    color:green;
+    line-height:1.5;
     }
 
 .slide .code {
-    color:#333 !important;
+    color:#333;
     }
     .slide .code span {
         color:#70952d;
@@ -48,26 +49,21 @@
             }
 
 
-/* Слайды */
+/* Slides */
 #Cover {
     background-color:#fff;
     }
 
 #Github H2 {
     margin-top:-0.5em;
-    font-size:75px;
     }
 
 #vimi H2 {
-    background:transparent;
-    box-shadow:none;
     margin-top:-0.55em;
     margin-left:-0.9em;
     padding-left:0;
-    }
-
-#betterthangrep H2 {
-    font-size:75px;
+    background:transparent;
+    box-shadow:none;
     }
 
 .links {
