@@ -1,12 +1,2 @@
-# BEGIN Auth
-# AuthUserFile /home/wst/web-standards.ru/.htpasswd
-# AuthGroupFile /dev/null
-# AuthName "Password Required"
-# AuthType Basic
-# <limit GET POST>
-# Require valid-user
-# </limit>
-# END Auth
-
 RewriteEngine On
 RewriteRule \.git - [F,L]
