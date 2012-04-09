@@ -73,55 +73,69 @@ $(function(){
 
 	$.fn.map = function() {
 		var map = document.getElementById( this.selector.substr( 1 ) );
-		if(!map) return;
-		var query = map.firstChild.src.split('&'),
-			centerCoords = {}, markerCoords = {}, coords, zoomLevel;
-		if (map != null) {
-			for(var i=0, queryLength = query.length; i < queryLength; i++ ) {
-				var current = query[i];
-				if( current.indexOf('center')+1 ) {
-					coords = current.split('=')[1].split(',');
-					centerCoords.lat = coords[0];
-					centerCoords.lng = coords[1];
-				}
-				if( current.indexOf('markers')+1 ) {
-					coords = current.split('=')[1].split(',');
-					markerCoords.lat = coords[0];
-					markerCoords.lng = coords[1];
-				}
-				if( current.indexOf('zoom')+1 ) {
-					zoomLevel = parseInt(current.split('=')[1]);
-				}
-			}
-			var options = {
-				zoom: zoomLevel,
-				center: new google.maps.LatLng( centerCoords.lat, centerCoords.lng ),
-				mapTypeControl: false,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			}
-			var gmap = new google.maps.Map(
-				map, options
-			);
-			var icon = new google.maps.MarkerImage(
-				'/i/map-logo.png',
-				new google.maps.Size( 93, 83 ),
-				new google.maps.Point( 0, 0 ),
-				new google.maps.Point( 24, 83 )
-			);
-			var shadow = new google.maps.MarkerImage(
-				'/i/map-shadow.png',
-				new google.maps.Size( 93, 83 ),
-				new google.maps.Point( 0, 0 ),
-				new google.maps.Point( 24, 83 )
-			);
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng( markerCoords.lat, markerCoords.lng ),
-				map: gmap,
-				shadow: shadow,
-				icon: icon
-			});
+
+		if(typeof map === 'undefined' || map === null) {
+			return;
 		}
-	}
+
+		var query = map.firstChild.src.split('?')[1].split('&'),
+			ymap = new YMaps.Map(map),
+			mapData = {},
+			centerCoords = {},
+			marker = {
+				coords: {},
+				style: new YMaps.Style()
+			};
+
+		for (var i=0, prop, queryLength = query.length; i < queryLength; i++ ) {
+			prop = query[i].split('=');
+			mapData[prop[0]] = prop[1];
+		}
+
+		centerCoords = {
+			lng: mapData.ll.split(',')[0],
+			lat: mapData.ll.split(',')[1]
+		};
+
+		mapCenter = new YMaps.GeoPoint(centerCoords.lng, centerCoords.lat);
+		
+		marker.coords = {
+			lng: mapData.pt.split(',')[0],
+			lat: mapData.pt.split(',')[1]
+		};
+		
+		marker.point = new YMaps.GeoPoint(marker.coords.lng, marker.coords.lat);
+
+		marker.style.iconStyle = new YMaps.IconStyle();
+
+		marker.style.iconStyle.href = '/i/map-logo.png';
+		marker.style.iconStyle.size = new YMaps.Point(93, 83);
+		marker.style.iconStyle.offset = new YMaps.Point(-24, -83);
+
+		marker.style.iconStyle.shadow = new YMaps.IconShadowStyle();
+		marker.style.iconStyle.shadow.href = "/i/map-shadow.png";
+		marker.style.iconStyle.shadow.size = new YMaps.Point(93, 83);
+		marker.style.iconStyle.shadow.offset = new YMaps.Point(-24, -83);
+
+		marker.placemark = new YMaps.Placemark(marker.point, {style: marker.style});
+		
+		ymap.setCenter(mapCenter, mapData.z);
+
+		ymap.addOverlay(marker.placemark);
+
+		ymap.addControl(new YMaps.SmallZoom(),
+			new YMaps.ControlPosition(YMaps.ControlPosition.TOP_LEFT,
+				new YMaps.Point(8, 24)
+				)
+			);
+
+		if (mapData.l === 'pmap') {
+			YMaps.load("pmap", function(){
+				ymap.setType(YMaps.MapType.PMAP);
+			});
+			
+		}
+	};
 
 	$('#map').map();
 

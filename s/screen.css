@@ -362,6 +362,7 @@ A {
 #map {
 	overflow:hidden;
 	background:#F1EEE8;
+	outline:solid 1px #EEE;
 	line-height:1.2;
 	}
 
