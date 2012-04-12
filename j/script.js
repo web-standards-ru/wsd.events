@@ -2,40 +2,6 @@ document.documentElement.id = 'js';
 
 $(function(){
 
-	// Scroller
-
-	$.fn.scroller = function() {
-		$( this ).each(
-			function(){
-				var locationPath = filterPath( location.pathname ),
-					thisPath = filterPath(this.pathname) || locationPath;
-				if( locationPath == thisPath && ( location.hostname == this.hostname || !this.hostname ) && this.hash.replace( /#/,'' )) {
-				var $target = $( this.hash ),
-					target = this.hash;
-				if ( target ) {
-					var targetOffset = $target.offset();
-					$( this ).click(
-						function( event ) {
-							event.preventDefault();
-							var frame = ( $.browser.safari ) ? $( 'body' ) : $( 'html' );
-						frame.animate(
-							{ scrollTop:targetOffset.top },
-							400,
-							function() {
-								location.hash = target;
-							});
-						}
-					);
-				}
-			}
-		});
-		function filterPath( string ){
-			return string.replace( /^\//, '' ).replace( /\/$/, '' );
-		}
-	}
-
-	$('a[href^=#]').scroller();
-
 	// Tweets
 
 	$.fn.tweets = function( q ) {

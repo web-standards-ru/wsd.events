@@ -1,23 +1,18 @@
 @import url(reset.css);
 
 BODY {
-	background:#2E5A75 url(../i/back.png) repeat-y;
+	overflow:hidden;
+	background:#153543;
 	font:13px/22px 'Helvetica Neue','Helvetica','Arial',sans-serif;
 	}
 A {
 	text-decoration:none;
 	}
 
-/* Page
----------------------------------------- */
-#page {
-	border-left:400px solid #153543;
-	}
-
 /* Header
 ---------------------------------------- */
 #header {
-	position:fixed;
+	position:absolute;
 	top:53px;
 	left:49px;
 	overflow:hidden;
@@ -35,12 +30,111 @@ A {
 		height:100%;
 		}
 
+/* Twitter
+---------------------------------------- */
+#twitter {
+	position:fixed;
+	top:310px;
+	bottom:63px;
+	left:85px;
+	padding:20px;
+	width:200px;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	background:#122E39;
+	}
+#twitter:after {
+	position:absolute;
+	top:-55px;
+	left:-35px;
+	width:67px;
+	height:46px;
+	background:url(../i/twitter.png) repeat-x;
+	content:'';
+	}
+	#twitter DIV {
+		position:absolute;
+		top:0;
+		bottom:0;
+		overflow:hidden;
+		width:200px;
+		}
+	#twitter DIV:before,
+	#twitter DIV:after {
+		position:absolute;
+		right:0;
+		left:0;
+		z-index:2;
+		height:20px;
+		background:url(../i/fade.png) repeat-x;
+		content:'';
+		}
+	#twitter DIV:before {
+		top:0;
+		background-position:0 -20px;
+		}
+	#twitter DIV:after {
+		bottom:0;
+		background-position:0 0;
+		}
+		#twitter DIV UL {
+			position:absolute;
+			top:0;
+			bottom:0;
+			overflow:auto;
+			padding-top:20px;
+			width:400px;
+			}
+		#twitter DIV LI {
+			position:relative;
+			padding:0 0 20px 58px;
+			width:142px;
+			min-height:48px;
+			line-height:16px;
+			}
+		#twitter DIV IMG {
+			position:absolute;
+			top:0;
+			left:0;
+			width:48px;
+			height:48px;
+			}
+	#twitter P {
+		position:absolute;
+		bottom:-40px;
+		left:0;
+		width:240px;
+		text-align:center;
+		font-size:12px;
+		}
+
+/* Page
+---------------------------------------- */
+#page {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:400px;
+	overflow:auto;
+	background:#2E5A75;
+	}
+
+/* Main
+---------------------------------------- */
+#main {
+	width:500px;
+	border-left:10px solid #9ECB1D;
+	background:#FFF;
+	}
+
 /* Next
 ---------------------------------------- */
 #next {
 	position:absolute;
 	top:146px;
-	left:808px;
+	left:408px;
 	width:190px;
 	height:191px;
 	overflow:hidden;
@@ -58,7 +152,7 @@ A {
 #browser-war {
 	position:absolute;
 	top:146px;
-	left:805px;
+	left:405px;
 	width:181px;
 	height:186px;
 	overflow:hidden;
@@ -99,19 +193,6 @@ A {
 	#navigation LI SPAN {
 		color:#CCC;
 		}
-
-/* Main
----------------------------------------- */
-#main {
-	width:500px;
-	border-left:10px solid #9ECB1D;
-	background:#FFF;
-	}
-
-/* Content Primary
----------------------------------------- */
-.content {
-	}
 
 /* Content Primary
 ---------------------------------------- */
@@ -334,29 +415,6 @@ A {
 		width:100px;
 		}
 
-/* Register
----------------------------------------- */
-.register {
-	margin:0 0 22px;
-	width:360px;
-	}
-	.register LABEL {
-		display:block;
-		color:#456375;
-		}
-	.register INPUT {
-		display:block;
-		margin:0 0 11px;
-		width:350px;
-		}
-	.register INPUT[type=submit] {
-		margin:22px 0 0;
-		width:auto;
-		}
-	.register .note {
-		font-size:11px;
-		}
-
 /* Map
 ---------------------------------------- */
 #map,
@@ -370,82 +428,3 @@ A {
 	outline:solid 1px #EEE;
 	line-height:1.2;
 	}
-
-/* Twitter
----------------------------------------- */
-#twitter {
-	position:fixed;
-	top:310px;
-	bottom:63px;
-	left:85px;
-	padding:20px;
-	width:200px;
-	-webkit-border-radius:20px;
-	-moz-border-radius:20px;
-	border-radius:20px;
-	background:#122E39;
-	}
-#twitter:after {
-	position:absolute;
-	top:-55px;
-	left:-35px;
-	width:67px;
-	height:46px;
-	background:url(../i/twitter.png) repeat-x;
-	content:'';
-	}
-	#twitter DIV {
-		position:absolute;
-		top:0;
-		bottom:0;
-		overflow:hidden;
-		width:200px;
-		}
-	#twitter DIV:before,
-	#twitter DIV:after {
-		position:absolute;
-		right:0;
-		left:0;
-		z-index:2;
-		height:20px;
-		background:url(../i/fade.png) repeat-x;
-		content:'';
-		}
-	#twitter DIV:before {
-		top:0;
-		background-position:0 -20px;
-		}
-	#twitter DIV:after {
-		bottom:0;
-		background-position:0 0;
-		}
-		#twitter DIV UL {
-			position:absolute;
-			top:0;
-			bottom:0;
-			overflow:auto;
-			padding-top:20px;
-			width:400px;
-			}
-		#twitter DIV LI {
-			position:relative;
-			padding:0 0 20px 58px;
-			width:142px;
-			min-height:48px;
-			line-height:16px;
-			}
-		#twitter DIV IMG {
-			position:absolute;
-			top:0;
-			left:0;
-			width:48px;
-			height:48px;
-			}
-	#twitter P {
-		position:absolute;
-		bottom:-40px;
-		left:0;
-		width:240px;
-		text-align:center;
-		font-size:12px;
-		}
