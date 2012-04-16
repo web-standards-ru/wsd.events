@@ -109,4 +109,11 @@ $(function(){
 		return true;
 	}
 
+	// Donate
+
+	$('a[href=#donate]').click(function(){
+		$('#donate').toggleClass('target');
+		return false;
+	});
+
 });

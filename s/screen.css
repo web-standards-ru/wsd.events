@@ -392,6 +392,21 @@ A {
 	margin:0 0 22px;
 	}
 
+/* Donate
+---------------------------------------- */
+#donate {
+	margin:-22px 0 0;
+	padding:22px 0 0;
+	}
+#donate .donate-form {
+	display:none;
+	margin:0 0 22px -44px;
+	}
+#donate.target .donate-form,
+#donate:target .donate-form {
+	display:block;
+	}
+
 /* Card
 ---------------------------------------- */
 .card {
