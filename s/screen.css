@@ -374,6 +374,11 @@ A {
 	.schedule-wide {
 		width:70%;
 		}
+	.schedule SMALL {
+		display:block;
+		line-height:1.7;
+		font-size:11px;
+		}
 	.schedule UL {
 		margin-bottom:5px;
 		padding-left:0;
