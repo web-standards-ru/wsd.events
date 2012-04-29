@@ -1,4 +1,4 @@
-document.documentElement.id = 'js';
+	document.documentElement.id = 'js';
 
 $(function(){
 
@@ -31,7 +31,7 @@ $(function(){
 				);
 			});
 		});
-	}
+	};
 
 	$('#twitter ul').tweets('wstdays');
 
@@ -45,12 +45,10 @@ $(function(){
 		}
 
 		var query = map.firstChild.src.split('?')[1].split('&'),
-			ymap = new YMaps.Map(map),
+			ymap,
 			mapData = {},
 			centerCoords = {},
 			marker = {
-				coords: {},
-				style: new YMaps.Style()
 			};
 
 		for (var i=0, prop, queryLength = query.length; i < queryLength; i++ ) {
@@ -63,51 +61,48 @@ $(function(){
 			lat: mapData.ll.split(',')[1]
 		};
 
-		mapCenter = new YMaps.GeoPoint(centerCoords.lng, centerCoords.lat);
-		
 		marker.coords = {
 			lng: mapData.pt.split(',')[0],
 			lat: mapData.pt.split(',')[1]
 		};
-		
-		marker.point = new YMaps.GeoPoint(marker.coords.lng, marker.coords.lat);
 
-		marker.style.iconStyle = new YMaps.IconStyle();
+		marker.point = [marker.coords.lat, marker.coords.lng];
 
-		marker.style.iconStyle.href = '/i/map-logo.png';
-		marker.style.iconStyle.size = new YMaps.Point(93, 83);
-		marker.style.iconStyle.offset = new YMaps.Point(-24, -83);
+		marker.style = {
+			iconImageHref:"/i/map-logo.png",
+			iconImageSize:[93, 83],
+			iconImageOffset:[-24, -83],
+			iconShadow:true,
+			iconShadowImageHref:"/i/map-shadow.png",
+			iconShadowImageSize:[93, 83],
+			iconShadowImageOffset:[-24, -83]
+		};
 
-		marker.style.iconStyle.shadow = new YMaps.IconShadowStyle();
-		marker.style.iconStyle.shadow.href = "/i/map-shadow.png";
-		marker.style.iconStyle.shadow.size = new YMaps.Point(93, 83);
-		marker.style.iconStyle.shadow.offset = new YMaps.Point(-24, -83);
-
-		marker.placemark = new YMaps.Placemark(marker.point, {style: marker.style});
-		
-		ymap.setCenter(mapCenter, mapData.z);
-
-		ymap.addOverlay(marker.placemark);
-
-		ymap.addControl(new YMaps.SmallZoom(),
-			new YMaps.ControlPosition(YMaps.ControlPosition.TOP_LEFT,
-				new YMaps.Point(8, 24)
-				)
-			);
-
-		if (mapData.l === 'pmap') {
-			YMaps.load("pmap", function(){
-				ymap.setType(YMaps.MapType.PMAP);
+		ymaps.ready(function () {
+			map.removeChild(map.firstChild);
+            ymap = new ymaps.Map(map, {
+				center: [centerCoords.lat, centerCoords.lng],
+				zoom: mapData.z
 			});
-			
-		}
+
+			marker.placemark = new ymaps.Placemark(marker.point, {}, marker.style);
+
+			ymap.geoObjects.add(marker.placemark);
+
+			ymap.controls.add('smallZoomControl',
+				{left: '8px', top: '24px'});
+
+			if (mapData.l === 'pmap') {
+				ymap.setType('yandex#publicMap');
+			}
+        });
 	};
 
 	$('#map').map();
 
 	window.onerror = function(){
 		return true;
-	}
+	};
 
 	// Donate
 
