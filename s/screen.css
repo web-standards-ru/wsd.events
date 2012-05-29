@@ -415,6 +415,15 @@ A {
 
 /* Card
 ---------------------------------------- */
+.register-form {
+	display:block;
+	margin-left:-10px;
+	width:400px;
+	border:none;
+	}
+
+/* Card
+---------------------------------------- */
 .card {
 	position:relative;
 	margin:-22px 0 22px;
