@@ -1,4 +1,4 @@
-	document.documentElement.id = 'js';
+document.documentElement.id = 'js';
 
 $(function(){
 
@@ -99,10 +99,6 @@ $(function(){
 	};
 
 	$('#map').map();
-
-	window.onerror = function(){
-		return true;
-	};
 
 	// Donate
 
