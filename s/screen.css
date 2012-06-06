@@ -375,8 +375,10 @@ A {
 	}
 	.history .year {
 		position:absolute;
-		margin:15px 0 0 -3.7em;
+		margin:15px 0 0 -70px;
+		width:70px;
 		color:#999;
+		text-align:center;
 		}
 	.history .schedule {
 		margin:0;
