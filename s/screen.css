@@ -345,7 +345,7 @@ A {
 	}
 	.schedule li {
 		padding:15px 0 13px 4em;
-		border-bottom:dotted 1px #95abb9;
+		border-bottom:solid 1px #ccd7dd;
 		}
 		.schedule li time {
 			position:absolute;
