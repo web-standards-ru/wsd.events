@@ -361,6 +361,13 @@ A {
 				font-weight:bold;
 				font-size:15px;
 				}
+	.schedule .break {
+		font-weight:bold;
+		color:#666;
+		}
+		.schedule .break time {
+			font-weight:normal;
+			}
 	.schedule .current {
 		border-color:#B5E070;
 		background:#D3F0A5;
