@@ -444,12 +444,12 @@ A {
 	.card DD {
 		line-height:18px;
 		}
-	.card IMG {
-		position:absolute;
-		top:22px;
-		left:0;
-		width:100px;
-		}
+		.card DD IMG {
+			position:absolute;
+			top:22px;
+			left:0;
+			width:100px;
+			}
 
 /* Map
 ---------------------------------------- */
