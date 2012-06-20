@@ -422,6 +422,7 @@ a {
 /* Card
 ---------------------------------------- */
 .register-form {
+	overflow:hidden;
 	display:block;
 	margin-left:-10px;
 	width:400px;
