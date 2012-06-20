@@ -1,11 +1,11 @@
 @import url(reset.css);
 
-BODY {
+body {
 	overflow:hidden;
 	background:#153543;
 	font:13px/22px 'Helvetica Neue','Helvetica','Arial',sans-serif;
 	}
-A {
+a {
 	text-decoration:none;
 	}
 
@@ -21,7 +21,7 @@ A {
 	background:url(../i/header.png) no-repeat;
 	text-indent:-9999px;
 	}
-	#header A {
+	#header a {
 		position:absolute;
 		top:0;
 		left:0;
@@ -53,15 +53,15 @@ A {
 	background:url(../i/twitter.png) repeat-x;
 	content:'';
 	}
-	#twitter DIV {
+	#twitter div {
 		position:absolute;
 		top:0;
 		bottom:0;
 		overflow:hidden;
 		width:200px;
 		}
-	#twitter DIV:before,
-	#twitter DIV:after {
+	#twitter div:before,
+	#twitter div:after {
 		position:absolute;
 		right:0;
 		left:0;
@@ -70,15 +70,15 @@ A {
 		background:url(../i/fade.png) repeat-x;
 		content:'';
 		}
-	#twitter DIV:before {
+	#twitter div:before {
 		top:0;
 		background-position:0 -20px;
 		}
-	#twitter DIV:after {
+	#twitter div:after {
 		bottom:0;
 		background-position:0 0;
 		}
-		#twitter DIV UL {
+		#twitter div ul {
 			position:absolute;
 			top:0;
 			bottom:0;
@@ -86,21 +86,21 @@ A {
 			padding-top:20px;
 			width:400px;
 			}
-		#twitter DIV LI {
+		#twitter div li {
 			position:relative;
 			padding:0 0 20px 58px;
 			width:142px;
 			min-height:48px;
 			line-height:16px;
 			}
-		#twitter DIV IMG {
+		#twitter div img {
 			position:absolute;
 			top:0;
 			left:0;
 			width:48px;
 			height:48px;
 			}
-	#twitter P {
+	#twitter p {
 		position:absolute;
 		bottom:-40px;
 		left:0;
@@ -141,7 +141,7 @@ A {
 	background:url(../i/next.png) no-repeat;
 	text-indent:-9999px;
 	}
-	#next A {
+	#next a {
 		position:absolute;
 		width:100%;
 		height:100%;
@@ -159,7 +159,7 @@ A {
 	background:url(/browser-war/images/badge.png) no-repeat;
 	text-indent:-9999px;
 	}
-	#browser-war A {
+	#browser-war a {
 		display:block;
 		width:100%;
 		height:100%;
@@ -174,11 +174,11 @@ A {
 	background:url(../i/shadow.png) 0 100% no-repeat;
 	font:24px/1 'Trebuchet MS',sans-serif;
 	}
-	#navigation LI {
+	#navigation li {
 		margin:-8px 0 0;
 		height:65px;
 		}
-	#navigation LI * {
+	#navigation li * {
 		display:block;
 		padding:8px 16px;
 		-webkit-border-radius:20px;
@@ -186,11 +186,11 @@ A {
 		border-radius:20px;
 		color:#8AB219;
 		}
-	#navigation LI A:hover {
+	#navigation li a:hover {
 		background:#9ECB1D;
 		color:#FFF;
 		}
-	#navigation LI SPAN {
+	#navigation li span {
 		color:#CCC;
 		}
 
@@ -199,10 +199,10 @@ A {
 .content-primary {
 	color:#262626;
 	}
-	.content-primary A {
+	.content-primary a {
 		color:#2B8BAD;
 		}
-	.content-primary A:hover {
+	.content-primary a:hover {
 		color:#8AB219;
 		}
 
@@ -211,10 +211,10 @@ A {
 .content-secondary {
 	color:#FFF;
 	}
-	.content-secondary A {
+	.content-secondary a {
 		color:#63BBDB;
 		}
-	.content-secondary A:hover {
+	.content-secondary a:hover {
 		color:#B2DB35;
 		}
 
@@ -225,15 +225,15 @@ A {
 	padding:63px 70px 41px;
 	border-bottom:1px solid #EEE;
 	}
-	.article HEADER {
+	.article header {
 		margin:0 0 22px;
 		}
-		.article HEADER H1,
-		.article HEADER H2 {
+		.article header h1,
+		.article header h2 {
 			color:#2E5A75;
 			font:20px/1 'Trebuchet MS',sans-serif;
 			}
-		.article HEADER .top {
+		.article header .top {
 			position:absolute;
 			top:20px;
 			right:20px;
@@ -243,7 +243,7 @@ A {
 			background:#9ECB1D url(../i/up.gif) no-repeat;
 			text-indent:-9999px;
 			}
-		.article:hover HEADER .top {
+		.article:hover header .top {
 			display:block;
 			}
 
@@ -251,7 +251,7 @@ A {
 .article:last-child {
 	border-bottom:none;
 	}
-	.article:first-child:hover HEADER A {
+	.article:first-child:hover header a {
 		display:none;
 		}
 
@@ -259,29 +259,29 @@ A {
 .article .anchor {
 	border-bottom:1px dotted;
 	}
-.article HR {
+.article hr {
 	margin:0 0 22px;
 	border-top:1px solid #EEE;
 	}
-.article UL {
+.article ul {
 	padding-left:15px;
 	margin-bottom:22px;
 	}
-	.article UL LI {
+	.article ul li {
 		padding-left:15px;
 		background:url(../i/bullet.gif) 0 7px no-repeat;
 		}
-.article P {
+.article p {
 	margin:0 0 22px;
 	}
-.article IMG {
+.article img {
 	display:block;
 	margin:0 0 22px;
 	}
-.article STRONG {
+.article strong {
 	font-weight:bold;
 	}
-.article EM {
+.article em {
 	font-style:italic;
 	}
 
@@ -297,7 +297,7 @@ A {
 	padding:0;
 	background:#EEE;
 	}
-	.article .speakers LI {
+	.article .speakers li {
 		position:relative;
 		float:left;
 		padding:0;
@@ -306,7 +306,7 @@ A {
 		height:125px;
 		background:none;
 		}
-		.article .speakers LI SPAN {
+		.article .speakers li span {
 			position:absolute;
 			right:0;
 			bottom:0;
@@ -317,7 +317,7 @@ A {
 			background:rgba(0, 0, 0, 0.5);
 			color:#FFF;
 			}
-		.article .speakers LI:hover SPAN {
+		.article .speakers li:hover span {
 			display:block;
 			}
 	.article .speakers .speakers-join {
@@ -326,7 +326,7 @@ A {
 		height:105px;
 		background:#EEE url(../speakers/unknown.png) 13px 0 no-repeat;
 		}
-	.article .speakers IMG {
+	.article .speakers img {
 		display:block;
 		margin:0;
 		height:100%;
@@ -436,15 +436,15 @@ A {
 	padding:22px 0 0 120px;
 	min-height:125px;
 	}
-	.card DT {
+	.card dt {
 		margin:0 0 15px;
 		line-height:1;
 		font-weight:bold;
 		}
-	.card DD {
+	.card dd {
 		line-height:18px;
 		}
-		.card DD IMG {
+		.card dd img {
 			position:absolute;
 			top:22px;
 			left:0;
@@ -454,7 +454,7 @@ A {
 /* Map
 ---------------------------------------- */
 #map,
-#map IMG {
+#map img {
 	width:360px;
 	height:360px;
 	}
