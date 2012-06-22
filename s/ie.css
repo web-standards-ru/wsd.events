@@ -1,12 +1,12 @@
 /* Article
 ---------------------------------------- */
-* + HTML .article {
+* + html .article {
 	zoom:1;
 	}
 
 /* Twitter
 ---------------------------------------- */
-* + HTML #twitter {
+* + html #twitter {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -17,7 +17,7 @@
 		}(this)
 	);
 	}
-	* + HTML #twitter .after {
+	* + html #twitter .after {
 		position:absolute;
 		top:0;
 		left:-40px;
