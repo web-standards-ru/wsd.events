@@ -1,4 +1,4 @@
 favicon.gif
 pres/
-browser-war/
-*.sublime-*
+browser-war/*
+!browser-war/index.htm
