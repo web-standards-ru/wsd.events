@@ -256,6 +256,11 @@ a {
 		}
 
 /* Elements */
+.article h3 {
+	margin:30px 0 20px 120px;
+	color:#2E5A75;
+	font:15px/1 'Trebuchet MS',sans-serif;
+	}
 .article .anchor {
 	border-bottom:1px dotted;
 	}
