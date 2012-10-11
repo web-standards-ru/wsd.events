@@ -4,58 +4,24 @@
 	<title>Web Standards Days</title>
 	<meta charset="UTF-8">
 	<style>
-		HTML, BODY {
-			height:100%;
+		body {
+			background:#2E5A75;
 			}
-		BODY {
-			overflow:hidden;
-			margin:0;
-			padding:0;
-			background:#153543;
-			font-size:20px;
-			}
-		DIV {
-			margin:auto;
+		iframe {
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-300px 0 0 -250px;
+			width:500px;
+			height:600px;
 			}
 	</style>
 </head>
 <body>
-	<div>
-		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-		<script>
-		new TWTR.Widget({
-			version: 2,
-			type: 'search',
-			search: '#wstdays',
-			interval: 6000,
-			title: 'Хештег #wstdays',
-			subject: '',
-			width: 500,
-			height: document.body.clientHeight-70,
-			theme: {
-				shell: {
-					background: '#153543',
-					color: '#ffffff'
-				},
-				tweets: {
-					background: '#ffffff',
-					color: '#444444',
-					links: '#1985b5'
-				}
-			},
-			features: {
-				scrollbar: false,
-				loop: true,
-				live: true,
-				hashtags: true,
-				timestamp: true,
-				avatars: true,
-				toptweets: true,
-				behavior: 'default'
-			}
-		}).render().start();
-		</script>
-	</div>
+	<!-- Twitter Widget -->
+	<a class="twitter-timeline" href="https://twitter.com/search?q=%23wstdays" data-widget-id="256453855791955968" width="500" height="600">Твиты с тегом #wstdays</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<!-- Yandex.Metrika -->
 	<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter545187=new Ya.Metrika(545187);yaCounter545187.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
 	<script src="//mc.yandex.ru/metrika/watch.js" defer="defer"></script>
 	<noscript><img src="//mc.yandex.ru/watch/545187" alt="" style="position:absolute"></noscript>
