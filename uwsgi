@@ -1,0 +1,2 @@
+# TODO: переписать
+uwsgi -s /tmp/uwsgi.sock -w /home/h4/sites/brnv.ru/wsd/www/wsd.brnv.ru.py:app -H /home/h4/envs/wsd --chmod-socket 666
