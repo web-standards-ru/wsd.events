@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}{{ event.city }}, {{ event.date }}{% endblock %}
+
+{% block main %}
+
+<!-- TODO: Сделать определение условий вывода меню -->
+
+<nav id="navigation">
+    <ul>
+        <li><a href="#schedule">Программа встречи</a></li>
+        <li><a href="#speakers">Участники и партнёры</a></li>
+        <li><a href="#location">Место проведения</a></li>
+    </ul>
+</nav>
+
+<article id="intro" class="article">
+    <header>
+        <h1>{{ event.city }}, {{ event.date }}</h1>
+        <!-- TODO: написать фильтр date_human -->
+    </header>
+    {{ event.description|safe() }}
+    <!-- TODO: подумать, а нужно ли описание пихать в json -->
+
+    <script src="//yandex.st/share/share.js"></script>
+    <p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
+</article>
+
+<article id="schedule" class="article">
+    <header>
+        <h2>Программа встречи</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <ol class="schedule">
+        {% for item in event.schedule %}
+            {% if item.presentation %}
+            <li>
+                <time>{{ item.time }}</time>
+                   <dl>
+                        <dt>{{ item.presentation.title }}</dt>
+                        <dd>{{ item.presentation.description|safe() }}</dd>
+                    </dl>
+                <a href="#{{ item.presentation.speaker }}">{{ speakers_dict[item.presentation.speaker] }}</a>
+            </li>
+            {% else %}
+            <li class="break">
+                <time>{{ item.time }}</time> {{ item.title }}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+    <p>Расписание может незначительно измениться, следите за новостями на нашем твиттер-канале: <a href="https://twitter.com/webstandards_ru">webstandards_ru</a>.</p>
+</article>
+
+<article id="speakers" class="article">
+    <header>
+        <h2>Участники и партнёры</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+
+    {% for id, speaker in speakers %}
+    <dl id="{{ id }}" class="card">
+        <dt>{{ speaker['first_name'] }} {{ speaker['last_name'] }}</dt>
+        <dd>
+            <img src="/static/speakers/{{ speaker['photo'] }}" alt="{{ speaker['first_name'] }} {{ speaker['last_name'] }}">
+            {{ speaker['bio'] }}
+        </dd>
+    </dl>
+    {% endfor %}
+
+<hr>
+
+{% for categories in event.partners %}
+    {% for category in categories %}
+        <h3>{{ category }}</h3>
+        {% for partner in categories[category] %}
+            {% if partners[partner] is defined %}
+            <dl id="partner" class="card">
+                <dt><a href="{{ partners[partner].url }}">{{ partners[partner].title }}</a></dt>
+                <dd>
+                    <a href="{{ partners[partner].url }}"><img src="/static/partners/{{ partners[partner].logo }}" alt="{{ partners[partner].title }}"></a>
+                    {{ partners[partner].description }}
+                </dd>
+            </dl>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+</article>
+
+<article id="register" class="article">
+    <!-- TODO: проверка валидности регистрации -->
+
+    <header>
+        <h2>Регистрация</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <p>Регистрация на встречу закрыта. Есть вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
+</article>
+
+<article id="location" class="article">
+    <header>
+        <h2>Место проведения</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <p id="map"><img src="http://static-maps.yandex.ru/1.x/?ll={{ event.place.coord }}&amp;size=360,360&amp;z={{ event.place.zoom }}&amp;l=map&amp;pt={{ event.place.coord }},pm2orgl&amp;key=AIRHgE8BAAAA8ZWwHwIAmGnk_6mYfhSGNKGXGnXQvkl-l6IAAAAAAAAAAABVD9wC7PE13de3TAxuXNzFvh-T-g==" alt="Карта места проведения встречи"></p>
+    <p>Встреча пройдёт в {{ event.place.city }}, <в></в> <a href="{{ event.place.url }}">{{ event.place.title }}</a>.</p>
+</article>
+
+{% endblock %}
