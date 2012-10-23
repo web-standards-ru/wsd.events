@@ -22,14 +22,18 @@
             },
             {
                 "time":"11:15",
-                "lecture":"die-photoshop-die"
+                "presentation":"die-photoshop-die"
+            },
+            {
+                "time":"12:20",
+                "presentation":"press-here"
             }
         ],
-        "partners":{
-            "Организаторы":["lovata-group", "opera-software"],
-            "Партнёры":["oz.by"],
-            "Информационные партнёры":["tut.by", "komp-vesti"]
-        }
+        "partners":[
+            {"Организаторы":["lovata-group", "opera-software"]},
+            {"Партнёры":["oz.by"]},
+            {"Информационные партнёры":["tut.by", "komp-vesti"]}
+        ]
     },
     "kiev-2012":{
         "date":"13-10-2012",
@@ -57,7 +61,6 @@
                 "lecture":"die-photoshop-die"
             }
         ],
-        "partners":{
-        }
+        "partners":[]
     }
 }

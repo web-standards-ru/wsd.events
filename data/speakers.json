@@ -1,5 +1,10 @@
 {
-
+    "vadim-makeev":{
+        "first_name":"Вадим",
+        "last_name":"Макеев",
+        "bio":"Веб-евангелист в компании Opera Software. Веб-разработчик, организатор и участник IT-конференций, автор блога Пепелсбей.net, пропагандист веб-стандартов.",
+        "photo":"vadim.makeev.jpg"
+    },
     "pavel-lovtsevich":{
         "first_name":"Павел",
         "last_name":"Ловцевич",
