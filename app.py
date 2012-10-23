@@ -18,9 +18,7 @@ def hello_world():
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def event(year, month, day):
-    data = {}
-    for i in ['events', 'partners', 'presentations', 'speakers']:
-        data[i] = json.load(open('data/%s.json' % i))
+    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
 
     event_date = '%s-%s-%s' % (add_null(day), add_null(month), year)
 
@@ -31,7 +29,21 @@ def event(year, month, day):
     except Exception:
         return render_template('server_error.html'), 500
 
-    return unicode(event)
+    for schedule_item in event['schedule']:
+        if schedule_item.has_key('presentation'):
+            schedule_item['presentation'] = data['presentations'][schedule_item['presentation']]
+
+    speakers_keys = [x['presentation']['speaker'] for x in filter(lambda x: x.has_key('presentation'), event['schedule'])]
+
+    speakers = sorted(
+        [(key, data['speakers'][key]) for key in speakers_keys],
+        key=lambda x: x[1]['last_name']
+    )
+
+    speakers_dict = {x:'%s %s' % (y['first_name'], y['last_name']) for x, y in speakers}
+
+    return render_template('event.html', date=event_date, data=data, event=event, speakers=speakers,
+        speakers_dict=speakers_dict, partners=data['partners'])
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/register/')
