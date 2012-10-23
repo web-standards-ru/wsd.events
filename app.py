@@ -11,9 +11,15 @@ def add_null(val):
 
 
 @app.route('/')
-def hello_world():
+def index():
+    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
 
-    return u'Главная'
+    for event in data['events']:
+        event_date = data['events'][event]['date']
+        data['events'][event]['url'] = '/'.join(['%s' % s for s in event_date.split('-')[::-1]])
+
+    return render_template('index.html', events=data['events'], speakers=data['speakers'],
+        presentations=data['presentations'])
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
