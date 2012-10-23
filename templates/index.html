@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<article id="calendar" class="article">
+    <header>
+        <h2>Календарь событий</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <ol class="history">
+        <li>
+            <time class="year">2012</time>
+            <ol class="schedule">
+                {% for event in events %}
+
+                <li class="current">
+                    <time>{{ events[event].date }}</time>
+                    <a href="/{{ events[event].url }}/">{{ events[event].city }}</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+    </ol>
+</article>
+
+{% endblock %}

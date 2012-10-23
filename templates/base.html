@@ -1,9 +1,38 @@
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE HTML>
+<html lang="ru">
 <head>
-    <title></title>
+    <title>Web Standards Days — {% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=910">
+    <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='s/screen.css') }}">
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="{{ url_for('static', filename='s/ie.css') }}"><![endif]-->
+    <!--[if IE]>
+    <script src="{{ url_for('static', filename='j/html5.js') }}"></script><![endif]-->
+    <script src="http://yandex.st/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU"></script>
+    <script src="{{ url_for('static', filename='j/script.js') }}"></script>
 </head>
 <body>
-
+<header id="header" role="banner">
+    <p><a href="/">Web Standards Days</a></p>
+</header>
+<div id="page">
+<section id="main" role="main" class="content content-primary">
+{% block main %}    {% endblock %}
+</section>
+</div>
+<aside id="twitter" class="content content-secondary">
+    <div>
+        <ul></ul>
+    </div>
+    <p><a href="http://twitter.com/home?status=%23wstdays" target="_blank">Написать про Web Standards Days</a></p>
+</aside>
+<script>(function(w,c){(w[c]=w[c]||[]).push(function(){try{w.yaCounter545187=new Ya.Metrika(545187);yaCounter545187.trackLinks(true);}catch(e){}});})(window,'yandex_metrika_callbacks');</script>
+<script src="//mc.yandex.ru/metrika/watch.js" defer="defer"></script>
+<noscript><img src="//mc.yandex.ru/watch/545187" alt="" style="position:absolute"></noscript>
 </body>
 </html>
