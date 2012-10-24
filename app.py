@@ -31,9 +31,9 @@ def event(year, month, day):
     try:
         event = filter(lambda x: x if x['date'] == event_date else False, data['events'].values())[0]
     except IndexError:
-        return render_template('page_not_found.html'), 404
+        return render_template('page-not-found.html'), 404
     except Exception:
-        return render_template('server_error.html'), 500
+        return render_template('server-error.html'), 500
 
     for schedule_item in event['schedule']:
         if schedule_item.has_key('presentation'):
