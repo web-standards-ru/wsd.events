@@ -59,7 +59,7 @@
 
     {% for id, speaker in speakers %}
     <dl id="{{ id }}" class="card">
-        <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}</dt>
+        <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}{% if speaker['twitter'] %} <a href="http://twitter.com/{{ speaker['twitter'] }}">@{{ speaker['twitter'] }}</a>{% endif %}</dt>
         <dd>
             <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
             {{ speaker['bio'] }}
