@@ -75,9 +75,9 @@
         {% for partner in categories[category] %}
             {% if partners[partner] is defined %}
             <dl id="partner" class="card">
-                <dt><a href="{{ partners[partner].url }}">{{ partners[partner].title }}</a></dt>
+                <dt><a href="{{ partners[partner].sitename }}">{{ partners[partner].title }}</a></dt>
                 <dd>
-                    <a href="{{ partners[partner].url }}"><img src="/static/partners/{{ partner }}.png" alt="{{ partners[partner].title }}"></a>
+                    <a href="{{ partners[partner].sitename }}"><img src="/static/partners/{{ partner }}.png" alt="{{ partners[partner].title }}"></a>
                     {{ partners[partner].description }}
                 </dd>
             </dl>
