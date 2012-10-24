@@ -15,7 +15,7 @@
 
                 <li class="current">
                     <time>{{ events[event].date }}</time>
-                    <a href="/{{ events[event].url }}/">{{ events[event].city }}</a>
+                    <a href="/{{ events[event].url }}/">{{ events[event].place.city }}</a>
                 </li>
                 {% endfor %}
             </ol>

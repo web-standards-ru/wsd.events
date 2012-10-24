@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ event.city }}, {{ event.date }}{% endblock %}
+{% block title %}{{ event.place.city }}, {{ event.date }}{% endblock %}
 
 {% block main %}
 
@@ -15,7 +15,7 @@
 
 <article id="intro" class="article">
     <header>
-        <h1>{{ event.city }}, {{ event.date }}</h1>
+        <h1>{{ event.place.city }}, {{ event.date }}</h1>
         <!-- TODO: написать фильтр date_human -->
     </header>
     {{ event.description|safe() }}
