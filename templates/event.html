@@ -59,9 +59,9 @@
 
     {% for id, speaker in speakers %}
     <dl id="{{ id }}" class="card">
-        <dt>{{ speaker['first_name'] }} {{ speaker['last_name'] }}</dt>
+        <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}</dt>
         <dd>
-            <img src="/static/speakers/{{ speaker['photo'] }}" alt="{{ speaker['first_name'] }} {{ speaker['last_name'] }}">
+            <img src="/static/speakers/{{ speaker['photo'] }}" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
             {{ speaker['bio'] }}
         </dd>
     </dl>

@@ -43,10 +43,10 @@ def event(year, month, day):
 
     speakers = sorted(
         [(key, data['speakers'][key]) for key in speakers_keys],
-        key=lambda x: x[1]['last_name']
+        key=lambda x: x[1]['lastName']
     )
 
-    speakers_dict = {x:'%s %s' % (y['first_name'], y['last_name']) for x, y in speakers}
+    speakers_dict = {x:'%s %s' % (y['firstName'], y['lastName']) for x, y in speakers}
 
     return render_template('event.html', date=event_date, data=data, event=event, speakers=speakers,
         speakers_dict=speakers_dict, partners=data['partners'])
