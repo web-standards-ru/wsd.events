@@ -61,7 +61,7 @@
     <dl id="{{ id }}" class="card">
         <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}</dt>
         <dd>
-            <img src="/static/speakers/{{ speaker['photo'] }}" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
+            <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
             {{ speaker['bio'] }}
         </dd>
     </dl>
@@ -77,7 +77,7 @@
             <dl id="partner" class="card">
                 <dt><a href="{{ partners[partner].url }}">{{ partners[partner].title }}</a></dt>
                 <dd>
-                    <a href="{{ partners[partner].url }}"><img src="/static/partners/{{ partners[partner].logo }}" alt="{{ partners[partner].title }}"></a>
+                    <a href="{{ partners[partner].url }}"><img src="/static/partners/{{ partner }}.png" alt="{{ partners[partner].title }}"></a>
                     {{ partners[partner].description }}
                 </dd>
             </dl>
