@@ -11,8 +11,16 @@ def add_null(val):
     return val if val >= 10 else "0%s" % val
 
 
+def setSpeakerById(dict, speakers):
+    dict['speaker'] = speakers[dict['speaker']]
+
+    return dict
+
+
 @app.route('/')
 def index():
+    import random
+
     data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
 
     for event in data['events']:
@@ -24,8 +32,12 @@ def index():
         key=lambda x: x[1]['lastName']
     )
 
+    presentations = random.sample(filter(lambda x: x.has_key('video_id'), data['presentations'].values()), 3)
+
+    map(lambda x: setSpeakerById(x, data['speakers']), presentations)
+
     return render_template('index.html', events=data['events'], speakers=speakers,
-        presentations=data['presentations'])
+        presentations=presentations)
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
