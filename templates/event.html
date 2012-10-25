@@ -9,7 +9,12 @@
     <ul>
         <li><a href="#schedule">Программа встречи</a></li>
         <li><a href="#speakers">Участники и партнёры</a></li>
+        {% if show_registration %}
+        <li><a href="#register">Регистрация</a></li>
+        {% endif %}
+        {% if event.place.coord %}
         <li><a href="#location">Место проведения</a></li>
+        {% endif %}
     </ul>
 </nav>
 
@@ -88,23 +93,27 @@
 
 </article>
 
+{% if show_registration %}
 <article id="register" class="article">
-    <!-- TODO: проверка валидности регистрации -->
-
     <header>
         <h2>Регистрация</h2>
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
-    <p>Регистрация на встречу закрыта. Есть вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
+    {% if event.registration.custom %}
+    {{ event.registration.custom|safe() }}
+    {% endif %}
 </article>
+{% endif %}
 
-<article id="location" class="article">
-    <header>
-        <h2>Место проведения</h2>
-        <a href="#main" title="Наверх" class="top">Наверх</a>
-    </header>
-    <p id="map"><img src="http://static-maps.yandex.ru/1.x/?ll={{ event.place.coord }}&amp;size=360,360&amp;z={{ event.place.zoom }}&amp;l=map&amp;pt={{ event.place.coord }},pm2orgl&amp;key=AIRHgE8BAAAA8ZWwHwIAmGnk_6mYfhSGNKGXGnXQvkl-l6IAAAAAAAAAAABVD9wC7PE13de3TAxuXNzFvh-T-g==" alt="Карта места проведения встречи"></p>
-    <p>Встреча пройдёт в {{ event.place.city }}, <в></в> <a href="{{ event.place.url }}">{{ event.place.title }}</a>.</p>
-</article>
+{% if event.place.coord %}
+    <article id="location" class="article">
+        <header>
+            <h2>Место проведения</h2>
+            <a href="#main" title="Наверх" class="top">Наверх</a>
+        </header>
+        <p id="map"><img src="http://static-maps.yandex.ru/1.x/?ll={{ event.place.coord }}&amp;size=360,360&amp;z={{ event.place.zoom }}&amp;l=map&amp;pt={{ event.place.coord }},pm2orgl&amp;key=AIRHgE8BAAAA8ZWwHwIAmGnk_6mYfhSGNKGXGnXQvkl-l6IAAAAAAAAAAABVD9wC7PE13de3TAxuXNzFvh-T-g==" alt="Карта места проведения встречи"></p>
+        <p>Встреча пройдёт в {{ event.place.city }}, <в></в> <a href="{{ event.place.url }}">{{ event.place.title }}</a>.</p>
+    </article>
+{% endif %}
 
 {% endblock %}

@@ -42,6 +42,8 @@ def index():
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def event(year, month, day):
+    import time
+
     data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
 
     event_date = '%s-%s-%s' % (add_null(day), add_null(month), year)
@@ -66,8 +68,16 @@ def event(year, month, day):
 
     speakers_dict = {x:'%s %s' % (y['firstName'], y['lastName']) for x, y in speakers}
 
+    if event.has_key('registration'):
+        if event['registration']['open'] < time.time() < event['registration']['close'] and not event['registration'].has_key('force_close'):
+            show_registration = True
+        else:
+            show_registration = False
+    else:
+        show_registration = False
+
     return render_template('event.html', date=event_date, data=data, event=event, speakers=speakers,
-        speakers_dict=speakers_dict, partners=data['partners'])
+        speakers_dict=speakers_dict, partners=data['partners'], show_registration = show_registration)
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/register/')
