@@ -2,6 +2,26 @@
 
 {% block main %}
 
+
+<nav id="navigation">
+    <ul>
+        <li><a href="#calendar">Календарь событий</a></li>
+        <li><a href="#speakers">Наши докладчики</a></li>
+        <li><a href="#video">Видео со встреч</a></li>
+    </ul>
+</nav>
+<article id="intro" class="article">
+    <p>Объединение разработчиков «<a href="http://web-standards.ru/">Веб-стандарты</a>» представляет новый формат мероприятий под названием <strong>Web Standards Days</strong>. Главной целью этих встреч является качественное образование и обмен опытом в области веб-разработки. Подобный формат не подразумевает продвижение каких-либо отдельных коммерческих интересов и технологий — нас объединяет идея построения единого открытого веба.</p>
+    <div id="donate">
+        <p>Участие во всех наших встречах <strong>бесплатное,</strong> но вы всегда можете <a href="#donate" class="anchor">поддержать проект</a>.</p>
+        <iframe src="https://money.yandex.ru/embed/donate.xml?uid=41001119329753&amp;default-sum=100&amp;targets=%d0%9f%d0%be%d0%b4%d0%b4%d0%b5%d1%80%d0%b6%d0%ba%d0%b0&amp;project-name=%d0%92%d0%b5%d0%b1-%d1%81%d1%82%d0%b0%d0%bd%d0%b4%d0%b0%d1%80%d1%82%d1%8b&amp;project-site=http%3a%2f%2fweb-standards.ru%2f&amp;button-text=01&amp;hint=" width="450" height="105" class="donate-form"></iframe>
+    </div>
+    <p>Отчёты о проведённых событиях, видео докладов и файлы презентаций вы можете найти в разделе «<a href="http://web-standards.ru/category/events/">События</a>» нашего флагманского сайта.</p>
+    <p>Смотрите наши видео <a href="http://vimeo.com/channels/wstdays">на канале Web Standards Days</a> на Vimeo, читайте новости и анонсы в Твиттере: <a href="https://twitter.com/webstandards_ru">@webstandards_ru</a>.</p>
+    <p>Контактный e-mail: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
+    <script src="//yandex.st/share/share.js"></script>
+    <p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
+</article>
 <article id="calendar" class="article">
     <header>
         <h2>Календарь событий</h2>
@@ -21,6 +41,38 @@
             </ol>
         </li>
     </ol>
+</article>
+<article id="speakers" class="article">
+    <header>
+        <h2>Наши докладчики</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <ul class="speakers">
+        {% for id, speaker in speakers %}
+        <li>
+            <span>{{ speaker.firstName}} {{ speaker.lastName }}</span>
+            <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker.firstName}} {{ speaker.lastName }}">
+        </li>
+        {% endfor %}
+
+        <li class="speakers-join">
+            Хотите стать докладчиком?<br>
+            <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>
+        </li>
+    </ul>
+</article>
+<article id="video" class="article">
+    <header>
+        <h2>Видео со встреч</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <iframe src="http://player.vimeo.com/video/34190518?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
+    <p><a href="http://vimeo.com/34190518">Бесчеловечные эксперименты над CSS</a> — Роман Комаров</p>
+    <iframe src="http://player.vimeo.com/video/34197672?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
+    <p><a href="http://vimeo.com/34197672">-Пре-фиксы: зачем и как правильно</a> — Вадим Макеев</p>
+    <iframe src="http://player.vimeo.com/video/34212051?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
+    <p><a href="http://vimeo.com/34212051">Причеши свой код. Правила хорошего тона в CSS</a> — Вячеслав Олиянчук</p>
+    <p>Больше видео <a href="http://vimeo.com/channels/wstdays">на канале Web Standards Days</a> на Vimeo.</p>
 </article>
 
 {% endblock %}

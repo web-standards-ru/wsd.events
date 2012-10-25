@@ -19,7 +19,12 @@ def index():
         event_date = data['events'][event]['date']
         data['events'][event]['url'] = '/'.join(['%s' % s for s in event_date.split('-')[::-1]])
 
-    return render_template('index.html', events=data['events'], speakers=data['speakers'],
+    speakers = sorted(
+        [(key, data['speakers'][key]) for key in data['speakers']],
+        key=lambda x: x[1]['lastName']
+    )
+
+    return render_template('index.html', events=data['events'], speakers=speakers,
         presentations=data['presentations'])
 
 
