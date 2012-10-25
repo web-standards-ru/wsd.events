@@ -1,7 +1,7 @@
 {
     "minsk-2012":{
         "date":"27-10-2012",
-        "timestamp":1351314000,
+        "timestamp":1351296000,
         "timezone":"UTC+3",
         "place":{
             "city":"Минск",
@@ -25,24 +25,27 @@
             "limit":350,
             "custom":"<p>Для регистрации отправьте СМС с текстом «2222» на номер <a href='tel:4433'>4433</a>.</p>"
         },
-        "schedule":[
-            {
-                "time":"10:30",
-                "title":"Регистрация, общение"
-            },
-            {
-                "time":"11:00",
-                "title":"Открытие"
-            },
-            {
-                "time":"11:15",
-                "presentation":"die-photoshop-die"
-            },
-            {
-                "time":"12:20",
-                "presentation":"press-here"
-            }
-        ],
+        "schedule":{
+            "startTime":"11:00",
+            "presentations":[
+                {
+                    "duration":"30",
+                    "title":"Регистрация, общение"
+                },
+                {
+                    "duration":"15",
+                    "title":"Открытие"
+                },
+                {
+                    "duration":"45",
+                    "presentation":"die-photoshop-die"
+                },
+                {
+                    "duration":"45",
+                    "presentation":"press-here"
+                }
+            ]
+        },
         "partners":[
             {"Организаторы":["lovata-group", "opera-software"]},
             {"Партнёры":["oz.by"]},

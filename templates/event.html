@@ -39,7 +39,7 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ol class="schedule">
-        {% for item in event.schedule %}
+        {% for item in event.schedule.presentations %}
             {% if item.presentation %}
             <li>
                 <time>{{ item.time }}</time>
