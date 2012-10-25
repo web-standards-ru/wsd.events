@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Война браузеров{% endblock %}
+
+{% block main %}
+
+<p id="browser-war">Конкурс «Война браузеров»</p>
+<nav id="navigation">
+    <ul>
+        <li><a href="#wars">Участники</a></li>
+        <li><a href="#rules">Правила</a></li>
+        <li><a href="#jury">Жюри</a></li>
+        <li><a href="#prize">Призы</a></li>
+    </ul>
+</nav>
+<article id="intro" class="article">
+    <header>
+        <h2>Война браузеров</h2>
+    </header>
+    <p>Сообщество разработчиков «<a href="http://web-standards.ru/">Веб-стандарты</a>» совместно с компанией <a href="http://mail.ru/">Mail.Ru</a> провели конкурс для веб-разработчиков на знание современных веб-технологий. Призом был <a href="#prize" class="anchor">современный планшетный компьютер</a>. Церемония награждения и вручения призов победителям состоялась <strong>29 октября 2011 года</strong> на встрече <a href="http://webstandardsdays.ru/2011/10/29/">Web Standards Days в Минске</a>.</p>
+    <ul>
+        <li>Победитель конкурса:<br> <a href="/_old/browser-war/wars/castle/">Замок</a> — Романа Комарова из Москвы, Россия</li>
+        <li>Второе место:<br> <a href="/_old/browser-war/wars/history/">История</a> — Антона Немцева из Киева, Украина.</li>
+    </ul>
+</article>
+<article id="wars" class="article">
+    <header>
+        <h2>Участники</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <ul>
+        <li><a href="/_old/browser-war/wars/carousel/">Карусель</a> — Виктора Гринчика из Минска, Беларусь.</li>
+        <li><a href="/_old/browser-war/wars/cars/">Машины</a> — Дмитрия Радыно из Молодечно, Беларусь.</li>
+        <li><a href="/_old/browser-war/wars/combat/">Схватка</a> — Георгия Калихмана из Самары, Россия.</li>
+        <li><a href="/_old/browser-war/wars/fight/">Драка</a> — Михаила Павлова из Тимашевска, Россия.</li>
+        <li><a href="/_old/browser-war/wars/frames/">Кадры</a> — Антона Иванова из Беларуси.</li>
+        <li><a href="/_old/browser-war/wars/galaxy/">Галактика</a> — Александра Францкевича из Минска, Беларусь.</li>
+        <li><a href="/_old/browser-war/wars/lunch/">Обед</a> — Антона Бакая из Феодосии, Украина.</li>
+        <li><a href="/_old/browser-war/wars/shooter/">Тир</a> — Евгения Михайловского из Барановичей, Беларусь.</li>
+    </ul>
+</article>
+<article id="rules" class="article">
+    <header>
+        <h2>Правила</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <p>Участникам было необходимо сделать HTML-страницу с комиксом на тему «Война браузеров».</p>
+    <p>CSS, JavaScript, графика и любые другие необходимые ресурсы должны были содержаться внутри страницы. Исключение составляли веб-шрифты и JavaScript-библиотеки, которые могли быть подключены к работе с внешних CDN: <a href="http://www.google.com/webfonts/">Google Web Fonts</a>, <a href="http://api.yandex.ru/jslibs/libs.xml">Яндекс.API</a>. В итоге, должен был получиться <strong>один</strong> работоспособный файл.</p>
+    <hr>
+    <p>Главным в этом конкурсе были технологии, а не сюжеты. Задачей было по-максимуму выжать всё из технологий: CSS, JavaScript, SVG, Canvas и так далее.</p>
+    <p>Полная кроссбраузерность не являлась обязательным условием, но широкая поддержка браузеров и грамотная деградация для старых браузеров учитывались при голосовании.</p>
+    <p>Для тех, кому лень было придумывать сюжет, были даны три заготовки на выбор.</p>
+</article>
+<article id="jury" class="article">
+    <header>
+        <h2>Жюри</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <dl id="andrew-sumin" class="card">
+        <dt>Андрей Сумин</dt>
+        <dd>
+            <img src="/static/speakers/andrew-sumin.jpg" alt="Андрей Сумин">
+            Руководитель разработки клиентской части в <a href="http://mail.ru/">Mail.Ru</a>, постоянный участник встреч Web Standards Days, автор библиотеки <a href="http://jsx.ru/">JSX</a>.
+        </dd>
+    </dl>
+    <dl id="pavel-lovtsevich" class="card">
+        <dt>Павел Ловцевич</dt>
+        <dd>
+            <img src="/static/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич">
+            Веб-разработчик, технический директор компании <a href="http://lovata.com/">LOVATA Group</a> и руководитель минской команды клиентской разработки компании <a href="http://hh.ru/">HeadHunter</a>. Участник объединения разработчиков «Веб-стандарты». Докладчик ряда отраслевых конференций и образовательных мероприятий.
+        </dd>
+    </dl>
+    <dl id="vadim-makeev" class="card">
+        <dt>Вадим Макеев</dt>
+        <dd>
+            <img src="/static/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+            Веб-евангелист в компании <a href="http://opera.com/">Opera Software</a>. Веб-разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.
+        </dd>
+    </dl>
+</article>
+<article id="prize" class="article">
+    <header>
+        <h2>Приз</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <p>Участники сами выбирали какое устройство они хотели получить в качестве приза: Samsung Galaxy Tab 10.1 или Apple iPad 2</p>
+</article>
+
+{% endblock %}

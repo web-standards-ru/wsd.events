@@ -3,6 +3,7 @@
 import json
 
 from flask import Flask, render_template
+from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
 
@@ -56,6 +57,14 @@ def event(year, month, day):
 def register(year, month, day):
 
     return u'Регистрация на событие'
+
+
+@app.route('/<staticpage>/')
+def staticpage(staticpage):
+    try:
+        return render_template('staticpages/%s.html' % staticpage)
+    except TemplateNotFound, e:
+        return render_template('page-not-found.html'), 404
 
 
 if __name__ == '__main__':
