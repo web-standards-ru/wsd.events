@@ -76,6 +76,8 @@ def event(year, month, day):
     else:
         show_registration = False
 
+    event['archived'] = time.time() > event['timestamp'] + 86400
+
     return render_template('event.html', date=event_date, data=data, event=event, speakers=speakers,
         speakers_dict=speakers_dict, partners=data['partners'], show_registration = show_registration)
 
