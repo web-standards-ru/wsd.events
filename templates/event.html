@@ -67,7 +67,7 @@
         <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}{% if speaker['twitter'] %} <a href="http://twitter.com/{{ speaker['twitter'] }}">@{{ speaker['twitter'] }}</a>{% endif %}</dt>
         <dd>
             <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
-            {{ speaker['bio'] }}
+            {{ speaker['bio']|safe() }}
         </dd>
     </dl>
     {% endfor %}
@@ -83,7 +83,7 @@
                 <dt><a href="{{ partners[partner].sitename }}">{{ partners[partner].title }}</a></dt>
                 <dd>
                     <a href="{{ partners[partner].sitename }}"><img src="/static/partners/{{ partner }}.png" alt="{{ partners[partner].title }}"></a>
-                    {{ partners[partner].description }}
+                    {{ partners[partner].description|safe() }}
                 </dd>
             </dl>
             {% endif %}
