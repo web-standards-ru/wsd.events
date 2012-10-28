@@ -44,7 +44,7 @@
                     {{ event.place.city }}
                     {% else %}
                     <time>{{ event.timestamp|day() }} {{ event.timestamp|month() }}</time>
-                    <a href="/{{ event.url }}/">{{ event.place.city }}</a>
+                    <a href="/events/{{ event.id }}/">{{ event.place.city }}</a>
                     {% endif %}
                 </li>
                 {% endfor %}

@@ -2,9 +2,9 @@
 
 import json
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
 
 app = Flask(__name__)
@@ -83,20 +83,26 @@ def index():
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
-def event(year, month, day):
-    import time
-    from datetime import datetime, timedelta
-
-    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
-
+def legacy_event(year, month, day):
+    events = json.load(open('data/events.json'))
     event_date = '%s-%s-%s' % (add_null(day), add_null(month), year)
 
-    try:
-        event = filter(lambda x: x if x['date'] == event_date else False, data['events'].values())[0]
-    except IndexError:
+    event = (k for k, v in events.iteritems() if v['date'] == event_date)
+    event_id = list(event)[0]
+
+    return redirect('/events/%s/' % event_id)
+
+
+@app.route('/events/<id>/')
+def event(id):
+    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
+
+    print id
+
+    if data['events'].has_key(id):
+        event = data['events'][id]
+    else:
         return render_template('page-not-found.html'), 404
-    except Exception:
-        return render_template('server-error.html'), 500
 
     addTimestamp(event)
 
@@ -138,7 +144,7 @@ def event(year, month, day):
 
     event['archived'] = time.time() > event['timestamp'] + 86400
 
-    return render_template('event.html', date=event_date, data=data, event=event, speakers=speakers,
+    return render_template('event.html', data=data, event=event, speakers=speakers,
         speakers_dict=speakers_dict, partners=data['partners'], show_registration = show_registration)
 
 
