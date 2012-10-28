@@ -3,17 +3,26 @@
 
 {% block main %}
 
-<!-- TODO: Сделать определение условий вывода меню -->
-
 <nav id="navigation">
     <ul>
-        <li><a href="#schedule">Программа встречи</a></li>
-        <li><a href="#speakers">Участники и партнёры</a></li>
-        {% if show_registration %}
-        <li><a href="#register">Регистрация</a></li>
+        {% if event.schedule %}
+            <li><a href="#schedule">Программа встречи</a></li>
         {% endif %}
+
+        {% if speakers %}
+            {% if event.parters %}
+                <li><a href="#speakers">Участники и партнёры</a></li>
+            {% else %}
+                <li><a href="#speakers">Участники</a></li>
+            {% endif %}
+        {% endif %}
+
+        {% if show_registration %}
+            <li><a href="#register">Регистрация</a></li>
+        {% endif %}
+
         {% if event.place.coord %}
-        <li><a href="#location">Место проведения</a></li>
+            <li><a href="#location">Место проведения</a></li>
         {% endif %}
     </ul>
 </nav>
@@ -23,16 +32,19 @@
         <h1>{{ event.place.city }}, {{ event.date }}</h1>
         <!-- TODO: написать фильтр date_human -->
     </header>
-    {% if event.archived %}
-        {{ event.description.after|safe() }}
-    {% else %}
-        {{ event.description.before|safe() }}
+    {% if event.description %}
+        {% if event.archived %}
+            {{ event.description.after|safe() }}
+        {% else %}
+            {{ event.description.before|safe() }}
+        {% endif %}
     {% endif %}
 
     <script src="//yandex.st/share/share.js"></script>
     <p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
 </article>
 
+{% if event.schedule %}
 <article id="schedule" class="article">
     <header>
         <h2>Программа встречи</h2>
@@ -60,10 +72,16 @@
     <p>Расписание может незначительно измениться, следите за новостями на нашем твиттер-канале: <a href="https://twitter.com/webstandards_ru">webstandards_ru</a>.</p>
     {% endif %}
 </article>
+{% endif %}
 
+{% if speakers %}
 <article id="speakers" class="article">
     <header>
-        <h2>Участники и партнёры</h2>
+        {% if event.parters %}
+            <li>Участники и партнёры</li>
+        {% else %}
+            <li>Участники</li>
+        {% endif %}
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
 
@@ -78,6 +96,7 @@
     {% endfor %}
 
 <hr>
+{% endif %}
 
 {% for categories in event.partners %}
     {% for category in categories %}
@@ -111,18 +130,20 @@
 {% endif %}
 
 {% if event.place.coord %}
-    <article id="location" class="article">
-        <header>
-            <h2>Место проведения</h2>
-            <a href="#main" title="Наверх" class="top">Наверх</a>
-        </header>
-        <p id="map"><img src="http://static-maps.yandex.ru/1.x/?ll={{ event.place.coord }}&amp;size=360,360&amp;z={{ event.place.zoom }}&amp;l=map&amp;pt={{ event.place.coord }},pm2orgl&amp;key=AIRHgE8BAAAA8ZWwHwIAmGnk_6mYfhSGNKGXGnXQvkl-l6IAAAAAAAAAAABVD9wC7PE13de3TAxuXNzFvh-T-g==" alt="Карта места проведения встречи"></p>
+<article id="location" class="article">
+    <header>
+        <h2>Место проведения</h2>
+        <a href="#main" title="Наверх" class="top">Наверх</a>
+    </header>
+    <p id="map"><img src="http://static-maps.yandex.ru/1.x/?ll={{ event.place.coord }}&amp;size=360,360&amp;z={{ event.place.zoom }}&amp;l=map&amp;pt={{ event.place.coord }},pm2orgl&amp;key=AIRHgE8BAAAA8ZWwHwIAmGnk_6mYfhSGNKGXGnXQvkl-l6IAAAAAAAAAAABVD9wC7PE13de3TAxuXNzFvh-T-g==" alt="Карта места проведения встречи"></p>
+    {% if event.place.description %}
         {% if event.archived %}
             {{ event.place.description.after|safe() }}
         {% else %}
             {{ event.place.description.before|safe() }}
         {% endif %}
-    </article>
+    {% endif %}
+</article>
 {% endif %}
 
 {% endblock %}

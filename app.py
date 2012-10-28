@@ -81,18 +81,33 @@ def event(year, month, day):
 
     addTimestamp(event)
 
-    for schedule_item in event['schedule']['presentations']:
-        if schedule_item.has_key('presentation'):
-            schedule_item['presentation'] = data['presentations'][schedule_item['presentation']]
+    if event.has_key('schedule'):
+        for schedule_item in event['schedule']['presentations']:
+            if schedule_item.has_key('presentation'):
+                schedule_item['presentation'] = data['presentations'][schedule_item['presentation']]
 
-    speakers_keys = [x['presentation']['speaker'] for x in filter(lambda x: x.has_key('presentation'), event['schedule']['presentations'])]
+        speakers_keys = [x['presentation']['speaker'] for x in filter(lambda x: x.has_key('presentation'), event['schedule']['presentations'])]
 
-    speakers = sorted(
-        [(key, data['speakers'][key]) for key in speakers_keys],
-        key=lambda x: x[1]['lastName']
-    )
+        speakers = sorted(
+            [(key, data['speakers'][key]) for key in speakers_keys],
+            key=lambda x: x[1]['lastName']
+        )
 
-    speakers_dict = {x:'%s %s' % (y['firstName'], y['lastName']) for x, y in speakers}
+        speakers_dict = {x:'%s %s' % (y['firstName'], y['lastName']) for x, y in speakers}
+
+
+        date = datetime.utcfromtimestamp(event['timestamp'])
+
+        start_time = event['schedule']['startTime'].split(":")
+        clock = date + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
+
+        for item in event['schedule']['presentations']:
+            item['time'] = "%s:%s" % (clock.hour, add_null(clock.minute))
+            clock += timedelta(minutes=int(item['duration']))
+    else:
+        speakers = []
+        speakers_dict = {}
+
 
     if event.has_key('registration'):
         if event['registration']['open'] < time.time() < event['registration']['close'] and not event['registration'].has_key('force_close'):
@@ -101,17 +116,6 @@ def event(year, month, day):
             show_registration = False
     else:
         show_registration = False
-
-    date = datetime.utcfromtimestamp(event['timestamp'])
-
-    start_time = event['schedule']['startTime'].split(":")
-    clock = date + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
-
-    for item in event['schedule']['presentations']:
-        item['time'] = "%s:%s" % (clock.hour, add_null(clock.minute))
-        clock += timedelta(minutes=int(item['duration']))
-
-    print event['schedule']['presentations']
 
     event['archived'] = time.time() > event['timestamp'] + 86400
 
