@@ -38,7 +38,7 @@ def month(ts, case='v'):
         'i': (u'январь', u'февраль',u'март',u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь', u'ноябрь', u'декабрь'),
         'v': (u'января', u'февраля',u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября', u'ноября', u'декабря')
     }
-    return months[case][int(datetime.fromtimestamp(ts).strftime("%m"))]
+    return months[case][int(datetime.fromtimestamp(ts).strftime("%m"))-1]
 
 app.jinja_env.filters['day'] = day
 app.jinja_env.filters['month'] = month
@@ -88,9 +88,12 @@ def legacy_event(year, month, day):
     event_date = '%s-%s-%s' % (add_null(day), add_null(month), year)
 
     event = (k for k, v in events.iteritems() if v['date'] == event_date)
-    event_id = list(event)[0]
+    if len(list(event)):
+        event_id = list(event)[0]
+        return redirect('/events/%s/' % event_id)
+    else:
+        return render_template('page-not-found.html'), 404
 
-    return redirect('/events/%s/' % event_id)
 
 
 @app.route('/events/<id>/')
