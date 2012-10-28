@@ -19,8 +19,6 @@ def setSpeakerById(dict, speakers):
 
 
 def addTimestamp(el):
-    print el
-    print el['date']
     date = [int(x) for x in el['date'].split("-")]
     el['timestamp'] = time.mktime((date[2], date[1], date[0], 0, 0, 0, 0, 0, 0))
 
@@ -43,6 +41,15 @@ def month(ts, case='v'):
 app.jinja_env.filters['day'] = day
 app.jinja_env.filters['month'] = month
 app.jinja_env.filters['year'] = year
+
+
+@app.context_processor
+def utility_processor():
+    def get_static(path, static_dir=app.static_folder):
+        import os
+        f = os.path.join(static_dir, path)
+        return ("%s/%s?v=%s") % (app.static_url_path, path, int(os.stat(f).st_mtime))
+    return dict(get_static=get_static)
 
 
 @app.route('/')
@@ -99,8 +106,6 @@ def legacy_event(year, month, day):
 @app.route('/events/<id>/')
 def event(id):
     data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
-
-    print id
 
     if data['events'].has_key(id):
         event = data['events'][id]

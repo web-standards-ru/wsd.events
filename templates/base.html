@@ -5,16 +5,18 @@
     <title>Web Standards Days — {% block title %}{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=910">
-    <link rel="icon" sizes="16x16" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='s/screen.css') }}">
+    <link rel="icon" sizes="16x16" href="{{ get_static('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ get_static('favicon.png') }}">
+    <link rel="stylesheet" href="{{ get_static('s/screen.css') }}">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='s/screen.css') }}">-->
+
     <!--[if lte IE 7]>
-    <link rel="stylesheet" href="{{ url_for('static', filename='s/ie.css') }}"><![endif]-->
+    <link rel="stylesheet" href="{{ get_static('s/ie.css') }}"><![endif]-->
     <!--[if IE]>
-    <script src="{{ url_for('static', filename='j/html5.js') }}"></script><![endif]-->
+    <script src="{{ get_static('j/html5.js') }}"></script><![endif]-->
     <script src="http://yandex.st/jquery/1.8.1/jquery.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU"></script>
-    <script src="{{ url_for('static', filename='j/script.js') }}"></script>
+    <script src="{{ get_static('j/script.js') }}"></script>
 </head>
 <body>
 <header id="header" role="banner">
