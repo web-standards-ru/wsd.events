@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
+import time
 
 from flask import Flask, render_template
 from jinja2 import TemplateNotFound
@@ -17,15 +18,35 @@ def setSpeakerById(dict, speakers):
     return dict
 
 
+def addTimestamp(el):
+
+    print el
+    print el['date']
+    date = [int(x) for x in el['date'].split("-")]
+    el['timestamp'] = time.mktime((date[2], date[1], date[0], 0, 0, 0, 0, 0, 0))
+
+
 @app.route('/')
 def index():
     import random
 
     data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
 
-    for event in data['events']:
-        event_date = data['events'][event]['date']
-        data['events'][event]['url'] = '/'.join(['%s' % s for s in event_date.split('-')[::-1]])
+    for id in data['events']:
+        data['events'][id]['id'] = id
+        addTimestamp(data['events'][id])
+
+    events = sorted(data['events'].values(), key=lambda el: el['timestamp'])
+
+    events_dict = {}
+
+    for event in reversed(events):
+        event_date = event['date']
+        event['url'] = '/'.join(['%s' % s for s in event_date.split('-')[::-1]])
+        year = event['date'].split("-")[2]
+        if not events_dict.has_key(year):
+            events_dict[year] = []
+        events_dict[year].append(event)
 
     speakers = sorted(
         [(key, data['speakers'][key]) for key in data['speakers']],
@@ -36,8 +57,10 @@ def index():
 
     map(lambda x: setSpeakerById(x, data['speakers']), presentations)
 
-    return render_template('index.html', events=data['events'], speakers=speakers,
-        presentations=presentations)
+    today = time.time() + 60 * 60 * 24
+
+    return render_template('index.html', history=events_dict, speakers=speakers,
+        presentations=presentations, today=today)
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
@@ -55,6 +78,8 @@ def event(year, month, day):
         return render_template('page-not-found.html'), 404
     except Exception:
         return render_template('server-error.html'), 500
+
+    addTimestamp(event)
 
     for schedule_item in event['schedule']['presentations']:
         if schedule_item.has_key('presentation'):

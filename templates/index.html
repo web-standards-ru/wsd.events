@@ -23,23 +23,29 @@
     <p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
 </article>
 <article id="calendar" class="article">
+
     <header>
         <h2>Календарь событий</h2>
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ol class="history">
+        {% for year in history|dictsort()|reverse() %}
         <li>
-            <time class="year">2012</time>
+            <time class="year">{{ year.0 }}</time>
             <ol class="schedule">
-                {% for event in events %}
-
+                {% for event in year.1 %}
+                {% if event.timestamp > today %}
                 <li class="current">
-                    <time>{{ events[event].date }}</time>
-                    <a href="/{{ events[event].url }}/">{{ events[event].place.city }}</a>
+                {% else %}
+                <li>
+                {% endif %}
+                    <time>{{ event.date }}</time>
+                    <a href="/{{ event.url }}/">{{ event.place.city }}</a>
                 </li>
                 {% endfor %}
             </ol>
         </li>
+        {% endfor %}
     </ol>
 </article>
 <article id="speakers" class="article">
