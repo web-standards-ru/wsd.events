@@ -2,6 +2,7 @@
 
 import json
 import time
+from datetime import datetime
 
 from flask import Flask, render_template
 from jinja2 import TemplateNotFound
@@ -14,16 +15,34 @@ def add_null(val):
 
 def setSpeakerById(dict, speakers):
     dict['speaker'] = speakers[dict['speaker']]
-
     return dict
 
 
 def addTimestamp(el):
-
     print el
     print el['date']
     date = [int(x) for x in el['date'].split("-")]
     el['timestamp'] = time.mktime((date[2], date[1], date[0], 0, 0, 0, 0, 0, 0))
+
+
+def day(ts):
+    return datetime.fromtimestamp(ts).strftime("%d")
+
+
+def year(ts):
+    return datetime.fromtimestamp(ts).strftime("%Y")
+
+
+def month(ts, case='v'):
+    months = {
+        'i': (u'январь', u'февраль',u'март',u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь', u'ноябрь', u'декабрь'),
+        'v': (u'января', u'февраля',u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября', u'ноября', u'декабря')
+    }
+    return months[case][int(datetime.fromtimestamp(ts).strftime("%m"))]
+
+app.jinja_env.filters['day'] = day
+app.jinja_env.filters['month'] = month
+app.jinja_env.filters['year'] = year
 
 
 @app.route('/')

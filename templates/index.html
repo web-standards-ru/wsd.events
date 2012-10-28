@@ -29,18 +29,23 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ol class="history">
-        {% for year in history|dictsort()|reverse() %}
+        {% for history_year in history|dictsort()|reverse() %}
         <li>
-            <time class="year">{{ year.0 }}</time>
+            <time class="year">{{ history_year.0 }}</time>
             <ol class="schedule">
-                {% for event in year.1 %}
+                {% for event in history_year.1 %}
                 {% if event.timestamp > today %}
                 <li class="current">
                 {% else %}
                 <li>
                 {% endif %}
-                    <time>{{ event.date }}</time>
+                    {% if event.inaccurateDate %}
+                    <time>{{ event.timestamp|month("i") }}</time>
+                    {{ event.place.city }}
+                    {% else %}
+                    <time>{{ event.timestamp|day() }} {{ event.timestamp|month() }}</time>
                     <a href="/{{ event.url }}/">{{ event.place.city }}</a>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ol>

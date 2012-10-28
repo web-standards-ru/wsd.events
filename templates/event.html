@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ event.place.city }}, {{ event.date }}{% endblock %}
+{% block title %}{{ event.place.city }}, {{ event.timestamp|day() }} {{ event.timestamp|month() }} {{ event.timestamp|year() }} года{% endblock %}
 
 {% block main %}
 
@@ -29,8 +29,7 @@
 
 <article id="intro" class="article">
     <header>
-        <h1>{{ event.place.city }}, {{ event.date }}</h1>
-        <!-- TODO: написать фильтр date_human -->
+        <h1>{{ event.place.city }}, {{ event.timestamp|day() }} {{ event.timestamp|month() }} {{ event.timestamp|year() }} года</h1>
     </header>
     {% if event.description %}
         {% if event.archived %}
