@@ -46,10 +46,10 @@ a {
 	}
 #twitter:after {
 	position:absolute;
-	top:-55px;
-	left:-35px;
+	top:-35px;
+	left:-65px;
 	width:67px;
-	height:46px;
+	height:55px;
 	background:url(../i/twitter.png) repeat-x;
 	content:'';
 	}
@@ -178,21 +178,24 @@ a {
 		margin:-8px 0 0;
 		height:65px;
 		}
-	#navigation li * {
-		display:block;
+	#navigation li a {
+		display:inline-block;
 		padding:8px 16px;
 		-webkit-border-radius:20px;
 		-moz-border-radius:20px;
 		border-radius:20px;
 		color:#8AB219;
 		}
+		#navigation li span {
+			color:#CCC;
+			}
 	#navigation li a:hover {
 		background:#9ECB1D;
 		color:#FFF;
 		}
-	#navigation li span {
-		color:#CCC;
-		}
+		#navigation li a:hover span {
+			color:#FFF;
+			}
 
 /* Content Primary
 ---------------------------------------- */
