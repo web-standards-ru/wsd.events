@@ -31,11 +31,11 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ol class="history">
-        {% for history_year in history|dictsort()|reverse() %}
+        {% for history_year, events in history %}
         <li>
-            <time class="year">{{ history_year.0 }}</time>
+            <time class="year">{{ history_year }}</time>
             <ol class="schedule">
-                {% for event in history_year.1 %}
+                {% for event in events %}
                 {% if event.timestamp > today %}
                 <li class="current">
                 {% else %}
@@ -61,10 +61,10 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ul class="speakers">
-        {% for id, speaker in speakers %}
+        {% for speaker in speakers %}
         <li>
             <span>{{ speaker.firstName}} {{ speaker.lastName }}</span>
-            <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker.firstName}} {{ speaker.lastName }}">
+            <img src="/static/speakers/{{ speaker.id }}.jpg" alt="{{ speaker.firstName}} {{ speaker.lastName }}">
         </li>
         {% endfor %}
 

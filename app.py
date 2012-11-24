@@ -21,6 +21,7 @@ def setSpeakerById(dict, speakers):
 def addTimestamp(el):
     date = [int(x) for x in el['date'].split("-")]
     el['timestamp'] = time.mktime((date[2], date[1], date[0], 0, 0, 0, 0, 0, 0))
+    return el
 
 
 def day(ts):
@@ -55,79 +56,65 @@ def utility_processor():
 @app.route('/')
 def index():
     import random
+    from itertools import groupby
 
     data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
 
-    for id in data['events']:
-        data['events'][id]['id'] = id
-        addTimestamp(data['events'][id])
-
-    events = sorted(data['events'].values(), key=lambda el: el['timestamp'])
-
-    events_dict = {}
-
-    for event in reversed(events):
-        event_date = event['date']
-        event['url'] = '/'.join(['%s' % s for s in event_date.split('-')[::-1]])
-        year = event['date'].split("-")[2]
-        if not events_dict.has_key(year):
-            events_dict[year] = []
-        events_dict[year].append(event)
-
-    speakers = sorted(
-        [(key, data['speakers'][key]) for key in data['speakers']],
-        key=lambda x: x[1]['lastName']
-    )
-
-    presentations = random.sample(filter(lambda x: x.has_key('video_id'), data['presentations'].values()), 3)
-
-    map(lambda x: setSpeakerById(x, data['speakers']), presentations)
-
-    today = time.time() + 60 * 60 * 24
-
-    return render_template('index.html', history=events_dict, speakers=speakers,
-        presentations=presentations, today=today)
+    return render_template('index.html', 
+        history = groupby(
+            sorted(
+                map(addTimestamp, data['events']), 
+                key=lambda x: x['timestamp'], 
+                reverse=True), 
+            key=lambda x: x['date'].split("-")[2]
+            ), 
+        speakers = sorted(data['speakers'], key=lambda x: x['lastName']),
+        presentations = random.sample(filter(lambda x: 'video_id' in x, data['presentations'].values()), 3), 
+        today = time.time() + 60 * 60 * 24
+        )
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def legacy_event(year, month, day):
+    date = '%s-%s-%s' % (add_null(day), add_null(month), year)
     events = json.load(open('data/events.json'))
-    event_date = '%s-%s-%s' % (add_null(day), add_null(month), year)
+    event = reduce(lambda init, x: x if x['date'] == date else init, events, None)
 
-    event = (k for k, v in events.iteritems() if v['date'] == event_date)
-    if len(list(event)):
-        event_id = list(event)[0]
-        return redirect('/events/%s/' % event_id)
-    else:
-        return render_template('page-not-found.html'), 404
-
+    return redirect('/events/%s/' % event['id']) if event else (render_template('page-not-found.html'), 404)
 
 
 @app.route('/events/<id>/')
 def event(id):
-    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'partners', 'presentations', 'speakers']}
+    events, partners, presentations, speakers = (json.load(open('data/%s.json' % i)) 
+        for i in ('events', 'partners', 'presentations', 'speakers'))
 
-    if data['events'].has_key(id):
-        event = data['events'][id]
-    else:
+    event = reduce(lambda init, x: x if x['id'] == id else init, events, None)
+
+    if not event:
         return render_template('page-not-found.html'), 404
 
     addTimestamp(event)
 
-    if event.has_key('schedule'):
-        for schedule_item in event['schedule']['presentations']:
-            if schedule_item.has_key('presentation'):
-                schedule_item['presentation'] = data['presentations'][schedule_item['presentation']]
+    if 'schedule' in event:
+        event['schedule']['presentations'] = map(
+            lambda x: x['presentation'] = presentations[x['presentation']] if 'presentation' in x else None,
+            event['schedule']['presentations']
+            )
 
-        speakers_keys = [x['presentation']['speaker'] for x in filter(lambda x: x.has_key('presentation'), event['schedule']['presentations'])]
+        speakers_keys = map(
+            lambda x: x['presentation'].get('speaker'), 
+            filter(
+                lambda x: 'presentation' in x, 
+                event['schedule']['presentations']
+                )
+            )
 
-        speakers = sorted(
-            [(key, data['speakers'][key]) for key in speakers_keys],
-            key=lambda x: x[1]['lastName']
-        )
+        speakers = filter(
+            lambda x: x['id'] in speakers_keys, 
+            sorted(speakers, key=lambda x: x['lastName'])
+            )
 
-        speakers_dict = {x:'%s %s' % (y['firstName'], y['lastName']) for x, y in speakers}
-
+        speakers_dict = {'%s %s' % (x['firstName'], x['lastName']) for x in speakers}
 
         date = datetime.utcfromtimestamp(event['timestamp'])
 
@@ -141,24 +128,24 @@ def event(id):
         speakers = []
         speakers_dict = {}
 
-
-    if event.has_key('registration'):
-        if event['registration']['open'] < time.time() < event['registration']['close'] and not event['registration'].has_key('force_close'):
-            show_registration = True
-        else:
-            show_registration = False
+    if 'registration' in event and 'force_close' not in event['registration']:
+        show_registration = event['registration']['open'] < time.time() < event['registration']['close']
     else:
         show_registration = False
 
     event['archived'] = time.time() > event['timestamp'] + 86400
 
-    return render_template('event.html', data=data, event=event, speakers=speakers,
-        speakers_dict=speakers_dict, partners=data['partners'], show_registration = show_registration)
+    return render_template('event.html', 
+        event=event, 
+        speakers=speakers,
+        speakers_dict=speakers_dict, 
+        partners=partners, 
+        show_registration = show_registration
+        )
 
 
-@app.route('/<int:year>/<int:month>/<int:day>/register/')
+@app.route('/events/<id>/register/')
 def register(year, month, day):
-
     return u'Регистрация на событие'
 
 

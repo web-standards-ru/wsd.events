@@ -76,19 +76,19 @@
 {% if speakers %}
 <article id="speakers" class="article">
     <header>
-        {% if event.parters %}
-            <li>Участники и партнёры</li>
+        {% if event.partners %}
+            <h2>Участники и партнёры</h2>
         {% else %}
-            <li>Участники</li>
+            <h2>Участники</h2>
         {% endif %}
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
 
-    {% for id, speaker in speakers %}
-    <dl id="{{ id }}" class="card">
+    {% for speaker in speakers %}
+    <dl id="{{ speaker.id }}" class="card">
         <dt>{{ speaker['firstName'] }} {{ speaker['lastName'] }}{% if speaker['twitter'] %} <a href="http://twitter.com/{{ speaker['twitter'] }}">@{{ speaker['twitter'] }}</a>{% endif %}</dt>
         <dd>
-            <img src="/static/speakers/{{ id }}.jpg" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
+            <img src="/static/speakers/{{ speaker.id }}.jpg" alt="{{ speaker['firstName'] }} {{ speaker['lastName'] }}">
             {{ speaker['bio']|safe() }}
         </dd>
     </dl>
