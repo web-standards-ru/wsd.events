@@ -34,10 +34,12 @@ def year(ts):
 
 def month(ts, case='v'):
     months = {
-        'i': (u'январь', u'февраль',u'март',u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь', u'ноябрь', u'декабрь'),
-        'v': (u'января', u'февраля',u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября', u'ноября', u'декабря')
+        'i': (u'январь', u'февраль', u'март', u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь',
+              u'ноябрь', u'декабрь'),
+        'v': (u'января', u'февраля', u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября',
+              u'ноября', u'декабря')
     }
-    return months[case][int(datetime.fromtimestamp(ts).strftime("%m"))-1]
+    return months[case][int(datetime.fromtimestamp(ts).strftime("%m")) - 1]
 
 app.jinja_env.filters['day'] = day
 app.jinja_env.filters['month'] = month
@@ -48,8 +50,10 @@ app.jinja_env.filters['year'] = year
 def utility_processor():
     def get_static(path, static_dir=app.static_folder):
         import os
+
         f = os.path.join(static_dir, path)
         return ("%s/%s?v=%s") % (app.static_url_path, path, int(os.stat(f).st_mtime))
+
     return dict(get_static=get_static)
 
 
@@ -58,20 +62,20 @@ def index():
     import random
     from itertools import groupby
 
-    data = {i:json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
+    data = {i: json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
 
-    return render_template('index.html', 
-        history = groupby(
+    return render_template('index.html',
+        history=groupby(
             sorted(
-                map(addTimestamp, data['events']), 
-                key=lambda x: x['timestamp'], 
-                reverse=True), 
+                map(addTimestamp, data['events']),
+                key=lambda x: x['timestamp'],
+                reverse=True),
             key=lambda x: x['date'].split("-")[2]
-            ), 
-        speakers = sorted(data['speakers'], key=lambda x: x['lastName']),
-        presentations = random.sample(filter(lambda x: 'video_id' in x, data['presentations'].values()), 3), 
-        today = time.time() + 60 * 60 * 24
-        )
+        ),
+        speakers=sorted(data['speakers'], key=lambda x: x['lastName']),
+        presentations=random.sample(filter(lambda x: 'videoId' in x, data['presentations'].values()), 3),
+        today=time.time() + 60 * 60 * 24
+    )
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
@@ -85,7 +89,7 @@ def legacy_event(year, month, day):
 
 @app.route('/events/<id>/')
 def event(id):
-    events, partners, presentations, speakers = (json.load(open('data/%s.json' % i)) 
+    events, partners, presentations, speakers = (json.load(open('data/%s.json' % i))
         for i in ('events', 'partners', 'presentations', 'speakers'))
 
     event = reduce(lambda init, x: x if x['id'] == id else init, events, None)
@@ -96,23 +100,22 @@ def event(id):
     addTimestamp(event)
 
     if 'schedule' in event:
-        event['schedule']['presentations'] = map(
-            lambda x: x['presentation'] = presentations[x['presentation']] if 'presentation' in x else None,
-            event['schedule']['presentations']
-            )
+        for item in event['schedule']['presentations']:
+            if 'presentation' in item:
+                item['presentation'] = presentations[item['presentation']]
 
         speakers_keys = map(
-            lambda x: x['presentation'].get('speaker'), 
+            lambda x: x['presentation'].get('speaker'),
             filter(
-                lambda x: 'presentation' in x, 
+                lambda x: 'presentation' in x,
                 event['schedule']['presentations']
-                )
             )
+        )
 
         speakers = filter(
-            lambda x: x['id'] in speakers_keys, 
+            lambda x: x['id'] in speakers_keys,
             sorted(speakers, key=lambda x: x['lastName'])
-            )
+        )
 
         speakers_dict = {'%s %s' % (x['firstName'], x['lastName']) for x in speakers}
 
@@ -135,13 +138,13 @@ def event(id):
 
     event['archived'] = time.time() > event['timestamp'] + 86400
 
-    return render_template('event.html', 
-        event=event, 
+    return render_template('event.html',
+        event=event,
         speakers=speakers,
-        speakers_dict=speakers_dict, 
-        partners=partners, 
-        show_registration = show_registration
-        )
+        speakers_dict=speakers_dict,
+        partners=partners,
+        show_registration=show_registration
+    )
 
 
 @app.route('/events/<id>/register/')
