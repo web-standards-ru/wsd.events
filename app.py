@@ -117,7 +117,7 @@ def event(id):
             sorted(speakers, key=lambda x: x['lastName'])
         )
 
-        speakers_dict = {'%s %s' % (x['firstName'], x['lastName']) for x in speakers}
+        speakers_dict = dict((x['id'], '%s %s' % (x['firstName'], x['lastName'])) for x in speakers)
 
         date = datetime.utcfromtimestamp(event['timestamp'])
 
