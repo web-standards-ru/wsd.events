@@ -25,7 +25,7 @@ def addTimestamp(el):
 
 
 def day(ts):
-    return datetime.fromtimestamp(ts).strftime("%d")
+    return datetime.fromtimestamp(ts).strftime("%d").lstrip('0')
 
 
 def year(ts):
