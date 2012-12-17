@@ -22,6 +22,49 @@
         "title": "Адаптивный дизайн на практике",
         "speaker": "vadim-makeev",
         "videoId": "47073788"
-    }
+    },
 
+
+    "recode-sumin": {
+        "title": "Переверстать всё и в срок.",
+        "speaker": "andrew-sumin",
+        "slides": "recode.pdf",
+        "videoId": "47073788"
+    },
+    "error-makishvili": {
+        "title": "Ошибка. Осознание, примирение, извлечение пользы.",
+        "speaker": "vadim-makishvili",
+        "slides": "error.pdf",
+        "videoId": "47073788"
+    },
+    "web-fonts-makeev": {
+        "title": "Веб-шрифты vs. Шрифты для веба.",
+        "speaker": "vadim-makeev",
+        "slides": "web-fonts/index.htm",
+        "videoId": "47073788"
+    },
+    "html5-lovtsevich": {
+        "title": "HTML5. Будем знакомы!",
+        "speaker": "pavel-lovtsevich",
+        "slides": "html5.pdf",
+        "videoId": "47073788"
+    },
+    "webhitech-lomov": {
+        "title": "WebHiTech. Итоги 2009 и планы 2010.",
+        "speaker": "artemy-lomov",
+        "slides": "webhitech.pdf",
+        "videoId": "47073788"
+    },
+    "vml.svg.canvas-matsievsky": {
+        "title": "VML, SVG, Canvas: что дальше?",
+        "speaker": "nikolay-matsievsky",
+        "slides": "vml.svg.canvas.pdf",
+        "videoId": "47073788"
+    },
+    "troubles-efimov": {
+        "title": "Некоторые проблемы применения современных веб-технологий.",
+        "speaker": "konstantin-efimov",
+        "slides": "certain.troubles.pdf",
+        "videoId": "47073788"
+    }
 }
