@@ -299,12 +299,97 @@
         "place": {
             "city": "Москва",
             "title": "зал Экстрополис в офисе Яндекса",
-            "address": " ул. Льва Толстого, 16",
+            "address": "ул. Льва Толстого, 16",
             "url": "http://company.yandex.ru/contacts/redrose/",
-            "coord": [],
-            "zoom": 15
-        }
+            "coord": "37.58793,55.73403",
+            "zoom": 15,
+            "description": {
+                "after": "Встреча прошла в&nbsp;Москве, в&nbsp;зале Экстрополис <a href=\"http://company.yandex.ru/contacts/redrose/\">в&nbsp;офисе Яндекса</a> по&nbsp;адресу&nbsp;ул. Льва Толстого, 16."
+            }
+        },
+        "description": {
+            "after": "<p>Встреча состоялась <strong>24&nbsp;ноября 2012 года в&nbsp;Москве</strong> в&nbsp;зале Экстрополис <a href=\"http://company.yandex.ru/contacts/redrose/\">в&nbsp;офисе Яндекса</a> по&nbsp;адресу&nbsp;ул. Льва Толстого, 16. Подробнее о&nbsp;проведённых событиях вы&nbsp;можете прочесть в&nbsp;разделе «<a href=\"http://web-standards.ru/category/events/\">События</a>» нашего флагманского сайта.</p>"
+        },
+        "schedule": {
+            "startTime": "9:00",
+            "presentations": [
+                {
+                    "duration": "60",
+                    "title": "Регистрация, приветственный кофе"
+                },
+                {
+                    "duration": "30",
+                    "title": "Открытие"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "current-work-on-css-at-w3c"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "new-developments-in-semantic-web-and-internationalization-at-the-w3c"
+                },
+                {
+                    "duration": "45",
+                    "presentation": "yandex-and-w3c"
+                },
+                {
+                    "duration": "15",
+                    "title": "Перерыв"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "svgo"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "clear-and-sharp"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "javascript-patterns"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "grunt"
+                },
+                {
+                    "duration": "60",
+                    "title": "Обед"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "adaptive-web-design"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "getting-touchy"
+                },
+                {
+                    "duration": "30",
+                    "presentation": "engineer-is-also-a-designer"
+                },
+                {
+                    "duration": "15",
+                    "title": "Перерыв"
+                },
+                {
+                    "duration": "45",
+                    "presentation": "table-with-w3c"
+                },
+                {
+                    "duration": "15",
+                    "title": "Прощальный кофе"
+                }
+            ]
+        },
+        "partners": [
+            {
+                "Партнёры": ["yandex", "w3c", "opera-software", "mif"]
+            }
+        ]
     },
+
     {
         "id": "riga-2013",
         "date": "22-05-2013",

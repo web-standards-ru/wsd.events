@@ -66,5 +66,60 @@
         "speaker": "konstantin-efimov",
         "slides": "certain.troubles.pdf",
         "videoId": "47073788"
+    },
+    "current-work-on-css-at-w3c": {
+        "title": "Current work on CSS at W3C",
+        "description": "The W3C working group on CSS is working on many different specifications (called \"modules\") for new features in CSS. Some modules are finished, some are well advanced, some contain only very early ideas. This talk explains the relation between the modules and how they progress.",
+        "speaker": "bert-bos"
+    },
+    "new-developments-in-semantic-web-and-internationalization-at-the-w3c": {
+        "title": "New developments in Semantic Web and Internationalization at the W3C",
+        "description": "This talk introduces new developments in the areas of Semantic Web and Internationalization at W3C. Both seam to be unrelated; a closer look reveals that more and more multilingual resources are developed using Semantic Web technologies, and that the technicla building blocks of the multilingual web are relevant for these resources as well. The talk will explain these building blocks and their application in current and upcoming Semantic Web and general Web technologies.",
+        "speaker": "felix-sasaki"
+    },
+    "yandex-and-w3c": {
+        "title": "Yandex and W3C",
+        "description": "Yandex joined W3C a few weeks ago. Why? Do we think we can have an impact? What do we care about? How does W3C really work, and what will Yandex do there? Yandex’ representative to W3C, Chaals gives answers, and answers questions…",
+        "speaker": "charles-mccathienevile"
+    },
+    "svgo": {
+        "title": "SVGO: оптимизатор SVG",
+        "description": "Авторский рассказ об утилите для оптимизации SVG-файлов: причины возникновения, принцип работы и планы на будущее.",
+        "speaker": "kir-belevich"
+    },
+    "clear-and-sharp": {
+        "title": "Чётко и резко. Новая графика для экранов с высоким разрешением",
+        "description": "Вряд ли кто обрадуется, если увидит вместо красивого и с пиксельной точностью отрисованного дизайна расплывшийся кусок мыла. Но именно так выглядят сегодня большинство сайтов на устройствах с «ретиной» или просто экранах высокого разрешения. Меры, полумеры и просто трюки, чтобы ваш сайт выглядел безупречно — в этом докладе.",
+        "speaker": "vadim-makeev"
+    },
+    "javascript-patterns": {
+        "title": "Паттерны JavaScript",
+        "description": "Что это такое, почему это стоит использовать, основные паттерны и примеры их использования с обоснованием актуальности.",
+        "speaker": "anton-nemcev"
+    },
+    "grunt": {
+        "title": "Grunt: система сборки для фронтенд-разработчиков",
+        "description": "Современные сайты состоят из тысяч строк JavaScript и CSS, разбросанных по десяткам файлов. Если вывалить всё это пользователю в браузер, сайт будет загружаться дольше, чем мог бы. Справиться с этой, и многими другими задачами, помогают системы сборки. Grunt — одна из них, созданная специально для фронтенд-разработчиков.",
+        "speaker": "artem-sapegin"
+    },
+    "adaptive-web-design": {
+        "title": "Адаптивный веб-дизайн — Что? Где? Когда?",
+        "description": "Окружающий мир постоянно меняется, совершенствуются устройства, которые мы используем, и привычные, проверенные временем подходы разработки сайтов уже не гарантируют хороший результат. Пришло время выйти за рамки и начать делать удобные сайты.",
+        "speaker": "anna-selezneva"
+    },
+    "getting-touchy": {
+        "title": "Getting Touchy",
+        "description": "Beyond smartphones and tablets, touchscreens are finding their way into laptops and even desktop computers. With hardware support for touch becoming increasingly ubiquitous, it's time to explore what new possibilities are available to developers. This session will cover the basics of handling touch events - from making sure simple single-tap interactions are as responsive as possible, all the way to full multitouch, gesture-enabled, cross-browser interfaces.",
+        "speaker": "patrick-lauke"
+    },
+    "engineer-is-also-a-designer": {
+        "title": "Технолог — тоже дизайнер",
+        "description": "Технологу важно быть дизайнером. Без этого его интерфейсы будут если и неплохо выглядеть, то худо работать. Его кодом не воспользуются коллеги. А сам он утонет в рутине. Этот доклад не о техническом мастерстве, а о реализации хорошего дизайна даже там, куда не добрался дизайнер. Технические приёмы и личная эффективность технолога — необходимость для этого. Хотя, мотивация, настойчивость и изобретательность даже могут компенсировать недостаток умений.",
+        "speaker": "artem-polikarpov"
+    },
+    "table-with-w3c": {
+        "title": "Круглый стол с экспертами W3C, Яндекса и Opera Software",
+        "description": "Веб-стандарты, роль и ответственность W3C и мировых компаний за будущее интернета, возможность каждого принять участие в строительстве будущего. Вопросы и ответы вне рамок докладов.",
+        "speaker": "bert-bos"
     }
 }
