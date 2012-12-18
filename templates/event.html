@@ -58,7 +58,17 @@
                         <dt>{{ item.presentation.title }}</dt>
                         <dd>{{ item.presentation.description|safe() }}</dd>
                     </dl>
-                <a href="#{{ item.presentation.speaker }}">{{ speakers_dict[item.presentation.speaker] }}</a>
+
+                    {% if item.presentation.speaker %}
+                    <a href="#{{ item.presentation.speaker }}">{{ speakers_dict[item.presentation.speaker] }}</a>
+                    {% endif %}
+
+                    {% if item.presentation.speakers %}
+                        {% for speaker in item.presentation.speakers %}
+                            <a href="#{{ speaker }}">{{ speakers_dict[speaker] }}</a>{% if loop.last %} {% else %},
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
             </li>
             {% else %}
             <li class="break">
