@@ -308,7 +308,7 @@
             }
         },
         "description": {
-            "after": "<p>Встреча состоялась <strong>24&nbsp;ноября 2012 года в&nbsp;Москве</strong> в&nbsp;зале Экстрополис <a href=\"http://company.yandex.ru/contacts/redrose/\">в&nbsp;офисе Яндекса</a> по&nbsp;адресу&nbsp;ул. Льва Толстого, 16. Подробнее о&nbsp;проведённых событиях вы&nbsp;можете прочесть в&nbsp;разделе «<a href=\"http://web-standards.ru/category/events/\">События</a>» нашего флагманского сайта.</p>"
+            "after": "<p>Встреча состоялась <strong>24&nbsp;ноября 2012 года в&nbsp;Москве</strong> в&nbsp;зале Экстрополис <a href=\"http://company.yandex.ru/contacts/redrose/\">в&nbsp;офисе Яндекса</a> по&nbsp;адресу&nbsp;ул. Льва Толстого, 16. Подробнее о&nbsp;проведённых событиях вы&nbsp;можете прочесть в&nbsp;разделе «<a href=\"http://web-standards.ru/category/events/\">События</a>» нашего флагманского сайта.</p><p>Контактный e-mail: <a href=\"mailto:wst@web-standards.ru\">wst@web-standards.ru</a>.</p>"
         },
         "schedule": {
             "startTime": "9:00",
