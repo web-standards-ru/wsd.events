@@ -288,7 +288,66 @@
             "address": "проспект Газеты Правда, дом 11",
             "url": "http://ibb.by",
             "coord": "27.48719,53.86912",
-            "zoom": 15
+            "zoom": 15,
+            "description": {
+                "after": "<p>Встреча прошла в&nbsp;Минске, в&nbsp;конференц-зале <a href=\"http://ibb.by/\">Минского международного образовательного центра имени Йоханнеса Рау</a>.</p>"
+            }
+        },
+        "description": {
+            "after": "<p>Встреча состоялась <strong>27&nbsp;октября 2012 года в&nbsp;Минске</strong> в&nbsp;конференц-зале <a href=\"http://ibb.by/\">Минского международного образовательного центра имени Йоханнеса Рау</a> по&nbsp;адресу проспект Газеты Правда, дом 11. Подробнее о&nbsp;проведённых событиях вы&nbsp;можете прочесть в&nbsp;разделе «<a href=\"http://web-standards.ru/category/events/\">События</a>» нашего флагманского сайта.</p>"
+        },
+        "schedule": {
+            "startTime": "10:00",
+            "presentations": [
+                {
+                    "duration": "30",
+                    "title": "Регистрация, общение"
+                },
+                {
+                    "duration": "10",
+                    "title": "Открытие"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "die-photoshop-die"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "clear-and-sharp"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "adaptive-web-design"
+                },
+                {
+                    "duration": "60",
+                    "presentation": "adaptive-images"
+                },
+                {
+                    "duration": "60",
+                    "title": "Обед"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "multilayer-css"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "jquery-extend"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "modern-web-apps"
+                },
+                {
+                    "duration": "40",
+                    "presentation": "webstorage"
+                },
+                {
+                    "duration": "15",
+                    "title": "Закрытие"
+                }
+            ]
         }
     },
 
