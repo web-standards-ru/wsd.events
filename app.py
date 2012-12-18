@@ -122,7 +122,8 @@ def event(id):
         date = datetime.utcfromtimestamp(event['timestamp'])
 
         start_time = event['schedule']['startTime'].split(":")
-        clock = date + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
+        timezone = event['timezone'].replace("UTC", "")
+        clock = date + timedelta(hours=int(start_time[0]) + int(timezone), minutes=int(start_time[1]))
 
         for item in event['schedule']['presentations']:
             item['time'] = "%s:%s" % (clock.hour, add_null(clock.minute))
