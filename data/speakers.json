@@ -191,7 +191,7 @@
         "id": "aleksandr-beshkenadze",
         "firstName": "Александр",
         "lastName": "Бешкенадзе",
-        "bio": "Старший PHP-программист в <a href='http://digitaltechnologies.ru/'>Digital Techoligies</a>, разработчик сервиса по хранению фотографий <a href='http://pict.com/'>Pict.com</a>, специалист по широкому кругу клиентских технологий.",
+        "bio": "ТехЛид и архитектор в секретном e-commerce проекте, специалист по широкому кругу клиентских технологий, разработчик мобильных приложений.",
         "twitter": "beshkenadze"
     },
 
@@ -199,7 +199,7 @@
         "id": "viacheslav-oliyanchuk",
         "firstName": "Вяячеслав",
         "lastName": "Олиянчук",
-        "bio": "Веб-технолог в IT Studio, автор блога <a href='http://live.miripiruni.org/'>live.miripiruni.org</a>, создатель сервиса и набора плагинов <a href='http://csscomb.ru/'>CSScomb</a>.",
+        "bio": "Разработчик интерфейсов в компании <a href='http://www.yandex.ru/'>Яндекс</a>, автор блога <a href='http://live.miripiruni.org/'>live.miripiruni.org</a>, создатель сервиса и набора плагинов <a href='http://csscomb.ru/'>CSScomb</a>.",
         "twitter": "miripiruni"
     },
 
@@ -207,7 +207,8 @@
         "id": "vadim-pacev",
         "firstName": "Вадим",
         "lastName": "Пацев",
-        "bio": "Дизайнер-разработчик интерфейсов в компании Яндекс."
+        "bio": "Руководитель отдела фронтенд разработки в компании <a href='http://www.yandex.ru/'>Яндекс</a>.",
+        "twitter": "basvasilich"
     },
 
     {
@@ -243,7 +244,8 @@
         "id": "roman-komarov",
         "firstName": "Роман",
         "lastName": "Комаров",
-        "bio": "Разработчик интерфейсов в компании Яндекс, отвечает за вёрстку <a href='http://mail.yandex.ru/neo2/'>новой Яндекс.Почты</a>."
+        "bio": "Разработчик интерфейсов в компании <a href='http://www.yandex.ru/'>Яндекс</a>, отвечает за вёрстку <a href='http://mail.yandex.ru/neo2/'>новой Яндекс.Почты</a>.",
+        "twitter": "ki_zu"
     },
 
     {
