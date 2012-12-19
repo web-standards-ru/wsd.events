@@ -168,7 +168,8 @@
         "id": "nikita-seletsky",
         "firstName": "Никита",
         "lastName": "Селецкий",
-        "bio": "Практикующий веб-разработчик, дизайнер, руководитель и преподаватель <a href='http://www.webskola.lv'>Школы веб-технологий</a>, участник IT-конференций, автор блога <a href='http://seleckis.lv'>Seleckis.lv</a>."
+        "bio": "Практикующий веб-разработчик, дизайнер, руководитель и преподаватель <a href='http://www.webskola.lv'>Школы веб-технологий</a>, участник IT-конференций, автор блога <a href='http://seleckis.lv'>Seleckis.lv</a>.",
+        "twitter": "Seleckis"
     },
 
     {
@@ -182,21 +183,24 @@
         "id": "mikhail-baranov",
         "firstName": "Михаил",
         "lastName": "Баранов",
-        "bio": "Веб-технолог в <a href='http://www.geometria.ru/'>Geometria Lab</a>, автор курсов по веб-разработке <a href='http://www.avalon.ru/'>Факультета переподготовки специалистов</a> СПбГПУ. Автор блога <a href='http://designnotfound.ru/'>DesignNotFound.ru</a>."
+        "bio": "Веб-технолог в <a href='http://www.geometria.ru/'>Geometria Lab</a>, автор курсов по веб-разработке <a href='http://www.avalon.ru/'>Факультета переподготовки специалистов</a> СПбГПУ. Автор блога <a href='http://designnotfound.ru/'>DesignNotFound.ru</a>.",
+        "twitter": "_h4_"
     },
 
     {
         "id": "aleksandr-beshkenadze",
         "firstName": "Александр",
         "lastName": "Бешкенадзе",
-        "bio": "Старший PHP-программист в <a href='http://digitaltechnologies.ru/'>Digital Techoligies</a>, разработчик сервиса по хранению фотографий <a href='http://pict.com/'>Pict.com</a>, специалист по широкому кругу клиентских технологий."
+        "bio": "Старший PHP-программист в <a href='http://digitaltechnologies.ru/'>Digital Techoligies</a>, разработчик сервиса по хранению фотографий <a href='http://pict.com/'>Pict.com</a>, специалист по широкому кругу клиентских технологий.",
+        "twitter": "beshkenadze"
     },
 
     {
         "id": "viacheslav-oliyanchuk",
         "firstName": "Вяячеслав",
         "lastName": "Олиянчук",
-        "bio": "Веб-технолог в IT Studio, автор блога <a href='http://live.miripiruni.org/'>live.miripiruni.org</a>, создатель сервиса и набора плагинов <a href='http://csscomb.ru/'>CSScomb</a>."
+        "bio": "Веб-технолог в IT Studio, автор блога <a href='http://live.miripiruni.org/'>live.miripiruni.org</a>, создатель сервиса и набора плагинов <a href='http://csscomb.ru/'>CSScomb</a>.",
+        "twitter": "miripiruni"
     },
 
     {
@@ -246,7 +250,7 @@
         "id": "maxim-chervonny",
         "firstName": "Максим",
         "lastName": "Червонный",
-        "bio": "Front-end разработчик в <a href='http://ostrovok.ru/'>Ostrovok.ru.</a>",
+        "bio": "Front-end разработчик в <a href='http://ostrovok.ru/'>Ostrovok.ru</a>.",
         "twitter": "fiskus"
     }
 ]
