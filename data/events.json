@@ -82,7 +82,12 @@
         "date": "08-12-2009",
         "timezone": "UTC+4",
         "place": {
-            "city": "Москва"
+            "city": "Москва",
+            "title": "СДК МАИ",
+            "address": "ул. Дубосековская, 4А/1",
+            "url": "http://cdk.ru/",
+            "coord": "",
+            "zoom": 15
         }
     },
 
