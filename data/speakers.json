@@ -19,35 +19,39 @@
         "id": "andrew-sumin",
         "firstName": "Андрей",
         "lastName": "Сумин",
-        "bio": "Руководитель разработки клиентской части в Mail.Ru, постоянный участник встреч Web Standards Days, автор библиотеки JSX."
+        "bio": "Руководитель разработки клиентской части в <a href='http://mail.ru'>Mail.Ru</a>, постоянный участник встреч Web Standards Days, автор библиотеки JSX.",
+        "twitter": "AndrewSumin"
     },
 
     {
         "id": "vadim-makishvili",
         "firstName": "Вадим",
         "lastName": "Макишвили",
-        "bio": "Руководитель группы HTML-вёрстки поисковых и контентных сервисов компании Яндекс, автор блога Makishvili.com. Докладчик конференций ClientSide 2007 и UA Web 2008."
+        "bio": "Руководитель группы HTML-вёрстки поисковых и контентных сервисов компании <a href='http://yandex.ru/'>Яндекс</a>, автор блога <a href='http://makishvili.com/'>Makishvili.com</a>. Докладчик конференций <a href='http://www.client2007.ru/'>ClientSide 2007</a> и <a href='http://uaweb.in.ua/'>UA Web 2008</a>.",
+        "twitter": "makishvili"
     },
 
     {
         "id": "artemy-lomov",
         "firstName": "Артемий",
         "lastName": "Ломов",
-        "bio": "Практикующий веб-разработчик, технический журналист, пропагандирующий веб-стандарты, преподаватель, консультант. Автор двух технических книг по веб-разработке и других публикаций, ряда учебных курсов, семинаров и докладов. Призёр конкурсов РОТОР-2005, Интернить-2005, обладатель медали «Лауреат ВВЦ». ФРИ № 514."
+        "bio": "Практикующий веб-разработчик, технический журналист, пропагандирующий веб-стандарты, преподаватель, консультант. Автор двух технических книг по веб-разработке и других <a href='http://www.lomov.ru/publications/'>публикаций</a>, ряда <a href='http://www.lomov.ru/public/'>учебных курсов, семинаров и докладов</a>. Призёр конкурсов <a href='http://ezhe.ru/POTOP/results.html?do=res;2005;11'>РОТОР-2005</a>, <a href='http://www.internit.ru/?winners'>Интернить-2005</a>, обладатель медали «Лауреат ВВЦ». <a href='http://ezhe.ru/fri/514/'>ФРИ № 514</a>.",
+        "twitter": "art_lomov"
     },
 
     {
         "id": "nikolay-matsievsky",
         "firstName": "Николай",
         "lastName": "Мациевский",
-        "bio": "Автор книги «Разгони свой сайт». Руководит разработкой нескольких проектов по клиентской оптимизации с открытым кодом, в частности: YASS — самой быстрой JavaScript-библиотеки, а также Web Optimizer — веб-приложения для автоматизации клиентской оптимизации."
+        "bio": "Автор книги «Разгони свой сайт». Руководит разработкой нескольких проектов по клиентской оптимизации с открытым кодом, в частности: <a href='http://code.google.com/p/yeasss/'><abbr title='Yet Another cSS selector'>YASS</abbr></a> — самой быстрой JavaScript-библиотеки, а также <a href='http://code.google.com/p/web-optimizator/'>Web Optimizer</a> — веб-приложения для автоматизации клиентской оптимизации.",
+        "twitter": "dreamwind"
     },
 
     {
         "id": "konstantin-efimov",
         "firstName": "Константин",
         "lastName": "Ефимов",
-        "bio": "Веб-стандартист, основатель и руководитель веб-студии Арт-Лайн, автор блога Webstandards.org.ru, посвященного разработке сайтов на основе современных веб-стандартов."
+        "bio": "Веб-стандартист, основатель и руководитель веб-студии <a href='http://www.art-line.su/'>Арт-Лайн</a>, автор блога <a href='http://webstandards.org.ru/'>Webstandards.org.ru</a>, посвященного разработке сайтов на основе современных веб-стандартов."
     },
 
     {
@@ -125,7 +129,7 @@
         "id": "roman-mitasov",
         "firstName": "Роман",
         "lastName": "Митасов",
-        "bio": "Фронтенд-разработчик, Mail.Ru Group, работает в компании с 2007 года, занимается разработкой веб-клиентов месенджеров Агент и ICQ. В 2006 г. закончил факультет программного обеспечения МТУСИ (Московский технический университет связи и информатики), где ещё во время учебы получил опыт работы в нескольких крупных компаниях на должностях PHP-программиста."
+        "bio": "Фронтенд-разработчик, <a href='http://mail.ru/'>Mail.Ru Group</a>, работает в компании с 2007 года, занимается разработкой веб-клиентов месенджеров Агент и ICQ. В 2006 г. закончил факультет программного обеспечения МТУСИ (Московский технический университет связи и информатики), где ещё во время учебы получил опыт работы в нескольких крупных компаниях на должностях PHP-программиста."
     },
 
     {
@@ -156,7 +160,210 @@
         "id": "ivan-chashkin",
         "firstName": "Иван",
         "lastName": "Чашкин",
-        "bio": "Программист, Mail.Ru Group, работает в Mail.Ru с февраля 2011 года, занимается разработкой мобильной почты для тач-устройств. До Mail.Ru работал в стартапе Дзен-мани. Окончил Ульяновский Государственный Университет, факультет математики и информационных технологий.",
+        "bio": "Программист, <a href='http://mail.ru/'>Mail.Ru Group</a>, работает в Mail.Ru с февраля 2011 года, занимается разработкой мобильной почты для тач-устройств. До Mail.Ru работал в стартапе Дзен-мани. Окончил Ульяновский Государственный Университет, факультет математики и информационных технологий.",
         "twitter": "chizh73"
+    },
+
+    {
+        "id": "nikita-seletsky",
+        "firstName": "Никита",
+        "lastName": "Селецкий",
+        "bio": "Практикующий веб-разработчик, дизайнер, руководитель и преподаватель <a href='http://www.webskola.lv'>Школы веб-технологий</a>, участник IT-конференций, автор блога <a href='http://seleckis.lv'>Seleckis.lv</a>.",
+        "twitter": "Seleckis"
+    },
+
+    {
+        "id": "dmitry-dulepov",
+        "firstName": "Дмитрий",
+        "lastName": "Дулепов",
+        "bio": "Разработчик портала <a href='http://calis.lv'>calis.lv</a>, один из разработчиков <a href='http://typo3.org'>TYPO3 Enterprise CMS</a>, автор книги «TYPO3 Extension Development» и ряда электронных книг. Разработчик веб–приложений с 1996 года."
+    },
+
+    {
+        "id": "mikhail-baranov",
+        "firstName": "Михаил",
+        "lastName": "Баранов",
+        "bio": "Веб-технолог в <a href='http://www.geometria.ru/'>Geometria Lab</a>, автор курсов по веб-разработке <a href='http://www.avalon.ru/'>Факультета переподготовки специалистов</a> СПбГПУ. Автор блога <a href='http://designnotfound.ru/'>DesignNotFound.ru</a>.",
+        "twitter": "_h4_"
+    },
+
+    {
+        "id": "aleksandr-beshkenadze",
+        "firstName": "Александр",
+        "lastName": "Бешкенадзе",
+        "bio": "ТехЛид и архитектор в секретном e-commerce проекте, специалист по широкому кругу клиентских технологий, разработчик мобильных приложений.",
+        "twitter": "beshkenadze"
+    },
+
+    {
+        "id": "viacheslav-oliyanchuk",
+        "firstName": "Вячеслав",
+        "lastName": "Олиянчук",
+        "bio": "Разработчик интерфейсов в компании <a href='http://www.yandex.ru/'>Яндекс</a>, автор блога <a href='http://live.miripiruni.org/'>live.miripiruni.org</a>, создатель сервиса и набора плагинов <a href='http://csscomb.ru/'>CSScomb</a>.",
+        "twitter": "miripiruni"
+    },
+
+    {
+        "id": "vadim-pacev",
+        "firstName": "Вадим",
+        "lastName": "Пацев",
+        "bio": "Руководитель отдела фронтенд разработки в компании <a href='http://www.yandex.ru/'>Яндекс</a>.",
+        "twitter": "basvasilich"
+    },
+
+    {
+        "id": "vitaly-rybalka",
+        "firstName": "Виталий",
+        "lastName": "Рыбалка",
+        "bio": "Веб-разработчик в компании The Frayman Group, участник Kiev GTUG-West, в прошлом верстальщик лидирующего украинского портала UkrNet."
+    },
+
+    {
+        "id": "daniil-malykh",
+        "firstName": "Даниил",
+        "lastName": "Малых",
+        "bio": "Веб-разработчик редакционно-издательской группы компании <a href='http://www.nic.ru/'>RU-CENTER</a>"
+    },
+
+    {
+        "id": "alexey-kopylov",
+        "firstName": "Алексей",
+        "lastName": "Копылов",
+        "bio": "Технический директор и партнер компании <a href='http://uidesign.ru/'>UIDesign Group</a>, специализирующейся на проектировании пользовательских интерфейсов. Является автором профессионального блога «<a href='http://gui.ru/copylove/'>Перепроектируйте это немедленно!</a>» и редактором новостного специализированного блога «<a href='http://fresh.gui.ru/'>Fresh: новости мира юзабилити</a>»."
+    },
+
+    {
+        "id": "olga-aleksashenko",
+        "firstName": "Ольга",
+        "lastName": "Алексашенко",
+        "bio": "Веб-технолог в <a href='http://www.digitaloctober.ru/'>Digital October</a>. Участник объединения разработчиков «<a href='http://web-standards.ru/'>Веб-стандарты</a>». Член команды организаторов конференции РИТ 2007, участник программных комитетов конференций ClientSide 2007 и РИТ 2008. Автор блога <a href='http://tachisis.tumblr.com/'>Принцесса и веб-технолог</a> и <a href='http://engelside.net/'>Engel Side</a>.",
+        "twitter": "tachisis"
+    },
+
+    {
+        "id": "roman-komarov",
+        "firstName": "Роман",
+        "lastName": "Комаров",
+        "bio": "Разработчик интерфейсов в компании <a href='http://www.yandex.ru/'>Яндекс</a>, отвечает за вёрстку <a href='http://mail.yandex.ru/neo2/'>новой Яндекс.Почты</a>.",
+        "twitter": "ki_zu"
+    },
+
+    {
+        "id": "maxim-chervonny",
+        "firstName": "Максим",
+        "lastName": "Червонный",
+        "bio": "Front-end разработчик в <a href='http://ostrovok.ru/'>Ostrovok.ru</a>.",
+        "twitter": "fiskus"
+    },
+
+    {
+        "id": "andrey-golovnev",
+        "firstName": "Андрей",
+        "lastName": "Головнев",
+        "bio": "Frontend-разработчик в компании <a href='http://exadel.com/'>Exadel</a>.  Внештатный сотрудник компании <a href='http://www.imedia.ru/'>Sanoma Independent Media</a>. Участвовал в разработке проектов Cosmopolitan, Esquire, Martini All That Glam.",
+        "twitter": "golovnev"
+    },
+
+    {
+        "id": "andrey-kupchenko",
+        "firstName": "Андрей",
+        "lastName": "Купченко",
+        "bio": "Заместитель директора по коммерческим вопросам компании <a href='http://active.by/'>Active Technologies</a>, разработчика и провайдера облачных решений для корпоративных клиентов и малого бизнеса (в том числе IaaS SaaS). Сегодня под брэндом ActiveCloud, компания предоставляет сервисы в семи странах СНГ, обслуживая свыше 15 000 клиентов."
+    },
+
+    {
+        "id": "anton-kotenko",
+        "firstName": "Антон",
+        "lastName": "Котенко",
+        "bio": "Разработчик и архитектор фронтенда на JavaScript и GWT, участвовал в разработке проектов <a href='http://mypicturetown.com/'>my Picturetown</a> и <a href='http://www.experika.com/'>Experika</a>. Ведёт блог <a href='http://shamansir-ru.tumblr.com/'>Ни слова о луке</a>, переводил <a href='http://shamansir.github.com/JavaScript-Garden/'>JavaScript Garden</a> на русский язык. Проповедует простой JavaScript и красивый код. В данный момент пишет на GWT+HTML5 в <a href='http://www.jetbrains.com/'>JetBrains</a>.",
+        "twitter": "shaman_sir"
+    },
+
+    {
+        "id": "dmitry-makhnev",
+        "firstName": "Дмитрий",
+        "lastName": "Махнёв" ,
+        "bio": "Разработчик интерфейсов в <a href='http://www.softwearfinance.com/'>SoftWear</a>.",
+        "twitter": "DmitryMakhnev"
+    },
+
+    {
+        "id": "eugeny-chechurin",
+        "firstName": "Евгений",
+        "lastName": "Чечурин" ,
+        "bio": "Фронтенд-разработчик в компании <a href='http://grammarly.com/'>Grammarly</a>.",
+        "twitter": "2heneva"
+    },
+
+    {
+        "id": "igor-zenich",
+        "firstName": "Игорь",
+        "lastName": "Зенич",
+        "bio": "Веб-технолог и менеджер проектов компании <a href='http://ideus.biz/'>iDeus</a>, докладчик нескольких конференций, посвященных вопросам веб-разработки, участник объединения разработчиков «Веб-стандарты». Профессиональные интересы — организация работы верстальщиков, повышение качества и скорости вёрстки, доступность контента, микроформаты.",
+        "twitter": "delaz"
+    },
+
+    {
+        "id": "maksim-bereza",
+        "firstName": "Максим",
+        "lastName": "Берёза",
+        "bio": "Веб-разработчик, организатор нескольких BarCamp'ов."
+    },
+
+    {
+        "id": "mikhail-davydov",
+        "firstName": "Михаил",
+        "lastName": "Давыдов" ,
+        "bio": "Разработчик JavaScript в <a href='http://yandex.ru/'>Яндексе</a>, подробнее на личном сайте <a href='http://azproduction.ru/'>azproduction.ru</a>.",
+        "twitter": "azproduction"
+    },
+
+    {
+        "id": "murad-rogozhnikov",
+        "firstName": "Мурад",
+        "lastName": "Рогожников" ,
+        "bio": "Опытный веб-разрабочик, управляет верстальщиками, программистами, дизайнерами интерфейсов и их клиентами. Изобретает велосипеды, консультирует крупные сайты по клиентской оптимизации.",
+        "twitter": "Californiy"
+    },
+
+    {
+        "id": "oleg-mokhov",
+        "firstName": "Олег",
+        "lastName": "Мохов" ,
+        "bio": "Разработчик интерфейсов в <a href='http://yandex.ru/'>Яндексе</a>.",
+        "twitter": "olmokhov"
+    },
+
+    {
+        "id": "vasily-aksyonov",
+        "firstName": "Василий",
+        "lastName": "Аксёнов" ,
+        "bio": "Руководитель фронтенд-разработки в компании <a href='http://skbkontur.ru/'>СКБ Контур</a>. Разрабатывает проект <a href='http://e-kontur.ru/'>Эльба</a>, занимается обучением студентов и коллег.",
+        "twitter": "outring"
+    },
+
+    {
+        "id": "yury-artykh",
+        "firstName": "Юрий",
+        "lastName": "Артюх" ,
+        "bio": "Верстальщик, автор блога <a href='http://cssing.org.ua/'>CSSing.org.ua</a>, соучастник <a href='http://smartme.com.ua/'>SmartMe</a> и сообщества веб-стандартистов, ведущий верстальщик в <a href='http://coderiver.com.ua/'>Coderiver</a>'.",
+        "twitter": "akella"
+    },
+
+    {
+        "id": "sergey-dyniovsky",
+        "firstName": "Сергей",
+        "lastName": "Дыниовский",
+        "bio": "Верстальщик в <a href='http://evilmartians.ru'>Злых Марсианах</a>, Занимался разработкой <a href='http://darberry.ru'>Darberry.ru</a>, <a href='http://ren-tv.com'>Ren-TV.com</a>.",
+        "twitter": "llazio"
+    },
+
+    {
+        "id": "sergey-mezentsev",
+        "firstName": "Сергей",
+        "lastName": "Мезенцев" ,
+        "bio": "Разработчик в <a href='http://yandex.ru/'>Яндексе</a>, в прошлом партнёр в академическом направлении Microsoft.",
+        "twitter": "thebits"
     }
+
 ]
