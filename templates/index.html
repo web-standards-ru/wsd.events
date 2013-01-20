@@ -36,16 +36,16 @@
             <time class="year">{{ history_year }}</time>
             <ol class="schedule">
                 {% for event in events %}
-                {% if event.timestamp > today %}
+                {% if event.date > today %}
                 <li class="current">
                 {% else %}
                 <li>
                 {% endif %}
                     {% if event.inaccurateDate %}
-                    <time>{{ event.timestamp|month("i") }}</time>
+                    <time>{{ event.date|month("i") }}</time>
                     {{ event.place.city }}
                     {% else %}
-                    <time>{{ event.timestamp|day() }} {{ event.timestamp|month() }}</time>
+                    <time>{{ event.date|day() }} {{ event.date|month() }}</time>
                     <a href="/events/{{ event.id }}/">{{ event.place.city }}</a>
                     {% endif %}
                 </li>

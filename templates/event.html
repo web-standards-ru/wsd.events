@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ event.place.city }}, {{ event.timestamp|day() }} {{ event.timestamp|month() }} {{ event.timestamp|year() }} года{% endblock %}
+{% block title %}{{ event.place.city }}, {{ event.date|day() }} {{ event.date|month() }} {{ event.date|year() }} года{% endblock %}
 
 {% block main %}
 
@@ -29,7 +29,7 @@
 
 <article id="intro" class="article">
     <header>
-        <h1>{{ event.place.city }}, {{ event.timestamp|day() }} {{ event.timestamp|month() }} {{ event.timestamp|year() }} года</h1>
+        <h1>{{ event.place.city }}, {{ event.date|day() }} {{ event.date|month() }} {{ event.date|year() }} года</h1>
     </header>
     {% if event.description %}
         {% if event.archived %}

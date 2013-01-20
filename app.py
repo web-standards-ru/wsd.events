@@ -4,6 +4,7 @@ import json
 import time
 from datetime import datetime, timedelta
 
+import pytz
 from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
 
@@ -18,28 +19,28 @@ def setSpeakerById(dict, speakers):
     return dict
 
 
-def addTimestamp(el):
+def parseDate(el):
     date = [int(x) for x in el['date'].split("-")]
-    el['timestamp'] = time.mktime((date[2], date[1], date[0], 0, 0, 0, 0, 0, 0))
+    el['date'] = datetime(date[2], date[1], date[0], tzinfo=pytz.timezone(el['timezone']))
     return el
 
 
-def day(ts):
-    return int(datetime.fromtimestamp(ts).strftime("%d"))
+def day(date):
+    return int(date.day)
 
 
-def year(ts):
-    return datetime.fromtimestamp(ts).strftime("%Y")
+def year(date):
+    return date.year
 
 
-def month(ts, case='v'):
+def month(date, case='v'):
     months = {
         'i': (u'январь', u'февраль', u'март', u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь',
               u'ноябрь', u'декабрь'),
         'v': (u'января', u'февраля', u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября',
               u'ноября', u'декабря')
     }
-    return months[case][int(datetime.fromtimestamp(ts).strftime("%m")) - 1]
+    return months[case][date.month-1]
 
 app.jinja_env.filters['day'] = day
 app.jinja_env.filters['month'] = month
@@ -67,14 +68,14 @@ def index():
     return render_template('index.html',
         history=groupby(
             sorted(
-                map(addTimestamp, data['events']),
-                key=lambda x: x['timestamp'],
+                map(parseDate, data['events']),
+                key=lambda x: x['date'],
                 reverse=True),
-            key=lambda x: x['date'].split("-")[2]
+            key=lambda x: x['date'].year
         ),
         speakers=sorted(data['speakers'], key=lambda x: x['lastName']),
         presentations=random.sample(filter(lambda x: 'videoId' in x, data['presentations'].values()), 3),
-        today=time.time() + 60 * 60 * 24
+        today=datetime.now(pytz.utc)
     )
 
 
@@ -97,7 +98,7 @@ def event(id):
     if not event:
         return render_template('page-not-found.html'), 404
 
-    addTimestamp(event)
+    parseDate(event)
 
     if 'schedule' in event:
         for item in event['schedule']['presentations']:
@@ -119,11 +120,8 @@ def event(id):
 
         speakers_dict = dict((x['id'], '%s %s' % (x['firstName'], x['lastName'])) for x in speakers)
 
-        date = datetime.utcfromtimestamp(event['timestamp'])
-
         start_time = event['schedule']['startTime'].split(":")
-        timezone = event['timezone'].replace("UTC", "")
-        clock = date + timedelta(hours=int(start_time[0]) + int(timezone), minutes=int(start_time[1]))
+        clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
 
         for item in event['schedule']['presentations']:
             item['time'] = "%s:%s" % (clock.hour, add_null(clock.minute))
@@ -137,7 +135,7 @@ def event(id):
     else:
         show_registration = False
 
-    event['archived'] = time.time() > event['timestamp'] + 86400
+    event['archived'] = datetime.now(pytz.utc) > event['date'] + timedelta(days=1)
 
     return render_template('event.html',
         event=event,

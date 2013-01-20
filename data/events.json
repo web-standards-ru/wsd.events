@@ -2,7 +2,7 @@
     {
         "id": "minsk-2009",
         "date": "28-11-2009",
-        "timezone": "UTC+3",
+        "timezone": "Europe/Minsk",
         "place": {
             "city": "Минск",
             "title": "конференц-зал гостиницы «Беларусь»",
@@ -81,7 +81,7 @@
     {
         "id": "msk-2009",
         "date": "08-12-2009",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Москва",
             "title": "СДК МАИ",
@@ -95,7 +95,7 @@
     {
         "id": "riga-2010",
         "date": "22-05-2010",
-        "timezone": "UTC+2",
+        "timezone": "Europe/Riga",
         "place": {
             "city": "Рига",
             "title": "конференц-зал гостиницы Tallink Hotel Riga",
@@ -109,7 +109,7 @@
     {
         "id": "spb-2010",
         "date": "26-06-2010",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Санкт-Петербург",
             "title": "Факультет переподготовки специалистов СПбГПУ",
@@ -123,7 +123,7 @@
     {
         "id": "kiev-2010",
         "date": "18-09-2010",
-        "timezone": "UTC+2",
+        "timezone": "Europe/Kiev",
         "place": {
             "city": "Киев",
             "title": "конференц-зал гостиницы «Мир»",
@@ -137,7 +137,7 @@
     {
         "id": "msk-2010",
         "date": "16-12-2010",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Москва",
             "title": "конференц-центр Extropolis",
@@ -151,7 +151,7 @@
     {
         "id": "kiev-2011",
         "date": "22-10-2011",
-        "timezone": "UTC+2",
+        "timezone": "Europe/Kiev",
         "place": {
             "city": "Киев",
             "title": "конференц-зал гостиницы «Мир»",
@@ -165,7 +165,7 @@
     {
         "id": "minsk-2011",
         "date": "29-10-2011",
-        "timezone": "UTC+3",
+        "timezone": "Europe/Minsk",
         "place": {
             "city": "Минск",
             "title": "конференц-зал Минского международного образовательного центра имени Йоханнеса Рау",
@@ -225,7 +225,7 @@
     {
         "id": "msk-2011",
         "date": "13-12-2011",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Москва",
             "title": "актовый зал МИЭМ (Московского государственного института электроники и математики)",
@@ -239,7 +239,7 @@
     {
         "id": "ekb-2012",
         "date": "28-04-2012",
-        "timezone": "UTC+6",
+        "timezone": "Asia/Yekaterinburg",
         "place": {
             "city": "Екатеринбург",
             "title": "отель «Московская горка»",
@@ -253,7 +253,7 @@
     {
         "id": "spb-2012",
         "date": "23-06-2012",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Санкт-Петербург",
             "title": "Факультет переподготовки специалистов СПбГПУ",
@@ -267,7 +267,7 @@
     {
         "id": "kiev-2012",
         "date": "13-10-2012",
-        "timezone": "UTC+2",
+        "timezone": "Europe/Kiev",
         "place": {
             "city": "Киев",
             "title": "конференц-зал гостиницы «Мир»",
@@ -287,7 +287,7 @@
     {
         "id": "minsk-2012",
         "date": "27-10-2012",
-        "timezone": "UTC+3",
+        "timezone": "Europe/Minsk",
         "place": {
             "city": "Минск",
             "title": "конференц-зал Минского международного образовательного центра имени Йоханнеса Рау",
@@ -360,7 +360,7 @@
     {
         "id": "msk-2012",
         "date": "24-11-2012",
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Москва",
             "title": "зал Экстрополис в офисе Яндекса",
@@ -459,7 +459,7 @@
         "id": "riga-2013",
         "date": "22-05-2013",
         "inaccurateDate": true,
-        "timezone": "UTC+4",
+        "timezone": "Europe/Riga",
         "place": {
             "city": "Рига"
         }
@@ -469,7 +469,7 @@
         "id": "spb-2013",
         "date": "22-06-2013",
         "inaccurateDate": true,
-        "timezone": "UTC+4",
+        "timezone": "Europe/Moscow",
         "place": {
             "city": "Санкт-Петербург"
         }
