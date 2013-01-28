@@ -74,7 +74,7 @@ def legacy_event(year, month, day):
 @app.route('/events/<event_id>/')
 def event(event_id):
     sources_list = ('events', 'partners', 'presentations', 'speakers')
-    events, partners, presentations, speakers = (json.load(open('data/{filename}.json'.format(filname=i)))
+    events, partners, presentations, speakers = (json.load(open('data/{filename}.json'.format(filename=i)))
         for i in sources_list)
 
     event = reduce(lambda init, x: x if x['id'] == event_id else init, events, None)
