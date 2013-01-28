@@ -7,8 +7,10 @@ from datetime import datetime, timedelta
 import pytz
 from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
+import jinja_filters
 
 app = Flask(__name__)
+
 
 def add_null(val):
     return val if val >= 10 else "0%s" % val
@@ -25,26 +27,9 @@ def parseDate(el):
     return el
 
 
-def day(date):
-    return int(date.day)
-
-
-def year(date):
-    return date.year
-
-
-def month(date, case='v'):
-    months = {
-        'i': (u'январь', u'февраль', u'март', u'апрель', u'май', u'июнь', u'июль', u'август', u'сентябрь', u'октябрь',
-              u'ноябрь', u'декабрь'),
-        'v': (u'января', u'февраля', u'марта', u'апреля', u'мая', u'июня', u'июля', u'августа', u'сентября', u'октября',
-              u'ноября', u'декабря')
-    }
-    return months[case][date.month-1]
-
-app.jinja_env.filters['day'] = day
-app.jinja_env.filters['month'] = month
-app.jinja_env.filters['year'] = year
+app.jinja_env.filters['day'] = jinja_filters.day
+app.jinja_env.filters['month'] = jinja_filters.month
+app.jinja_env.filters['year'] = jinja_filters.year
 
 
 @app.context_processor
