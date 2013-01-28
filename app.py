@@ -22,6 +22,10 @@ def parseDate(el):
     return el
 
 
+def load_data(sources):
+    return (json.load(open('data/{filename}.json'.format(filename=i))) for i in sources)
+
+
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
 app.jinja_env.filters['year'] = jinja_filters.year
@@ -44,19 +48,18 @@ def index():
     from itertools import groupby
 
     sources_list = ('events', 'presentations', 'speakers')
-    data = {i: json.load(open('data/{filename}.json'.format(filename=i))) for i in sources_list}
+    events, presentations, speakers = load_data(sources_list)
 
     return render_template('index.html',
                            history=groupby(
                                sorted(
-                                   map(parseDate, data['events']),
+                                   map(parseDate, events),
                                    key=lambda x: x['date'],
                                    reverse=True),
                                key=lambda x: x['date'].year
                            ),
-                           speakers=sorted(data['speakers'], key=lambda x: x['lastName']),
-                           presentations=random.sample(filter(lambda x: 'videoId' in x, data['presentations'].values()),
-                                                       3),
+                           speakers=sorted(speakers, key=lambda x: x['lastName']),
+                           presentations=random.sample(filter(lambda x: 'videoId' in x, presentations.values()), 3),
                            today=datetime.now(pytz.utc)
     )
 
@@ -74,8 +77,7 @@ def legacy_event(year, month, day):
 @app.route('/events/<event_id>/')
 def event(event_id):
     sources_list = ('events', 'partners', 'presentations', 'speakers')
-    events, partners, presentations, speakers = (json.load(open('data/{filename}.json'.format(filename=i)))
-        for i in sources_list)
+    events, partners, presentations, speakers = load_data(sources_list)
 
     event = reduce(lambda init, x: x if x['id'] == event_id else init, events, None)
 
@@ -102,7 +104,7 @@ def event(event_id):
             sorted(speakers, key=lambda x: x['lastName'])
         )
 
-        speakers_dict = dict((x['id'], '{firstname} {lastname}'.format(firstname=x['firstName'], lastname=x['lastName'])) for x in speakers)
+        speakers_dict = dict((x['id'], u'{firstname} {lastname}'.format(firstname=x['firstName'], lastname=x['lastName'])) for x in speakers)
 
         start_time = event['schedule']['startTime'].split(":")
         clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
