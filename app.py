@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 def add_null(val):
-    return val if val >= 10 else "0%s" % val
+    return val if val >= 10 else "0{num}".format(num=val)
 
 
 def parseDate(el):
@@ -33,7 +33,7 @@ def utility_processor():
         import os
 
         f = os.path.join(static_dir, path)
-        return ("%s/%s?v=%s") % (app.static_url_path, path, int(os.stat(f).st_mtime))
+        return "{root}/{path}?v={token}".format(root=app.static_url_path, path=path, token=int(os.stat(f).st_mtime))
 
     return dict(get_static=get_static)
 
@@ -43,37 +43,41 @@ def index():
     import random
     from itertools import groupby
 
-    data = {i: json.load(open('data/%s.json' % i)) for i in ['events', 'presentations', 'speakers']}
+    sources_list = ('events', 'presentations', 'speakers')
+    data = {i: json.load(open('data/{filename}.json'.format(filename=i))) for i in sources_list}
 
     return render_template('index.html',
-        history=groupby(
-            sorted(
-                map(parseDate, data['events']),
-                key=lambda x: x['date'],
-                reverse=True),
-            key=lambda x: x['date'].year
-        ),
-        speakers=sorted(data['speakers'], key=lambda x: x['lastName']),
-        presentations=random.sample(filter(lambda x: 'videoId' in x, data['presentations'].values()), 3),
-        today=datetime.now(pytz.utc)
+                           history=groupby(
+                               sorted(
+                                   map(parseDate, data['events']),
+                                   key=lambda x: x['date'],
+                                   reverse=True),
+                               key=lambda x: x['date'].year
+                           ),
+                           speakers=sorted(data['speakers'], key=lambda x: x['lastName']),
+                           presentations=random.sample(filter(lambda x: 'videoId' in x, data['presentations'].values()),
+                                                       3),
+                           today=datetime.now(pytz.utc)
     )
 
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def legacy_event(year, month, day):
-    date = '%s-%s-%s' % (add_null(day), add_null(month), year)
+    date = '{day}-{month}-{year}'.format(day=add_null(day), month=add_null(month), year=year)
     events = json.load(open('data/events.json'))
     event = reduce(lambda init, x: x if x['date'] == date else init, events, None)
+    path = '/events/{event_id}/'.format(event_id=event['id'])
 
-    return redirect('/events/%s/' % event['id']) if event else (render_template('page-not-found.html'), 404)
+    return redirect(path) if event else (render_template('page-not-found.html'), 404)
 
 
-@app.route('/events/<id>/')
-def event(id):
-    events, partners, presentations, speakers = (json.load(open('data/%s.json' % i))
-        for i in ('events', 'partners', 'presentations', 'speakers'))
+@app.route('/events/<event_id>/')
+def event(event_id):
+    sources_list = ('events', 'partners', 'presentations', 'speakers')
+    events, partners, presentations, speakers = (json.load(open('data/{filename}.json'.format(filname=i)))
+        for i in sources_list)
 
-    event = reduce(lambda init, x: x if x['id'] == id else init, events, None)
+    event = reduce(lambda init, x: x if x['id'] == event_id else init, events, None)
 
     if not event:
         return render_template('page-not-found.html'), 404
@@ -98,13 +102,13 @@ def event(id):
             sorted(speakers, key=lambda x: x['lastName'])
         )
 
-        speakers_dict = dict((x['id'], '%s %s' % (x['firstName'], x['lastName'])) for x in speakers)
+        speakers_dict = dict((x['id'], '{firstname} {lastname}'.format(firstname=x['firstName'], lastname=x['lastName'])) for x in speakers)
 
         start_time = event['schedule']['startTime'].split(":")
         clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
 
         for item in event['schedule']['presentations']:
-            item['time'] = "%s:%s" % (clock.hour, add_null(clock.minute))
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
             clock += timedelta(minutes=int(item['duration']))
     else:
         speakers = []
@@ -118,15 +122,15 @@ def event(id):
     event['archived'] = datetime.now(pytz.utc) > event['date'] + timedelta(days=1)
 
     return render_template('event.html',
-        event=event,
-        speakers=speakers,
-        speakers_dict=speakers_dict,
-        partners=partners,
-        show_registration=show_registration
+                           event=event,
+                           speakers=speakers,
+                           speakers_dict=speakers_dict,
+                           partners=partners,
+                           show_registration=show_registration
     )
 
 
-@app.route('/events/<id>/register/')
+@app.route('/events/<evant_id>/register/')
 def register(year, month, day):
     return u'Регистрация на событие'
 
