@@ -95,13 +95,15 @@ def event(event_id):
             if 'presentation' in item:
                 item['presentation'] = presentations[item['presentation']]
 
-        speakers_keys = map(
-            lambda x: x['presentation'].get('speaker'),
+        presentation_speakers = map(
+            lambda x: x['presentation'].get('speakers'),
             filter(
                 lambda x: 'presentation' in x,
                 event['schedule']['presentations']
             )
         )
+
+        speakers_keys = reduce(lambda d, el: d.extend(el) or d, presentation_speakers, [])
 
         speakers = filter(
             lambda x: x['id'] in speakers_keys,
