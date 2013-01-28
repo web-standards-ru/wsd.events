@@ -26,6 +26,10 @@ def load_data(sources):
     return (json.load(open('data/{filename}.json'.format(filename=i))) for i in sources)
 
 
+def format_name(person):
+    return u'{firstname} {lastname}'.format(firstname=person['firstName'], lastname=person['lastName'])
+
+
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
 app.jinja_env.filters['year'] = jinja_filters.year
@@ -104,7 +108,7 @@ def event(event_id):
             sorted(speakers, key=lambda x: x['lastName'])
         )
 
-        speakers_dict = dict((x['id'], u'{firstname} {lastname}'.format(firstname=x['firstName'], lastname=x['lastName'])) for x in speakers)
+        speakers_dict = {speaker['id']: format_name(speaker) for speaker in speakers}
 
         start_time = event['schedule']['startTime'].split(":")
         clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
