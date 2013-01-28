@@ -30,6 +30,10 @@ def format_name(person):
     return u'{firstname} {lastname}'.format(firstname=person['firstName'], lastname=person['lastName'])
 
 
+def get_speaker_by_id(speaker_id, speakers):
+    return filter(lambda speaker: speaker['id'] == speaker_id, speakers)[0]
+
+
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
 app.jinja_env.filters['year'] = jinja_filters.year
@@ -57,8 +61,8 @@ def index():
     presentations = random.sample(filter(lambda x: 'videoId' in x, presentations.values()), 3)
 
     for presentation in presentations:
-        speaker_keys = presentation['speakers']
-        presentation['speakers'] = map(lambda key: filter(lambda speaker: speaker['id'] == key, speakers)[0], speaker_keys)
+        presentation['speakers'] = map(lambda speaker: format_name(get_speaker_by_id(speaker, speakers)),
+                                       presentation['speakers'])
 
     return render_template('index.html',
                            history=groupby(
