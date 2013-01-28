@@ -71,8 +71,12 @@
             {% endif %}
         {% endfor %}
     </ol>
-    {% if not event.archived %}
-    <p>Расписание может незначительно измениться, следите за новостями на нашем твиттер-канале: <a href="https://twitter.com/webstandards_ru">webstandards_ru</a>.</p>
+    {% if event.schedule.comment %}
+        {% if not event.archived %}
+            {{ event.schedule.comment.before|safe }}
+        {% else %}
+            {{ event.schedule.comment.after|safe }}
+        {% endif %}
     {% endif %}
 </article>
 {% endif %}

@@ -446,7 +446,10 @@
                     "duration": "15",
                     "title": "Прощальный кофе"
                 }
-            ]
+            ],
+            "comment": {
+                "before": "<p>Расписание может незначительно измениться, следите за новостями на нашем твиттер-канале: <a href='http://twitter.com/webstandards_ru'>webstandards_ru</a>.</p>"
+            }
         },
         "partners": [
             {
