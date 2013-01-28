@@ -54,6 +54,12 @@ def index():
     sources_list = ('events', 'presentations', 'speakers')
     events, presentations, speakers = load_data(sources_list)
 
+    presentations = random.sample(filter(lambda x: 'videoId' in x, presentations.values()), 3)
+
+    for presentation in presentations:
+        speaker_keys = presentation['speakers']
+        presentation['speakers'] = map(lambda key: filter(lambda speaker: speaker['id'] == key, speakers)[0], speaker_keys)
+
     return render_template('index.html',
                            history=groupby(
                                sorted(
@@ -63,7 +69,7 @@ def index():
                                key=lambda x: x['date'].year
                            ),
                            speakers=sorted(speakers, key=lambda x: x['lastName']),
-                           presentations=random.sample(filter(lambda x: 'videoId' in x, presentations.values()), 3),
+                           presentations=presentations,
                            today=datetime.now(pytz.utc)
     )
 
