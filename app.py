@@ -16,11 +16,6 @@ def add_null(val):
     return val if val >= 10 else "0%s" % val
 
 
-def setSpeakerById(dict, speakers):
-    dict['speaker'] = speakers[dict['speaker']]
-    return dict
-
-
 def parseDate(el):
     date = [int(x) for x in el['date'].split("-")]
     el['date'] = datetime(date[2], date[1], date[0], tzinfo=pytz.timezone(el['timezone']))
