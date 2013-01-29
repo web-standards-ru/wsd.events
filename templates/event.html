@@ -54,21 +54,15 @@
             {% if item.presentation %}
             <li>
                 <time>{{ item.time }}</time>
-                   <dl>
+                    <dl>
                         <dt>{{ item.presentation.title }}</dt>
                         <dd>{{ item.presentation.description|safe() }}</dd>
                     </dl>
 
-                    {% if item.presentation.speaker %}
-                    <a href="#{{ item.presentation.speaker }}">{{ speakers_dict[item.presentation.speaker] }}</a>
-                    {% endif %}
-
-                    {% if item.presentation.speakers %}
-                        {% for speaker in item.presentation.speakers %}
-                            <a href="#{{ speaker }}">{{ speakers_dict[speaker] }}</a>{% if loop.last %} {% else %},
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
+                    {% for speaker in item.presentation.speakers %}
+                        <a href="#{{ speaker }}">{{ speakers_dict[speaker] }}</a>{% if loop.last %} {% else %},
+                        {% endif %}
+                    {% endfor %}
             </li>
             {% else %}
             <li class="break">
@@ -77,8 +71,12 @@
             {% endif %}
         {% endfor %}
     </ol>
-    {% if not event.archived %}
-    <p>Расписание может незначительно измениться, следите за новостями на нашем твиттер-канале: <a href="https://twitter.com/webstandards_ru">webstandards_ru</a>.</p>
+    {% if event.schedule.comment %}
+        {% if not event.archived %}
+            {{ event.schedule.comment.before|safe }}
+        {% else %}
+            {{ event.schedule.comment.after|safe }}
+        {% endif %}
     {% endif %}
 </article>
 {% endif %}
