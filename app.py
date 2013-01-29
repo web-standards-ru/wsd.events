@@ -148,8 +148,8 @@ def event(event_id):
     )
 
 
-@app.route('/events/<evant_id>/register/')
-def register(year, month, day):
+@app.route('/events/<event_id>/register/')
+def register(event_id):
     return u'Регистрация на событие'
 
 
