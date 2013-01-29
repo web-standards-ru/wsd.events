@@ -56,7 +56,11 @@
                 <time>{{ item.time }}</time>
                     <dl>
                         <dt>{{ item.presentation.title }}</dt>
-                        <dd>{{ item.presentation.description|safe() }}</dd>
+                        <dd>{{ item.presentation.description|safe() }}
+                            {% if item.presentation.file %}
+                            <a href="/pres/{{ item.presentation.file.name }}">Презентация, {{ item.presentation.file.type }} {{ item.presentation.file.size|filesize() }}</a>
+                            {% endif %}
+                        </dd>
                     </dl>
 
                     {% for speaker in item.presentation.speakers %}
