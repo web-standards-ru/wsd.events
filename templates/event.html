@@ -58,7 +58,7 @@
                         <dt>{{ item.presentation.title }}</dt>
                         <dd>{{ item.presentation.description|safe() }}
                             {% if item.presentation.file %}
-                                <p><a href="/pres/{{ item.presentation.file.name }}">Презентация, {{ item.presentation.file.type }} {{ item.presentation.file.size|filesize() }}</a></p>
+                            <a href="/pres/{{ item.presentation.file.name }}">Презентация, {{ item.presentation.file.type }} {{ item.presentation.file.size|filesize() }}</a>
                             {% endif %}
                         </dd>
                     </dl>
