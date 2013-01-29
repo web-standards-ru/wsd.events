@@ -81,7 +81,11 @@
     </header>
     {% for presentation in presentations %}
     <iframe src="http://player.vimeo.com/video/{{ presentation.video_id }}?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
-    <p><a href="http://vimeo.com/{{ presentation.video_id }}">{{ presentation.title }}</a> — {{ presentation.speaker.firstName }} {{ presentation.speaker.lastName }}</p>
+    <p><a href="http://vimeo.com/{{ presentation.video_id }}">{{ presentation.title }}</a> —
+    {% for speaker in presentation.speakers %}
+        {{ speaker }}{% if loop.last %} {% else %},{% endif %}
+    {% endfor %}
+    </p>
     {% endfor %}
     <p>Больше видео <a href="http://vimeo.com/channels/wstdays">на канале Web Standards Days</a> на Vimeo.</p>
 </article>
