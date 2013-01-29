@@ -39,6 +39,7 @@ def get_speaker_by_id(speaker_id, speakers):
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
 app.jinja_env.filters['year'] = jinja_filters.year
+app.jinja_env.filters['filesize'] = jinja_filters.filesize
 
 
 @app.context_processor
