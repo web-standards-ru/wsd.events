@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import json
 import time
 from datetime import datetime, timedelta
@@ -10,6 +11,7 @@ from jinja2 import TemplateNotFound
 import jinja_filters
 
 app = Flask(__name__)
+app_root = os.path.abspath(os.path.dirname(__name__))
 
 
 def add_null(val):
@@ -101,9 +103,21 @@ def event(event_id):
     parseDate(event)
 
     if 'schedule' in event:
+        pres_dir = os.path.join(app_root, 'pres/')
         for item in event['schedule']['presentations']:
             if 'presentation' in item:
-                item['presentation'] = presentations[item['presentation']]
+                presentation_id = item['presentation']
+                item['presentation'] = presentations[presentation_id]
+                for ext in ('zip', 'pdf'):
+                    filename = '.'.join((presentation_id, ext))
+                    abspath = os.path.join(pres_dir, filename)
+                    if os.path.exists(abspath):
+                        item['presentation']['file'] = {
+                            "name": filename,
+                            "size": os.path.getsize(abspath),
+                            "type": ext.upper()
+                        }
+
 
         presentation_speakers = map(
             lambda x: x['presentation'].get('speakers'),
