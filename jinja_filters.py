@@ -18,3 +18,13 @@ def year(date):
 
 def month(date, case='v'):
     return months[case][date.month - 1]
+
+
+def filesize(num):
+    if num < 1024 * 1024:
+        value = num / 1024
+        ext = u"КБ"
+    else:
+        value = round(float(num) / (1024 * 1024), 1)
+        ext = u"МБ"
+    return u'{value} {ext}'.format(value=value, ext=ext)
