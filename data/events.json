@@ -27,11 +27,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "recode-sumin"
+                    "presentation": "minsk-2009_1-recode-sumin"
                 },
                 {
                     "duration": "45",
-                    "presentation": "error-makishvili"
+                    "presentation": "minsk-2009_2-error-makishvili"
                 },
                 {
                     "duration": "15",
@@ -39,7 +39,7 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "web-fonts-makeev"
+                    "presentation": "minsk-2009_3-web-fonts-makeev"
                 },
                 {
                     "duration": "60",
@@ -47,11 +47,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "html5-lovtsevich"
+                    "presentation": "minsk-2009_4-html5-lovtsevich"
                 },
                 {
                     "duration": "15",
-                    "presentation": "webhitech-lomov"
+                    "presentation": "minsk-2009_5-webhitech-lomov"
                 },
                 {
                     "duration": "15",
@@ -59,11 +59,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "vml.svg.canvas-matsievsky"
+                    "presentation": "minsk-2009_6-vml-svg-canvas-matsievsky"
                 },
                 {
                     "duration": "30",
-                    "presentation": "troubles-efimov"
+                    "presentation": "minsk-2009_7-troubles-efimov"
                 },
                 {
                     "duration": "15",
@@ -172,54 +172,8 @@
             "address": "проспект Газеты Правда, дом 11",
             "url": "http://ibb.by",
             "coord": "27.48719, 53.86912",
-            "zoom": 15,
-            "description": {
-                "before": "<p>Встреча пройдёт в Минске в конференц-зале Минского международного образовательного центра имени Йоханнеса Рау по адресу проспект Газеты Правда, дом 11.</p>",
-                "after": "<p>Встреча прошла в Минске в конференц-зале Минского международного образовательного центра имени Йоханнеса Рау по адресу проспект Газеты Правда, дом 11.</p>"
-            }
-        },
-        "description": {
-            "before": "<p>Встреча состоится 27 октября 2012 года в Минске в конференц-зале Минского международного образовательного центра имени Йоханнеса Рау по адресу проспект Газеты Правда, дом 11. Подробнее о проведённых событиях вы можете прочесть в разделе «События» нашего флагманского сайта.</p> <p>Участие во встрече бесплатное, достаточно зарегистрироваться. Контактный e-mail: wst@web-standards.ru.</p>",
-            "after": "<p>Встреча состоялась 27 октября 2012 года в Минске в конференц-зале Минского международного образовательного центра имени Йоханнеса Рау по адресу проспект Газеты Правда, дом 11. Подробнее о проведённых событиях вы можете прочесть в разделе «События» нашего флагманского сайта.</p>"
-        },
-        "registration": {
-            "open": 1291269600,
-            "close": 1351499311,
-            "limit": 350,
-            "custom": "<p>Для регистрации отправьте СМС с текстом «2222» на номер <a href='tel:4433'>4433</a>.</p>"
-        },
-        "schedule": {
-            "startTime": "11:00",
-            "presentations": [
-                {
-                    "duration": "30",
-                    "title": "Регистрация, общение"
-                },
-                {
-                    "duration": "15",
-                    "title": "Открытие"
-                },
-                {
-                    "duration": "45",
-                    "presentation": "die-photoshop-die"
-                },
-                {
-                    "duration": "45",
-                    "presentation": "press-here"
-                }
-            ]
-        },
-        "partners": [
-            {
-                "Организаторы": ["lovata-group", "opera-software"]
-            },
-            {
-                "Партнёры": ["oz.by"]
-            },
-            {
-                "Информационные партнёры": ["tut.by", "komp-vesti"]
-            }
-        ]
+            "zoom": 15
+        }
     },
 
     {
@@ -315,19 +269,19 @@
                 },
                 {
                     "duration": "40",
-                    "presentation": "die-photoshop-die"
+                    "presentation": "2012-minsk_1-die-photoshop-die"
                 },
                 {
                     "duration": "40",
-                    "presentation": "clear-and-sharp"
+                    "presentation": "2012-minsk_2-clear-and-sharp"
                 },
                 {
                     "duration": "40",
-                    "presentation": "adaptive-web-design"
+                    "presentation": "2012-minsk_3-adaptive-web-design"
                 },
                 {
                     "duration": "60",
-                    "presentation": "adaptive-images"
+                    "presentation": "2012-minsk_4-adaptive-images"
                 },
                 {
                     "duration": "60",
@@ -335,19 +289,19 @@
                 },
                 {
                     "duration": "40",
-                    "presentation": "multilayer-css"
+                    "presentation": "2012-minsk_5-multilayer-css"
                 },
                 {
                     "duration": "40",
-                    "presentation": "jquery-extend"
+                    "presentation": "2012-minsk_6-jquery-extend"
                 },
                 {
                     "duration": "40",
-                    "presentation": "modern-web-apps"
+                    "presentation": "2012-minsk_7-modern-web-apps"
                 },
                 {
                     "duration": "40",
-                    "presentation": "webstorage"
+                    "presentation": "2012-minsk_8-webstorage"
                 },
                 {
                     "duration": "15",
@@ -388,15 +342,15 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "current-work-on-css-at-w3c"
+                    "presentation": "2012-msk_1-current-work-on-css-at-w3c"
                 },
                 {
                     "duration": "30",
-                    "presentation": "new-developments-in-semantic-web-and-internationalization-at-the-w3c"
+                    "presentation": "2012-msk_2-new-developments-in-semantic-web-and-internationalization-at-the-w3c"
                 },
                 {
                     "duration": "45",
-                    "presentation": "yandex-and-w3c"
+                    "presentation": "2012-msk_3-yandex-and-w3c"
                 },
                 {
                     "duration": "15",
@@ -404,19 +358,19 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "svgo"
+                    "presentation": "2012-msk_4-svgo"
                 },
                 {
                     "duration": "30",
-                    "presentation": "clear-and-sharp"
+                    "presentation": "2012-msk_5-clear-and-sharp"
                 },
                 {
                     "duration": "30",
-                    "presentation": "javascript-patterns"
+                    "presentation": "2012-msk_6-javascript-patterns"
                 },
                 {
                     "duration": "30",
-                    "presentation": "grunt"
+                    "presentation": "2012-msk_7-grunt"
                 },
                 {
                     "duration": "60",
@@ -424,11 +378,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "adaptive-web-design"
+                    "presentation": "2012-msk_8-adaptive-web-design"
                 },
                 {
                     "duration": "30",
-                    "presentation": "getting-touchy"
+                    "presentation": "2012-msk_9-getting-touchy"
                 },
                 {
                     "duration": "30",
@@ -440,7 +394,7 @@
                 },
                 {
                     "duration": "45",
-                    "presentation": "table-with-w3c"
+                    "presentation": "2012-msk_11-table-with-w3c"
                 },
                 {
                     "duration": "15",
