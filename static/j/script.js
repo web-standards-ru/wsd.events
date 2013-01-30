@@ -80,7 +80,7 @@ $(function(){
 
 		ymaps.ready(function () {
 			map.removeChild(map.firstChild);
-            ymap = new ymaps.Map(map, {
+			ymap = new ymaps.Map(map, {
 				center: [centerCoords.lat, centerCoords.lng],
 				zoom: mapData.z
 			});
@@ -95,7 +95,7 @@ $(function(){
 			if (mapData.l === 'pmap') {
 				ymap.setType('yandex#publicMap');
 			}
-        });
+		});
 	};
 
 	$('#map').map();
