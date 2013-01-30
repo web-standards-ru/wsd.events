@@ -69,11 +69,11 @@ $(function(){
 		marker.point = [marker.coords.lat, marker.coords.lng];
 
 		marker.style = {
-			iconImageHref:"/i/map-logo.png",
+			iconImageHref:"/static/i/map-logo.png",
 			iconImageSize:[93, 83],
 			iconImageOffset:[-24, -83],
 			iconShadow:true,
-			iconShadowImageHref:"/i/map-shadow.png",
+			iconShadowImageHref:"/static/i/map-shadow.png",
 			iconShadowImageSize:[93, 83],
 			iconShadowImageOffset:[-24, -83]
 		};
