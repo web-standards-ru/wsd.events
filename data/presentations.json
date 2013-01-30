@@ -1,157 +1,137 @@
 {
-    "die-photoshop-die": {
+    "2012-minsk_1-die-photoshop-die": {
         "title": "Die Photoshop, die! Или стоит ли пропускать Photoshop в процессе разработки веб-дизайна?",
         "speakers": ["ilya-pukhalski"],
         "description": "Современные технологии позволяют разработчикам создавать удивительные отзывчивые сайты, браузерные и даже мобильные приложения. Как же запечатлеть всю эту динамику на статичном холсте? И стоит ли? Почему дизайнеру важно знать хотя бы немного о верстке, а верстальщику иметь представление о процессе дизайна? Ответы на все вопросы в рассказ об актуальном подходе «Без фотошопа»."
     },
 
-    "adaptive-images": {
+    "2012-minsk_4-adaptive-images": {
         "title": "Всем сестрам по серьгам. Адаптивные изображения",
         "speakers": ["pavel-lovtsevich"]
     },
 
-    "multilayer-css": {
+    "2012-minsk_5-multilayer-css": {
         "title": "Многослойный CSS",
         "speakers": ["robert-haritonov"],
         "description": "Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа."
     },
 
-    "jquery-extend": {
+    "2012-minsk_6-jquery-extend": {
         "title": "Способы расширения функционала jQuery",
         "speakers": ["dmitry-petrov"],
         "description": "Как и зачем писать расширения для jQuery, с примерами на CoffeeScript."
     },
 
-    "modern-web-apps": {
+    "2012-minsk_7-modern-web-apps": {
         "title": "Современные веб-приложения",
         "speakers": ["ivan-chashkin"],
         "description": "Применение принципа «graceful degradation» на примере тач-почты Mail.Ru."
     },
 
-    "webstorage": {
+    "2012-minsk_8-webstorage": {
         "title": "WebStorage и его применение для связи окон",
         "speakers": ["roman-mitasov"],
         "description": "Веб-клиент для Mail.ru Agent. Особенности разработки месенджера для веба. Плюсы, минусы и подводные камни клиентского хранения данных. Синхронизация интерфейса, межоконный роутер, одно соединения на все окна пользователя."
     },
 
-    "press-here": {
-        "title": "Жми сюда!",
-        "speakers": ["vadim-makeev"],
-        "description": "Кнопка, ссылка, псевдоссылка? Как правильно выбрать, сверстать и не наделать глупостей.",
-        "slides": "press-here.pdf",
-        "videoId": "34190518"
-    },
-
-    "css-experiment": {
-        "title": "Бесчеловечные эксперименты над CSS",
-        "speakers": ["vadim-makeev"],
-        "videoId": "34190518"
-    },
-
-    "adaptive-design": {
-        "title": "Адаптивный дизайн на практике",
-        "speakers": ["vadim-makeev"],
-        "videoId": "47073788"
-    },
-
-    "recode-sumin": {
+    "minsk-2009_1-recode-sumin": {
         "title": "Переверстать всё и в срок.",
         "speakers": ["andrew-sumin"],
         "slides": "recode.pdf",
         "videoId": "47073788"
     },
 
-    "error-makishvili": {
+    "minsk-2009_2-error-makishvili": {
         "title": "Ошибка. Осознание, примирение, извлечение пользы.",
         "speakers": ["vadim-makishvili"],
         "slides": "error.pdf",
         "videoId": "47073788"
     },
 
-    "web-fonts-makeev": {
+    "minsk-2009_3-web-fonts-makeev": {
         "title": "Веб-шрифты vs. Шрифты для веба.",
         "speakers": ["vadim-makeev"],
         "slides": "web-fonts/index.htm",
         "videoId": "47073788"
     },
 
-    "html5-lovtsevich": {
+    "minsk-2009_4-html5-lovtsevich": {
         "title": "HTML5. Будем знакомы!",
         "speakers": ["pavel-lovtsevich"],
         "slides": "html5.pdf",
         "videoId": "47073788"
     },
 
-    "webhitech-lomov": {
+    "minsk-2009_5-webhitech-lomov": {
         "title": "WebHiTech. Итоги 2009 и планы 2010.",
         "speakers": ["artemy-lomov"],
         "slides": "webhitech.pdf",
         "videoId": "47073788"
     },
 
-    "vml.svg.canvas-matsievsky": {
+    "minsk-2009_6-vml_svg_canvas-matsievsky": {
         "title": "VML, SVG, Canvas: что дальше?",
         "speakers": ["nikolay-matsievsky"],
         "slides": "vml.svg.canvas.pdf",
         "videoId": "47073788"
     },
 
-    "troubles-efimov": {
+    "minsk-2009_7-troubles-efimov": {
         "title": "Некоторые проблемы применения современных веб-технологий.",
         "speakers": ["konstantin-efimov"],
         "slides": "certain.troubles.pdf",
         "videoId": "47073788"
     },
 
-    "current-work-on-css-at-w3c": {
+    "2012-msk_1-current-work-on-css-at-w3c": {
         "title": "Current work on CSS at W3C",
         "description": "The W3C working group on CSS is working on many different specifications (called \"modules\") for new features in CSS. Some modules are finished, some are well advanced, some contain only very early ideas. This talk explains the relation between the modules and how they progress.",
         "speakers": ["bert-bos"]
     },
 
-    "new-developments-in-semantic-web-and-internationalization-at-the-w3c": {
+    "2012-msk_2-new-developments-in-semantic-web-and-internationalization-at-the-w3c": {
         "title": "New developments in Semantic Web and Internationalization at the W3C",
         "description": "This talk introduces new developments in the areas of Semantic Web and Internationalization at W3C. Both seam to be unrelated; a closer look reveals that more and more multilingual resources are developed using Semantic Web technologies, and that the technicla building blocks of the multilingual web are relevant for these resources as well. The talk will explain these building blocks and their application in current and upcoming Semantic Web and general Web technologies.",
         "speakers": ["felix-sasaki"]
     },
 
-    "yandex-and-w3c": {
+    "2012-msk_3-yandex-and-w3c": {
         "title": "Yandex and W3C",
         "description": "Yandex joined W3C a few weeks ago. Why? Do we think we can have an impact? What do we care about? How does W3C really work, and what will Yandex do there? Yandex’ representative to W3C, Chaals gives answers, and answers questions…",
         "speakers": ["charles-mccathienevile"]
     },
 
-    "svgo": {
+    "2012-msk_4-svgo": {
         "title": "SVGO: оптимизатор SVG",
         "description": "Авторский рассказ об утилите для оптимизации SVG-файлов: причины возникновения, принцип работы и планы на будущее.",
         "speakers": ["kir-belevich"]
     },
 
-    "clear-and-sharp": {
+    "2012-msk_5-clear-and-sharp": {
         "title": "Чётко и резко. Новая графика для экранов с высоким разрешением",
         "description": "Вряд ли кто обрадуется, если увидит вместо красивого и с пиксельной точностью отрисованного дизайна расплывшийся кусок мыла. Но именно так выглядят сегодня большинство сайтов на устройствах с «ретиной» или просто экранах высокого разрешения. Меры, полумеры и просто трюки, чтобы ваш сайт выглядел безупречно — в этом докладе.",
         "speakers": ["vadim-makeev"]
     },
 
-    "javascript-patterns": {
+    "2012-msk_6-javascript-patterns": {
         "title": "Паттерны JavaScript",
         "description": "Что это такое, почему это стоит использовать, основные паттерны и примеры их использования с обоснованием актуальности.",
         "speakers": ["anton-nemcev"]
     },
 
-    "grunt": {
+    "2012-msk_7-grunt": {
         "title": "Grunt: система сборки для фронтенд-разработчиков",
         "description": "Современные сайты состоят из тысяч строк JavaScript и CSS, разбросанных по десяткам файлов. Если вывалить всё это пользователю в браузер, сайт будет загружаться дольше, чем мог бы. Справиться с этой, и многими другими задачами, помогают системы сборки. Grunt — одна из них, созданная специально для фронтенд-разработчиков.",
         "speakers": ["artem-sapegin"]
     },
 
-    "adaptive-web-design": {
+    "2012-msk_8-adaptive-web-design": {
         "title": "Адаптивный веб-дизайн — Что? Где? Когда?",
         "description": "Окружающий мир постоянно меняется, совершенствуются устройства, которые мы используем, и привычные, проверенные временем подходы разработки сайтов уже не гарантируют хороший результат. Пришло время выйти за рамки и начать делать удобные сайты.",
         "speakers": ["anna-selezneva"]
     },
 
-    "getting-touchy": {
+    "2012-msk_9-getting-touchy": {
         "title": "Getting Touchy",
         "description": "Beyond smartphones and tablets, touchscreens are finding their way into laptops and even desktop computers. With hardware support for touch becoming increasingly ubiquitous, it's time to explore what new possibilities are available to developers. This session will cover the basics of handling touch events - from making sure simple single-tap interactions are as responsive as possible, all the way to full multitouch, gesture-enabled, cross-browser interfaces.",
         "speakers": ["patrick-lauke"]
@@ -163,7 +143,7 @@
         "speakers": ["artem-polikarpov"]
     },
 
-    "table-with-w3c": {
+    "2012-msk_11-table-with-w3c": {
         "title": "Круглый стол с экспертами W3C, Яндекса и Opera Software",
         "description": "Веб-стандарты, роль и ответственность W3C и мировых компаний за будущее интернета, возможность каждого принять участие в строительстве будущего. Вопросы и ответы вне рамок докладов.",
         "speakers": [
