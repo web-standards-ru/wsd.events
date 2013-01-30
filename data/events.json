@@ -27,11 +27,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "minsk-2009_1-recode-sumin"
+                    "presentation": "2009-minsk_1-recode-in-time"
                 },
                 {
                     "duration": "45",
-                    "presentation": "minsk-2009_2-error-makishvili"
+                    "presentation": "2009-minsk_2-error"
                 },
                 {
                     "duration": "15",
@@ -39,7 +39,7 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "minsk-2009_3-web-fonts-makeev"
+                    "presentation": "2009-minsk_3-web-fonts"
                 },
                 {
                     "duration": "60",
@@ -47,11 +47,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "minsk-2009_4-html5-lovtsevich"
+                    "presentation": "2009-minsk_4-html5"
                 },
                 {
                     "duration": "15",
-                    "presentation": "minsk-2009_5-webhitech-lomov"
+                    "presentation": "2009-minsk_5-webhitech"
                 },
                 {
                     "duration": "15",
@@ -59,11 +59,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "minsk-2009_6-vml-svg-canvas-matsievsky"
+                    "presentation": "2009-minsk_6-vml-svg-canvas"
                 },
                 {
                     "duration": "30",
-                    "presentation": "minsk-2009_7-troubles-efimov"
+                    "presentation": "2009-minsk_7-troubles"
                 },
                 {
                     "duration": "15",
@@ -342,11 +342,11 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "2012-msk_1-current-work-on-css-at-w3c"
+                    "presentation": "2012-msk_1-current-css-w3c"
                 },
                 {
                     "duration": "30",
-                    "presentation": "2012-msk_2-new-developments-in-semantic-web-and-internationalization-at-the-w3c"
+                    "presentation": "2012-msk_2-semantic-i18n-w3c"
                 },
                 {
                     "duration": "45",
@@ -370,7 +370,7 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "2012-msk_7-grunt"
+                    "presentation": "2012-msk_7-grunt-frontend"
                 },
                 {
                     "duration": "60",
@@ -386,7 +386,7 @@
                 },
                 {
                     "duration": "30",
-                    "presentation": "2012-msk_10-engineer-is-also-a-designer"
+                    "presentation": "2012-msk_10-tech-vs-designer"
                 },
                 {
                     "duration": "15",
@@ -394,7 +394,7 @@
                 },
                 {
                     "duration": "45",
-                    "presentation": "2012-msk_11-table-with-w3c"
+                    "presentation": "2012-msk_11-round-table"
                 },
                 {
                     "duration": "15",
