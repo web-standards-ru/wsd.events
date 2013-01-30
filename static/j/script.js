@@ -33,7 +33,7 @@ $(function(){
 		});
 	};
 
-	$('#twitter ul').tweets('-RT%20wstdays');
+	$('#twitter').find('ul').tweets('-RT%20wstdays');
 
 	// Map
 
