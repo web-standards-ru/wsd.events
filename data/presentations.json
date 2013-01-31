@@ -1,39 +1,4 @@
 {
-    "2012-minsk_1-die-photoshop-die": {
-        "title": "Die Photoshop, die! Или стоит ли пропускать Photoshop в процессе разработки веб-дизайна?",
-        "speakers": ["ilya-pukhalski"],
-        "description": "Современные технологии позволяют разработчикам создавать удивительные отзывчивые сайты, браузерные и даже мобильные приложения. Как же запечатлеть всю эту динамику на статичном холсте? И стоит ли? Почему дизайнеру важно знать хотя бы немного о верстке, а верстальщику иметь представление о процессе дизайна? Ответы на все вопросы в рассказ об актуальном подходе «Без фотошопа»."
-    },
-
-    "2012-minsk_4-adaptive-images": {
-        "title": "Всем сестрам по серьгам. Адаптивные изображения",
-        "speakers": ["pavel-lovtsevich"]
-    },
-
-    "2012-minsk_5-multilayer-css": {
-        "title": "Многослойный CSS",
-        "speakers": ["robert-haritonov"],
-        "description": "Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа."
-    },
-
-    "2012-minsk_6-jquery-extend": {
-        "title": "Способы расширения функционала jQuery",
-        "speakers": ["dmitry-petrov"],
-        "description": "Как и зачем писать расширения для jQuery, с примерами на CoffeeScript."
-    },
-
-    "2012-minsk_7-modern-web-apps": {
-        "title": "Современные веб-приложения",
-        "speakers": ["ivan-chashkin"],
-        "description": "Применение принципа «graceful degradation» на примере тач-почты Mail.Ru."
-    },
-
-    "2012-minsk_8-webstorage": {
-        "title": "WebStorage и его применение для связи окон",
-        "speakers": ["roman-mitasov"],
-        "description": "Веб-клиент для Mail.ru Agent. Особенности разработки месенджера для веба. Плюсы, минусы и подводные камни клиентского хранения данных. Синхронизация интерфейса, межоконный роутер, одно соединения на все окна пользователя."
-    },
-
     "2009-minsk_1-recode-in-time": {
         "title": "Переверстать всё и в срок.",
         "speakers": ["andrew-sumin"],
@@ -81,6 +46,272 @@
         "speakers": ["konstantin-efimov"],
         "slides": "certain.troubles.pdf",
         "videoId": "47073788"
+    },
+
+    "2011-kiev_2-sass": {
+        "title": "Sass и Compass.",
+        "speakers": ["sergey-dyniovsky"],
+        "videoId": "33377362"
+    },
+
+    "2011-kiev_7-real-js": {
+        "title": "Настоящий JavaScript.",
+        "speakers": ["anton-kotenko"],
+        "videoId": "33393795"
+    },
+
+    "2011-minsk_1-edge": {
+        "title": "Adobe Edge. Веб-анимация по стандартам.",
+        "speakers": ["andrey-golovnev"],
+        "videoId": "33148794"
+    },
+
+    "2011-minsk_2-check-list": {
+        "title": "Чек-лист вёрстки. Что можно отдавать клиенту, а что надо переделывать.",
+        "speakers": ["igor-zenich"],
+        "videoId": "33216368"
+    },
+
+    "2011-minsk_3-conditional-css": {
+        "title": "Мухи отдельно, котлеты отдельно: Conditional Comments, Conditional CSS, Modernizr, CSS Conditional Rules.",
+        "speakers": ["pavel-lovtsevich"],
+        "videoId": "33160837"
+    },
+
+    "2011-minsk_4-media-queries": {
+        "title": "CSS3 Media Queries: легкость превращений.",
+        "speakers": ["artemy-lomov"],
+        "videoId": "33149535"
+    },
+
+    "2011-minsk_5-procrustes": {
+        "title": "Прокрустовы окна. Как вписаться в устройство с минимальными потерями.",
+        "speakers": ["vadim-makeev"],
+        "videoId": "33180097"
+    },
+
+    "2011-minsk_6-editable-html": {
+        "title": "Редактирование HTML в браузере. Как должно быть, как есть, и зачем это вообще нужно.",
+        "speakers": ["anton-nemcev"],
+        "videoId": "33214437"
+    },
+
+    "2011-minsk_7-bem": {
+        "title": "БЭМ. Реальный опыт двух компаний Mail.ru и hh.ru.",
+        "speakers": ["andrew-sumin"],
+        "videoId": "33153484"
+    },
+
+    "2011-minsk_8-console": {
+        "title": "Быстрая разработка. Краткий обзор средств для работы с кодом из консоли.",
+        "speakers": ["maxim-chervonny"],
+        "videoId": "33151436"
+    },
+
+    "2011-minsk_9-cloud": {
+        "title": "Презентация услуги CloudServer — облачного хостинга Active Technologies.",
+        "speakers": ["andrey-kupchenko"]
+    },
+
+    "2011-msk_1-console": {
+        "title": "Быстрая разработка. Краткий обзор средств для работы с кодом из консоли.",
+        "speakers": ["maxim-chervonny"]
+    },
+
+    "2011-msk_2-css-experiments": {
+        "title": "Обустраиваем лабораторию для бесчеловечных экспериментов над CSS.",
+        "speakers": ["roman-komarov"],
+        "videoId": "34190518"
+    },
+
+    "2011-msk_3-media-queries": {
+        "title": "CSS3 Media Queries: легкость превращений.",
+        "speakers": ["artemy-lomov"]
+    },
+
+    "2011-msk_4-vimi": {
+        "title": "Всё, что вы делаете в Vim неправильно.",
+        "speakers": ["viacheslav-oliyanchuk"],
+        "videoId": "34201803"
+    },
+
+    "2011-msk_5-pre-fixes": {
+        "title": "-Пре-фиксы: зачем и как правильно.",
+        "speakers": ["vadim-makeev"],
+        "videoId": "34197672"
+    },
+
+    "2011-msk_6-editable-html": {
+        "title": "Редактирование HTML в браузере. Как должно быть, как есть, и зачем это вообще нужно.",
+        "speakers": ["anton-nemcev"]
+    },
+
+    "2011-msk_7-csscomb": {
+        "title": "Причеши свой код. Правила хорошего тона в CSS.",
+        "speakers": ["viacheslav-oliyanchuk"],
+        "videoId": "34212051"
+    },
+
+    "2012-ekb_1-text-editor": {
+        "title": "Как сделать текстовый онлайн-редактор и испортить себе жизнь.",
+        "speakers": ["vasily-aksyonov"],
+        "description": "Проблемы создания редактора в вебе при текущем уровне поддержки Editing APIs браузерами.",
+        "videoId": "47626426"
+    },
+
+    "2012-ekb_2-css-selectors": {
+        "title": "Быстрый удар точно в цель.",
+        "speakers": ["artemy-lomov"],
+        "description": "Селекторы CSS в разрезе производительности, каскадности, независимости и избранных нововведений CSS3"
+    },
+
+    "2012-ekb_3-dart": {
+        "title": "Dart — светлая сторона силы?",
+        "speakers": ["mikhail-davydov"],
+        "description": "Язык Dart, его особенности. Для чего он создавался и какое у него будущее. Полезный опыт, который мы можем почерпнуть из Dart."
+    },
+
+    "2012-ekb_4-pre-fixes": {
+        "title": "Пре-фиксы. Зачем и как правильно.",
+        "speakers": ["vadim-makeev"],
+        "description": "Злободневный доклад о технологии префиксов в CSS, закрывающий вопрос об их необходимости, правилах применения и будущем технологии."
+    },
+
+    "2012-ekb_5-css3": {
+        "title": "Как должно быть и как на самом деле?",
+        "speakers": ["oleg-mokhov"],
+        "description": "Как в браузерах работают новые CSS3-свойства, почему получается по-разному и как с этим жить уже сейчас."
+    },
+
+    "2012-kiev_1-speed-coding": {
+        "title": "Скоростная верстка в 8 рук или как не стать осьминогом",
+        "speakers": ["murad-rogozhnikov"],
+        "description": "Наш опыт устранения грабель коллективной вёрстки, или как банальные и неочевидные технологии и инструменты помогают достичь синергии в командной работе."
+    },
+
+    "2012-kiev_2-mcss": {
+        "title": "Многослойный CSS",
+        "speakers": ["robert-haritonov"],
+        "description": "Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа."
+    },
+
+    "2012-kiev_3-meteor": {
+        "title": "С реактивными костылями в будущее. Meteor JS",
+        "speakers": ["eugeny-chechurin"],
+        "description": "Эпоха динамических сайтов с новым динамическим фреймворком."
+    },
+
+    "2012-kiev_4-pushit": {
+        "title": "Жми сюда!",
+        "speakers": ["vadim-makeev"],
+        "description": "Кнопка, ссылка, псевдоссылка? Как правильно выбрать, сверстать и не наделать глупостей."
+    },
+
+    "2012-kiev_5-3d-css": {
+        "title": "На грани возможного",
+        "speakers": ["anton-nemcev"],
+        "description": "3D и 2D-анимация и эмоции в веб c помощью CSS."
+    },
+
+    "2012-kiev_6-html5-win8": {
+        "title": "HTML5-приложения для Windows 8",
+        "speakers": ["yury-artykh"],
+        "description": "Создание платных приложений для планшетов на Windows 8 с помощью HTML, CSS и JavaScript."
+    },
+
+    "2012-minsk_1-die-photoshop-die": {
+        "title": "Die Photoshop, die! Или стоит ли пропускать Photoshop в процессе разработки веб-дизайна?",
+        "speakers": ["ilya-pukhalski"],
+        "description": "Современные технологии позволяют разработчикам создавать удивительные отзывчивые сайты, браузерные и даже мобильные приложения. Как же запечатлеть всю эту динамику на статичном холсте? И стоит ли? Почему дизайнеру важно знать хотя бы немного о верстке, а верстальщику иметь представление о процессе дизайна? Ответы на все вопросы в рассказ об актуальном подходе «Без фотошопа»."
+    },
+
+    "2012-minsk_2-clear-and-sharp": {
+        "title": "Чётко и резко. Новая графика для экранов с высоким разрешением",
+        "speakers": ["vadim-makeev"],
+        "description": "Вряд ли кто обрадуется, если увидит вместо красивого и с пиксельной точностью отрисованного дизайна расплывшийся кусок мыла. Но именно так выглядят сегодня большинство сайтов на устройствах с экранами высокого разрешения. Меры, полумеры и просто трюки, чтобы ваш сайт выглядел безупречно — в этом докладе."
+    },
+
+    "2012-minsk_3-adaptive-design": {
+        "title": "Адаптивный веб-дизайн — Что? Где? Когда?",
+        "speakers": ["anna-selezneva"],
+        "description": "Рассказ о том, что такое адаптивный веб-дизайн, как и где его можно применять, что нужно учитывать при его создании и почему пора начать делать адаптивные сайты."
+    },
+
+    "2012-minsk_4-adaptive-images": {
+        "title": "Всем сестрам по серьгам. Адаптивные изображения",
+        "speakers": ["pavel-lovtsevich"]
+    },
+
+    "2012-minsk_5-mcss": {
+        "title": "Многослойный CSS",
+        "speakers": ["robert-haritonov"],
+        "description": "Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа."
+    },
+
+    "2012-minsk_7-web-apps": {
+        "title": "Современные веб-приложения",
+        "speakers": ["ivan-chashkin"],
+        "description": "Применение принципа «graceful degradation» на примере тач-почты Mail.Ru."
+    },
+
+    "2012-minsk_6-jquery-extend": {
+        "title": "Способы расширения функционала jQuery",
+        "speakers": ["dmitry-petrov"],
+        "description": "Как и зачем писать расширения для jQuery, с примерами на CoffeeScript."
+    },
+
+    "2012-minsk_7-modern-web-apps": {
+        "title": "Современные веб-приложения",
+        "speakers": ["ivan-chashkin"],
+        "description": "Применение принципа «graceful degradation» на примере тач-почты Mail.Ru."
+    },
+
+    "2012-minsk_8-webstorage": {
+        "title": "WebStorage и его применение для связи окон",
+        "speakers": ["roman-mitasov"],
+        "description": "Веб-клиент для Mail.ru Agent. Особенности разработки месенджера для веба. Плюсы, минусы и подводные камни клиентского хранения данных. Синхронизация интерфейса, межоконный роутер, одно соединения на все окна пользователя."
+    },
+
+    "2012-spb_1-jedi": {
+        "title": "Джедаями не рождаются",
+        "speakers": ["mikhail-baranov"],
+        "description": "Заметки о том, как нужно и как не нужно учить клиентским технологиям. Будет полезен руководителям, разработчикам и всем, кто хочет ими стать."
+    },
+
+    "2012-spb_2-css-selectors": {
+        "title": "Селекторы CSS в разрезе производительности",
+        "speakers": ["artemy-lomov"],
+        "description": "Принципы обработки стилей браузером, история и особенности работы селекторов, тестирование производительности."
+    },
+
+    "2012-spb_3-push-it": {
+        "title": "Жми сюда!",
+        "speakers": ["vadim-makeev"],
+        "description": "Кнопка, ссылка, псевдоссылка? Как правильно выбрать, сверстать и не наделать глупостей."
+    },
+
+    "2012-spb_4-schema.org": {
+        "title": "Schema.org. Современный семантический веб",
+        "speakers": ["sergey-mezentsev"],
+        "description": "Использование HTML5 microdata и Schema.org на сайте."
+    },
+
+    "2012-spb_5-js-performance": {
+        "title": "Трудности производительности",
+        "speakers": ["dmitry-makhnev"],
+        "description": "О важности производительности JavaScript каждого кирпичика вашего приложения."
+    },
+
+    "2012-spb_6-3d-css": {
+        "title": "На грани возможного",
+        "speakers": ["anton-nemcev"],
+        "description": "3D и 2D-анимация и эмоции в веб c помощью CSS."
+    },
+
+    "2012-spb_7-save-the-world": {
+        "title": "Спасаем мир вместе",
+        "speakers": ["roman-komarov"],
+        "description": "Несколько простых способов внести свой вклад в развитие фронтенда. Опенсорс, Гитхаб и всё такое."
     },
 
     "2012-msk_1-current-css-w3c": {

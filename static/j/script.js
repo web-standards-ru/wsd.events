@@ -33,7 +33,7 @@ $(function(){
 		});
 	};
 
-	$('#twitter ul').tweets('-RT%20wstdays');
+	$('#twitter').find('ul').tweets('-RT%20wstdays');
 
 	// Map
 
@@ -69,18 +69,18 @@ $(function(){
 		marker.point = [marker.coords.lat, marker.coords.lng];
 
 		marker.style = {
-			iconImageHref:"/i/map-logo.png",
+			iconImageHref:"/static/i/map-logo.png",
 			iconImageSize:[93, 83],
 			iconImageOffset:[-24, -83],
 			iconShadow:true,
-			iconShadowImageHref:"/i/map-shadow.png",
+			iconShadowImageHref:"/static/i/map-shadow.png",
 			iconShadowImageSize:[93, 83],
 			iconShadowImageOffset:[-24, -83]
 		};
 
 		ymaps.ready(function () {
 			map.removeChild(map.firstChild);
-            ymap = new ymaps.Map(map, {
+			ymap = new ymaps.Map(map, {
 				center: [centerCoords.lat, centerCoords.lng],
 				zoom: mapData.z
 			});
@@ -95,7 +95,7 @@ $(function(){
 			if (mapData.l === 'pmap') {
 				ymap.setType('yandex#publicMap');
 			}
-        });
+		});
 	};
 
 	$('#map').map();
