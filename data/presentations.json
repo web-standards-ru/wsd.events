@@ -1,4 +1,148 @@
 {
+    "2011-kiev_2-sass": {
+
+    },
+
+    "2011-kiev_7-real-js": {
+
+    },
+
+    "2011-minsk_1-edge": {
+
+    },
+
+    "2011-minsk_2-check-list": {
+
+    },
+
+    "2011-minsk_3-conditional-css": {
+
+    },
+
+    "2011-minsk_4-media-queries": {
+
+    },
+
+    "2011-minsk_5-procrustes": {
+
+    },
+
+    "2011-minsk_6-editable-html": {
+
+    },
+
+    "2011-minsk_7-bem": {
+
+    },
+
+    "2011-minsk_8-console": {
+
+    },
+
+    "2011-minsk_9-cloud": {
+
+    },
+
+    "2011-msk_2-css-experiments": {
+
+    },
+
+    "2011-msk_4-vimi": {
+
+    },
+
+    "2011-msk_5-pre-fixes": {
+
+    },
+
+    "2011-msk_7-csscomb": {
+
+    },
+
+    "2012-ekb_1-text-editor": {
+
+    },
+
+    "2012-ekb_2-css-selectors": {
+
+    },
+
+    "2012-ekb_3-dart": {
+
+    },
+
+    "2012-ekb_4-pre-fixes": {
+
+    },
+
+    "2012-kiev_1-speed-coding": {
+
+    },
+
+    "2012-kiev_2-mcss": {
+
+    },
+
+    "2012-kiev_3-meteor": {
+
+    },
+
+    "2012-kiev_4-pushit": {
+
+    },
+
+    "2012-kiev_5-3d-css": {
+
+    },
+
+    "2012-kiev_6-html5-win8": {
+
+    },
+
+    "2012-minsk_2-clear-and-sharp": {
+
+    },
+
+    "2012-minsk_3-adaptive-design": {
+
+    },
+
+    "2012-minsk_5-mcss": {
+
+    },
+
+    "2012-minsk_7-web-apps": {
+
+    },
+
+    "2012-spb_1-jedi": {
+
+    },
+
+    "2012-spb_2-css-selectors": {
+
+    },
+
+    "2012-spb_3-push-it": {
+
+    },
+
+    "2012-spb_4-schema.org": {
+
+    },
+
+    "2012-spb_5-js-performance": {
+
+    },
+
+    "2012-spb_6-3d-css": {
+
+    },
+
+    "2012-spb_7-save-the-world": {
+
+    },
+
     "2012-minsk_1-die-photoshop-die": {
         "title": "Die Photoshop, die! Или стоит ли пропускать Photoshop в процессе разработки веб-дизайна?",
         "speakers": ["ilya-pukhalski"],
