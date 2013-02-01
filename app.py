@@ -116,19 +116,20 @@ def event(event_id):
     parseDate(event)
 
     if 'schedule' in event:
+        start_time = event['schedule']['startTime'].split(":")
+        clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
+
+        presentation_speakers = []
+
         for item in event['schedule']['presentations']:
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
+            clock += timedelta(minutes=int(item['duration']))
+
             if 'presentation' in item:
                 presentation_id = item['presentation']
                 item['presentation'] = presentations[presentation_id]
                 item['presentation']['file'] = get_file(presentation_id)
-
-        presentation_speakers = map(
-            lambda x: x['presentation'].get('speakers'),
-            filter(
-                lambda x: 'presentation' in x,
-                event['schedule']['presentations']
-            )
-        )
+                presentation_speakers.append(item['presentation'].get('speakers'))
 
         speakers_keys = reduce(lambda d, el: d.extend(el) or d, presentation_speakers, [])
 
@@ -139,12 +140,6 @@ def event(event_id):
 
         speakers_dict = {speaker['id']: format_name(speaker) for speaker in speakers}
 
-        start_time = event['schedule']['startTime'].split(":")
-        clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
-
-        for item in event['schedule']['presentations']:
-            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
-            clock += timedelta(minutes=int(item['duration']))
     else:
         speakers = []
         speakers_dict = {}
