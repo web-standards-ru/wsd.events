@@ -12,6 +12,7 @@ import jinja_filters
 
 app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__name__))
+pres_dir = os.path.join(app_root, 'pres/')
 
 
 def add_null(val):
@@ -35,6 +36,17 @@ def format_name(person):
 def get_speaker_by_id(speaker_id, speakers):
     return filter(lambda speaker: speaker['id'] == speaker_id, speakers)[0]
 
+
+def get_file(name, extensions=('zip', 'pdf',)):
+    for ext in extensions:
+        filename = '.'.join((name, ext))
+        abspath = os.path.join(pres_dir, filename)
+        if os.path.exists(abspath):
+            return {
+                "name": filename,
+                "size": os.path.getsize(abspath),
+                "type": ext.upper()
+            }
 
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
@@ -104,21 +116,11 @@ def event(event_id):
     parseDate(event)
 
     if 'schedule' in event:
-        pres_dir = os.path.join(app_root, 'pres/')
         for item in event['schedule']['presentations']:
             if 'presentation' in item:
                 presentation_id = item['presentation']
                 item['presentation'] = presentations[presentation_id]
-                for ext in ('zip', 'pdf'):
-                    filename = '.'.join((presentation_id, ext))
-                    abspath = os.path.join(pres_dir, filename)
-                    if os.path.exists(abspath):
-                        item['presentation']['file'] = {
-                            "name": filename,
-                            "size": os.path.getsize(abspath),
-                            "type": ext.upper()
-                        }
-
+                item['presentation']['file'] = get_file(presentation_id)
 
         presentation_speakers = map(
             lambda x: x['presentation'].get('speakers'),
