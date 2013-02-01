@@ -12,6 +12,7 @@ import jinja_filters
 
 app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__name__))
+pres_dir = os.path.join(app_root, 'pres/')
 
 
 def add_null(val):
@@ -35,6 +36,17 @@ def format_name(person):
 def get_speaker_by_id(speaker_id, speakers):
     return filter(lambda speaker: speaker['id'] == speaker_id, speakers)[0]
 
+
+def get_file(name, extensions=('zip', 'pdf',)):
+    for ext in extensions:
+        filename = '.'.join((name, ext))
+        abspath = os.path.join(pres_dir, filename)
+        if os.path.exists(abspath):
+            return {
+                "name": filename,
+                "size": os.path.getsize(abspath),
+                "type": ext.upper()
+            }
 
 app.jinja_env.filters['day'] = jinja_filters.day
 app.jinja_env.filters['month'] = jinja_filters.month
@@ -104,29 +116,20 @@ def event(event_id):
     parseDate(event)
 
     if 'schedule' in event:
-        pres_dir = os.path.join(app_root, 'pres/')
+        start_time = event['schedule']['startTime'].split(":")
+        clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
+
+        presentation_speakers = []
+
         for item in event['schedule']['presentations']:
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
+            clock += timedelta(minutes=int(item['duration']))
+
             if 'presentation' in item:
                 presentation_id = item['presentation']
                 item['presentation'] = presentations[presentation_id]
-                for ext in ('zip', 'pdf'):
-                    filename = '.'.join((presentation_id, ext))
-                    abspath = os.path.join(pres_dir, filename)
-                    if os.path.exists(abspath):
-                        item['presentation']['file'] = {
-                            "name": filename,
-                            "size": os.path.getsize(abspath),
-                            "type": ext.upper()
-                        }
-
-
-        presentation_speakers = map(
-            lambda x: x['presentation'].get('speakers'),
-            filter(
-                lambda x: 'presentation' in x,
-                event['schedule']['presentations']
-            )
-        )
+                item['presentation']['file'] = get_file(presentation_id)
+                presentation_speakers.append(item['presentation'].get('speakers'))
 
         speakers_keys = reduce(lambda d, el: d.extend(el) or d, presentation_speakers, [])
 
@@ -137,12 +140,6 @@ def event(event_id):
 
         speakers_dict = {speaker['id']: format_name(speaker) for speaker in speakers}
 
-        start_time = event['schedule']['startTime'].split(":")
-        clock = event['date'] + timedelta(hours=int(start_time[0]), minutes=int(start_time[1]))
-
-        for item in event['schedule']['presentations']:
-            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
-            clock += timedelta(minutes=int(item['duration']))
     else:
         speakers = []
         speakers_dict = {}
