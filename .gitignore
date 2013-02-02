@@ -2,3 +2,4 @@ favicon.gif
 pres/
 browser-war/*
 !browser-war/index.htm
+env/
