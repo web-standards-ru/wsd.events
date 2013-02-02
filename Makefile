@@ -13,7 +13,13 @@ default:
 
 publishpres:
 	@echo 'Uploading presentations...'
-	@rsync -az --delete --exclude '.DS_Store' ./pres web-standards.ru:/var/www/webstandardsdays.ru/master/
+	@if [ "`cat .git/HEAD`" == 'ref: refs/heads/master' ]; then \
+		echo 'Upload to production'; \
+		rsync -az --delete --exclude '.DS_Store' ./pres webstandardsdays.ru:/var/www/webstandardsdays.ru/master/; \
+	else \
+		echo 'Upload to dev'; \
+		rsync -az --delete --exclude '.DS_Store' ./pres dev.webstandardsdays.ru:/var/www/webstandardsdays.ru/dev/; \
+	fi
 	@echo 'Done.'
 
 install: check
