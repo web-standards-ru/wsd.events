@@ -1,0 +1,20 @@
+default:
+	@echo "Usage make [COMMAND]"
+	@echo "Commands available:"
+	@echo "  check         check dependencies"
+	@echo "  install       create environment and install package"
+	@echo "  run           run application"
+	@echo "  publishpres   upload presentations to server"
+
+publishpres:
+	./install.sh publishpres
+
+install:
+	./install.sh install
+
+check:
+	./install.sh check
+
+run:
+	@echo 'Run application...'
+	@env/bin/python app.py
