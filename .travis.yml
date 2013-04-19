@@ -7,4 +7,4 @@ install: "pip install -r pip-requirements --use-mirrors"
 script: nosetests
 # run deploy script on server
 notifications:
-  webhooks: http://dev.webstandardsdays.ru/deploy
+  webhooks: http://serve.webstandardsdays.ru/
