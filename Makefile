@@ -4,6 +4,7 @@ default:
 	@echo "  check         check dependencies"
 	@echo "  install       create environment and install package"
 	@echo "  run           run application"
+	@echo "  test          run tests"
 	@echo "  publishpres   upload presentations to server"
 
 publishpres:
@@ -18,3 +19,7 @@ check:
 run:
 	@echo 'Run application...'
 	@env/bin/python app.py
+
+test:
+	@echo 'Run tests...'
+	@env/bin/nosetests
