@@ -1,0 +1,3 @@
+-r base.txt # includes the base.txt requirements file
+
+nose==1.3.0
