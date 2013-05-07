@@ -2,7 +2,7 @@ language: python
 python:
   - "2.7"
 # command to install dependencies
-install: "pip install -r pip-requirements --use-mirrors"
+install: "pip install -r requirements/ci.txt --use-mirrors"
 # command to run tests
 script: nosetests
 # run deploy script on server
