@@ -17,8 +17,7 @@ check:
 	./install.sh check
 
 run:
-	@echo 'Run application...'
-	@env/bin/python app.py
+	./install.sh run
 
 test:
 	@echo 'Run tests...'
