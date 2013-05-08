@@ -9,6 +9,7 @@ import pytz
 from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
 import jinja_filters
+from config import CSRF_ENABLED, SECRET_KEY
 
 app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__name__))
