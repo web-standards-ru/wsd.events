@@ -9,13 +9,16 @@ import pytz
 from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
 import jinja_filters
-from config import CSRF_ENABLED, SECRET_KEY
 
 app = Flask(__name__)
+app.config.from_object('config')
+
+# TODO: Move it to config
 app_root = os.path.abspath(os.path.dirname(__name__))
 pres_dir = os.path.join(app_root, 'pres/')
 
 
+# TODO: Move it to utils module
 def add_null(val):
     return val if val >= 10 else "0{num}".format(num=val)
 
