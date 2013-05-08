@@ -76,7 +76,7 @@ then
       echo "Creating environment..."
       virtualenv --prompt=\[wsd\] ./env
       echo "Installing packages..."
-      env/bin/pip install -r pip-requirements
+      env/bin/pip install -r requirements/dev.txt
       echo "Done"
       ;;
     "check")
