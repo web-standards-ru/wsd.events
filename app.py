@@ -25,14 +25,14 @@ def add_null(val):
 from mailsnake.exceptions import *
 
 
-def process_register(data):
+def process_register(data, list_id):
     from mailsnake import MailSnake
     api_key = os.environ['MAILCHIMP_API_KEY']
 
     ms = MailSnake(api_key)
     try:
         status = ms.listSubscribe(
-            id='a63c57772a',
+            id=list_id,
             email_address=data['email'],
             double_optin=False,
             merge_vars={
@@ -208,7 +208,7 @@ def event(event_id):
         show_registration = event['registration']['open'] < datetime.now(pytz.utc) < event['registration']['close']
         registration_form = RegistrationForm(prefix="regform_")
         if registration_form.validate_on_submit():
-            register = process_register(registration_form.data)
+            register = process_register(registration_form.data, event['registration']['mailchimpListId'])
             if register.get('success'):
                 flash(u'Спасибо, ваша заявка принята')
                 return redirect('/events/{}'.format(event_id))

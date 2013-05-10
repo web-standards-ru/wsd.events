@@ -434,6 +434,7 @@
             "openTime": "21:00",
             "closeDate": "16-05-2013",
             "closeTime": "12:00",
+            "mailchimpListId": "a63c57772a",
             "fields": [
                 {
                     "name": "firstName",
