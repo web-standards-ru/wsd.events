@@ -22,6 +22,43 @@ pres_dir = os.path.join(app_root, 'pres/')
 def add_null(val):
     return val if val >= 10 else "0{num}".format(num=val)
 
+from mailsnake.exceptions import *
+
+
+def process_register(data):
+    from mailsnake import MailSnake
+    api_key = os.environ['MAILCHIMP_API_KEY']
+
+    ms = MailSnake(api_key)
+    try:
+        status = ms.listSubscribe(
+            id='a63c57772a',
+            email_address=data['email'],
+            double_optin=False,
+            merge_vars={
+                "FNAME": data['firstName'],
+                "LNAME": data['lastName'],
+                "COMPANY": data['company'],
+                "POSITION": data['position'],
+                "TWITTER": data['twitter']
+            }
+        )
+        return {
+            'success': status
+        }
+    except ListAlreadySubscribedException, e:
+        return {
+            'success': False,
+            'message': u'Адрес электронной почты {} уже зарегистрирован'.format(data['email']),
+        }
+    except MailSnakeException, e:
+        # TODO: Нужно логгировать ошибки
+        print e.message
+        return {
+            'success': False,
+            'message': u'Возникла непредвиденная ошибка',
+        }
+
 
 def parseDate(el):
     date = [int(x) for x in el['date'].split("-")]
@@ -171,7 +208,12 @@ def event(event_id):
         show_registration = event['registration']['open'] < datetime.now(pytz.utc) < event['registration']['close']
         registration_form = RegistrationForm(prefix="regform_")
         if registration_form.validate_on_submit():
-            flash(u'Спасибо, ваша заявка принята')
+            register = process_register(registration_form.data)
+            if register.get('success'):
+                flash(u'Спасибо, ваша заявка принята')
+                return redirect('/events/{}'.format(event_id))
+            else:
+                flash(register.get('message'))
     else:
         show_registration = False
         registration_form = None
