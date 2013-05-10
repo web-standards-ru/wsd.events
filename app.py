@@ -5,9 +5,10 @@ import json
 from datetime import datetime, timedelta
 
 import pytz
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, flash
 from jinja2 import TemplateNotFound
 import jinja_filters
+from forms import RegistrationForm
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -123,7 +124,7 @@ def legacy_event(year, month, day):
     return redirect(path) if event else (render_template('page-not-found.html'), 404)
 
 
-@app.route('/events/<event_id>/')
+@app.route('/events/<event_id>/', methods=['GET', 'POST'])
 def event(event_id):
     sources_list = ('events', 'partners', 'presentations', 'speakers')
     events, partners, presentations, speakers = load_data(sources_list)
@@ -168,8 +169,12 @@ def event(event_id):
         parseRegistrationOpen(event)
         parseRegistrationClose(event)
         show_registration = event['registration']['open'] < datetime.now(pytz.utc) < event['registration']['close']
+        registration_form = RegistrationForm(prefix="regform_")
+        if registration_form.validate_on_submit():
+            flash(u'Спасибо, ваша заявка принята')
     else:
         show_registration = False
+        registration_form = None
 
     event['archived'] = datetime.now(pytz.utc) > event['date'] + timedelta(days=1)
 
@@ -178,13 +183,9 @@ def event(event_id):
                            speakers=speakers,
                            speakers_dict=speakers_dict,
                            partners=partners,
-                           show_registration=show_registration
+                           show_registration=show_registration,
+                           registration_form=registration_form,
     )
-
-
-@app.route('/events/<event_id>/register/')
-def register(event_id):
-    return u'Регистрация на событие'
 
 
 @app.route('/<staticpage>/')

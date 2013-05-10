@@ -434,32 +434,33 @@
             "openTime": "21:00",
             "closeDate": "16-05-2013",
             "closeTime": "12:00",
-            "fields": {
-                "firstName": {
-                    "title": "Имя",
-                    "type": "TextField"
+            "fields": [
+                {
+                    "name": "firstName",
+                    "label": "Имя"
                 },
-                "lastName": {
-                    "title": "Фамилия",
-                    "type": "TextField"
+                {
+                    "name": "lastName",
+                    "label": "Фамилия"
                 },
-                "email": {
-                    "title": "Адрес электронной почты",
-                    "type": "TextField"
+                {
+                    "name": "email",
+                    "label": "Адрес электронной почты",
+                    "description": "Обещаем — спама не будет"
                 },
-                "jobCompany": {
-                    "title": "Место работы или учёбы",
-                    "type": "TextField"
+                {
+                    "name": "company",
+                    "label": "Место работы или учёбы"
                 },
-                "jobPosition": {
-                    "title": "Должность",
-                    "type": "TextField"
+                {
+                    "name": "position",
+                    "label": "Должность"
                 },
-                "twitterName": {
-                    "title": "Ник в твиттере",
-                    "type": "TextField"
+                {
+                    "name": "twitter",
+                    "label": "Ник в твиттере"
                 }
-            }
+            ]
         }
     }
 ]
