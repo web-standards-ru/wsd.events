@@ -2,7 +2,6 @@
 
 import os
 import json
-import time
 from datetime import datetime, timedelta
 
 import pytz
@@ -25,8 +24,25 @@ def add_null(val):
 
 def parseDate(el):
     date = [int(x) for x in el['date'].split("-")]
-    el['date'] = datetime(date[2], date[1], date[0], tzinfo=pytz.timezone(el['timezone']))
+    timezone = pytz.timezone(el['timezone'])
+    el['date'] = timezone.localize(datetime(date[2], date[1], date[0]))
     return el
+
+
+def parseRegistrationOpen(el):
+    date = [int(x) for x in el['registration']['openDate'].split("-")]
+    time = [int(x) for x in el['registration']['openTime'].split(":")]
+    timezone = pytz.timezone(el['timezone'])
+    dt = datetime(date[2], date[1], date[0], time[0], time[1])
+    el['registration']['open'] = timezone.localize(dt)
+
+
+def parseRegistrationClose(el):
+    date = [int(x) for x in el['registration']['closeDate'].split("-")]
+    time = [int(x) for x in el['registration']['closeTime'].split(":")]
+    timezone = pytz.timezone(el['timezone'])
+    dt = datetime(date[2], date[1], date[0], time[0], time[1])
+    el['registration']['close'] = timezone.localize(dt)
 
 
 def load_data(sources):
@@ -149,7 +165,9 @@ def event(event_id):
         speakers_dict = {}
 
     if 'registration' in event and 'force_close' not in event['registration']:
-        show_registration = event['registration']['open'] < time.time() < event['registration']['close']
+        parseRegistrationOpen(event)
+        parseRegistrationClose(event)
+        show_registration = event['registration']['open'] < datetime.now(pytz.utc) < event['registration']['close']
     else:
         show_registration = False
 
