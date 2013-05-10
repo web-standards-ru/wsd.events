@@ -66,6 +66,7 @@ publish () {
 
 run () {
   export WSD_SECRET_KEY=Ulfmm0guvWRfOY$21ZtPRVv
+  export MAILCHIMP_API_KEY=fakeKey
   ./env/bin/python app.py
 }
 
