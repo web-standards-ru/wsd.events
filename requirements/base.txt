@@ -1,7 +1,5 @@
 Flask==0.9
 Jinja2==2.6
 Flask-WTF==0.8.3
-WTForms==1.0.4
-Werkzeug==0.8.3
 pytz==2013b
 mailsnake==1.6.2
