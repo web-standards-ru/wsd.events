@@ -135,8 +135,15 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     {% if event.registration.custom %}
-    {{ event.registration.custom|safe() }}
+        {{ event.registration.custom|safe() }}
+    {% else %}
+        <form action="" method="POST">
+        {{ registration_form.hidden_tag() }}
+        {% include "__registration_form.html" %}
+        <input type="submit" value="Зарегистрироваться">
+        </form>
     {% endif %}
+
 </article>
 {% endif %}
 

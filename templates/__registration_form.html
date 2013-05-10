@@ -1,0 +1,26 @@
+{% set fields = event.registration.fields %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+
+{{ registration_form.prefix }}
+
+{% for field in fields %}
+    <div>
+        <label for="regform_{{ field.name }}">{{ field.label }}</label>
+        {{ registration_form[field.name] }}
+        {% if field.description %}
+            <span class="field_description">{{ field.description }}</span>
+        {% endif %}
+        {% for error in registration_form.errors[field.name] %}
+            <span class="error">{{ error }}</span>
+        {% endfor %}
+    </div>
+{% endfor %}

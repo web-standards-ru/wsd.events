@@ -64,6 +64,12 @@ publish () {
   esac
 }
 
+run () {
+  export WSD_SECRET_KEY=Ulfmm0guvWRfOY$21ZtPRVv
+  export MAILCHIMP_API_KEY=fakeKey
+  ./env/bin/python app.py
+}
+
 if [ $# = 1 ]
 then
   case "$1" in
@@ -81,6 +87,10 @@ then
       ;;
     "check")
       checkdeps
+      ;;
+    "run")
+      echo "Run application..."
+      run
       ;;
     *)
       echo -e "${ERROR} Unknown parameter \"${1}\""

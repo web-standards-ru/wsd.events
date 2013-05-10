@@ -424,11 +424,44 @@
 
     {
         "id": "spb-2013",
-        "date": "22-06-2013",
-        "inaccurateDate": true,
+        "date": "08-06-2013",
         "timezone": "Europe/Moscow",
         "place": {
             "city": "Санкт-Петербург"
+        },
+        "registration": {
+            "openDate": "10-05-2013",
+            "openTime": "21:00",
+            "closeDate": "16-05-2013",
+            "closeTime": "12:00",
+            "mailchimpListId": "a63c57772a",
+            "fields": [
+                {
+                    "name": "firstName",
+                    "label": "Имя"
+                },
+                {
+                    "name": "lastName",
+                    "label": "Фамилия"
+                },
+                {
+                    "name": "email",
+                    "label": "Адрес электронной почты",
+                    "description": "Обещаем — спама не будет"
+                },
+                {
+                    "name": "company",
+                    "label": "Место работы или учёбы"
+                },
+                {
+                    "name": "position",
+                    "label": "Должность"
+                },
+                {
+                    "name": "twitter",
+                    "label": "Ник в твиттере"
+                }
+            ]
         }
     }
 ]
