@@ -119,6 +119,7 @@ a {
 	left:400px;
 	overflow:auto;
 	background:#2E5A75;
+	-webkit-overflow-scrolling:touch;
 	}
 
 /* Main
