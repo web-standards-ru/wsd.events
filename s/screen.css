@@ -3,7 +3,7 @@
 body {
 	overflow:hidden;
 	background:#153543;
-	font:13px/22px 'Helvetica Neue','Helvetica','Arial',sans-serif;
+	font:13px/22px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 a {
 	text-decoration:none;
@@ -18,17 +18,25 @@ a {
 	overflow:hidden;
 	width:302px;
 	height:213px;
-	background:url(../i/header.png) no-repeat;
-	text-indent:-9999px;
+	text-align:center;
+	color:#FFF;
 	}
-	#header a {
-		position:absolute;
-		top:0;
-		left:0;
-		display:block;
-		width:100%;
-		height:100%;
+	#header h1,
+	#header p {
+		font:bold 65px/1 'Trebuchet MS', sans-serif;
 		}
+		#header h1:before,
+		#header p:before {
+			display:inline-block;
+			width:1.2em;
+			height:0.75em;
+			background:url(../i/logo.svg) no-repeat;
+			vertical-align:-0.03em;
+			content:'';
+			}
+		#header a {
+			color:#FFF;
+			}
 
 /* Twitter
 ---------------------------------------- */
@@ -59,6 +67,7 @@ a {
 		bottom:0;
 		overflow:hidden;
 		width:200px;
+		-webkit-overflow-scrolling:touch;
 		}
 	#twitter div:before,
 	#twitter div:after {
@@ -173,7 +182,7 @@ a {
 	padding:63px 54px 30px;
 	width:392px;
 	background:url(../i/shadow.png) 0 100% no-repeat;
-	font:24px/1 'Trebuchet MS',sans-serif;
+	font:24px/1 'Trebuchet MS', sans-serif;
 	}
 	#navigation li {
 		margin:-8px 0 0;
@@ -235,7 +244,7 @@ a {
 		.article header h1,
 		.article header h2 {
 			color:#2E5A75;
-			font:20px/1 'Trebuchet MS',sans-serif;
+			font:20px/1 'Trebuchet MS', sans-serif;
 			}
 		.article header .top {
 			position:absolute;
@@ -263,7 +272,7 @@ a {
 .article h3 {
 	margin:30px 0 20px 120px;
 	color:#2E5A75;
-	font:15px/1 'Trebuchet MS',sans-serif;
+	font:15px/1 'Trebuchet MS', sans-serif;
 	}
 .article .anchor {
 	border-bottom:1px dotted;
@@ -473,4 +482,32 @@ a {
 	background:#F1EEE8;
 	outline:solid 1px #EEE;
 	line-height:1.2;
+	}
+
+/* Narrow
+---------------------------------------- */
+@media (max-width:910px) {
+	body {
+		overflow:auto;
+		background:#2E5A75;
+		}
+	#header {
+		position:relative;
+		top:auto;
+		left:auto;
+		width:510px;
+		height:auto;
+		background:#153543;
+		}
+		#header h1,
+		#header p {
+			padding:20px 0;
+			font-size:43px;
+			}
+	#twitter {
+		display:none;
+		}
+	#page {
+		position:static;
+		}
 	}
