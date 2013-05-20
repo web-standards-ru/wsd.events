@@ -1,0 +1,10 @@
+{
+	"version": "1",
+	"api_version": 1,
+
+	"layout": {
+		"logo": "http://webstandardsdays.ru/i/tableau.png",
+		"color": "#E6F7FC",
+		"show_title": false
+	}
+}
