@@ -6,7 +6,9 @@ $(function(){
 
 	$.fn.tweets = function( q ) {
 		var list = $( this ),
-			url = 'http://search.twitter.com/search.json?q=%23' + q + '&rpp=20&callback=?';
+			url;
+		q = '%23' + q + '%20-RT';
+		url = 'http://search.twitter.com/search.json?q=' + q + '&rpp=20&callback=?';
 		$.getJSON( url, function( data ) {
 			$.each( data.results, function( i, item ) {
 				var user = item.from_user,
