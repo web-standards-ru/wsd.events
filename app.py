@@ -57,19 +57,15 @@ def process_register(data, list_id):
 
 
 def parseRegistrationOpen(el):
-    date = [int(x) for x in el['registration']['openDate'].split("-")]
-    time = [int(x) for x in el['registration']['openTime'].split(":")]
-    timezone = pytz.timezone(el['timezone'])
-    dt = datetime(date[2], date[1], date[0], time[0], time[1])
-    el['registration']['open'] = timezone.localize(dt)
+    el['registration']['open'] = helpers.parseDateTime(el['registration']['openDate'],
+                                                       el['registration']['openTime'],
+                                                       el['timezone'])
 
 
 def parseRegistrationClose(el):
-    date = [int(x) for x in el['registration']['closeDate'].split("-")]
-    time = [int(x) for x in el['registration']['closeTime'].split(":")]
-    timezone = pytz.timezone(el['timezone'])
-    dt = datetime(date[2], date[1], date[0], time[0], time[1])
-    el['registration']['close'] = timezone.localize(dt)
+    el['registration']['open'] = helpers.parseDateTime(el['registration']['closeDate'],
+                                                       el['registration']['closeTime'],
+                                                       el['timezone'])
 
 
 def load_data(sources):
