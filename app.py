@@ -6,23 +6,82 @@ import time
 from datetime import datetime, timedelta
 
 import pytz
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, flash
 from jinja2 import TemplateNotFound
 import jinja_filters
+from forms import RegistrationForm
 
 app = Flask(__name__, static_folder='templates/static', template_folder='templates')
+app.config.from_object('config')
+
+# TODO: Move it to config
 app_root = os.path.abspath(os.path.dirname(__name__))
 pres_dir = os.path.join(app_root, 'pres/')
 
 
+# TODO: Move it to utils module
 def add_null(val):
     return val if val >= 10 else "0{num}".format(num=val)
+
+from mailsnake.exceptions import *
+
+
+def process_register(data, list_id):
+    from mailsnake import MailSnake
+    api_key = os.environ['MAILCHIMP_API_KEY']
+
+    ms = MailSnake(api_key)
+    try:
+        status = ms.listSubscribe(
+            id=list_id,
+            email_address=data['email'],
+            double_optin=False,
+            merge_vars={
+                "FNAME": data['firstName'],
+                "LNAME": data['lastName'],
+                "COMPANY": data['company'],
+                "POSITION": data['position'],
+                "TWITTER": data['twitter']
+            }
+        )
+        return {
+            'success': status
+        }
+    except ListAlreadySubscribedException, e:
+        return {
+            'success': False,
+            'message': u'Адрес электронной почты {} уже зарегистрирован'.format(data['email']),
+        }
+    except MailSnakeException, e:
+        # TODO: Нужно логгировать ошибки
+        print e.message
+        return {
+            'success': False,
+            'message': u'Возникла непредвиденная ошибка',
+        }
 
 
 def parseDate(el):
     date = [int(x) for x in el['date'].split("-")]
-    el['date'] = datetime(date[2], date[1], date[0], tzinfo=pytz.timezone(el['timezone']))
+    timezone = pytz.timezone(el['timezone'])
+    el['date'] = timezone.localize(datetime(date[2], date[1], date[0]))
     return el
+
+
+def parseRegistrationOpen(el):
+    date = [int(x) for x in el['registration']['openDate'].split("-")]
+    time = [int(x) for x in el['registration']['openTime'].split(":")]
+    timezone = pytz.timezone(el['timezone'])
+    dt = datetime(date[2], date[1], date[0], time[0], time[1])
+    el['registration']['open'] = timezone.localize(dt)
+
+
+def parseRegistrationClose(el):
+    date = [int(x) for x in el['registration']['closeDate'].split("-")]
+    time = [int(x) for x in el['registration']['closeTime'].split(":")]
+    timezone = pytz.timezone(el['timezone'])
+    dt = datetime(date[2], date[1], date[0], time[0], time[1])
+    el['registration']['close'] = timezone.localize(dt)
 
 
 def load_data(sources):
@@ -103,7 +162,7 @@ def legacy_event(year, month, day):
     return redirect(path) if event else (render_template('page-not-found.html'), 404)
 
 
-@app.route('/events/<event_id>/')
+@app.route('/events/<event_id>/', methods=['GET', 'POST'])
 def event(event_id):
     sources_list = ('events', 'partners', 'presentations', 'speakers')
     events, partners, presentations, speakers = load_data(sources_list)
@@ -145,9 +204,20 @@ def event(event_id):
         speakers_dict = {}
 
     if 'registration' in event and 'force_close' not in event['registration']:
-        show_registration = event['registration']['open'] < time.time() < event['registration']['close']
+        parseRegistrationOpen(event)
+        parseRegistrationClose(event)
+        show_registration = event['registration']['open'] < datetime.now(pytz.utc) < event['registration']['close']
+        registration_form = RegistrationForm(prefix="regform_")
+        if registration_form.validate_on_submit():
+            register = process_register(registration_form.data, event['registration']['mailchimpListId'])
+            if register.get('success'):
+                flash(u'Спасибо, ваша заявка принята')
+                return redirect('/events/{}'.format(event_id))
+            else:
+                flash(register.get('message'))
     else:
         show_registration = False
+        registration_form = None
 
     event['archived'] = datetime.now(pytz.utc) > event['date'] + timedelta(days=1)
 
@@ -156,13 +226,9 @@ def event(event_id):
                            speakers=speakers,
                            speakers_dict=speakers_dict,
                            partners=partners,
-                           show_registration=show_registration
+                           show_registration=show_registration,
+                           registration_form=registration_form,
     )
-
-
-@app.route('/events/<event_id>/register/')
-def register(event_id):
-    return u'Регистрация на событие'
 
 
 @app.route('/<staticpage>/')
