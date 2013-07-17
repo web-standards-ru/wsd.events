@@ -10,7 +10,7 @@ from flask import Flask, render_template, redirect
 from jinja2 import TemplateNotFound
 import jinja_filters
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='templates/static', template_folder='templates')
 app_root = os.path.abspath(os.path.dirname(__name__))
 pres_dir = os.path.join(app_root, 'pres/')
 
