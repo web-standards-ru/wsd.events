@@ -56,13 +56,6 @@ def process_register(data, list_id):
         }
 
 
-def parseDate(el):
-    date = [int(x) for x in el['date'].split("-")]
-    timezone = pytz.timezone(el['timezone'])
-    el['date'] = timezone.localize(datetime(date[2], date[1], date[0]))
-    return el
-
-
 def parseRegistrationOpen(el):
     date = [int(x) for x in el['registration']['openDate'].split("-")]
     time = [int(x) for x in el['registration']['openTime'].split(":")]
@@ -133,10 +126,13 @@ def index():
         presentation['speakers'] = map(lambda speaker: format_name(get_speaker_by_id(speaker, speakers)),
                                        presentation['speakers'])
 
+    for event in events:
+        event['date'] = helpers.parseDate(event['date'], event['timezone'])
+
     return render_template('index.html',
                            history=groupby(
                                sorted(
-                                   map(parseDate, events),
+                                   events,
                                    key=lambda x: x['date'],
                                    reverse=True),
                                key=lambda x: x['date'].year
@@ -167,7 +163,7 @@ def event(event_id):
     if not event:
         return render_template('page-not-found.html'), 404
 
-    parseDate(event)
+    event['date'] = helpers.parseDate(event['date'], event['timezone'])
 
     if 'schedule' in event:
         start_time = event['schedule']['startTime'].split(":")
