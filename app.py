@@ -2,16 +2,16 @@
 
 import os
 import json
-import time
 from datetime import datetime, timedelta
 
 import pytz
 from flask import Flask, render_template, redirect, flash
 from jinja2 import TemplateNotFound
-import jinja_filters
-from utils import helpers
-from forms import RegistrationForm
 from mailsnake.exceptions import *
+
+from utils import helpers, jinjaFilters
+from forms import RegistrationForm
+
 
 app = Flask(__name__, static_folder='templates/static', template_folder='templates')
 app.config.from_object('config')
@@ -102,10 +102,10 @@ def get_file(name, extensions=('zip', 'pdf',)):
                 "type": ext.upper()
             }
 
-app.jinja_env.filters['day'] = jinja_filters.day
-app.jinja_env.filters['month'] = jinja_filters.month
-app.jinja_env.filters['year'] = jinja_filters.year
-app.jinja_env.filters['filesize'] = jinja_filters.filesize
+app.jinja_env.filters['day'] = jinjaFilters.day
+app.jinja_env.filters['month'] = jinjaFilters.month
+app.jinja_env.filters['year'] = jinjaFilters.year
+app.jinja_env.filters['filesize'] = jinjaFilters.filesize
 
 
 @app.context_processor
