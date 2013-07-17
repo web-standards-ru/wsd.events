@@ -1,9 +1,10 @@
 # coding=utf-8
+import os
 import pytz
 from datetime import datetime
 
 
-def add_null(val):
+def addNull(val):
     """Добавление ведущего нуля к переданному значению"""
     return val if val >= 10 else "0{num}".format(num=val)
 
@@ -18,10 +19,23 @@ def parseDate(date_string, tz_str=None, sep="-"):
     return tz.localize(dt)
 
 
+def getFile(name, path, extensions=('zip', 'pdf',)):
+    """Получение информации о файле по имени и пути"""
+    for ext in extensions:
+        filename = '.'.join((name, ext))
+        abspath = os.path.join(path, filename)
+        if os.path.exists(abspath):
+            return {
+                "name": filename,
+                "size": os.path.getsize(abspath),
+                "type": ext.upper()
+            }
+
+
 if __name__ == "__main__":
-    print add_null(1)
-    print add_null(10)
-    print add_null("a")
+    print addNull(1)
+    print addNull(10)
+    print addNull("a")
 
     print "-" * 8
 

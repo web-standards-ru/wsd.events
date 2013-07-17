@@ -84,17 +84,6 @@ def get_speaker_by_id(speaker_id, speakers):
     return filter(lambda speaker: speaker['id'] == speaker_id, speakers)[0]
 
 
-def get_file(name, extensions=('zip', 'pdf',)):
-    for ext in extensions:
-        filename = '.'.join((name, ext))
-        abspath = os.path.join(pres_dir, filename)
-        if os.path.exists(abspath):
-            return {
-                "name": filename,
-                "size": os.path.getsize(abspath),
-                "type": ext.upper()
-            }
-
 app.jinja_env.filters['day'] = jinjaFilters.day
 app.jinja_env.filters['month'] = jinjaFilters.month
 app.jinja_env.filters['year'] = jinjaFilters.year
@@ -145,7 +134,7 @@ def index():
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def legacy_event(year, month, day):
-    date = '{day}-{month}-{year}'.format(day=helpers.add_null(day), month=helpers.add_null(month), year=year)
+    date = '{day}-{month}-{year}'.format(day=helpers.addNull(day), month=helpers.addNull(month), year=year)
     events = json.load(open('data/events.json'))
     event = reduce(lambda init, x: x if x['date'] == date else init, events, None)
     path = '/events/{event_id}/'.format(event_id=event['id'])
@@ -172,13 +161,13 @@ def event(event_id):
         presentation_speakers = []
 
         for item in event['schedule']['presentations']:
-            item['time'] = "{h}:{m}".format(h=clock.hour, m=helpers.add_null(clock.minute))
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=helpers.addNull(clock.minute))
             clock += timedelta(minutes=int(item['duration']))
 
             if 'presentation' in item:
                 presentation_id = item['presentation']
                 item['presentation'] = presentations[presentation_id]
-                item['presentation']['file'] = get_file(presentation_id)
+                item['presentation']['file'] = helpers.getFile(presentation_id, pres_dir)
                 presentation_speakers.append(item['presentation'].get('speakers'))
 
         speakers_keys = reduce(lambda d, el: d.extend(el) or d, presentation_speakers, [])
