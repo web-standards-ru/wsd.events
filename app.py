@@ -9,7 +9,9 @@ import pytz
 from flask import Flask, render_template, redirect, flash
 from jinja2 import TemplateNotFound
 import jinja_filters
+from utils import helpers
 from forms import RegistrationForm
+from mailsnake.exceptions import *
 
 app = Flask(__name__, static_folder='templates/static', template_folder='templates')
 app.config.from_object('config')
@@ -17,13 +19,6 @@ app.config.from_object('config')
 # TODO: Move it to config
 app_root = os.path.abspath(os.path.dirname(__name__))
 pres_dir = os.path.join(app_root, 'pres/')
-
-
-# TODO: Move it to utils module
-def add_null(val):
-    return val if val >= 10 else "0{num}".format(num=val)
-
-from mailsnake.exceptions import *
 
 
 def process_register(data, list_id):
@@ -154,7 +149,7 @@ def index():
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def legacy_event(year, month, day):
-    date = '{day}-{month}-{year}'.format(day=add_null(day), month=add_null(month), year=year)
+    date = '{day}-{month}-{year}'.format(day=helpers.add_null(day), month=helpers.add_null(month), year=year)
     events = json.load(open('data/events.json'))
     event = reduce(lambda init, x: x if x['date'] == date else init, events, None)
     path = '/events/{event_id}/'.format(event_id=event['id'])
@@ -181,7 +176,7 @@ def event(event_id):
         presentation_speakers = []
 
         for item in event['schedule']['presentations']:
-            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=helpers.add_null(clock.minute))
             clock += timedelta(minutes=int(item['duration']))
 
             if 'presentation' in item:
