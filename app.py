@@ -2,14 +2,16 @@
 
 import os
 import json
-import time
 from datetime import datetime, timedelta
 
 import pytz
 from flask import Flask, render_template, redirect, flash
 from jinja2 import TemplateNotFound
-import jinja_filters
+from mailsnake.exceptions import *
+
+from utils import helpers, jinjaFilters
 from forms import RegistrationForm
+
 
 app = Flask(__name__, static_folder='templates/static', template_folder='templates')
 app.config.from_object('config')
@@ -17,13 +19,6 @@ app.config.from_object('config')
 # TODO: Move it to config
 app_root = os.path.abspath(os.path.dirname(__name__))
 pres_dir = os.path.join(app_root, 'pres/')
-
-
-# TODO: Move it to utils module
-def add_null(val):
-    return val if val >= 10 else "0{num}".format(num=val)
-
-from mailsnake.exceptions import *
 
 
 def process_register(data, list_id):
@@ -61,27 +56,16 @@ def process_register(data, list_id):
         }
 
 
-def parseDate(el):
-    date = [int(x) for x in el['date'].split("-")]
-    timezone = pytz.timezone(el['timezone'])
-    el['date'] = timezone.localize(datetime(date[2], date[1], date[0]))
-    return el
-
-
 def parseRegistrationOpen(el):
-    date = [int(x) for x in el['registration']['openDate'].split("-")]
-    time = [int(x) for x in el['registration']['openTime'].split(":")]
-    timezone = pytz.timezone(el['timezone'])
-    dt = datetime(date[2], date[1], date[0], time[0], time[1])
-    el['registration']['open'] = timezone.localize(dt)
+    el['registration']['open'] = helpers.parseDateTime(el['registration']['openDate'],
+                                                       el['registration']['openTime'],
+                                                       el['timezone'])
 
 
 def parseRegistrationClose(el):
-    date = [int(x) for x in el['registration']['closeDate'].split("-")]
-    time = [int(x) for x in el['registration']['closeTime'].split(":")]
-    timezone = pytz.timezone(el['timezone'])
-    dt = datetime(date[2], date[1], date[0], time[0], time[1])
-    el['registration']['close'] = timezone.localize(dt)
+    el['registration']['open'] = helpers.parseDateTime(el['registration']['closeDate'],
+                                                       el['registration']['closeTime'],
+                                                       el['timezone'])
 
 
 def load_data(sources):
@@ -96,21 +80,10 @@ def get_speaker_by_id(speaker_id, speakers):
     return filter(lambda speaker: speaker['id'] == speaker_id, speakers)[0]
 
 
-def get_file(name, extensions=('zip', 'pdf',)):
-    for ext in extensions:
-        filename = '.'.join((name, ext))
-        abspath = os.path.join(pres_dir, filename)
-        if os.path.exists(abspath):
-            return {
-                "name": filename,
-                "size": os.path.getsize(abspath),
-                "type": ext.upper()
-            }
-
-app.jinja_env.filters['day'] = jinja_filters.day
-app.jinja_env.filters['month'] = jinja_filters.month
-app.jinja_env.filters['year'] = jinja_filters.year
-app.jinja_env.filters['filesize'] = jinja_filters.filesize
+app.jinja_env.filters['day'] = jinjaFilters.day
+app.jinja_env.filters['month'] = jinjaFilters.month
+app.jinja_env.filters['year'] = jinjaFilters.year
+app.jinja_env.filters['filesize'] = jinjaFilters.filesize
 
 
 @app.context_processor
@@ -138,10 +111,13 @@ def index():
         presentation['speakers'] = map(lambda speaker: format_name(get_speaker_by_id(speaker, speakers)),
                                        presentation['speakers'])
 
+    for event in events:
+        event['date'] = helpers.parseDate(event['date'], event['timezone'])
+
     return render_template('index.html',
                            history=groupby(
                                sorted(
-                                   map(parseDate, events),
+                                   events,
                                    key=lambda x: x['date'],
                                    reverse=True),
                                key=lambda x: x['date'].year
@@ -154,7 +130,7 @@ def index():
 
 @app.route('/<int:year>/<int:month>/<int:day>/')
 def legacy_event(year, month, day):
-    date = '{day}-{month}-{year}'.format(day=add_null(day), month=add_null(month), year=year)
+    date = '{day}-{month}-{year}'.format(day=helpers.addNull(day), month=helpers.addNull(month), year=year)
     events = json.load(open('data/events.json'))
     event = reduce(lambda init, x: x if x['date'] == date else init, events, None)
     path = '/events/{event_id}/'.format(event_id=event['id'])
@@ -172,7 +148,7 @@ def event(event_id):
     if not event:
         return render_template('page-not-found.html'), 404
 
-    parseDate(event)
+    event['date'] = helpers.parseDate(event['date'], event['timezone'])
 
     if 'schedule' in event:
         start_time = event['schedule']['startTime'].split(":")
@@ -181,13 +157,13 @@ def event(event_id):
         presentation_speakers = []
 
         for item in event['schedule']['presentations']:
-            item['time'] = "{h}:{m}".format(h=clock.hour, m=add_null(clock.minute))
+            item['time'] = "{h}:{m}".format(h=clock.hour, m=helpers.addNull(clock.minute))
             clock += timedelta(minutes=int(item['duration']))
 
             if 'presentation' in item:
                 presentation_id = item['presentation']
                 item['presentation'] = presentations[presentation_id]
-                item['presentation']['file'] = get_file(presentation_id)
+                item['presentation']['file'] = helpers.getFile(presentation_id, pres_dir)
                 presentation_speakers.append(item['presentation'].get('speakers'))
 
         speakers_keys = reduce(lambda d, el: d.extend(el) or d, presentation_speakers, [])
