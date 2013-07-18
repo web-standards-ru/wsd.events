@@ -5,6 +5,7 @@ from utils.system import get_env_variable
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
+PRESENTATIONS_DIR = os.path.join(PROJECT_ROOT, 'pres')
 
 
 class Config(object):
