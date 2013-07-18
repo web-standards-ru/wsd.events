@@ -5,7 +5,7 @@
 
 <nav id="navigation">
     <ul>
-        {% if event.schedule %}
+        {% if schedule %}
             <li><a href="#schedule">Программа встречи</a></li>
         {% endif %}
 
@@ -43,14 +43,14 @@
     <p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
 </article>
 
-{% if event.schedule %}
+{% if schedule %}
 <article id="schedule" class="article">
     <header>
         <h2>Программа встречи</h2>
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     <ol class="schedule">
-        {% for item in event.schedule.presentations %}
+        {% for item in schedule.presentations %}
             {% if item.presentation %}
             <li>
                 <time>{{ item.time }}</time>
@@ -75,11 +75,11 @@
             {% endif %}
         {% endfor %}
     </ol>
-    {% if event.schedule.comment %}
+    {% if schedule.comment %}
         {% if not event.archived %}
-            {{ event.schedule.comment.before|safe }}
+            {{ schedule.comment.before|safe }}
         {% else %}
-            {{ event.schedule.comment.after|safe }}
+            {{ schedule.comment.after|safe }}
         {% endif %}
     {% endif %}
 </article>
