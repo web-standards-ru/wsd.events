@@ -80,8 +80,8 @@
         <a href="#main" title="Наверх" class="top">Наверх</a>
     </header>
     {% for presentation in presentations %}
-    <iframe src="http://player.vimeo.com/video/{{ presentation.video_id }}?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
-    <p><a href="http://vimeo.com/{{ presentation.video_id }}">{{ presentation.title }}</a> —
+    <iframe src="http://player.vimeo.com/video/{{ presentation.videoId }}?title=0&amp;byline=0&amp;portrait=0&amp;color=9ecb1d" width="359" height="202" frameborder="0" webkitAllowFullScreen mozAllowFullScreen allowFullScreen class="video-player"></iframe>
+    <p><a href="http://vimeo.com/{{ presentation.videoId }}">{{ presentation.title }}</a> —
     {% for speaker in presentation.speakers %}
         {{ speaker }}{% if loop.last %} {% else %},{% endif %}
     {% endfor %}
