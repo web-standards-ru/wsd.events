@@ -7,8 +7,7 @@ $(function(){
 	$.fn.tweets = function( q ) {
 		var list = $( this ),
 			url;
-		url = 'http://twitter.webstandardsdays.ru/?callback=?';
-		console.log(url);
+		url = 'http://twitter.webstandardsdays.ru/?fields=user.screen_name,user.profile_image_url,text&callback=?';
 
 		$.getJSON( url, function( data ) {
 			$.each( data, function( i, item ) {
