@@ -7,12 +7,12 @@ $(function(){
 	$.fn.tweets = function( q ) {
 		var list = $( this ),
 			url;
-		q = '%23' + q + '%20-RT';
-		url = 'http://search.twitter.com/search.json?q=' + q + '&rpp=20&callback=?';
+		url = 'http://twitter.webstandardsdays.ru/?fields=user.screen_name,user.profile_image_url,text&callback=?';
+
 		$.getJSON( url, function( data ) {
-			$.each( data.results, function( i, item ) {
-				var user = item.from_user,
-					image = item.profile_image_url,
+			$.each( data, function( i, item ) {
+				var user = item.user.screen_name,
+					image = item.user.profile_image_url,
 					text = item.text;
 				text = text.replace(
 					/(^|\s)(?:#([\d\w_]+)|@([\d\w_]{1,15}))|(https?:\/\/[^\s"]+[\d\w_\-\/])|([^\s:@"]+@[^\s:@"]*)/gi,
