@@ -18,8 +18,8 @@ $(function(){
 					/(^|\s)(?:#([\d\w_]+)|@([\d\w_]{1,15}))|(https?:\/\/[^\s"]+[\d\w_\-\/])|([^\s:@"]+@[^\s:@"]*)/gi,
 					function( all, space, hashtag, username, link, email ) {
 						var res = '<a href="mailto:' + email + '">' + email + "</a>";
-							hashtag && (res = space + '<a href="http://search.twitter.com/search?q=%23' + hashtag + '">#' + hashtag + "</a>");
-							username && (res = space + '<a href="http://twitter.com/' + username + '">@' + username + "</a>");
+							hashtag && (res = space + '<a href="https://twitter.com/search?q=%23' + hashtag + '">#' + hashtag + "</a>");
+							username && (res = space + '<a href="https://twitter.com/' + username + '">@' + username + "</a>");
 							link && (res = '<a href="' + encodeURI(decodeURI(link.replace(/<[^>]*>/g, ""))) + '">' + link + "</a>");
 						return res;
 					}
@@ -39,7 +39,7 @@ $(function(){
 
 	// Map
 
-	$.fn.map = function() {
+	$.fn.yandexMap = function() {
 		var map = document.getElementById( this.selector.substr( 1 ) );
 
 		if(typeof map === 'undefined' || map === null) {
@@ -50,8 +50,7 @@ $(function(){
 			ymap,
 			mapData = {},
 			centerCoords = {},
-			marker = {
-			};
+			marker = {};
 
 		for (var i=0, prop, queryLength = query.length; i < queryLength; i++ ) {
 			prop = query[i].split('=');
@@ -100,7 +99,7 @@ $(function(){
         });
 	};
 
-	$('#map').map();
+	$('#map').yandexMap();
 
 	// Donate
 
