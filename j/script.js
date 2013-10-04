@@ -39,7 +39,7 @@ $(function(){
 
 	// Map
 
-	$.fn.map = function() {
+	$.fn.yandexMap = function() {
 		var map = document.getElementById( this.selector.substr( 1 ) );
 
 		if(typeof map === 'undefined' || map === null) {
@@ -50,8 +50,7 @@ $(function(){
 			ymap,
 			mapData = {},
 			centerCoords = {},
-			marker = {
-			};
+			marker = {};
 
 		for (var i=0, prop, queryLength = query.length; i < queryLength; i++ ) {
 			prop = query[i].split('=');
@@ -100,7 +99,7 @@ $(function(){
         });
 	};
 
-	$('#map').map();
+	$('#map').yandexMap();
 
 	// Donate
 
