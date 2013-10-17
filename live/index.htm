@@ -12,77 +12,7 @@
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="http://yandex.st/jquery/1.6.2/jquery.min.js"></script>
     <script src="/j/script.js"></script>
-
-    <script type="text/javascript" src="/j/flowplayer/flowplayer-3.2.10.min.js"></script>
-
-    <script type="text/javascript">
-        $(function() {
-            flowplayer("head", { src: "/j/flowplayer/flowplayer-3.2.11.swf", wmode: "opaque" }, {
-
-                clip: {
-                    autoPlay: false,
-
-
-                    live: true,
-                    provider: 'rtmp',
-                    url: 'head',
-                    netConnectionUrl: 'rtmp://erlyvideo.avalon.ru/live/'
-                },
-
-                plugins: {
-                    controls: {
-                        url: '/j/flowplayer/flowplayer.controls-3.2.11.swf',
-                        autoHide: 'auto',
-                        play: true,
-                        volume: true,
-                        mute: true,
-                        time: false,
-                        stop: true,
-                        playlist: false,
-                        fullscreen: true,
-                        scrubber: false
-                    },
-                    rtmp: {
-                        url: '/j/flowplayer/flowplayer.rtmp-3.2.10.swf'
-                    }
-                }
-
-            });
-            flowplayer("screen", { src: "/j/flowplayer/flowplayer-3.2.11.swf", wmode: "opaque" }, {
-
-                clip: {
-                    autoPlay: false,
-
-
-                    live: true,
-                    provider: 'rtmp',
-                    url: 'screen',
-                    netConnectionUrl: 'rtmp://erlyvideo.avalon.ru/live/'
-                },
-
-                plugins: {
-                    controls: {
-                        url: '/j/flowplayer/flowplayer.controls-3.2.11.swf',
-                        autoHide: 'auto',
-                        play: true,
-                        volume: false,
-                        mute: false,
-                        time: false,
-                        stop: true,
-                        playlist: false,
-                        fullscreen: true,
-                        scrubber: false
-                    },
-                    rtmp: {
-                        url: '/j/flowplayer/flowplayer.rtmp-3.2.10.swf'
-                    }
-                }
-
-            });
-        });
-
-
-    </script>
+    <script src='http://stream.webstandardsdays.ru:8080/flu/js/swfobject.js'></script>
 </head>
 <body>
     <header id="header" role="banner">
@@ -95,16 +25,21 @@
                     <h1>Трансляция Web Standards Days</h1>
                     <a href="#page" title="Наверх" class="top">Наверх</a>
                 </header>
-                <p><a href="http://webstandardsdays.ru/2012/06/23/#schedule">Расписание встречи 23 июня в Петербурге</a>.</p>
-                <header>
-                    <h2>Докладчик</h2>
-                </header>
-                <div id="head" style="width:359px; height:202px;" class="video-player"></div>
-                <header>
-                    <h2>Презентация</h2>
-                </header>
-                <div id="screen" style="width:359px; height:202px;" class="video-player"></div>
-
+                <p><a href="http://webstandardsdays.ru/2012/10/19/#schedule">Расписание встречи 19 октября в Минске</a>.</p>
+                <div id="head" style="width:320px; height:240px;" class="video-player"></div>
+		<script >
+		  swfobject.embedSWF(
+			'http://stream.webstandardsdays.ru:8080/flu/StrobeMediaPlayback.swf', 
+			'video', 640, 480, '10.3', 
+			'false',
+		    	{
+				src : 'http://stream.webstandardsdays.ru:8080/live/wsd/manifest.f4m', 
+				autoPlay : true
+			}, {
+				allowFullScreen : "true", 
+				allowNetworking : "all"
+			});
+		</script>
             </article>
         </section>
     </div>
