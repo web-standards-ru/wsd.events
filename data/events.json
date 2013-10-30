@@ -413,22 +413,38 @@
     },
 
     {
-        "id": "riga-2013",
-        "date": "22-05-2013",
-        "inaccurateDate": true,
-        "timezone": "Europe/Riga",
-        "place": {
-            "city": "Рига"
-        }
-    },
-
-    {
         "id": "spb-2013",
-        "date": "22-06-2013",
-        "inaccurateDate": true,
+        "date": "08-06-2013",
         "timezone": "Europe/Moscow",
         "place": {
             "city": "Санкт-Петербург"
+        }
+    }
+
+    {
+        "id": "minsk-2013",
+        "date": "19-10-2013",
+        "timezone": "Europe/Minsk",
+        "place": {
+            "city": "Минск"
+        }
+    }
+
+    {
+        "id": "kiev-2013",
+        "date": "26-10-2013",
+        "timezone": "Europe/Kiev",
+        "place": {
+            "city": "Киев"
+        }
+    }
+
+    {
+        "id": "msk-2013",
+        "date": "07-12-2013",
+        "timezone": "Europe/Moscow",
+        "place": {
+            "city": "Москва"
         }
     }
 ]
