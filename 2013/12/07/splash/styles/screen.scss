@@ -1,0 +1,138 @@
+@import 'reset';
+
+$blue:#2E5A75;
+
+html {
+	background:#000;
+	overflow:hidden;
+	}
+body {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-384px 0 0 -512px;
+	padding:0;
+	overflow:hidden;
+	width:1024px;
+	height:768px;
+	background:#FFF;
+	color:$blue;
+	font:16px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	a {
+		text-decoration:none;
+		}
+	}
+h1 {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	padding:35px 0 0;
+	width:100%;
+	height:120px;
+	background:$blue;
+	color:#FFF;
+	text-align:center;
+	white-space:nowrap;
+	font:bold 80px/1 'Trebuchet MS', sans-serif;
+	}
+.card {
+	position:absolute;
+	top:155px;
+	left:0;
+	width:1024px;
+	height:613px;
+	background:#FFF;
+	box-shadow:0 0 500px rgba(#000, 0.5);
+	h2 {
+		position:absolute;
+		bottom:415px;
+		left:0;
+		width:370px;
+		color:#2D93B8;
+		text-align:right;
+		white-space:nowrap;
+		font-size:30px;
+		a {
+			color:#2B8BAD;
+			}
+		}
+	img {
+		position:absolute;
+		bottom:67px;
+		left:70px;
+		width:300px;
+		}
+	dt {
+		position:absolute;
+		top:65px;
+		left:440px;
+		font-size:50px;
+		line-height:1;
+		color:#9ECB1D;
+		time {
+			position:absolute;
+			right:100%;
+			margin:-10px 65px 0 0;
+			color:#2D93B8;
+			font-size:100px;
+			}
+		}
+	dd {
+		position:absolute;
+		right:70px;
+		top:239px;
+		left:440px;
+		font-size:29px;
+		}
+	}
+// Animation
+.card {
+	transform-origin:0 0;
+	transform:rotateX(180deg);
+	transform-style:preserve-3d;
+	backface-visibility:hidden;
+	animation:slide 110s ease-out infinite;
+	&:nth-of-type(1)  { animation-delay:0s;  }
+	&:nth-of-type(2)  { animation-delay:10s; }
+	&:nth-of-type(3)  { animation-delay:20s; }
+	&:nth-of-type(4)  { animation-delay:30s; }
+	&:nth-of-type(5)  { animation-delay:40s; }
+	&:nth-of-type(6)  { animation-delay:50s; }
+	&:nth-of-type(7)  { animation-delay:60s; }
+	&:nth-of-type(8)  { animation-delay:70s; }
+	&:nth-of-type(9)  { animation-delay:80s; }
+	&:nth-of-type(10) { animation-delay:90s; }
+	&:nth-of-type(11) { animation-delay:100s; }
+	}
+@keyframes slide {
+	0%, 20%, 100% {
+		transform:rotateX(180deg);
+		}
+	5%, 15% {
+		transform:rotateX(0);
+		}
+	}
+// Info
+.info {
+	position:absolute;
+	bottom:155px;
+	left:195px;
+	font-size:95px;
+	li:before {
+		position:absolute;
+		margin:20px 0 0 -1.2em;
+		width:1em;
+		height:1em;
+		content:'';
+		}
+	li:nth-child(1):before {
+		background:url(../images/twitter.svg) 0 50% no-repeat;
+		}
+	li:nth-child(2):before {
+		background:url(../images/hash.svg) 0 50% no-repeat;
+		}
+	li:nth-child(3):before {
+		background:url(../images/wifi.svg) 0 50% no-repeat;
+		}
+	}
