@@ -1,5 +1,5 @@
 favicon.gif
 pres/
 browser-war/*
-!browser-war/index.htm
+!browser-war/index.html
 .sass-cache
