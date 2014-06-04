@@ -83,7 +83,8 @@ $(function(){
 			map.removeChild(map.firstChild);
             ymap = new ymaps.Map(map, {
 				center: [centerCoords.lat, centerCoords.lng],
-				zoom: mapData.z
+				zoom: mapData.z,
+				controls: ['zoomControl', 'rulerControl']
 			});
 
 			marker.placemark = new ymaps.Placemark(marker.point, {}, marker.style);
