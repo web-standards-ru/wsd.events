@@ -100,7 +100,25 @@ $(function(){
 		});
 	};
 
+    $.fn.registrationCounter = function() {
+        var $this = $(this);
+
+        function declOfNum(number, titles) {
+            var cases = [2, 0, 1, 1, 1, 2];
+            return titles[ (number % 100 > 4 && number % 100 < 20)? 2 : cases[ ( number % 10 < 5 ) ? number % 10 : 5] ];
+        }
+
+        $.getJSON('http://api.webstandardsdays.ru/', function(data) {
+            var count = parseInt(data.registered);
+            var postfix = declOfNum(count, ['заявка', 'заявки', 'заявок']);
+
+            $this.text(count + ' ' + postfix);
+        });
+    };
+
 	$('#map').yandexMap();
+
+    $('.registration-counter').registrationCounter();
 
 	// Donate
 
