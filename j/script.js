@@ -40,59 +40,48 @@ $(function(){
 	// Map
 
 	$.fn.yandexMap = function() {
-		var map = document.getElementById( this.selector.substr( 1 ) );
 
-		if(typeof map === 'undefined' || map === null) {
-			return;
-		}
+		var map = $(this);
 
-		var query = map.firstChild.src.split('?')[1].split('&'),
-			ymap,
+		if (!map) return;
+
+		var query = map.find('img').attr('src').split('?')[1].split('&'),
 			mapData = {},
-			centerCoords = {},
-			marker = {};
+			ymap;
 
-		for (var i=0, prop, queryLength = query.length; i < queryLength; i++ ) {
+		for (var i = 0, l = query.length, prop; i < l; i++ ) {
 			prop = query[i].split('=');
 			mapData[prop[0]] = prop[1];
 		}
 
-		centerCoords = {
-			lng: mapData.ll.split(',')[0],
-			lat: mapData.ll.split(',')[1]
-		};
-
-		marker.coords = {
-			lng: mapData.pt.split(',')[0],
-			lat: mapData.pt.split(',')[1]
-		};
-
-		marker.point = [marker.coords.lat, marker.coords.lng];
-
-		marker.style = {
-			iconImageHref:"/i/map-logo.png",
-			iconImageSize:[93, 83],
-			iconImageOffset:[-24, -83],
-			iconShadow:true,
-			iconShadowImageHref:"/i/map-shadow.png",
-			iconShadowImageSize:[93, 83],
-			iconShadowImageOffset:[-24, -83]
-		};
-
 		ymaps.ready(function () {
-			map.removeChild(map.firstChild);
-			ymap = new ymaps.Map(map, {
-				center: [centerCoords.lat, centerCoords.lng],
+
+			map.empty();
+
+			ymap = new ymaps.Map('map', {
+				center: [
+					mapData.ll.split(',')[1],
+					mapData.ll.split(',')[0]
+				],
 				zoom: mapData.z,
 				controls: ['zoomControl', 'rulerControl']
 			});
 
-			marker.placemark = new ymaps.Placemark(marker.point, {}, marker.style);
+			marker = new ymaps.Placemark([
+				mapData.pt.split(',')[1],
+				mapData.pt.split(',')[0]
+			], {}, {
+				iconLayout: 'default#image',
+				iconImageHref:"/i/map-logo.png",
+				iconImageSize:[93, 83],
+				iconImageOffset:[-24, -83],
+				iconShadow:true,
+				iconShadowImageHref:"/i/map-shadow.png",
+				iconShadowImageSize:[93, 83],
+				iconShadowImageOffset:[-24, -83]
+			});
 
-			ymap.geoObjects.add(marker.placemark);
-
-			ymap.controls.add('smallZoomControl',
-				{left: '8px', top: '24px'});
+			ymap.geoObjects.add(marker);
 
 			if (mapData.l === 'pmap') {
 				ymap.setType('yandex#publicMap');
