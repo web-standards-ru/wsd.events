@@ -3,3 +3,4 @@ pres/
 browser-war/*
 !browser-war/index.html
 .sass-cache
+.DS_Store
