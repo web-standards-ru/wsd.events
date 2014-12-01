@@ -89,6 +89,48 @@ $(function(){
 		});
 	};
 
+	$.fn.registerForm = function () {
+		var $this = $(this);
+		var $status = $('.status', $this);
+		var url = $this.attr('action');
+
+		$this.on('submit', function (e) {
+			e.preventDefault();
+			// TODO: Блокировать повторный сабмит формы
+
+			var data = $this.serialize();
+
+			$.get(url, data)
+				.done(function (data) {
+					switch (data.result) {
+
+						case 'success':
+							$status.text('Заявка принята');
+							// TODO: Очищать форму после отправки
+							break;
+						case 'error':
+							switch (data.code) {
+								case 400:
+									$status.text('Исправьте ошибки в форме');
+									break;
+								case 500:
+									$status.text('Не получилось отправить форму');
+									break;
+								default :
+									$status.text('Произошла какая-то ошибка');
+									break;
+							}
+							break;
+					}
+				})
+				.fail(function () {
+					$status.text('Произошла какая-то ошибка');
+				});
+		});
+	};
+
+    $('#register-form').registerForm();
+
 	$('#map').yandexMap();
 
 	// Donate
