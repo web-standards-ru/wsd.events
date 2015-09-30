@@ -1,5 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 384">
-	<rect x="256" y="128" width="256" height="256" fill="#2E5A75"/>
-	<rect x="128" width="256" height="256" fill="#2D93B8"/>
-	<rect y="128" width="256" height="256" fill="#9ECB1D"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 1324">
+	<title>Веб-стандарты</title>
+	<defs>
+		<linearGradient id="l1" gradientUnits="userSpaceOnUse" x1="1074" y1="662" x2="1074" y2="406">
+			<stop offset="0" stop-color="#a8cd4b"/>
+			<stop offset="0.9" stop-color="#98c55b"/>
+		</linearGradient>
+		<linearGradient id="l2" gradientUnits="userSpaceOnUse" x1="1074" y1="406" x2="612" y2="150">
+			<stop offset="0" stop-color="#98c55b"/>
+			<stop offset="0.9" stop-color="#79b580"/>
+		</linearGradient>
+		<linearGradient id="l3" gradientUnits="userSpaceOnUse" x1="612" y1="150" x2="150" y2="406">
+			<stop offset="0" stop-color="#79b580"/>
+			<stop offset="0.8" stop-color="#5aa5a7"/>
+		</linearGradient>
+		<linearGradient id="l4" gradientUnits="userSpaceOnUse" x1="150" y1="406" x2="612" y2="662">
+			<stop offset="0" stop-color="#5aa5a7"/>
+			<stop offset="0.9" stop-color="#4a94b1"/>
+		</linearGradient>
+		<linearGradient id="l5" gradientUnits="userSpaceOnUse" x1="612" y1="662" x2="612" y2="1174">
+			<stop offset="0" stop-color="#4a94b1"/>
+			<stop offset="0.8" stop-color="#49839f"/>
+		</linearGradient>
+		<linearGradient id="l6" gradientUnits="userSpaceOnUse" x1="1074" y1="918" x2="612" y2="1174">
+			<stop offset="0" stop-color="#466d85"/>
+			<stop offset="0.7" stop-color="#49839f"/>
+		</linearGradient>
+		<linearGradient id="l7" gradientUnits="userSpaceOnUse" x1="612" y1="1174" x2="150" y2="918">
+			<stop offset="0.3" stop-color="#49839f"/>
+			<stop offset="0.9" stop-color="#47728b"/>
+		</linearGradient>
+		<linearGradient id="l8" gradientUnits="userSpaceOnUse" x1="150" y1="918" x2="150" y2="662">
+			<stop offset="0" stop-color="#47728b"/>
+			<stop offset="1" stop-color="#456a81"/>
+		</linearGradient>
+	</defs>
+	<g stroke-width="120" stroke-linecap="round" stroke-linejoin="round" fill="none">
+		<polygon stroke="white" stroke-width="300" fill="white" points="1074,406 612,150 150,406 150,918 612,1174 1074,918"/>
+		<polyline stroke="url(#l1)" points="1074,662 1074,406"/>
+		<polyline stroke="url(#l2)" points="1074,406 612,150"/>
+		<polyline stroke="url(#l3)" points="612,150 150,406"/>
+		<polyline stroke="url(#l4)" points="150,406 612,662"/>
+		<polyline stroke="url(#l5)" points="612,662 612,1174"/>
+		<polyline stroke="url(#l6)" points="1074,918 612,1174"/>
+		<polyline stroke="url(#l7)" points="612,1174 150,918"/>
+		<polyline stroke="url(#l8)" points="150,918 150,662"/>
+	</g>
 </svg>

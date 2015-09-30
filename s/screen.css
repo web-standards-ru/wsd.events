@@ -25,15 +25,6 @@ a {
 	#header p {
 		font:bold 65px/1 'Trebuchet MS', sans-serif;
 		}
-		#header h1:before,
-		#header p:before {
-			display:inline-block;
-			width:1.2em;
-			height:0.75em;
-			background:url(../i/logo.svg) no-repeat;
-			vertical-align:-0.03em;
-			content:'';
-			}
 		#header a {
 			color:#FFF;
 			}
