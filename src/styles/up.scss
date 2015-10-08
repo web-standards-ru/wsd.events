@@ -1,0 +1,23 @@
+// ------------------------------------------------------------------
+// Up
+// ------------------------------------------------------------------
+
+.up {
+
+	position:absolute;
+	right:24px;
+	margin-top:5px;
+	width:20px;
+	height:15px;
+	background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15"><polygon fill="' + $green + '" points="10,0 20,15 0,15"/></svg>');
+	opacity:0.5;
+
+	&:hover {
+		opacity:1;
+		}
+
+	&__text {
+		@include offscreen;
+		}
+
+	}

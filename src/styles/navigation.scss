@@ -1,0 +1,25 @@
+// ------------------------------------------------------------------
+// Navigation
+// ------------------------------------------------------------------
+
+.navigation {
+
+	line-height:1;
+
+	// Link
+
+	&__link {
+		display:inline-block;
+		margin-bottom:12px;
+		color:$green;
+		text-decoration:none;
+		font-size:24px;
+
+		@include mq($from:palm) {
+			margin-bottom:18px;
+			font-size:36px;
+			}
+
+		}
+
+	}

@@ -1,0 +1,57 @@
+// ------------------------------------------------------------------
+// Speakers
+// ------------------------------------------------------------------
+
+.speakers {
+
+	overflow:hidden;
+	display:flex;
+	flex-wrap:wrap;
+
+	// Speaker
+
+	&__speaker {
+
+		position:relative;
+		width:25%;
+
+		@include mq($from:palm) {
+			width:20%;
+			}
+
+		}
+
+	// Name
+
+	&__name {
+
+		position:absolute;
+		clip:rect(0 0 0 0);
+		bottom:0;
+		padding:5px 5px 6px;
+		width:100%;
+		background:rgba(#000, 0.5);
+		color:#FFF;
+		line-height:1;
+		font-size:12px;
+
+		@include mq($from:desk) {
+			font-size:15px;
+			}
+
+		}
+
+	// Picture
+
+	&__picture {
+		display:block;
+		width:100%;
+		}
+
+	// Hover
+
+	&__speaker:hover &__name {
+		clip:auto;
+		}
+
+	}

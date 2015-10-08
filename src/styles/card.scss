@@ -1,0 +1,38 @@
+// ------------------------------------------------------------------
+// Card
+// ------------------------------------------------------------------
+
+.card {
+
+	display:flex;
+	padding-bottom:24px;
+
+	@include mq($from:palm) {
+		padding-bottom:36px;
+		}
+
+	// Picture
+
+	&__picture {
+		order:-1;
+		flex-shrink:0;
+		width:30%;
+		}
+	&__picture-element {
+		display:block;
+		width:100%;
+		}
+
+	// Description
+
+	&__description {
+
+		margin-top:-6px;
+		padding:0 24px;
+
+		@include mq($from:palm) {
+			padding:0 36px;
+			}
+		}
+
+	}
