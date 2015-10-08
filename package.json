@@ -1,7 +1,12 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=4.1"
+  },
   "scripts": {
-    "postinstall": "gulp"
+    "test": "ls dest",
+    "server": "gulp",
+    "postinstall": "gulp copy html styles"
   },
   "dependencies": {
     "browser-sync": "^2.9.8",
