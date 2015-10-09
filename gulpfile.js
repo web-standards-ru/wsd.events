@@ -11,7 +11,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 var paths = {
 	html: 'src/**/*.html',
 	styles: 'src/styles/*.scss'
-}
+};
 
 gulp.task('default', ['copy', 'html', 'styles'], function () {
 	sync.init({
