@@ -13,14 +13,28 @@ var paths = {
 	styles: 'src/styles/*.scss'
 };
 
-gulp.task('default', ['copy', 'html', 'styles'], function () {
+gulp.task('default', [
+	'build',
+	'server',
+	'watch'
+]);
+
+gulp.task('build', [
+	'copy',
+	'html',
+	'styles'
+]);
+
+gulp.task('server', function () {
 	sync.init({
 		notify: false,
 		server: {
 			baseDir: 'dest/'
 		}
 	});
+});
 
+gulp.task('watch', function () {
 	gulp.watch([
 		'src/**',
 		'!' + paths.html,
