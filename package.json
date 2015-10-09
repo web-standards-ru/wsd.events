@@ -6,7 +6,7 @@
   "scripts": {
     "test": "ls dest",
     "server": "gulp",
-    "postinstall": "gulp copy html styles"
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "browser-sync": "^2.9.8",
