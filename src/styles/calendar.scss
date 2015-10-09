@@ -29,6 +29,10 @@
 		padding:12px 24px;
 		border-bottom:solid 1px lighten($dark, 50%);
 
+		@include mq($from:palm) {
+			padding:18px 36px;
+			}
+
 		// Current
 
 		&--current {
@@ -37,8 +41,10 @@
 			color:darken($green, 10%);
 			}
 
-		@include mq($from:palm) {
-			padding:18px 36px;
+		// Break
+
+		&--break {
+			background:lighten($blue, 45%);
 			}
 
 		}
