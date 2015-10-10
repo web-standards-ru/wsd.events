@@ -1,7 +1,7 @@
 module.exports = {
 	src: {
 		assets: 'src/assets/**',
-		html: 'src/pages/*.html',
-		styles: 'src/styles/*.scss'
+		html: 'src/pages/**/*.html',
+		styles: 'src/styles/**/*.scss'
 	}
 };
