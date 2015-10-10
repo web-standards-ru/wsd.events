@@ -3,11 +3,11 @@ var gulp = require('gulp'),
 	beml = require('gulp-beml'),
 	htmlmin = require('gulp-htmlmin'),
 	rename = require('gulp-rename'),
-	sync = require('browser-sync').create();
+	sync = require('browser-sync').get('sync');
 
 gulp.task('html', function () {
 	// Building all HTML pages
-	gulp.src(config.src.html)
+	return gulp.src(config.src.html)
 		// Applying BEML preprocessor
 		.pipe(beml({
 			elemPrefix: '__',
