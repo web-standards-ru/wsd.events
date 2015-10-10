@@ -13,7 +13,7 @@
 		position:absolute;
 		right:0;
 		padding:12px 24px;
-		color:#999;
+		color:$dark;
 
 		@include mq($from:palm) {
 			padding:18px 36px;
