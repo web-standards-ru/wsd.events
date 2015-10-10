@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-	sync = require('browser-sync').create();
+	sync = require('browser-sync').get('sync');
 
 // Starting up a server
 // in the dest folder
