@@ -11,7 +11,7 @@
 	&__link {
 		display:inline-block;
 		margin-bottom:12px;
-		color:$green;
+		color:#FFF;
 		font-size:24px;
 
 		@include mq($from:palm) {

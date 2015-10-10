@@ -1,0 +1,23 @@
+// ------------------------------------------------------------------
+// Title
+// ------------------------------------------------------------------
+
+.title {
+
+	display:block;
+	padding-bottom:50%;
+	height:0;
+	background:$black url(/images/title.svg) 50% 50% / auto 70% no-repeat;
+	color:#FFF;
+
+	@include mq($from:palm) {
+		padding-bottom:58%;
+		}
+
+	// Text
+
+	&__text {
+		@include offscreen;
+		}
+
+	}

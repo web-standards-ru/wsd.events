@@ -1,13 +1,16 @@
 // ------------------------------------------------------------------
-// Global
+// Page
 // ------------------------------------------------------------------
 
-body {
+.page {
+
 	background:$dark;
 	color:#212121;
-	font:16px/1.6 Ubuntu, sans-serif;
-	}
-a {
-	color:#489DBD;
-	text-decoration:none;
+
+	&__body {
+		margin:auto;
+		max-width:1024px;
+		font:16px/1.6 Ubuntu, sans-serif;
+		}
+
 	}

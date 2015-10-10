@@ -4,7 +4,7 @@
 
 .content {
 
-	// Elements
+	// Block
 
 	h3 {
 
@@ -17,7 +17,6 @@
 			}
 
 		}
-
 	p {
 
 		margin-bottom:12px;
@@ -28,11 +27,16 @@
 
 		}
 
+	// Inline
+
 	strong, b {
 		font-weight:bold;
 		}
 	em, i {
 		font-style:italic;
+		}
+	a {
+		color:$blue;
 		}
 
 	// Inline

@@ -16,6 +16,10 @@
 		opacity:1;
 		}
 
+	@include mq($from:lap) {
+		@include offscreen;
+		}
+
 	&__text {
 		@include offscreen;
 		}
