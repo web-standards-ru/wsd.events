@@ -1,3 +1,2 @@
-require('require-dir')('gulp/tasks', {
-	recurse: true
-});
+require('browser-sync').create('sync');
+require('require-dir')('gulp/tasks');
