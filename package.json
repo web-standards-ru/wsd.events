@@ -19,7 +19,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "merge-stream": "^1.0.0",
+    "open": "0.0.5",
     "require-dir": "^0.3.0",
+    "rsyncwrapper": "^0.4.3",
     "sass-mq": "^3.2.4"
   }
 }
