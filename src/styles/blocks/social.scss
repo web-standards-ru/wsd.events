@@ -1,0 +1,65 @@
+// ------------------------------------------------------------------
+// Social
+// ------------------------------------------------------------------
+
+.social {
+
+	display:flex;
+	padding:0 0 24px 24px;
+
+	@include mq($from:palm) {
+		padding:0 0 36px 36px;
+		}
+
+	// Link
+
+	&__link {
+
+		display:block;
+		margin-right:16px;
+		width:24px;
+		height:24px;
+		background-position:0 50%;
+		background-repeat:no-repeat;
+		opacity:0.4;
+		transition:opacity 0.2s linear;
+
+		// Active
+
+		&:hover,
+		&:focus {
+			opacity:1;
+			}
+
+		// Icons
+
+		&--twitter {
+			background-image:url(/images/twitter.svg);
+			}
+		&--vkontakte {
+			background-image:url(/images/vkontakte.svg);
+			}
+		&--facebook {
+			background-image:url(/images/facebook.svg);
+			}
+		&--github {
+			width:25px;
+			background-image:url(/images/github.svg);
+			}
+		&--youtube {
+			width:30px;
+			background-image:url(/images/youtube.svg);
+			}
+		&--google {
+			background-image:url(/images/google.svg);
+			}
+
+		}
+
+	// Text
+
+	&__text {
+		@include offscreen;
+		}
+
+	}
