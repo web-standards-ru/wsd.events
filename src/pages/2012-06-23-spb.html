@@ -233,10 +233,13 @@
 			<script>
 				ymaps.ready(function () {
 					var coords = [60.009230, 30.377838];
-					new ymaps.Map('map', {
+					var map = new ymaps.Map('map', {
 						center: coords,
 						zoom: 16
-					}).geoObjects.add(new ymaps.Placemark(coords, {}, {
+					});
+					map.behaviors.disable('scrollZoom');
+					map.geoObjects.add(
+						new ymaps.Placemark(coords, {}, {
 						iconLayout: 'default#image',
 						iconImageHref: '/images/logo.svg',
 						iconImageSize: [80, 87],
