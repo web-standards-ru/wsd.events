@@ -27,10 +27,10 @@
 
 	&__caption {
 
-		padding:24px;
+		padding:12px 24px;
 
 		@include mq($from:palm) {
-			padding:36px;
+			padding:18px 36px;
 			}
 
 		}
