@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// Support
+// ------------------------------------------------------------------
+
+.support {
+	display:block;
+	margin-bottom:12px;
+	margin-left:-3px;
+	width:211px;
+	height:42px;
+	border:none;
+
+	@include mq($from:palm) {
+		margin-bottom:18px;
+		}
+
+	}
