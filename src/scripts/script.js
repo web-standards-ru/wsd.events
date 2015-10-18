@@ -5,7 +5,7 @@
 	var more = document.getElementById('more');
 
 	if (more) {
-		more && more.addEventListener('click', function () {
+		more.addEventListener('click', function () {
 			var hidden = this.parentNode.querySelectorAll('.speakers__list--hidden');
 			if (hidden) {
 				var pictures = hidden[0].querySelectorAll('.speakers__picture');
