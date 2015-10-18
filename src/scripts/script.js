@@ -1,4 +1,4 @@
-(function(window, document){
+(function(document){
 
 	// More
 
@@ -46,4 +46,4 @@
 		});
 	}
 
-})(window, document);
+})(document);
