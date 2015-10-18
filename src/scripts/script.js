@@ -7,8 +7,10 @@
 	if (more) {
 		more.addEventListener('click', function () {
 			var hidden = this.parentNode.querySelectorAll('.speakers__list--hidden');
+
 			if (hidden) {
 				var pictures = hidden[0].querySelectorAll('.speakers__picture');
+
 				for (var i = 0, j = pictures.length; i < j; i++) {
 					var picture = pictures[i],
 						data = picture.dataset.src;
@@ -16,7 +18,9 @@
 						picture.src = data;
 					}
 				}
+
 				hidden[0].classList.remove('speakers__list--hidden');
+
 				if (!hidden[1]) {
 					this.parentNode.removeChild(this);
 				}
@@ -39,6 +43,7 @@
 				center: coordinates,
 				zoom: zoom
 			});
+
 			map.behaviors.disable('scrollZoom');
 			map.geoObjects.add(
 				new ymaps.Placemark(coordinates, {}, {
