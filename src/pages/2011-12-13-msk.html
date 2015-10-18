@@ -278,29 +278,17 @@
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"></div>
-			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-			<script>
-				ymaps.ready(function () {
-					var coords = [55.75534, 37.64641];
-					var map = new ymaps.Map('map', {
-						center: coords,
-						zoom: 17
-					});
-					map.behaviors.disable('scrollZoom');
-					map.geoObjects.add(
-						new ymaps.Placemark(coords, {}, {
-						iconLayout: 'default#image',
-						iconImageHref: '/images/logo.svg',
-						iconImageSize: [80, 87],
-						iconImageOffset: [-40, -95]
-					}));
-				});
-			</script>
+			<div block="map" id="map"
+				data-latitude="55.75534"
+				data-longitude="37.64641"
+				data-zoom="17">
+			</div>
 			<div elem="box" mix="block:content">
 				<p>Москва, актовый зал <a href="http://miem.edu.ru/">МИЭМ</a> на Большом Трехсвятительском пер., 3.</p>
 			</div>
 		</section>
 	</main>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script src="/scripts/script.js"></script>
 </body>
 </html>

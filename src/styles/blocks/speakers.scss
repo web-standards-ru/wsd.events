@@ -4,9 +4,21 @@
 
 .speakers {
 
-	overflow:hidden;
-	display:flex;
-	flex-wrap:wrap;
+	// List
+
+	&__list {
+
+		overflow:hidden;
+		display:flex;
+		flex-wrap:wrap;
+
+		// Hidden
+
+		&--hidden {
+			display:none;
+			}
+
+		}
 
 	// Speaker
 

@@ -236,29 +236,17 @@
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"></div>
-			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-			<script>
-				ymaps.ready(function () {
-					var coords = [50.39835, 30.50995];
-					var map = new ymaps.Map('map', {
-						center: coords,
-						zoom: 16
-					});
-					map.behaviors.disable('scrollZoom');
-					map.geoObjects.add(
-						new ymaps.Placemark(coords, {}, {
-						iconLayout: 'default#image',
-						iconImageHref: '/images/logo.svg',
-						iconImageSize: [80, 87],
-						iconImageOffset: [-40, -95]
-					}));
-				});
-			</script>
+			<div block="map" id="map"
+				data-latitude="50.39835"
+				data-longitude="30.50995"
+				data-zoom="17">
+			</div>
 			<div elem="box" mix="block:content">
 				<p>Киев, конференц-зал <a href="http://hotelmir.kiev.ua/">гостиницы «Мир»</a> на пр. 40-летия Октября, 70.</p>
 			</div>
 		</section>
 	</main>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script src="/scripts/script.js"></script>
 </body>
 </html>

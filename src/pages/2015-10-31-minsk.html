@@ -448,29 +448,17 @@
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"></div>
-			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-			<script>
-				ymaps.ready(function () {
-					var coords = [53.8896, 27.5706];
-					var map = new ymaps.Map('map', {
-						center: coords,
-						zoom: 16
-					});
-					map.behaviors.disable('scrollZoom');
-					map.geoObjects.add(
-						new ymaps.Placemark(coords, {}, {
-						iconLayout: 'default#image',
-						iconImageHref: '/images/logo.svg',
-						iconImageSize: [80, 87],
-						iconImageOffset: [-40, -95]
-					}));
-				});
-			</script>
+			<div block="map" id="map"
+				data-latitude="53.8896"
+				data-longitude="27.5706"
+				data-zoom="16">
+			</div>
 			<div elem="box" mix="block:content">
 				<p>Минск, лофт <a href="http://eventspace.by/">Event Space</a> на Октябрьской, 16А.</p>
 			</div>
 		</section>
 	</main>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script src="/scripts/script.js"></script>
 </body>
 </html>
