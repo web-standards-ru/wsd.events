@@ -10,7 +10,11 @@
 			if (hidden) {
 				var pictures = hidden[0].querySelectorAll('.speakers__picture');
 				for (var i = 0, j = pictures.length; i < j; i++) {
-					pictures[i].src = pictures[i].dataset.src;
+					var picture = pictures[i],
+						data = picture.dataset.src;
+					if (data) {
+						picture.src = data;
+					}
 				}
 				hidden[0].classList.remove('speakers__list--hidden');
 				if (!hidden[1]) {
