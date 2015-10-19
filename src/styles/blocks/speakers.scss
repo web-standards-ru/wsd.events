@@ -68,21 +68,6 @@
 		width:100%;
 		}
 
-	// Button
-
-	&__button {
-		display:block;
-		margin:0;
-		padding:18px 0;
-		width:100%;
-		border:none;
-		background:lighten($dark, 50%);
-		color:$blue;
-		cursor:pointer;
-		font-size:24px;
-		font-family:inherit;
-		}
-
 	// Hover
 
 	&__speaker:hover &__name {
