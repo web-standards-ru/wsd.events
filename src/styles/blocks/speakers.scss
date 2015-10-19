@@ -9,9 +9,25 @@
 	&__list {
 
 		overflow:hidden;
-		display:flex;
-		flex-wrap:wrap;
-		background:lighten($dark, 50%);
+		background:lighten($blue, 45%);
+
+		}
+
+	// Speaker
+
+	&__speaker {
+
+		position:relative;
+		float:left;
+		padding-bottom:25%;
+		width:25%;
+		height:0;
+		box-shadow:-1px -1px lighten($dark, 50%) inset;
+
+		@include mq($from:desk) {
+			padding-bottom:20%;
+			width:20%;
+			}
 
 		// Hidden
 
@@ -21,32 +37,21 @@
 
 		}
 
-	// Speaker
-
-	&__speaker {
-
-		position:relative;
-		width:25%;
-
-		@include mq($from:desk) {
-			width:20%;
-			}
-
-		}
-
 	// Name
 
 	&__name {
 
 		position:absolute;
-		clip:rect(0 0 0 0);
 		bottom:0;
+		z-index:1;
 		padding:5px 5px 6px;
 		width:100%;
 		background:rgba(#000, 0.5);
+		opacity:0;
 		color:#FFF;
 		line-height:1;
 		font-size:12px;
+		transition:opacity 0.2s linear;
 
 		@include mq($from:desk) {
 			font-size:15px;
@@ -57,7 +62,9 @@
 	// Picture
 
 	&__picture {
-		display:block;
+		position:absolute;
+		top:0;
+		left:0;
 		width:100%;
 		}
 
@@ -79,7 +86,7 @@
 	// Hover
 
 	&__speaker:hover &__name {
-		clip:auto;
+		opacity:1;
 		}
 
 	}

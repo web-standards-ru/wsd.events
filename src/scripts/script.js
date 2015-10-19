@@ -5,27 +5,29 @@
 	var more = document.getElementById('more');
 
 	if (more) {
-		more.addEventListener('click', function () {
-			var hidden = this.parentNode.querySelectorAll('.speakers__list--hidden');
+		more.addEventListener('click', function() {
+		    var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden'),
+			    group = 20;
 
-			if (hidden.length) {
-				var pictures = hidden[0].querySelectorAll('.speakers__picture');
+		    if (speakers.length) {
+		        for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
+		            var speaker = speakers[i],
+		            	picture = speaker.querySelector('.speakers__picture'),
+		            	data = picture.dataset.src;
 
-				for (var i = 0, j = pictures.length; i < j; i++) {
-					var picture = pictures[i],
-						data = picture.dataset.src;
-					if (data) {
-						picture.src = data;
-					}
-				}
+		            if (data) {
+		                picture.src = data;
+		            }
 
-				hidden[0].classList.remove('speakers__list--hidden');
+		            speaker.classList.remove('speakers__speaker--hidden');
+		        }
 
-				if (!hidden[1]) {
-					this.parentNode.removeChild(this);
-				}
-			}
+		        if (speakers.length < group) {
+		            more.parentNode.removeChild(more);
+		        }
+		    }
 		});
+
 	}
 
 	// Map
