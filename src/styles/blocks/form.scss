@@ -1,0 +1,28 @@
+// ------------------------------------------------------------------
+// Form
+// ------------------------------------------------------------------
+
+.form {
+
+	&__label {
+		display:block;
+		}
+
+	&__text {
+		margin-bottom:12px;
+		display:block;
+		width:100%;
+		font-size:24px;
+		}
+
+	&__button {
+		margin:0;
+		padding:6px 12px;
+		border:none;
+		background:$green;
+		color:#FFF;
+		font-family:inherit;
+		font-size:24px;
+		}
+
+	}
