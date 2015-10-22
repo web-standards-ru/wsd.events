@@ -17,15 +17,25 @@
 	// Label
 
 	&__label {
+
 		display:block;
+
+		&--required {
+			&:after {
+				color:$green;
+				content:' *';
+				}
+			}
+
 		}
 
 	// Text
 
 	&__text {
 
-		margin-bottom:12px;
 		display:block;
+		margin-bottom:12px;
+		padding-left:6px;
 		max-width:100%;
 		width:100%;
 		border:1px solid lighten($dark, 50%);
