@@ -16,7 +16,7 @@ gulp.task('styles', function () {
 		.pipe(sync.stream());
 
 	// Building all non-regular font faces into ubuntu.css
-	var fonts = gulp.src(['src/styles/blocks/ubuntu/!(regular).scss'])
+	var fonts = gulp.src('src/styles/blocks/ubuntu/!(regular).scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cssmin())
 		.pipe(concat('ubuntu.css'))
