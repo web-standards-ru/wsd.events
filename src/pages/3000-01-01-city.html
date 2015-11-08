@@ -44,26 +44,18 @@
 			</div>
 		</div>
 		<div block="section" mod="open" id="register">
-			<div elem="box">
-				<h2 elem="title">
-					Регистрация
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
-					</a>
-				</h2>
-			</div>
-			<form block="form">
+			<form block="badge">
 				<fieldset elem="box">
-					<label elem="label" mod="required" for="name">Как вас зовут?</label>
-					<input elem="text" type="text" placeholder="Имя Фамилия" required id="name">
-					<label elem="label" mod="required" for="email">Эл. почта</label>
-					<input elem="text" type="email" placeholder="mail@example.com" required id="email">
-					<label elem="label" for="nick">Ваш ник</label>
-					<input elem="text" type="text" placeholder="nick_name" id="nick">
-					<label elem="label" for="about">Пара слов о вас</label>
-					<textarea rows="7" elem="text" placeholder="Учусь, работаю, интересуюсь" id="about"></textarea>
+					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="name">
+					<label elem="label" for="name">как вас зовут, обязательно</label>
+					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email">
+					<label elem="label" for="email">эл. почта, обязательно</label>
+					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter">
+					<label elem="label" for="twitter">ник в Твиттере, если есть</label>
+					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about"></textarea>
+					<label elem="label" for="about">пара слов о вас и ваших интересах</label>
 				</fieldset>
-				<input elem="button" type="submit" value="Зарегистрироваться">
+				<input block="button" type="submit" value="Зарегистрироваться">
 			</form>
 		</div>
 		<section block="section" mod="open" id="schedule">

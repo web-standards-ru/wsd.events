@@ -1,0 +1,27 @@
+// ------------------------------------------------------------------
+// Button
+// ------------------------------------------------------------------
+
+.button {
+
+	display:block;
+	margin:0;
+	padding:18px 0;
+	width:100%;
+	outline:none;
+	border:none;
+	background:$green;
+	color:#FFF;
+	cursor:pointer;
+	font-size:24px;
+	font-family:inherit;
+
+	&:hover,
+	&:focus {
+		background:lighten($green, 7%);
+		}
+	&::-moz-focus-inner {
+		border:none;
+		}
+
+	}
