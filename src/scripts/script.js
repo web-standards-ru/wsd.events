@@ -50,7 +50,7 @@
 			map.geoObjects.add(
 				new ymaps.Placemark(coordinates, {}, {
 				iconLayout: 'default#image',
-				iconImageHref: '/images/logo.svg',
+				iconImageHref: '/images/logo-dark.svg',
 				iconImageSize: [80, 87],
 				iconImageOffset: [-40, -95]
 			}));
