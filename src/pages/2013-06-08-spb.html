@@ -40,7 +40,17 @@
 			<div elem="box" mix="block:content">
 				<h1 elem="title">Санкт-Петербург, 8 июня 2013</h1>
 				<p>Конференция прошла на Факультете переподготовки специалистов СПбГПУ на Обручевых, 1. Остались вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
-				<iframe block="support" src="https://money.yandex.ru/embed/small.xml?account=41001119329753&amp;quickpay=small&amp;any-card-payment-type=on&amp;button-text=06&amp;button-size=m&amp;button-color=white&amp;targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0+%C2%AB%D0%92%D0%B5%D0%B1-%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BE%D0%B2%C2%BB&amp;default-sum=500"></iframe>
+				<p>Понравилась конференция?</p>
+				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+					<input type="hidden" name="receiver" value="41001119329753">
+					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
+					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
+					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
+					<input type="hidden" name="quickpay-form" value="donate">
+					<input type="hidden" name="paymentType" value="AC">
+					<input elem="amount" name="sum" value="500" size="4" required type="text">
+					<button elem="button" mix="block:button">Поддержать</button>
+				</form>
 			</div>
 		</div>
 		<section block="section" mod="open" id="schedule">
