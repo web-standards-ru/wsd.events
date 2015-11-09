@@ -13,7 +13,6 @@ gulp.task('deploy', function() {
 			destination: '/var/www/wsd.events/www/htdocs/',
 			recursive: true,
 			clean: true,
-			incremental: true,
-			times: true
+			incremental: true
 		}));
 });
