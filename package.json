@@ -6,6 +6,8 @@
   "scripts": {
     "test": "ls dest",
     "server": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp deploy",
     "postinstall": "gulp build"
   },
   "dependencies": {
