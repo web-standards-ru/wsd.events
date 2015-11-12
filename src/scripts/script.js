@@ -22,7 +22,7 @@
 		            speaker.classList.remove('speakers__speaker--hidden');
 		        }
 
-		        if (speakers.length < group) {
+		        if (speakers.length <= group) {
 		            more.parentNode.removeChild(more);
 		        }
 		    }
