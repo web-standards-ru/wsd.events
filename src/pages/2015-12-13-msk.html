@@ -53,15 +53,15 @@
 			</div>
 		</div>
 		<div block="section" mod="open" id="register">
-			<form block="badge">
+			<form block="badge" method="post" target="_blank" action="https://docs.google.com/forms/d/1x_DvIF6xgtKJmz293h-zDdeH5nsad2Ij-Axe_7jDlWM/formResponse">
 				<fieldset elem="box">
-					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="name">
+					<input elem="field" mod="line" placeholder="Имя Фамилия" name="entry.1070667028" type="text" required id="name">
 					<label elem="label" for="name">как вас зовут, обязательно</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email">
+					<input elem="field" mod="line" placeholder="email@example.com" name="entry.1308419317" type="email" required id="email">
 					<label elem="label" for="email">эл. почта, обязательно</label>
-					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter">
+					<input elem="field" mod="line" placeholder="nick_name" name="entry.554942989" type="text" id="twitter">
 					<label elem="label" for="twitter">ник в Твиттере, если есть</label>
-					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about"></textarea>
+					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" name="entry.1099610128" rows="7" id="about"></textarea>
 					<label elem="label" for="about">пара слов о вас и ваших интересах</label>
 				</fieldset>
 				<button block="button" mod="full">Зарегистрироваться</button>
@@ -78,29 +78,93 @@
 			</div>
 			<ol block="calendar">
 				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Открытие
+					<time elem="time">09:00</time> Регистрация
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">10:00</time> Открытие
 				</li>
 				<li elem="event">
-					<time elem="time">00:00</time>
-					<div block="content" mod="inline" id="ID">
-						<h3>TITLE</h3>
-						<p>DESC</p>
-						<p><a href="#SLUG" block="anchor">NAME</a></p>
+					<time elem="time">10:10</time>
+					<div block="content" mod="inline" id="id-1">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">10:50</time>
+					<div block="content" mod="inline" id="web-apps">
+						<h3>Ещё лучше, чем настоящие!</h3>
+						<p>Невидимый бой веба с нейтивом за внимание пользователей продолжается: доступ к датчикам и другим железным API мы более менее получили и даже выигрываем на десктопе, но на мобильных платформах у веб-приложений всё плохо. Как нам выиграть и этот бой с помощью веб-манифестов, сервис-воркеров и системы установки веб-приложений на домашний экран в свежих версиях Opera и Chrome для Android. Предыстория, обзор возможностей и конечно живые демки.</p>
+						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Перерыв
+					<time elem="time">11:30</time> Перерыв
 				</li>
 				<li elem="event">
-					<time elem="time">00:00</time>
-					<div block="content" mod="inline" id="ID">
-						<h3>TITLE</h3>
-						<p>DESC</p>
-						<p><a href="#SLUG" block="anchor">NAME</a></p>
+					<time elem="time">11:40</time>
+					<div block="content" mod="inline" id="avito-frontend">
+						<h3>Фронтенд в Avito</h3>
+						<p>Avito помогает миллионам продавать и покупать практически всё, что они пожелают. В основе — сложная система со своей историей. Как эволюционировал фронтенд в Avito, зачем там Angular, React и Basis.js, как устроен процесс сборки и небольшая история перехода от bower к npm.</p>
+						<p><a href="#alexander-lobashev" block="anchor">Александр Лобашев</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">12:20</time>
+					<div block="content" mod="inline" id="wcag-pain">
+						<h3>WCAG 2.0, или Боль доступного веба</h3>
+						<p>Доклад для тех, кто хочет сделать веб лучше. Коротко о том, почему ваш сайт должен быть доступным и что для этого необходимо сделать.</p>
+						<p><a href="#stanislau-zubovich" block="anchor">Станислав Зубович</a></p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Закрытие
+					<time elem="time">13:00</time> Обед
+				</li>
+				<li elem="event">
+					<time elem="time">14:00</time>
+					<div block="content" mod="inline" id="id-5">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">14:40</time>
+					<div block="content" mod="inline" id="id-6">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">15:20</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">15:30</time>
+					<div block="content" mod="inline" id="avito-frontend">
+						<h3>Тёмная сторона SVG</h3>
+						<p>История о том, как дизайнер решилcя изучать код и начал с SVG. Как оказалось, с помощью векторной графики можно решать продуктовые задачи — кроссбраузерно и лаконично. Кому польза от применения вектора уже сейчас, можно ли решить известные интерфейсные проблемы, сохранив дзен в команде разработчиков — ответы на все больные вопросы.</p>
+						<p><a href="#iryna-rudenko" block="anchor">Ирина Руденко</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">16:10</time>
+					<div block="content" mod="inline" id="id-8">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">16:50</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">17:00</time>
+					<div block="content" mod="inline" id="id-9">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">17:40</time>
+					<div block="content" mod="inline" id="id-10">
+						<p><em>Доклад уточняется</em></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">18:20</time> Закрытие
 				</li>
 			</ol>
 		</section>
@@ -113,13 +177,49 @@
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="SLUG">
+			<div block="card" id="roman-dvornov">
 				<div elem="description" mix="block:content">
-					<h3>NAME <a href="https://twitter.com/NICK">@NICK</a></h3>
-					<p>DESC</p>
+					<h3>Роман Дворнов <a href="https://twitter.com/rdvornov">@rdvornov</a></h3>
+					<p>Ведущий фронтенд-разработчик в <a href="http://avito.ru/company">Авито</a>. Автор и мейнтейнер <a href="http://basisjs.com/">basis.js</a>. Исследователь, изобретатель велосипедов, евангелист веб-стандартов, идейный вдохновитель, критик, докладчик. Основной интерес — архитектура и инфраструктура больших одностраничных приложений и смежные задачи.</p>
 				</div>
 				<div elem="column">
-					<img elem="picture" src="/speakers/SLUG.jpg" alt="NAME">
+					<img elem="picture" src="/speakers/roman-dvornov.jpg" alt="Роман Дворнов">
+				</div>
+			</div>
+			<div block="card" id="stanislau-zubovich">
+				<div elem="description" mix="block:content">
+					<h3>Станислав Зубович <a href="https://twitter.com/bigbaddev">@bigbaddev</a></h3>
+					<p>Веб-разработчик с трехлетним опытом, работает в EPAM Systems. Увлекается всем, что можно сделать с помощью CSS.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/stanislau-zubovich.jpg" alt="Станислав Зубович">
+				</div>
+			</div>
+			<div block="card" id="alexander-lobashev">
+				<div elem="description" mix="block:content">
+					<h3>Александр Лобашев <a href="https://twitter.com/limarc">@limarc</a></h3>
+					<p>Фронтенд-разработчик из Чебоксар, пишет код в Avito. Любит простой код, сложную архитектуру и интерфейсы. Иногда что-то публикет на <a href="https://github.com/limarc">Гитхабе</a> и в <a href="https://twitter.com/limarc">Твиттере</a>.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/alexander-lobashev.jpg" alt="Александр Лобашев">
+				</div>
+			</div>
+			<div block="card" id="vadim-makeev">
+				<div elem="description" mix="block:content">
+					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
+					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div block="card" id="iryna-rudenko">
+				<div elem="description" mix="block:content">
+					<h3>Ирина Руденко <a href="https://twitter.com/rynarud">@rynarud</a></h3>
+					<p>UI/UX-дизайнер в <a href="http://hackraft.com/">Hackraft</a>, работает в основном над большими контентными проектами. Считает, что за статическими скринами прошлое, а за интерактивными — будущее. Дружит с разработчиками, изучает Ruby и фронтенд. Можно найти в Gitter как <a href="https://gitter.im/rynarud">@rynarud</a>.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/iryna-rudenko.jpg" alt="Ирина Руденко">
 				</div>
 			</div>
 		</section>
@@ -146,7 +246,7 @@
 			<div block="card" id="microsoft">
 				<div elem="description" mix="block:content">
 					<h3>Microsoft</h3>
-					<p>Компания не нуждающаяся в представлении. Разработчики операционной системы Windows, браузера Internet Explorer 11. А также многих других полезных вещей прочно вошедших в нашу жизнь за последние 15 лет.</p>
+					<p>Компания не нуждающаяся в представлении. Разработчики операционной системы Windows, браузера Edge, а также многих других полезных вещей прочно вошедших в нашу жизнь за последние 15 лет.</p>
 				</div>
 				<div elem="column" mod="logo">
 					<a href="http://microsoft.com/">
