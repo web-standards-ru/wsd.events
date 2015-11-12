@@ -63,9 +63,9 @@
 	&__field {
 
 		display:block;
+		padding-bottom:6px;
 		width:100%;
 		outline:none;
-		line-height:1.8;
 		font-family:inherit;
 
 		&::placeholder {
@@ -90,6 +90,7 @@
 			padding:0 4px;
 			border:1px solid lighten($dark, 50%);
 			background:lighten($blue, 45%);
+			line-height:1.6;
 			font-size:16px;
 			}
 
