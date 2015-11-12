@@ -80,7 +80,7 @@
 
 		&--line {
 			border:none;
-			background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="4"><circle cx="2" cy="2" r="2" fill="%23416E87"/></svg>') 0 100% repeat-x;
+			background:svg('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="4"><circle cx="2" cy="2" r="2" fill="%23416E87"/></svg>') 0 100% repeat-x;
 			font-size:24px;
 			}
 

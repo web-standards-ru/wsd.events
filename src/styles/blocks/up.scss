@@ -9,7 +9,7 @@
 	margin-top:5px;
 	width:20px;
 	height:15px;
-	background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15"><polygon fill="%23A7CF40" points="10,0 20,15 0,15"/></svg>');
+	background:svg('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15"><polygon fill="%23A7CF40" points="10,0 20,15 0,15"/></svg>');
 	opacity:0.5;
 
 	&:hover {
