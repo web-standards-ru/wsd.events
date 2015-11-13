@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-	config = require('../config'),
 	beml = require('gulp-beml'),
 	htmlmin = require('gulp-htmlmin'),
 	rename = require('gulp-rename'),
@@ -7,7 +6,7 @@ var gulp = require('gulp'),
 
 gulp.task('html', function () {
 	// Building all HTML pages
-	return gulp.src(config.src.html)
+	return gulp.src('src/pages/**/*.html')
 		// Applying BEML preprocessor
 		.pipe(beml({
 			elemPrefix: '__',

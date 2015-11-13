@@ -1,2 +1,2 @@
 require('browser-sync').create('sync');
-require('require-dir')('gulp/tasks');
+require('require-dir')('gulp');

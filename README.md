@@ -7,13 +7,13 @@
 ### Gulp
 
 1. Разработка: `gulp` — сборка в `dest` и локальный сервер из `dest` с вотчером.
-2. Сборка: `gulp build` — сборка в `dest`.
+2. Сборка: `gulp build:prod` — сборка в `dest`.
 3. Деплой: `gulp deploy` — синхронизация из `dest` на удалённый сервер, требуется доступ.
 
 ### Скрипты npm
 
 1. Разработка: `npm run server`.
-2. Сборка: `npm run build`.
+2. Сборка: `npm run build:prod`.
 3. Деплой: `npm run deploy`.
 
 ## Картинки

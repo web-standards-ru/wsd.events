@@ -4,7 +4,7 @@ var gulp = require('gulp');
 // a server with a file watcher
 
 gulp.task('default', [
-	'build',
+	'build:dev',
 	'server',
 	'watch'
 ]);

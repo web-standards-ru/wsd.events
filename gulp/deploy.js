@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-	open = require('open'),
 	rsync = require('gulp-rsync');
 
 // Deploying all files
