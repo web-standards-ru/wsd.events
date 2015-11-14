@@ -1,5 +1,7 @@
 # Web Standards Days
 
+[![Build Status](https://travis-ci.org/web-standards-ru/web-standards-days.svg?branch=master)](https://travis-ci.org/web-standards-ru/web-standards-days)
+
 ## Установка и запуск окружения
 
 Необходима Node.js версии не ниже 4.1, зависимости ставятся командой `npm i`.
