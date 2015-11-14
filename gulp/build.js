@@ -13,6 +13,6 @@ gulp.task('build:dev', [
 
 gulp.task('build:prod', function(callback) {
 	sequence(
-		'build:dev', 'cache', callback
+		'clean', 'build:dev', 'cache', callback
 	);
 });
