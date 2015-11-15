@@ -30,31 +30,30 @@
 
 	}
 
-	// Map
-
-	var map = document.getElementById('map');
-
-	if (map) {
-		var latitude = map.dataset.latitude,
-			longitude = map.dataset.longitude,
-			coordinates = [latitude, longitude],
-			zoom = map.dataset.zoom;
-
-		ymaps.ready(function () {
-			var map = new ymaps.Map('map', {
-				center: coordinates,
-				zoom: zoom
-			});
-
-			map.behaviors.disable('scrollZoom');
-			map.geoObjects.add(
-				new ymaps.Placemark(coordinates, {}, {
-				iconLayout: 'default#image',
-				iconImageHref: '/images/logo-dark.svg',
-				iconImageSize: [80, 87],
-				iconImageOffset: [-40, -95]
-			}));
-		});
-	}
-
 })(document);
+
+// Map
+
+function map() {
+	var map = document.getElementById('map'),
+		latitude = map.dataset.latitude,
+		longitude = map.dataset.longitude,
+		coordinates = [latitude, longitude],
+		zoom = map.dataset.zoom;
+
+	ymaps.ready(function () {
+		var map = new ymaps.Map('map', {
+			center: coordinates,
+			zoom: zoom
+		});
+
+		map.behaviors.disable('scrollZoom');
+		map.geoObjects.add(
+			new ymaps.Placemark(coordinates, {}, {
+			iconLayout: 'default#image',
+			iconImageHref: '/images/logo-dark.svg',
+			iconImageSize: [80, 87],
+			iconImageOffset: [-40, -95]
+		}));
+	});
+}
