@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 	hash = require('hash-files'),
 	rename = require('gulp-rename'),
 	replace = require('gulp-replace'),
+	merge = require('merge-stream'),
 	paths = require('vinyl-paths'),
 	del = require('del');
 
@@ -16,7 +17,19 @@ function hashEight(files) {
 // Cache
 
 gulp.task('cache', function() {
-	gulp.src('dest/**/*.html')
+	var styles = gulp.src('dest/styles/screen.css')
+		.pipe(rename(function(path) {
+			path.basename = hashEight(['dest/styles/screen.css'])
+		}))
+		.pipe(gulp.dest('dest/styles'));
+
+	var scripts = gulp.src('dest/scripts/script.js')
+		.pipe(rename(function(path) {
+			path.basename = hashEight(['dest/scripts/script.js'])
+		}))
+		.pipe(gulp.dest('dest/scripts'));
+
+	var html = gulp.src('dest/**/*.html')
 		.pipe(replace(
 			/(<link rel="stylesheet" href="\/styles\/)(screen)(\.css">)/g,
 			'$1' + hashEight(['dest/styles/screen.css']) + '$3'
@@ -27,17 +40,5 @@ gulp.task('cache', function() {
 		))
 		.pipe(gulp.dest('dest'));
 
-	gulp.src('dest/styles/screen.css')
-		.pipe(paths(del))
-		.pipe(rename(function(path) {
-			path.basename = hashEight(['dest/styles/screen.css'])
-		}))
-		.pipe(gulp.dest('dest/styles'));
-
-	gulp.src('dest/scripts/script.js')
-		.pipe(paths(del))
-		.pipe(rename(function(path) {
-			path.basename = hashEight(['dest/scripts/script.js'])
-		}))
-		.pipe(gulp.dest('dest/scripts'));
+	return merge(styles, scripts, html);
 });
