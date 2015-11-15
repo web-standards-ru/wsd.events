@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	replace = require('gulp-replace'),
 	merge = require('merge-stream'),
 	paths = require('vinyl-paths'),
+	revert = require('gulp-revert-path'),
 	del = require('del');
 
 // Hash Eight
@@ -21,13 +22,17 @@ gulp.task('cache', function() {
 		.pipe(rename(function(path) {
 			path.basename = hashEight(['dest/styles/screen.css'])
 		}))
-		.pipe(gulp.dest('dest/styles'));
+		.pipe(gulp.dest('dest/styles'))
+		.pipe(revert())
+		.pipe(paths(del));
 
 	var scripts = gulp.src('dest/scripts/script.js')
 		.pipe(rename(function(path) {
 			path.basename = hashEight(['dest/scripts/script.js'])
 		}))
-		.pipe(gulp.dest('dest/scripts'));
+		.pipe(gulp.dest('dest/scripts'))
+		.pipe(revert())
+		.pipe(paths(del));
 
 	var html = gulp.src('dest/**/*.html')
 		.pipe(replace(
@@ -35,7 +40,7 @@ gulp.task('cache', function() {
 			'$1' + hashEight(['dest/styles/screen.css']) + '$3'
 		))
 		.pipe(replace(
-			/(<script src="\/scripts\/)(script)(\.js">)/g,
+			/(<script async src="\/scripts\/)(script)(\.js">)/g,
 			'$1' + hashEight(['dest/scripts/script.js']) + '$3'
 		))
 		.pipe(gulp.dest('dest'));
