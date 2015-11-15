@@ -19,7 +19,7 @@ gulp.task('cache:hash', function() {
 gulp.task('cache:replace', function() {
 	return gulp.src('dest/**/*.html')
 		.pipe(replace({
-			manifest: gulp.src('dest/rev-manifest.json')
+			manifest: gulp.src('dest/rev-manifest.json').pipe(paths(del))
 		}))
 		.pipe(gulp.dest('dest'));
 });
