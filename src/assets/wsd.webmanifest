@@ -1,0 +1,17 @@
+{
+	"name": "Web Standards Days",
+	"short_name": "WSD",
+	"lang": "ru",
+	"start_url": "/",
+	"display": "browser",
+	"orientation": "any",
+	"theme_color": "#416E87",
+	"background_color": "#416E87",
+	"icons": [
+		{
+			"src": "apple-touch-icon.png",
+			"sizes": "306x331",
+			"type": "image/png"
+		}
+	]
+}
