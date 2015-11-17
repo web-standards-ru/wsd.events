@@ -10,7 +10,7 @@
 	"icons": [
 		{
 			"src": "apple-touch-icon.png",
-			"sizes": "306x331",
+			"sizes": "331x331",
 			"type": "image/png"
 		}
 	]
