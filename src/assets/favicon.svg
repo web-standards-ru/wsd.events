@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1044 1144">
+	<title>Веб-стандарты</title>
+	<g stroke="black" stroke-width="120" stroke-linecap="round" stroke-linejoin="round" fill="none">
+		<polyline points="984,572 984,316"/>
+		<polyline points="984,316 522,60"/>
+		<polyline points="522,60 60,316"/>
+		<polyline points="60,316 522,572"/>
+		<polyline points="522,572 522,1084"/>
+		<polyline points="984,828 522,1084"/>
+		<polyline points="522,1084 60,828"/>
+		<polyline points="60,828 60,572"/>
+	</g>
+</svg>
