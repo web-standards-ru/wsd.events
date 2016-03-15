@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
-	cssmin = require('gulp-minify-css'),
+	csso = require('gulp-csso'),
 	concat = require('gulp-concat'),
 	merge = require('merge-stream'),
 	sync = require('browser-sync').get('sync');
@@ -11,14 +11,14 @@ gulp.task('styles', function () {
 	var screen = gulp.src('src/styles/screen.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
-		.pipe(cssmin())
+		.pipe(csso())
 		.pipe(gulp.dest('dest/styles'))
 		.pipe(sync.stream());
 
 	// Building all non-regular font faces into ubuntu.css
 	var fonts = gulp.src('src/styles/blocks/ubuntu/!(regular).scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(cssmin())
+		.pipe(csso())
 		.pipe(concat('ubuntu.css'))
 		.pipe(gulp.dest('dest/styles'))
 		.pipe(sync.stream());
