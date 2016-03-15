@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-	del = require('del');
+const gulp = require('gulp');
+const del = require('del');
 
 // Cleaning up dest folder
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
 	return del('dest/**');
 });

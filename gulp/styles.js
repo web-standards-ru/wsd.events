@@ -1,14 +1,14 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	csso = require('gulp-csso'),
-	concat = require('gulp-concat'),
-	merge = require('merge-stream'),
-	sync = require('browser-sync').get('sync');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
+const concat = require('gulp-concat');
+const merge = require('merge-stream');
+const sync = require('browser-sync').get('sync');
 
-gulp.task('styles', function () {
+gulp.task('styles', () => {
 	// Building main styles into screen.css
-	var screen = gulp.src('src/styles/screen.scss')
+	const screen = gulp.src('src/styles/screen.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(csso())
@@ -16,7 +16,7 @@ gulp.task('styles', function () {
 		.pipe(sync.stream());
 
 	// Building all non-regular font faces into ubuntu.css
-	var fonts = gulp.src('src/styles/blocks/ubuntu/!(regular).scss')
+	const fonts = gulp.src('src/styles/blocks/ubuntu/!(regular).scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(csso())
 		.pipe(concat('ubuntu.css'))

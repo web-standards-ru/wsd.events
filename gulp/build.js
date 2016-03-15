@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-	sequence = require('run-sequence').use(gulp);
+const gulp = require('gulp');
+const sequence = require('run-sequence').use(gulp);
 
 // Building the site by running
 // a sequence of other tasks
@@ -11,7 +11,7 @@ gulp.task('build:dev', [
 	'scripts'
 ]);
 
-gulp.task('build:prod', function(callback) {
+gulp.task('build:prod', (callback) => {
 	sequence(
 		'clean', 'build:dev', 'cache:hash', 'cache:replace', callback
 	);

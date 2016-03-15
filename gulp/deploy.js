@@ -1,10 +1,10 @@
-var gulp = require('gulp'),
-	rsync = require('gulp-rsync');
+const gulp = require('gulp');
+const rsync = require('gulp-rsync');
 
 // Deploying all files
 // from dest folder to server
 
-gulp.task('deploy', function() {
+gulp.task('deploy', () => {
 	return gulp.src('dest/**')
 		.pipe(rsync({
 			root: 'dest',

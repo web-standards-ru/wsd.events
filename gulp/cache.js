@@ -1,10 +1,10 @@
-var gulp = require('gulp'),
-	rev = require('gulp-rev'),
-	replace = require('gulp-rev-replace'),
-	paths = require('vinyl-paths'),
-	del = require('del');
+const gulp = require('gulp');
+const rev = require('gulp-rev');
+const replace = require('gulp-rev-replace');
+const paths = require('vinyl-paths');
+const del = require('del');
 
-gulp.task('cache:hash', function() {
+gulp.task('cache:hash', () => {
 	return gulp.src([
 			'dest/styles/*.css',
 			'dest/scripts/*.js'
@@ -16,7 +16,7 @@ gulp.task('cache:hash', function() {
 		.pipe(gulp.dest('dest'));
 });
 
-gulp.task('cache:replace', function() {
+gulp.task('cache:replace', () => {
 	return gulp.src('dest/**/*.html')
 		.pipe(replace({
 			manifest: gulp.src('dest/rev-manifest.json').pipe(paths(del))

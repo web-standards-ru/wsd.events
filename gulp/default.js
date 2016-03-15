@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // Building the site and starting
 // a server with a file watcher
