@@ -8,7 +8,9 @@ gulp.task('cache:hash', () => {
 	return gulp.src([
 			'dest/styles/*.css',
 			'dest/scripts/*.js'
-		], {base: 'dest'})
+		], {
+			base: 'dest'
+		})
 		.pipe(paths(del))
 		.pipe(rev())
 		.pipe(gulp.dest('dest'))
