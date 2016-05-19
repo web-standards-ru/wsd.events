@@ -24,6 +24,8 @@
 			<div elem="box">
 				<ul block="navigation">
 					<li><a elem="link" href="#register">Регистрация</a></li>
+					<li><a elem="link" href="#schedule">Программа</a></li>
+					<li><a elem="link" href="#speakers">Докладчики</a></li>
 					<li><a elem="link" href="#organisers">Организаторы</a></li>
 					<li><a elem="link" href="#venue">Площадка</a></li>
 				</ul>
@@ -72,6 +74,164 @@
 				<button block="button" mod="full">Зарегистрироваться</button>
 			</form>
 		</div>
+		<section block="section" mod="open" id="schedule">
+			<div elem="box">
+				<h2 elem="title">
+					Программа
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<ol block="calendar">
+				<li elem="event" mod="break">
+					<time elem="time">10:00</time> Регистрация
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">11:00</time> Открытие
+				</li>
+				<li elem="event">
+					<time elem="time">11:10</time>
+					<div block="content" mod="inline" id="production">
+						<h3>Как отвечать за продакшен</h3>
+						<p>Вы — разработчик. Что у вас есть? В худшем случае, компьютер, на котором вы всё тестируете перед выкаткой. Проверяете во всех браузерах, запускаете автоматические тесты, возможно, нагрузочные. В хорошем случае — есть ферма машин или даже отдел тестирования. Стандартные практики по соблюдению качества продукта. Но это только малая часть. Логирование, мониторинг, алертинг, бета-пользователи, поддержка, плагины, антивирусы — что ещё можно сделать, чтобы улучшить техническое качество продукта.</p>
+						<p><a href="#andrew-sumin" block="anchor">Андрей Сумин</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">11:50</time>
+					<div block="content" mod="inline" id="data-mri">
+						<h3>МРТ для данных</h3>
+						<p>Человеческий мозг устроен сложно. Если с ним что-то не так, то для диагностики используют магнитно-резонансный томограф. Большие одностраничные приложения тоже устроены сложно. Чтобы их починить или обвесить новой функциональностью, требуется вникнуть в их устройство. Для этого нередко приходится засучивать рукава и с головой погружаться в самую глубь проекта. И немалая часть проблем связана именно с бизнес-логикой и потоками данных. Но что, если у нас будет возможность проникнуть в структуру данных, способ увидеть связи между ними и отслеживать то, как они влияют друг на друга? Такой способ, чтобы не требовалось вскрытия черепной коробки — всё как с МРТ.</p>
+						<p><a href="#anastasia-goryacheva" block="anchor">Анастасия Горячева</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">12:30</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">12:40</time>
+					<div block="content" mod="inline" id="html-ios">
+						<h3>Жизнь HTML в 2ГИС под iOS</h3>
+						<p>Когда и для чего нативному приложению использовать веб-технологии. Что делается хорошо, а что нельзя ни в коем случае делать с веб-вью в приложении. Как в 2ГИС проходит разработка для мобильного приложения и чем она отличается от привычного процесса фронтенд-разработки. Как сделать HTML-страницу похожей на приложение, чтобы сохранить чувство «нативности».</p>
+						<p><a href="#roman-yanke" block="anchor">Роман Янке</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">13:20</time>
+					<div block="content" mod="inline" id="content-transform">
+						<h3>Дружим с контентом пользователя</h3>
+						<p>WYSIWG-редакторы не дают настоящего представления того, как оформленный там текст будет выглядеть будет на сайте и не всегда генерируют ожидаемую разметку. Такой контент, созданный пользователем, можно взять под контроль и подружить с вёрсткой можно, применив для него цепочку заранее приготовленных трансформаций. Как сделать <code>&lt;h3&gt;</code> из <code>&lt;p&gt;&lt;b&gt;&lt;span style="font-size:20px"&gt;</code>, параграфы из <code>&lt;br&gt;&lt;br&gt;</code>, а из одного тега <code>&lt;img&gt;</code> — <code>&lt;picture&gt;</code> с набором картинок для разных размеров экрана.</p>
+						<p><a href="#vladimir-kuznetsov" block="anchor">Владимир Кузнецов</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">14:00</time> Обед
+				</li>
+				<li elem="event">
+					<time elem="time">15:00</time>
+					<div block="content" mod="inline" id="push-it">
+						<h3>Жми сюда!</h3>
+						<p>Все наши интерфейсы бесполезны без интерактивных элементов. Кнопки, ссылки, псевдоссылки — да какая разница? Див с онкликом и поехали. Как правильно выбрать, сверстать и не наделать глупостей. Куда делась мышка и кому вообще нужна навигация с клавиатуры.</p>
+						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">15:40</time>
+					<div block="content" mod="inline" id="talk-6">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">16:20</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">16:30</time>
+					<div block="content" mod="inline" id="talk-7">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">17:10</time>
+					<div block="content" mod="inline" id="talk-8">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">17:50</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">18:00</time>
+					<div block="content" mod="inline" id="talk-9">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">18:40</time>
+					<div block="content" mod="inline" id="talk-10">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">19:20</time> Закрытие
+				</li>
+			</ol>
+		</section>
+		<section block="section" id="speakers">
+			<div elem="box">
+				<h2 elem="title">
+					Докладчики
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<div block="card" id="anastasia-goryacheva">
+				<div elem="description" mix="block:content">
+					<h3>Анастасия Горячева <a href="https://twitter.com/negoryacheva">@negoryacheva</a></h3>
+					<p>Разрабатывает большое одностраничное приложение для профессиональных пользователей Avito, участвует в разработке инструментов для фреймворка Basis.js.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/anastasia-goryacheva.jpg" alt="Анастасия Горячева">
+				</div>
+			</div>
+			<div block="card" id="vladimir-kuznetsov">
+				<div elem="description" mix="block:content">
+					<h3>Владимир Кузнецов <a href="https://twitter.com/mista_k">@mista_k</a></h3>
+					<p>Фронтенд-разработчик в Graph. Апологет компонентного подхода при разработке сайтов. Любит автоматизировать рабочие процессы. Ведёт технический блог «<a href="http://noteskeeper.ru">Хранитель заметок</a>».</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/vladimir-kuznetsov.jpg" alt="Владимир Кузнецов">
+				</div>
+			</div>
+			<div block="card" id="vadim-makeev">
+				<div elem="description" mix="block:content">
+					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
+					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div block="card" id="andrew-sumin">
+				<div elem="description" mix="block:content">
+					<h3>Андрей Сумин <a href="https://twitter.com/andrewsumin">@andrewsumin</a></h3>
+					<p>Заместитель технического директора почтовой службы <a href="https://mail.ru/">Mail.Ru</a>.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/andrew-sumin.jpg" alt="Андрей Сумин">
+				</div>
+			</div>
+			<div block="card" id="roman-yanke">
+				<div elem="description" mix="block:content">
+					<h3>Роман Янке <a href="https://twitter.com/romanyanke">@romanyanke</a></h3>
+					<p>Занимается фронтендом более 5 лет, в последнее время сосредоточился на мобильных платформах. Делает интерфейсы мобильного приложения 2ГИС на iOS лучше нативного на стеке веб-технологий. Пишет <a href="http://notes.yanke.ru/">заметки про веб-интерфейсы</a>.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/roman-yanke.jpg" alt="Роман Янке">
+				</div>
+			</div>
+		</section>
 		<section block="section" id="organisers">
 			<div elem="box">
 				<h2 elem="title">
