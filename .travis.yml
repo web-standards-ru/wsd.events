@@ -1,3 +1,17 @@
 language: node_js
 node_js:
-  - "4.1"
+- '4.1'
+git:
+  depth: 3
+addons:
+  ssh_known_hosts:
+  - web-standards.ru
+  - wsd.events
+before_deploy:
+- .travis/set-up-ssh
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master
