@@ -4,7 +4,7 @@
 
 .social {
 
-	overflow:hidden;
+	display:flex;
 	padding:0 0 24px 24px;
 
 	@include mq($from:palm) {
@@ -15,7 +15,6 @@
 
 	&__link {
 
-		float:left;
 		margin-right:16px;
 		width:24px;
 		height:24px;
