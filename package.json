@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.6",
-    "browser-sync": "^2.12.8",
+    "browser-sync": "^2.13.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-beml": "^1.0.0",
@@ -29,7 +29,7 @@
     "merge-stream": "^1.0.0",
     "postcss-inline-svg": "^1.4.0",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.2.0",
+    "run-sequence": "^1.2.1",
     "sass-mq": "^3.3.0-beta.1",
     "vinyl-paths": "^2.1.0"
   }
