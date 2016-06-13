@@ -4,7 +4,8 @@
     "node": ">=4.1"
   },
   "scripts": {
-    "test": "gulp build:prod && ls dest",
+    "pretest": "gulp build:prod",
+    "test": "ls dest",
     "server": "gulp",
     "build:dev": "gulp build:dev",
     "build:prod": "gulp build:prod",
