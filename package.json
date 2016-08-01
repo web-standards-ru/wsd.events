@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.7",
-    "browser-sync": "^2.13.0",
+    "browser-sync": "^2.14.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-beml": "^1.0.0",
