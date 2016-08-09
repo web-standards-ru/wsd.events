@@ -8,44 +8,45 @@
 
 	&__box {
 
-		padding:24px 24px 12px;
+		padding:0 24px 12px;
 
 		@include mq($from:palm) {
-			padding:36px 36px 18px;
+			padding:0 36px 18px;
 			}
 
 		// Hole
 
-		&:before {
+		&--hole {
 
-			display:block;
-			margin:auto;
-			background:$dark;
-			content:'';
-
-			@mixin sizing($size) {
-				margin-top:$size / 2;
-				margin-bottom:$size;
-				width:$size * 4;
-				height:$size;
-				border-radius:$size;
-				}
-
-			@include sizing(18px);
+			padding-top:24px;
 
 			@include mq($from:palm) {
-				@include sizing(24px);
+				padding-top:36px;
 				}
 
-			}
+			&::before {
 
-		// Back
+				display:block;
+				margin:auto;
+				background:$dark;
+				content:'';
 
-		&--back {
-			background:lighten($blue, 45%);
-			&:before {
-				content:none;
+				@mixin sizing($size) {
+					margin-top:$size / 2;
+					margin-bottom:$size;
+					width:$size * 4;
+					height:$size;
+					border-radius:$size;
+					}
+
+				@include sizing(18px);
+
+				@include mq($from:palm) {
+					@include sizing(24px);
+					}
+
 				}
+
 			}
 
 		}
@@ -56,6 +57,7 @@
 		display:block;
 		margin-bottom:24px;
 		color:$dark;
+		text-transform:lowercase;
 		}
 
 	// Field
