@@ -12,7 +12,7 @@
     "deploy": "gulp deploy"
   },
   "dependencies": {
-    "autoprefixer": "^6.3.7",
+    "autoprefixer": "^6.4.0",
     "browser-sync": "^2.14.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
