@@ -60,26 +60,152 @@
 				</form>
 			</div>
 		</div>
-		<section block="section" mod="open" id="proposal">
+		<div block="section" mod="open" id="register">
+			<form block="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSfRZDxxA2C6oEbjh75py6v9G0ugI0W4WQsfcwBBzTyR-u0Ksw/formResponse" target="_blank" method="get">
+				<div elem="box" mod="hole">
+					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="name" name="entry.589522332">
+					<label elem="label" for="name">Как вас зовут, обязательно</label>
+					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email" name="entry.1216681030">
+					<label elem="label" for="email">Эл. почта, обязательно</label>
+					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter" name="entry.689923458">
+					<label elem="label" for="twitter">Ник в Твиттере, если есть</label>
+					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about" name="entry.794777881"></textarea>
+					<label elem="label" for="about">Пара слов о вас и ваших интересах</label>
+				</div>
+				<button block="button" mod="full">Зарегистрироваться</button>
+			</form>
+		</div>
+		<section block="section" mod="open" id="schedule">
 			<div elem="box">
 				<h2 elem="title">
-					Заявка на доклад
+					Программа
 					<a block="up" href="#navigation" title="Наверх">
 						<span elem="text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<form block="badge" action="https://docs.google.com/forms/d/e/1FAIpQLScDtQcfjyWAx81M7MV3X2lGRojKR2Oi4H3XkRvLeUQGejU8eA/formResponse" method="get" target="_blank">
-				<div elem="box">
-					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="entry.2130812920">
-					<label elem="label" for="proposal-name">Как вас зовут</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="proposal-email" name="entry.1559395980">
-					<label elem="label" for="proposal-email">Эл. почта</label>
-					<textarea elem="field" mod="text" rows="7" required id="proposal-description" name="entry.1657042102"></textarea>
-					<label elem="label" for="proposal-description">Название, описание или идея доклада</label>
+			<ol block="calendar">
+				<li elem="event" mod="break">
+					<time elem="time">10:00</time> Регистрация
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">11:00</time> Открытие
+				</li>
+				<li elem="event">
+					<time elem="time">11:10</time>
+					<div block="content" mod="inline" id="talk-1">
+						<h3>TITLE 1</h3>
+						<p>DESC 1</p>
+						<p><a href="#speaker-1" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">11:50</time>
+					<div block="content" mod="inline" id="talk-2">
+						<h3>TITLE 2</h3>
+						<p>DESC 2</p>
+						<p><a href="#speaker-2" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">12:30</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">12:40</time>
+					<div block="content" mod="inline" id="talk-3">
+						<h3>TITLE 3</h3>
+						<p>DESC 3</p>
+						<p><a href="#speaker-3" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">13:20</time>
+					<div block="content" mod="inline" id="talk-4">
+						<h3>TITLE 4</h3>
+						<p>DESC 4</p>
+						<p><a href="#speaker-4" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">14:00</time> Обед
+				</li>
+				<li elem="event">
+					<time elem="time">15:00</time>
+					<div block="content" mod="inline" id="talk-5">
+						<h3>TITLE 5</h3>
+						<p>DESC 5</p>
+						<p><a href="#speaker-5" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">15:40</time>
+					<div block="content" mod="inline" id="talk-6">
+						<h3>TITLE 6</h3>
+						<p>DESC 6</p>
+						<p><a href="#speaker-6" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">16:20</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">16:30</time>
+					<div block="content" mod="inline" id="talk-7">
+						<h3>TITLE 7</h3>
+						<p>DESC 7</p>
+						<p><a href="#speaker-7" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">17:10</time>
+					<div block="content" mod="inline" id="talk-8">
+						<h3>TITLE 8</h3>
+						<p>DESC 8</p>
+						<p><a href="#speaker-8" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">17:50</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">18:00</time>
+					<div block="content" mod="inline" id="talk-9">
+						<h3>TITLE 9</h3>
+						<p>DESC 9</p>
+						<p><a href="#speaker-9" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">18:40</time>
+					<div block="content" mod="inline" id="talk-10">
+						<h3>TITLE 10</h3>
+						<p>DESC 10</p>
+						<p><a href="#speaker-10" block="anchor">YOURS TRULY</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">19:20</time> Закрытие
+				</li>
+			</ol>
+		</section>
+		<section block="section" id="speakers">
+			<div elem="box">
+				<h2 elem="title">
+					Докладчики
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<div block="card" id="vadim-makeev">
+				<div elem="description" mix="block:content">
+					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
+					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
 				</div>
-				<button block="button" mod="full">Подать</button>
-			</form>
+				<div elem="column">
+					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				</div>
+			</div>
 		</section>
 		<section block="section" id="organisers">
 			<div elem="box">
@@ -90,7 +216,7 @@
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="lovata">
+			<div block="card" id="itmo">
 				<div elem="description" mix="block:content">
 					<h3>Университет ИТМО</h3>
 					<p>Национальный исследовательский университет, ведущий вуз России в области информационных и фотонных технологий. Альма-матер победителей международных соревнований по программированию: ACM ICPC, Google Code Jam, Facebook Hacker Cup, Яндекс.Алгоритм, Russian Code Cup, Topcoder Open и др. Приоритетные направления: IT, фотонные технологии, робототехника, квантовые коммуникации, трансляционная медицина, урбанистика, Art&amp;Science, Science Communication. С 2013 года — участник «<a href="http://www.ifmo.ru/ru/page/239/programma_povysheniya_konkurentosposobnosti_universiteta_itmo_programma_5-100.htm">Программы 5-100</a>».</p>
