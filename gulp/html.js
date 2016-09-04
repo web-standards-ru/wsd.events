@@ -27,5 +27,5 @@ gulp.task('html', () => {
 		}))
 		// Writing all results to dest
 		.pipe(gulp.dest('dest'))
-		.pipe(sync.stream());
+		.pipe(sync.stream({ once: true }));
 });
