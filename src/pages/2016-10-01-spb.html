@@ -26,7 +26,9 @@
 		<nav block="section" mod="open" id="navigation">
 			<div elem="box">
 				<ul block="navigation">
-					<li><a elem="link" href="#proposal">Заявка на доклад</a></li>
+					<li><a elem="link" href="#register">Регистрация</a></li>
+					<li><a elem="link" href="#schedule">Программа</a></li>
+					<li><a elem="link" href="#speakers">Докладчики</a></li>
 					<li><a elem="link" href="#organisers">Организаторы</a></li>
 					<li><a elem="link" href="#venue">Площадка</a></li>
 				</ul>
@@ -46,7 +48,7 @@
 		<div block="section" id="intro">
 			<div elem="box" mix="block:content">
 				<h1 elem="title">Санкт-Петербург, 1 октября 2016</h1>
-				<p>Конференция пройдёт в <a href="http://www.ifmo.ru/ru/">Университете ИТМО</a> на Ломоносова, 9. Участие — бесплатное, скоро откроем регистрацию. Остались вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
+				<p>Конференция пройдёт в <a href="http://www.ifmo.ru/ru/">Университете ИТМО</a> на Ломоносова, 9. Участие — бесплатное. Остались вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Нравится конференция?</p>
 				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
 					<input type="hidden" name="receiver" value="41001119329753">
@@ -93,18 +95,18 @@
 				</li>
 				<li elem="event">
 					<time elem="time">11:10</time>
-					<div block="content" mod="inline" id="talk-1">
-						<h3>TITLE 1</h3>
-						<p>DESC 1</p>
-						<p><a href="#speaker-1" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="heads-up">
+						<h3><code>&lt;head&gt;</code> — всему голова</h3>
+						<p>Зачем и кому нужен этот тэг и почему это важно? Влияет ли <code>&lt;head&gt;</code> на скорость загрузки сайта, как использовать <code>&lt;base&gt;</code>, чтобы всё сломать, сколько фавиконок нужно современному сайту, что общего у <code>&lt;head&gt;</code> с семантикой. Давайте наведём порядок в вашей «голове»!</p>
+						<p><a href="#roman-ganin" block="anchor">Роман Ганин</a></p>
 					</div>
 				</li>
 				<li elem="event">
 					<time elem="time">11:50</time>
-					<div block="content" mod="inline" id="talk-2">
-						<h3>TITLE 2</h3>
-						<p>DESC 2</p>
-						<p><a href="#speaker-2" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="css-methodologies">
+						<h3>CSS-методологии от О до Б</h3>
+						<p>Что отличает сильного верстальщика от обычного? Знание новых технологий, опыт работы, сильные мышцы? Нет, главное отличие — это способность воспользоваться правильной CSS-методологией. Давайте разберёмся, что такое CSS-методология, поделим аудиторию на два лагеря, рассмотрим несколько самых популярных методологий, разделим их на три главных типа и научимся правильно скрещивать.</p>
+						<p><a href="#oleksii-okhrymenko" block="anchor">Алексей Охрименко</a></p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
@@ -112,18 +114,14 @@
 				</li>
 				<li elem="event">
 					<time elem="time">12:40</time>
-					<div block="content" mod="inline" id="talk-3">
-						<h3>TITLE 3</h3>
-						<p>DESC 3</p>
-						<p><a href="#speaker-3" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="talk-6">
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event">
 					<time elem="time">13:20</time>
-					<div block="content" mod="inline" id="talk-4">
-						<h3>TITLE 4</h3>
-						<p>DESC 4</p>
-						<p><a href="#speaker-4" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="talk-5">
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
@@ -131,18 +129,18 @@
 				</li>
 				<li elem="event">
 					<time elem="time">15:00</time>
-					<div block="content" mod="inline" id="talk-5">
-						<h3>TITLE 5</h3>
-						<p>DESC 5</p>
-						<p><a href="#speaker-5" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="im-and-iot">
+						<h3>Я и ИоТ</h3>
+						<p>Веб шагнул с виртуальных экранов во вполне осязаемую реальность: блютус, биконы, мигающие лампочки и летающие роботы! Шагнул, но хвосты по-прежнему ведут в браузеры к новым API. Хватит гонять пиксели по экрану, айда играть с железками в интернете вещей.</p>
+						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
 					</div>
 				</li>
 				<li elem="event">
 					<time elem="time">15:40</time>
-					<div block="content" mod="inline" id="talk-6">
-						<h3>TITLE 6</h3>
-						<p>DESC 6</p>
-						<p><a href="#speaker-6" block="anchor">YOURS TRULY</a></p>
+					<div block="content" mod="inline" id="web-pokemon-go">
+						<h3>Pokemon GO на веб-технологиях</h3>
+						<p>Эта игра взорвала весь мир своим появлением. Успех игры сложился из известного бренда и интересных технических решений. А можно ли подобные решения применять в вебе? Какие технологии для этого существуют и какие у них ограничения? Как это будет смотреться и сложно ли это все сделать?</p>
+						<p><a href="#egor-konovalov" block="anchor">Егор Коновалов</a></p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
@@ -151,17 +149,13 @@
 				<li elem="event">
 					<time elem="time">16:30</time>
 					<div block="content" mod="inline" id="talk-7">
-						<h3>TITLE 7</h3>
-						<p>DESC 7</p>
-						<p><a href="#speaker-7" block="anchor">YOURS TRULY</a></p>
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event">
 					<time elem="time">17:10</time>
 					<div block="content" mod="inline" id="talk-8">
-						<h3>TITLE 8</h3>
-						<p>DESC 8</p>
-						<p><a href="#speaker-8" block="anchor">YOURS TRULY</a></p>
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
@@ -170,17 +164,13 @@
 				<li elem="event">
 					<time elem="time">18:00</time>
 					<div block="content" mod="inline" id="talk-9">
-						<h3>TITLE 9</h3>
-						<p>DESC 9</p>
-						<p><a href="#speaker-9" block="anchor">YOURS TRULY</a></p>
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event">
 					<time elem="time">18:40</time>
 					<div block="content" mod="inline" id="talk-10">
-						<h3>TITLE 10</h3>
-						<p>DESC 10</p>
-						<p><a href="#speaker-10" block="anchor">YOURS TRULY</a></p>
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li elem="event" mod="break">
@@ -197,6 +187,24 @@
 					</a>
 				</h2>
 			</div>
+			<div block="card" id="roman-ganin">
+				<div elem="description" mix="block:content">
+					<h3>Роман Ганин <a href="https://twitter.com/realetive">@realetive</a></h3>
+					<p>Разработчик интерфейсов в <a href="https://fbs.com/">FBS</a>. Амбассадор MODX в России, любит верстать, абхазскую кухню и типографику. Любознательный и дотошный.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/roman-ganin.jpg" alt="Роман Ганин">
+				</div>
+			</div>
+			<div block="card" id="egor-konovalov">
+				<div elem="description" mix="block:content">
+					<h3>Егор Коновалов <a href="https://twitter.com/agegorin">@agegorin</a></h3>
+					<p>Фронтенд-разработчик в <a href="http://www.htc-cs.ru/">Центре Высоких Технологий</a>. Делает на веб-технологиях игры, приложения для телевизоров и VR.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/egor-konovalov.jpg" alt="Егор Коновалов">
+				</div>
+			</div>
 			<div block="card" id="vadim-makeev">
 				<div elem="description" mix="block:content">
 					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
@@ -204,6 +212,15 @@
 				</div>
 				<div elem="column">
 					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div block="card" id="oleksii-okhrymenko">
+				<div elem="description" mix="block:content">
+					<h3>Алексей Охрименко <a href="https://twitter.com/ai_boy">@ai_boy</a></h3>
+					<p>Senior JavaScript Developer в <a href="http://www.iponweb.com/">IPONWEB</a>. Автор дизайн-паттерна MALEVICH и PEG-парсера SimplePEG. Докладчик, выступал на множестве крупных конференций.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/oleksii-okhrymenko.jpg" alt="Алексей Охрименко">
 				</div>
 			</div>
 		</section>
