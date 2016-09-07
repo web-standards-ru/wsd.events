@@ -5,9 +5,11 @@ const sync = require('browser-sync').get('sync');
 // to the dest folder
 
 gulp.task('copy', () => {
-	return gulp.src('src/assets/**')
+	return gulp.src('src/assets/**', {
+			dot: true
+		})
 		.pipe(gulp.dest('dest'))
 		.pipe(sync.stream({
-			once:true
+			once: true
 		}));
 });

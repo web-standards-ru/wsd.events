@@ -12,6 +12,7 @@ gulp.task('deploy', () => {
 			destination: '/var/www/wsd.events/www/htdocs/',
 			recursive: true,
 			clean: true,
-			incremental: true
+			incremental: true,
+			exclude: '.DS_Store'
 		}));
 });
