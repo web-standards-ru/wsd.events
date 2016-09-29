@@ -26,7 +26,9 @@
 		<nav block="section" mod="open" id="navigation">
 			<div elem="box">
 				<ul block="navigation">
-					<li><a elem="link" href="#proposal">Заявка на доклад</a></li>
+					<li><a elem="link" href="#register">Регистрация</a></li>
+					<li><a elem="link" href="#schedule">Программа</a></li>
+					<li><a elem="link" href="#speakers">Докладчики</a></li>
 					<li><a elem="link" href="#organisers">Организаторы</a></li>
 					<li><a elem="link" href="#venue">Площадка</a></li>
 				</ul>
@@ -60,26 +62,158 @@
 				</form>
 			</div>
 		</div>
-		<section block="section" mod="open" id="proposal">
+		<div block="section" mod="open" id="register">
+			<form block="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSdQzfZ1vbiCJU6bh302rSmcPw70dZphKWCobZ8n5NJ5a8zlDA/formResponse" target="_self" method="post">
+				<div elem="box" mod="hole">
+					<input elem="field" mod="line" placeholder="Имя" type="text" required id="first-name" name="entry.466403378">
+					<label elem="label" for="first-name">Имя *</label>
+					<input elem="field" mod="line" placeholder="Фамилия" type="text" required id="second-name" name="entry.1733424253">
+					<label elem="label" for="second-name">Фамилия *</label>
+					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email" name="entry.1994038875">
+					<label elem="label" for="email">Эл. почта *</label>
+					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter" name="entry.1043662092">
+					<label elem="label" for="twitter">Ник в Твиттере, если есть</label>
+					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about" name="entry.1134836503"></textarea>
+					<label elem="label" for="about">Пара слов о вас и ваших интересах</label>
+				</div>
+				<button block="button" mod="full">Зарегистрироваться</button>
+			</form>
+		</div>
+		<section block="section" mod="open" id="schedule">
 			<div elem="box">
 				<h2 elem="title">
-					Заявка на доклад
+					Программа
 					<a block="up" href="#navigation" title="Наверх">
 						<span elem="text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<form block="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSeOkqYY5jKZZt_dAqCaUkv7Wfz9-jtTIVR2YtEDsdaxlQ5zzw/formResponse" method="get" target="_blank">
-				<div elem="box">
-					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="entry.1453345160">
-					<label elem="label" for="proposal-name">Как вас зовут</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="proposal-email" name="entry.627405598">
-					<label elem="label" for="proposal-email">Эл. почта</label>
-					<textarea elem="field" mod="text" rows="7" required id="proposal-description" name="entry.2074436227"></textarea>
-					<label elem="label" for="proposal-description">Название, описание или идея доклада</label>
+			<ol block="calendar">
+				<li elem="event" mod="break">
+					<time elem="time">10:00</time> Регистрация
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">11:00</time> Открытие
+				</li>
+				<li elem="event">
+					<time elem="time">11:10</time>
+					<div block="content" mod="inline" id="custom-properties">
+						<h3>Пользовательские свойства как основа архитектуры CSS</h3>
+						<p>Пользовательские свойства открыли такой простор для творчества и экспериментов над архитектурой CSS-кода, какого раньше не было. Всесильны ли препроцессоры? Можно ли дать CSS второй шанс? Наследуемость или БЭМ? Практические примеры, нюансы, обратная совместимость.</p>
+						<p><a href="#pavel-lovtsevich" block="anchor">Павел Ловцевич</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">11:50</time>
+					<div block="content" mod="inline" id="im-in-iot">
+						<h3>Я и ИоТ</h3>
+						<p>Веб шагнул с виртуальных экранов во вполне осязаемую реальность: блютус, биконы, мигающие лампочки и летающие роботы! Шагнул, но хвосты по-прежнему ведут в браузеры к новым API. Хватит гонять пиксели по экрану, айда играть с железками в интернете вещей.</p>
+						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">12:30</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">12:40</time>
+					<div block="content" mod="inline" id="you-dont-know-css">
+						<h3>Вы не знаете CSS</h3>
+						<p>Поучительный обзор прелюбопытных черновиков CSS, незаслуженно обделенных должным вниманием, который покажет слушателям, что бежать впереди паровоза — не такая уж скверная идея.</p>
+						<p><a href="#anton-nemcev" block="anchor">Антон Немцев</a></p>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">13:20</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">14:00</time> Обед
+				</li>
+				<li elem="event">
+					<time elem="time">15:00</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">15:40</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">16:20</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">16:30</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">17:10</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">17:50</time> Перерыв
+				</li>
+				<li elem="event">
+					<time elem="time">18:00</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event">
+					<time elem="time">18:40</time>
+					<div block="content" mod="inline">
+						<h3>Доклад уточняется</h3>
+					</div>
+				</li>
+				<li elem="event" mod="break">
+					<time elem="time">19:20</time> Закрытие
+				</li>
+			</ol>
+		</section>
+		<section block="section" id="speakers">
+			<div elem="box">
+				<h2 elem="title">
+					Докладчики
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<div block="card" id="pavel-lovtsevich">
+				<div elem="description" mix="block:content">
+					<h3>Павел Ловцевич <a href="https://twitter.com/zigzag_mcquack">@zigzag_mcquack</a></h3>
+					<p>Технический директор компании LOVATA, старожил сообщества «Веб-стандарты», организатор, докладчик и участник ряда отраслевых конференций и образовательных мероприятий. Крёстный отец WSD.</p>
 				</div>
-				<button block="button" mod="full">Подать</button>
-			</form>
+				<div elem="column">
+					<img elem="picture" src="/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич">
+				</div>
+			</div>
+			<div block="card" id="vadim-makeev">
+				<div elem="description" mix="block:content">
+					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
+					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div block="card" id="anton-nemcev">
+				<div elem="description" mix="block:content">
+					<h3>Антон Немцев <a href="https://twitter.com/silentimp">@silentimp</a></h3>
+					<p>Фронтенд-разработчик на протяжении 16 лет. Создатель и редактор журнала <a href="http://frontender.info/">Frontender Magazine</a>. Представитель «<a href="http://web-standards.ru/editors/">Веб-стандартов</a>» в Украине. Докладчик на международных и локальных конференций, эксперт на чемпионате UA Web Challenge. Free Hugs.</p>
+				</div>
+				<div elem="column">
+					<img elem="picture" src="/speakers/anton-nemcev.jpg" alt="Антон Немцев">
+				</div>
+			</div>
 		</section>
 		<section block="section" id="organisers">
 			<div elem="box">
