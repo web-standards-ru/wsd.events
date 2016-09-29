@@ -51,15 +51,6 @@
 
 		}
 
-	// Label
-
-	&__label {
-		display:block;
-		margin-bottom:24px;
-		color:$dark;
-		text-transform:lowercase;
-		}
-
 	// Field
 
 	&__field {
@@ -96,6 +87,24 @@
 			font-size:16px;
 			}
 
+		}
+
+	// Label
+
+	&__label {
+		display:block;
+		margin-bottom:24px;
+		color:$dark;
+		text-transform:lowercase;
+		}
+
+	// Required
+
+	&__field[required] + &__label::before {
+		position:absolute;
+		margin:0.25em 0 0 -0.8em;
+		color: #c00;
+		content:'*';
 		}
 
 	}
