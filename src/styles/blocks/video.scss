@@ -7,30 +7,30 @@
 	// Wrapper
 
 	&__wrapper {
-		position:relative;
-		padding-bottom:56.25%;
-		height:0;
-		background:#000;
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		background: #000;
 		}
 
 	// Media
 
 	&__media {
-		position:absolute;
-		top:0;
-		right:0;
-		width:100%;
-		height:100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
 		}
 
 	// Caption
 
 	&__caption {
 
-		padding:12px 24px;
+		padding: 12px 24px;
 
-		@include mq($from:palm) {
-			padding:18px 36px;
+		@include mq($from: palm) {
+			padding: 18px 36px;
 			}
 
 		}

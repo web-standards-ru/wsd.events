@@ -4,18 +4,18 @@
 
 .section {
 
-	position:relative;
-	overflow:hidden;
-	border-bottom:1px solid lighten($dark, 50%);
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid lighten($dark, 50%);
 
 	// Box
 
 	&__box {
 
-		padding:24px 24px 12px;
+		padding: 24px 24px 12px;
 
-		@include mq($from:palm) {
-			padding:36px 36px 18px;
+		@include mq($from: palm) {
+			padding: 36px 36px 18px;
 			}
 
 		}
@@ -24,13 +24,13 @@
 
 	&__title {
 
-		margin-bottom:12px;
-		color:$dark;
-		line-height:1;
-		font-size:24px;
+		margin-bottom: 12px;
+		color: $dark;
+		line-height: 1;
+		font-size: 24px;
 
-		@include mq($from:palm) {
-			margin-bottom:18px;
+		@include mq($from: palm) {
+			margin-bottom: 18px;
 			}
 
 		}
@@ -38,7 +38,7 @@
 	// No Rule
 
 	&--open {
-		border:none;
+		border: none;
 		}
 
 	}

@@ -4,12 +4,12 @@
 
 .main {
 
-	min-height:100%;
-	background:#FFF;
+	min-height: 100%;
+	background: #FFF;
 
-	@include mq($from:lap) {
-		padding-left:384px;
-		max-width:1024px;
+	@include mq($from: lap) {
+		padding-left: 384px;
+		max-width: 1024px;
 		}
 
 	}
