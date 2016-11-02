@@ -61,21 +61,52 @@
 				</form>
 			</div>
 		</div>
-		<div block="section" mod="open" id="register">
-			<form block="badge">
-				<fieldset elem="box" mod="hole">
-					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="name">
-					<label elem="label" for="name">как вас зовут, обязательно</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email">
-					<label elem="label" for="email">эл. почта, обязательно</label>
-					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter">
-					<label elem="label" for="twitter">ник в Твиттере, если есть</label>
-					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about"></textarea>
-					<label elem="label" for="about">пара слов о вас и ваших интересах</label>
-				</fieldset>
+		<section block="section" mod="open" id="proposal">
+			<div elem="box">
+				<h2 elem="title">
+					Заявка на доклад
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<form block="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
+				<div elem="box">
+					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="TODO">
+					<label elem="label" for="proposal-name">Как вас зовут</label>
+					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="proposal-email" name="TODO">
+					<label elem="label" for="proposal-email">Эл. почта</label>
+					<textarea elem="field" mod="text" rows="7" required id="proposal-description" name="TODO"></textarea>
+					<label elem="label" for="proposal-description">Название, описание или идея доклада</label>
+				</div>
+				<button type="submit" block="button" mod="full">Подать</button>
+			</form>
+		</section>
+		<section block="section" mod="open" id="register">
+			<div elem="box" mod="hidden">
+				<h2 elem="title">
+					Регистрация
+					<a block="up" href="#navigation" title="Наверх">
+						<span elem="text">Наверх</span>
+					</a>
+				</h2>
+			</div>
+			<form block="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
+				<div elem="box" mod="hole">
+					<input elem="field" mod="line" placeholder="Имя" type="text" required id="first-name" name="TODO">
+					<label elem="label" for="first-name">Имя</label>
+					<input elem="field" mod="line" placeholder="Фамилия" type="text" required id="second-name" name="TODO">
+					<label elem="label" for="second-name">Фамилия</label>
+					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email" name="TODO">
+					<label elem="label" for="email">Эл. почта</label>
+					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter" name="TODO">
+					<label elem="label" for="twitter">Ник в Твиттере, если есть</label>
+					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about" name="TODO"></textarea>
+					<label elem="label" for="about">Пара слов о вас и ваших интересах</label>
+				</div>
 				<button block="button" mod="full">Зарегистрироваться</button>
 			</form>
-		</div>
+		</section>
 		<section block="section" mod="open" id="schedule">
 			<div elem="box">
 				<h2 elem="title">
