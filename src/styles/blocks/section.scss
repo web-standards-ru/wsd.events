@@ -18,6 +18,12 @@
 			padding: 36px 36px 18px;
 			}
 
+		// Hidden
+
+		&--hidden {
+			@include offscreen;
+			}
+
 		}
 
 	// Title

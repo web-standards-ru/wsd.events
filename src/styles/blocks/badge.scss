@@ -102,7 +102,8 @@
 
 	&__field[required] + &__label::before {
 		position: absolute;
-		margin: -0.75em 0px 0 -1.2em;
+		margin-top: 0.25em;
+		margin-left: -0.9em;
 		color: #c00;
 		content: '*';
 		}
