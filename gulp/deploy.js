@@ -9,7 +9,7 @@ gulp.task('deploy', () => {
 		.pipe(rsync({
 			root: 'dest',
 			hostname: 'web-standards.ru',
-			destination: '/var/www/wsd.events/www/htdocs/',
+			destination: '/var/www/wsd.events/html/',
 			recursive: true,
 			clean: true,
 			incremental: true,
