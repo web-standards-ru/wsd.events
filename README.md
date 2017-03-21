@@ -1,6 +1,4 @@
-# Web Standards Days
-
-[![Build Status](https://travis-ci.org/web-standards-ru/web-standards-days.svg?branch=master)](https://travis-ci.org/web-standards-ru/web-standards-days)
+# Web Standards Days [![Build Status](https://travis-ci.org/web-standards-ru/web-standards-days.svg?branch=master)](https://travis-ci.org/web-standards-ru/web-standards-days)
 
 ## Установка и запуск окружения
 
