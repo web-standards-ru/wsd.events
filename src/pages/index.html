@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html block="page" lang="ru">
+<html class="page" lang="ru">
 <head>
 	<title>Web Standards Days</title>
 	<meta charset="utf-8">
@@ -14,423 +14,440 @@
 	<script>(function(d){var f=function(){var h=d.getElementsByTagName('head')[0],l=d.createElement('link');l.rel='stylesheet';l.href='/styles/ubuntu.css';h.appendChild(l)},r=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(r){r(f)}else{window.addEventListener('load',f)}})(document)</script>
 	<noscript><link rel="stylesheet" href="/styles/ubuntu.css"></noscript>
 </head>
-<body elem="body">
-	<header block="header" id="header">
-		<h1 block="title">
-			<span elem="text">
+<body class="page__body">
+	<header class="header" id="header">
+		<h1 class="title">
+			<span class="title__text">
 				Web<br>
 				Standards<br>
 				Days
 			</span>
 		</h1>
-		<nav block="section" mod="open" id="navigation">
-			<div elem="box">
-				<ul block="navigation">
-					<li><a elem="link" href="#calendar">Календарь</a></li>
-					<li><a elem="link" href="#speakers">Докладчики</a></li>
-					<li><a elem="link" href="#video">Видео</a></li>
+		<nav class="section section--open" id="navigation">
+			<div class="section__box">
+				<ul class="navigation">
+					<li><a class="navigation__link" href="#calendar">Календарь</a></li>
+					<li><a class="navigation__link" href="#speakers">Докладчики</a></li>
+					<li><a class="navigation__link" href="#video">Видео</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div block="social">
-			<a elem="link" mod="twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span elem="text">Твиттер</span></a>
-			<a elem="link" mod="vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span elem="text">ВКонтакте</span></a>
-			<a elem="link" mod="github" href="https://github.com/web-standards-ru" title="Гитхаб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span elem="text">Фейсбук</span></a>
-			<a elem="link" mod="youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="slack" href="http://slack.web-standards.ru" title="Слак"><span elem="text">Слак</span></a>
-			<a elem="link" mod="telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span elem="text">Телеграм</span></a>
+		<div class="social">
+			<a class="social__link social__link--twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span class="social__text">Твиттер</span></a>
+			<a class="social__link social__link--vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span class="social__text">ВКонтакте</span></a>
+			<a class="social__link social__link--github" href="https://github.com/web-standards-ru" title="Гитхаб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span class="social__text">Фейсбук</span></a>
+			<a class="social__link social__link--youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--slack" href="http://slack.web-standards.ru" title="Слак"><span class="social__text">Слак</span></a>
+			<a class="social__link social__link--telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span class="social__text">Телеграм</span></a>
 		</div>
 	</header>
-	<main block="main" id="main">
-		<section block="section" id="intro">
-			<div elem="box" mix="block:content">
-				<h2 elem="title">О проекте</h2>
-				<p>Конференция по фронтенду и веб-стандартам, проводится с 2009 года ежегодно в разных городах силами сообщества «<a href="http://web-standards.ru/">Веб-стандарты</a>». Участие — бесплатное. Хотите выступить или помочь? Пишите нам: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
+	<main class="main" id="main">
+		<section class="section" id="intro">
+			<div class="section__box content">
+				<h2 class="section__title">О проекте</h2>
+				<p>Конференция по фронтенду и веб-стандартам, проводится с 2009 года ежегодно в разных городах силами сообщества «<a href="http://web-standards.ru/">Веб-стандарты</a>». Участие — бесплатное. Хотите выступить или помочь? Пишите нам: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Понравилась конференция?</p>
-				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+				<form class="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
 					<input type="hidden" name="receiver" value="41001119329753">
 					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
 					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="quickpay-form" value="donate">
 					<input type="hidden" name="paymentType" value="AC">
-					<input elem="amount" name="sum" value="500" size="4" required type="text">
-					<button elem="button" mix="block:button">Поддержать</button>
+					<input class="support__amount" name="sum" value="500" size="4" required type="text">
+					<button class="support__button button">Поддержать</button>
 				</form>
 			</div>
 		</section>
-		<section block="section" mod="open" id="calendar">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="calendar">
+			<div class="section__box">
+				<h2 class="section__title">
 					Календарь
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<ol block="calendar" mix="block:content">
+			<ol class="calendar content">
 				<li>
-					<time elem="year">2017</time>
+					<time class="calendar__year">2018</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">28 января</time>
+						<li class="calendar__event calendar__event--current">
+							<time class="calendar__time calendar__time--date">…</time>
+							Москва
+						</li>
+					</ol>
+				</li>
+				<li>
+					<time class="calendar__year">2017</time>
+					<ol>
+						<li class="calendar__event calendar__event--current">
+							<time class="calendar__time calendar__time--date">…</time>
+							Киев
+						</li>
+						<li class="calendar__event calendar__event--current">
+							<time class="calendar__time calendar__time--date">…</time>
+							Минск
+						</li>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">28 января</time>
 							<a href="/2017/01/28/">Москва</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2016</time>
+					<time class="calendar__year">2016</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">26 ноября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">26 ноября</time>
 							<a href="/2016/11/26/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">29 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">29 октября</time>
 							<a href="/2016/10/29/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">1 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">1 октября</time>
 							<a href="/2016/10/01/">Санкт-Петербург</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">25 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">25 июня</time>
 							<a href="/2016/06/25/">Екатеринбург</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2015</time>
+					<time class="calendar__year">2015</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">13 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">13 декабря</time>
 							<a href="/2015/12/13/">Москва</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">28 ноября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">28 ноября</time>
 							<a href="/2015/11/28/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">31 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">31 октября</time>
 							<a href="/2015/10/31/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">20 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">20 июня</time>
 							<a href="/2015/06/20/">Санкт-Петербург</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2014</time>
+					<time class="calendar__year">2014</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">6 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">6 декабря</time>
 							<a href="/2014/12/06/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">26 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">26 октября</time>
 							<a href="/2014/10/26/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">28 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">28 июня</time>
 							<a href="/2014/06/28/">Санкт-Петербург</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">24 мая</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">24 мая</time>
 							<a href="/2014/05/24/">Рига</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">12 апреля</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">12 апреля</time>
 							<a href="/2014/04/12/">Новосибирск</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2013</time>
+					<time class="calendar__year">2013</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">7 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">7 декабря</time>
 							<a href="/2013/12/07/">Москва</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">26 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">26 октября</time>
 							<a href="/2013/10/26/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">19 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">19 октября</time>
 							<a href="/2013/10/19/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">8 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">8 июня</time>
 							<a href="/2013/06/08/">Санкт-Петербург</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2012</time>
+					<time class="calendar__year">2012</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">24 ноября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">24 ноября</time>
 							<a href="/2012/11/24/">Москва</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">27 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">27 октября</time>
 							<a href="/2012/10/27/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">13 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">13 октября</time>
 							<a href="/2012/10/13/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">23 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">23 июня</time>
 							<a href="/2012/06/23/">Санкт-Петербург</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">28 апреля</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">28 апреля</time>
 							<a href="/2012/04/28/">Екатеринбург</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2011</time>
+					<time class="calendar__year">2011</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">13 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">13 декабря</time>
 							<a href="/2011/12/13/">Москва</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">29 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">29 октября</time>
 							<a href="/2011/10/29/">Минск</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">22 октября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">22 октября</time>
 							<a href="/2011/10/22/">Киев</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2010</time>
+					<time class="calendar__year">2010</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">16 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">16 декабря</time>
 							<a href="/2010/12/16/">Москва</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">18 сентября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">18 сентября</time>
 							<a href="/2010/09/18/">Киев</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">26 июня</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">26 июня</time>
 							<a href="/2010/06/26/">Санкт-Петербург</a>
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">22 мая</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">22 мая</time>
 							<a href="/2010/05/22/">Рига</a>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<time elem="year">2009</time>
+					<time class="calendar__year">2009</time>
 					<ol>
-						<li elem="event">
-							<time elem="time" mod="date">8 декабря</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">8 декабря</time>
 							Москва
 						</li>
-						<li elem="event">
-							<time elem="time" mod="date">28 ноября</time>
+						<li class="calendar__event">
+							<time class="calendar__time calendar__time--date">28 ноября</time>
 							<a href="/2009/11/28/">Минск</a>
 						</li>
 					</ol>
 				</li>
 			</ol>
 		</section>
-		<section block="section" id="speakers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="speakers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Докладчики
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="speakers">
-				<ul elem="list">
-					<li elem="speaker"><span elem="name">Андрей<br>Абрамов</span><img elem="picture" src="/speakers/andrew-abramov.jpg" alt="Андрей Абрамов"></li>
-					<li elem="speaker"><span elem="name">Василий<br>Аксёнов</span><img elem="picture" src="/speakers/vasily-aksyonov.jpg" alt="Василий Аксёнов"></li>
-					<li elem="speaker"><span elem="name">Ольга<br>Алексашенко</span><img elem="picture" src="/speakers/olga-aleksashenko.jpg" alt="Ольга Алексашенко"></li>
-					<li elem="speaker"><span elem="name">Алексей<br>Андросов</span><img elem="picture" src="/speakers/alexey-androsov.jpg" alt="Алексей Андросов"></li>
-					<li elem="speaker"><span elem="name">Наташа<br>Арефьева</span><img elem="picture" src="/speakers/natasha-arefyeva.jpg" alt="Наташа Арефьева"></li>
-					<li elem="speaker"><span elem="name">Юрий<br>Артюх</span><img elem="picture" src="/speakers/yury-artykh.jpg" alt="Юрий Артюх"></li>
-					<li elem="speaker"><span elem="name">Михаил<br>Баранов</span><img elem="picture" src="/speakers/mikhail-baranov.jpg" alt="Михаил Баранов"></li>
-					<li elem="speaker"><span elem="name">Кир<br>Белевич</span><img elem="picture" src="/speakers/kir-belevich.jpg" alt="Кир Белевич"></li>
-					<li elem="speaker"><span elem="name">Максим<br>Берёза</span><img elem="picture" src="/speakers/maksim-bereza.jpg" alt="Максим Берёза"></li>
-					<li elem="speaker"><span elem="name">Александр<br>Бешкенадзе</span><img elem="picture" src="/speakers/aleksandr-beshkenadze.jpg" alt="Александр Бешкенадзе"></li>
-					<li elem="speaker"><span elem="name">Владимир<br>Билоненко</span><img elem="picture" src="/speakers/vladimir-bilonenko.jpg" alt="Владимир Билоненко"></li>
-					<li elem="speaker"><span elem="name">Михаил<br>Боднарчук</span><img elem="picture" src="/speakers/michael-bodnarchuk.jpg" alt="Михаил Боднарчук"></li>
-					<li elem="speaker"><span elem="name">Анастасия<br>Бортнийчук</span><img elem="picture" src="/speakers/anastasia-bortnychuk.jpg" alt="Анастасия Бортнийчук"></li>
-					<li elem="speaker"><span elem="name">Берт<br>Бос</span><img elem="picture" src="/speakers/bert-bos.jpg" alt="Берт Бос"></li>
-					<li elem="speaker"><span elem="name">Антон<br>Бульёнов</span><img elem="picture" src="/speakers/anton-bulyonov.jpg" alt="Антон Бульёнов"></li>
-					<li elem="speaker"><span elem="name">Юлия<br>Бухвалова</span><img elem="picture" src="/speakers/julia-buhvalova.jpg" alt="Юлия Бухвалова"></li>
-					<li elem="speaker"><span elem="name">Антон<br>Виноградов</span><img elem="picture" src="/speakers/anton-vinogradov.jpg" alt="Антон Виноградов"></li>
-					<li elem="speaker"><span elem="name">Павел<br>Волокитин</span><img elem="picture" src="/speakers/pavel-volokitin.jpg" alt="Павел Волокитин"></li>
-					<li elem="speaker"><span elem="name">Милослав<br>Волосков</span><img elem="picture" src="/speakers/miloslav-voloskov.jpg" alt="Милослав Волосков"></li>
-					<li elem="speaker"><span elem="name">Александра<br>Воробьёва</span><img elem="picture" src="/speakers/alexandra-vorobyova.jpg" alt="Александра Воробьёва"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Ганин</span><img elem="picture" src="/speakers/roman-ganin.jpg" alt="Роман Ганин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Павел<br>Голован</span><img elem="picture" src="/speakers/paul-golovan.jpg" alt="Павел Голован"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Владимир<br>Гриненко</span><img elem="picture" src="/speakers/vladimir-grinenko.jpg" alt="Владимир Гриненко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Любовь<br>Гулько</span><img elem="picture" src="/speakers/lubov-gulko.jpg" alt="Любовь Гулько"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Головнёв</span><img elem="picture" src="/speakers/andrey-golovnev.jpg" alt="Андрей Головнёв"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Анастасия<br>Горячева</span><img elem="picture" src="/speakers/anastasia-goryacheva.jpg" alt="Анастасия Горячева"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Виктор<br>Грищенко</span><img elem="picture" src="/speakers/victor-grishchenko.jpg" alt="Виктор Грищенко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Густун</span><img elem="picture" src="/speakers/sergey-gustun.jpg" alt="Сергей Густун"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Михаил<br>Давыдов</span><img elem="picture" src="/speakers/mikhail-davydov.jpg" alt="Михаил Давыдов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Владимир<br>Дашукевич</span><img elem="picture" src="/speakers/vladimir-dashukevich.jpg" alt="Владимир Дашукевич"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Дворнов</span><img elem="picture" src="/speakers/roman-dvornov.jpg" alt="Роман Дворнов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Дудин</span><img elem="picture" src="/speakers/dmitry-dudin.jpg" alt="Дмитрий Дудин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Дулепов</span><img elem="picture" data-src="/speakers/dmitry-dulepov.jpg" alt="Дмитрий Дулепов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Дыниовский</span><img elem="picture" data-src="/speakers/sergey-dyniovsky.jpg" alt="Сергей Дыниовский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Антон<br>Еремеев</span><img elem="picture" data-src="/speakers/anton-eremeev.jpg" alt="Антон Еремеев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Константин<br>Ефимов</span><img elem="picture" data-src="/speakers/konstantin-efimov.jpg" alt="Константин Ефимов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Евгений<br>Жарков</span><img elem="picture" data-src="/speakers/eugene-zharkov.jpg" alt="Евгений Жарков"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Жигалов</span><img elem="picture" src="/speakers/sergey-zhigalov.jpg" alt="Сергей Жигалов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Александр<br>Завьялов</span><img elem="picture" data-src="/speakers/aleksandr-zavyalov.jpg" alt="Александр Завьялов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Игорь<br>Зенич</span><img elem="picture" data-src="/speakers/igor-zenich.jpg" alt="Игорь Зенич"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Станислав<br>Зубович</span><img elem="picture" data-src="/speakers/stanislau-zubovich.jpg" alt="Станислав Зубович"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Евгений<br>Исаков</span><img elem="picture" data-src="/speakers/eugene-isakov.jpg" alt="Евгений Исаков"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Игорь<br>Канонученко</span><img elem="picture" data-src="/speakers/igor-kononuchenko.jpg" alt="Игорь Канонученко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Василика<br>Климова</span><img elem="picture" data-src="/speakers/vasilika-klimova.jpg" alt="Василика Климова"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Комаров</span><img elem="picture" data-src="/speakers/roman-komarov.jpg" alt="Роман Комаров"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Егор<br>Коновалов</span><img elem="picture" data-src="/speakers/egor-konovalov.jpg" alt="Егор Коновалов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Константинов</span><img elem="picture" data-src="/speakers/sergey-konstantinov.jpg" alt="Сергей Константинов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Копылов</span><img elem="picture" data-src="/speakers/alexey-kopylov.jpg" alt="Алексей Копылов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Олег<br>Корсунский</span><img elem="picture" data-src="/speakers/oleg-korsunsky.jpg" alt="Олег Корсунский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Антон<br>Котенко</span><img elem="picture" data-src="/speakers/anton-kotenko.jpg" alt="Антон Котенко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артур<br>Кох</span><img elem="picture" src="/speakers/arthur-koch.jpg" alt="Артур Кох"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Константин<br>Кривленя</span><img elem="picture" data-src="/speakers/konstantin-krivlenia.jpg" alt="Константин Кривленя"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Владимир<br>Кузнецов</span><img elem="picture" data-src="/speakers/vladimir-kuznetsov.jpg" alt="Владимир Кузнецов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Кузнецов</span><img elem="picture" data-src="/speakers/dmitry-kuznecov.jpg" alt="Дмитрий Кузнецов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Купченко</span><img elem="picture" data-src="/speakers/andrey-kupchenko.jpg" alt="Андрей Купченко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Патрик<br>Лауке</span><img elem="picture" data-src="/speakers/patrick-lauke.jpg" alt="Патрик Лауке"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Ирина<br>Левина</span><img elem="picture" data-src="/speakers/irina-levina.jpg" alt="Ирина Левина"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Листочкин</span><img elem="picture" data-src="/speakers/andrey-listochkin.jpg" alt="Андрей Листочкин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Александр<br>Лобашёв</span><img elem="picture" data-src="/speakers/alexander-lobashev.jpg" alt="Александр Лобашёв"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Павел<br>Ловцевич</span><img elem="picture" data-src="/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артемий<br>Ломов</span><img elem="picture" data-src="/speakers/artemy-lomov.jpg" alt="Артемий Ломов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Брюс<br>Лоусон</span><img elem="picture" data-src="/speakers/bruce-lawson.jpg" alt="Брюс Лоусон"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Лютиков</span><img elem="picture" data-src="/speakers/roman-liutikov.jpg" alt="Роман Лютиков"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Ляпунов</span><img elem="picture" data-src="/speakers/dmitry-lapynov.jpg" alt="Дмитрий Ляпунов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вадим<br>Макеев</span><img elem="picture" data-src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дима<br>Малеев</span><img elem="picture" data-src="/speakers/dima-maleev.jpg" alt="Дима Малеев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вадим<br>Макишвили</span><img elem="picture" data-src="/speakers/vadim-makishvili.jpg" alt="Вадим Макишвили"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Чарльз<br>МакКетиНевил</span><img elem="picture" data-src="/speakers/charles-mccathienevile.jpg" alt="Чарльз МакКетиНевил"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Даниил<br>Малых</span><img elem="picture" data-src="/speakers/daniil-malykh.jpg" alt="Даниил Малых"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Анатолий<br>Матов</span><img elem="picture" data-src="/speakers/anatoly-matov.jpg" alt="Анатолий Матов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Махнев</span><img elem="picture" data-src="/speakers/dmitry-makhnev.jpg" alt="Дмитрий Махнев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Николай<br>Мациевский</span><img elem="picture" data-src="/speakers/nikolay-matsievsky.jpg" alt="Николай Мациевский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Айгарс<br>Мачинс</span><img elem="picture" data-src="/speakers/aigars-macins.jpg" alt="Айгарс Мачинс"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Мезенцев</span><img elem="picture" data-src="/speakers/sergey-mezentsev.jpg" alt="Сергей Мезенцев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Мезин</span><img elem="picture" data-src="/speakers/artem-mezin.jpg" alt="Артём Мезин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Марина<br>Миронович</span><img elem="picture" data-src="/speakers/marina-mironovich.jpg" alt="Марина Миронович"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Митасов</span><img elem="picture" data-src="/speakers/roman-mitasov.jpg" alt="Роман Митасов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Никита<br>Мостовой</span><img elem="picture" data-src="/speakers/nikita-mostovoy.jpg" alt="Никита Мостовой"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Мотошин</span><img elem="picture" data-src="/speakers/andrew-motoshin.jpg" alt="Андрей Мотошин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Олег<br>Мохов</span><img elem="picture" data-src="/speakers/oleg-mokhov.jpg" alt="Олег Мохов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Антон<br>Немцев</span><img elem="picture" data-src="/speakers/anton-nemcev.jpg" alt="Антон Немцев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вячеслав<br>Олиянчук</span><img elem="picture" data-src="/speakers/viacheslav-oliyanchuk.jpg" alt="Вячеслав Олиянчук"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Охрименко</span><img elem="picture" data-src="/speakers/oleksii-okhrymenko.jpg" alt="Алексей Охрименко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артур<br>Пархисенко</span><img elem="picture" data-src="/speakers/artur-parkhisenko.jpg" alt="Артур Пархисенко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Пархоменко</span><img elem="picture" data-src="/speakers/artem-parhomenko.jpg" alt="Артём Пархоменко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вадим<br>Пацев</span><img elem="picture" data-src="/speakers/vadim-pacev.jpg" alt="Вадим Пацев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Александр<br>Першин</span><img elem="picture" src="/speakers/alexander-pershin.jpg" alt="Александр Першин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Петров</span><img elem="picture" data-src="/speakers/dmitry-petrov.jpg" alt="Дмитрий Петров"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Виталий<br>Потапов</span><img elem="picture" data-src="/speakers/vitaly-potapov.jpg" alt="Виталий Потапов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Поликарпов</span><img elem="picture" data-src="/speakers/artem-polikarpov.jpg" alt="Артём Поликарпов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Попов</span><img elem="picture" data-src="/speakers/dmitro-popov.jpg" alt="Дмитрий Попов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Попов</span><img elem="picture" data-src="/speakers/sergey-popov.jpg" alt="Сергей Попов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Прохацкий</span><img elem="picture" data-src="/speakers/artem-prokhatskyi.jpg" alt="Артём Прохацкий"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Прудников</span><img elem="picture" data-src="/speakers/roman-prudnikov.jpg" alt="Роман Прудников"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Пузанков</span><img elem="picture" data-src="/speakers/sergey-puzankov.jpg" alt="Сергей Пузанков"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Юрис<br>Пукитис</span><img elem="picture" data-src="/speakers/juris-pukitis.jpg" alt="Юрис Пукитис"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Илья<br>Пухальский</span><img elem="picture" data-src="/speakers/ilya-pukhalski.jpg" alt="Илья Пухальский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Распопов</span><img elem="picture" data-src="/speakers/alexey-raspopov.jpg" alt="Алексей Распопов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Мурад<br>Рогожников</span><img elem="picture" data-src="/speakers/murad-rogozhnikov.jpg" alt="Мурад Рогожников"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Ирина<br>Руденко</span><img elem="picture" data-src="/speakers/iryna-rudenko.jpg" alt="Ирина Руденко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дэвид<br>Руссе</span><img elem="picture" data-src="/speakers/david-rousset.jpg" alt="Дэвид Руссе"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Виталий<br>Рыбалка</span><img elem="picture" data-src="/speakers/vitaly-rybalka.jpg" alt="Виталий Рыбалка"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Виталий<br>Рыбка</span><img elem="picture" data-src="/speakers/vitaly-rybka.jpg" alt="Виталий Рыбка"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Сапегин</span><img elem="picture" data-src="/speakers/artem-sapegin.jpg" alt="Артём Сапегин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Феликс<br>Сасаки</span><img elem="picture" data-src="/speakers/felix-sasaki.jpg" alt="Феликс Сасаки"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Артём<br>Свительский</span><img elem="picture" data-src="/speakers/artem-svitelskyi.jpg" alt="Артём Свительский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Анна<br>Селезнёва</span><img elem="picture" data-src="/speakers/anna-selezneva.jpg" alt="Анна Селезнёва"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Никита<br>Селецкий</span><img elem="picture" data-src="/speakers/nikita-seletsky.jpg" alt="Никита Селецкий"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Елизавета<br>Селиванова</span><img elem="picture" data-src="/speakers/elizaveta-selivanova.jpg" alt="Елизавета Селиванова"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Симоненко</span><img elem="picture" src="/speakers/alexey-simonenko.jpg" alt="Алексей Симоненко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Лев<br>Солнцев</span><img elem="picture" src="/speakers/lev-solntsev.jpg" alt="Лев Солнцев"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Ситник</span><img elem="picture" data-src="/speakers/andrey-sitnik.jpg" alt="Андрей Ситник"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Варя<br>Степанова</span><img elem="picture" data-src="/speakers/varya-stepanova.jpg" alt="Варя Степанова"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Владимир<br>Столяров</span><img elem="picture" data-src="/speakers/uladzimir-staliarou.jpg" alt="Владимир Столяров"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Всеволод<br>Струкчинский</span><img elem="picture" src="/speakers/vsevolod-strukchinsky.jpg" alt="Всеволод Струкчинский"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Сумин</span><img elem="picture" data-src="/speakers/andrew-sumin.jpg" alt="Андрей Сумин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Сергей<br>Сыркин</span><img elem="picture" data-src="/speakers/sergey-syrkin.jpg" alt="Сергей Сыркин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Евгений<br>Тихонов</span><img elem="picture" src="/speakers/evgeny-tihonov.jpg" alt="Евгений Тихонов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Юра<br>Ткаченко</span><img elem="picture" data-src="/speakers/yuri-tkachenko.jpg" alt="Юра Ткаченко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Денис<br>Тужик</span><img elem="picture" data-src="/speakers/denis-tuzhik.jpg" alt="Денис Тужик"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Уколов</span><img elem="picture" src="/speakers/alexey-ukolov.jpg" alt="Алексей Уколов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Александр<br>Феоктистов</span><img elem="picture" data-src="/speakers/alexander-feoktistov.jpg" alt="Александр Феоктистов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Денис<br>Хананеин</span><img elem="picture" data-src="/speakers/denis-hananein.jpg" alt="Денис Хананеин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роберт<br>Харитонов</span><img elem="picture" data-src="/speakers/robert-haritonov.jpg" alt="Роберт Харитонов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алёна<br>Царёва</span><img elem="picture" data-src="/speakers/alena-tsareva.jpg" alt="Алёна Царёва"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Тим<br>Чаптыков</span><img elem="picture" data-src="/speakers/tim-chaptykov.jpg" alt="Тим Чаптыков"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Иван<br>Чашкин</span><img elem="picture" data-src="/speakers/ivan-chashkin.jpg" alt="Иван Чашкин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Максим<br>Червонный</span><img elem="picture" data-src="/speakers/maxim-chervonny.jpg" alt="Максим Червонный"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вадим<br>Черненко</span><img elem="picture" data-src="/speakers/vadim-chernenko.jpg" alt="Вадим Черненко"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Евгений<br>Чечурин</span><img elem="picture" data-src="/speakers/eugeny-chechurin.jpg" alt="Евгений Чечурин"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Алексей<br>Швайка</span><img elem="picture" data-src="/speakers/alexey-shvaika.jpg" alt="Алексей Швайка"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Вячеслав<br>Шебанов</span><img elem="picture" data-src="/speakers/vyacheslav-shebanov.jpg" alt="Вячеслав Шебанов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Григорий<br>Шехет</span><img elem="picture" data-src="/speakers/gregory-shehet.jpg" alt="Григорий Шехет"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Дмитрий<br>Шильников</span><img elem="picture" data-src="/speakers/dmitriy-shilnikov.jpg" alt="Дмитрий Шильников"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Александра<br>Шинкевич</span><img elem="picture" data-src="/speakers/alexandra-shinkevich.jpg" alt="Александра Шинкевич"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Андрей<br>Шитов</span><img elem="picture" data-src="/speakers/andrew-shitov.jpg" alt="Андрей Шитов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Всеволод<br>Шмыров</span><img elem="picture" data-src="/speakers/vsevolod-shmyrov.jpg" alt="Всеволод Шмыров"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Антон<br>Шувалов</span><img elem="picture" data-src="/speakers/anton-shuvalov.jpg" alt="Антон Шувалов"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Максим<br>Юзва</span><img elem="picture" data-src="/speakers/maksim-yuzva.jpg" alt="Максим Юзва"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Якобчук</span><img elem="picture" data-src="/speakers/roman-iakobchuk.jpg" alt="Роман Якобчук"></li>
-					<li elem="speaker" mod="hidden"><span elem="name">Роман<br>Янке</span><img elem="picture" data-src="/speakers/roman-yanke.jpg" alt="Роман Янке"></li>
+			<div class="speakers">
+				<ul class="speakers__list">
+					<li class="speakers__speaker"><span class="speakers__name">Андрей<br>Абрамов</span><img class="speakers__picture" src="/speakers/andrew-abramov.jpg" alt="Андрей Абрамов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Василий<br>Аксёнов</span><img class="speakers__picture" src="/speakers/vasily-aksyonov.jpg" alt="Василий Аксёнов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Ольга<br>Алексашенко</span><img class="speakers__picture" src="/speakers/olga-aleksashenko.jpg" alt="Ольга Алексашенко"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Алексей<br>Андросов</span><img class="speakers__picture" src="/speakers/alexey-androsov.jpg" alt="Алексей Андросов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Наташа<br>Арефьева</span><img class="speakers__picture" src="/speakers/natasha-arefyeva.jpg" alt="Наташа Арефьева"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Юрий<br>Артюх</span><img class="speakers__picture" src="/speakers/yury-artykh.jpg" alt="Юрий Артюх"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Михаил<br>Баранов</span><img class="speakers__picture" src="/speakers/mikhail-baranov.jpg" alt="Михаил Баранов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Кир<br>Белевич</span><img class="speakers__picture" src="/speakers/kir-belevich.jpg" alt="Кир Белевич"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Максим<br>Берёза</span><img class="speakers__picture" src="/speakers/maksim-bereza.jpg" alt="Максим Берёза"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Александр<br>Бешкенадзе</span><img class="speakers__picture" src="/speakers/aleksandr-beshkenadze.jpg" alt="Александр Бешкенадзе"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Владимир<br>Билоненко</span><img class="speakers__picture" src="/speakers/vladimir-bilonenko.jpg" alt="Владимир Билоненко"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Михаил<br>Боднарчук</span><img class="speakers__picture" src="/speakers/michael-bodnarchuk.jpg" alt="Михаил Боднарчук"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Анастасия<br>Бортнийчук</span><img class="speakers__picture" src="/speakers/anastasia-bortnychuk.jpg" alt="Анастасия Бортнийчук"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Берт<br>Бос</span><img class="speakers__picture" src="/speakers/bert-bos.jpg" alt="Берт Бос"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Антон<br>Бульёнов</span><img class="speakers__picture" src="/speakers/anton-bulyonov.jpg" alt="Антон Бульёнов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Юлия<br>Бухвалова</span><img class="speakers__picture" src="/speakers/julia-buhvalova.jpg" alt="Юлия Бухвалова"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Антон<br>Виноградов</span><img class="speakers__picture" src="/speakers/anton-vinogradov.jpg" alt="Антон Виноградов"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Павел<br>Волокитин</span><img class="speakers__picture" src="/speakers/pavel-volokitin.jpg" alt="Павел Волокитин"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Милослав<br>Волосков</span><img class="speakers__picture" src="/speakers/miloslav-voloskov.jpg" alt="Милослав Волосков"></li>
+					<li class="speakers__speaker"><span class="speakers__name">Александра<br>Воробьёва</span><img class="speakers__picture" src="/speakers/alexandra-vorobyova.jpg" alt="Александра Воробьёва"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Ганин</span><img class="speakers__picture" src="/speakers/roman-ganin.jpg" alt="Роман Ганин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Павел<br>Голован</span><img class="speakers__picture" src="/speakers/paul-golovan.jpg" alt="Павел Голован"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Владимир<br>Гриненко</span><img class="speakers__picture" src="/speakers/vladimir-grinenko.jpg" alt="Владимир Гриненко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Любовь<br>Гулько</span><img class="speakers__picture" src="/speakers/lubov-gulko.jpg" alt="Любовь Гулько"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Головнёв</span><img class="speakers__picture" src="/speakers/andrey-golovnev.jpg" alt="Андрей Головнёв"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Анастасия<br>Горячева</span><img class="speakers__picture" src="/speakers/anastasia-goryacheva.jpg" alt="Анастасия Горячева"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Виктор<br>Грищенко</span><img class="speakers__picture" src="/speakers/victor-grishchenko.jpg" alt="Виктор Грищенко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Густун</span><img class="speakers__picture" src="/speakers/sergey-gustun.jpg" alt="Сергей Густун"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Михаил<br>Давыдов</span><img class="speakers__picture" src="/speakers/mikhail-davydov.jpg" alt="Михаил Давыдов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Владимир<br>Дашукевич</span><img class="speakers__picture" src="/speakers/vladimir-dashukevich.jpg" alt="Владимир Дашукевич"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Дворнов</span><img class="speakers__picture" src="/speakers/roman-dvornov.jpg" alt="Роман Дворнов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Дудин</span><img class="speakers__picture" src="/speakers/dmitry-dudin.jpg" alt="Дмитрий Дудин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Дулепов</span><img class="speakers__picture" data-src="/speakers/dmitry-dulepov.jpg" alt="Дмитрий Дулепов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Дыниовский</span><img class="speakers__picture" data-src="/speakers/sergey-dyniovsky.jpg" alt="Сергей Дыниовский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Антон<br>Еремеев</span><img class="speakers__picture" data-src="/speakers/anton-eremeev.jpg" alt="Антон Еремеев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Константин<br>Ефимов</span><img class="speakers__picture" data-src="/speakers/konstantin-efimov.jpg" alt="Константин Ефимов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Евгений<br>Жарков</span><img class="speakers__picture" data-src="/speakers/eugene-zharkov.jpg" alt="Евгений Жарков"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Жигалов</span><img class="speakers__picture" src="/speakers/sergey-zhigalov.jpg" alt="Сергей Жигалов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Александр<br>Завьялов</span><img class="speakers__picture" data-src="/speakers/aleksandr-zavyalov.jpg" alt="Александр Завьялов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Игорь<br>Зенич</span><img class="speakers__picture" data-src="/speakers/igor-zenich.jpg" alt="Игорь Зенич"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Станислав<br>Зубович</span><img class="speakers__picture" data-src="/speakers/stanislau-zubovich.jpg" alt="Станислав Зубович"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Евгений<br>Исаков</span><img class="speakers__picture" data-src="/speakers/eugene-isakov.jpg" alt="Евгений Исаков"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Игорь<br>Канонученко</span><img class="speakers__picture" data-src="/speakers/igor-kononuchenko.jpg" alt="Игорь Канонученко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Василика<br>Климова</span><img class="speakers__picture" data-src="/speakers/vasilika-klimova.jpg" alt="Василика Климова"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Комаров</span><img class="speakers__picture" data-src="/speakers/roman-komarov.jpg" alt="Роман Комаров"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Егор<br>Коновалов</span><img class="speakers__picture" data-src="/speakers/egor-konovalov.jpg" alt="Егор Коновалов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Константинов</span><img class="speakers__picture" data-src="/speakers/sergey-konstantinov.jpg" alt="Сергей Константинов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Копылов</span><img class="speakers__picture" data-src="/speakers/alexey-kopylov.jpg" alt="Алексей Копылов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Олег<br>Корсунский</span><img class="speakers__picture" data-src="/speakers/oleg-korsunsky.jpg" alt="Олег Корсунский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Антон<br>Котенко</span><img class="speakers__picture" data-src="/speakers/anton-kotenko.jpg" alt="Антон Котенко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артур<br>Кох</span><img class="speakers__picture" src="/speakers/arthur-koch.jpg" alt="Артур Кох"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Константин<br>Кривленя</span><img class="speakers__picture" data-src="/speakers/konstantin-krivlenia.jpg" alt="Константин Кривленя"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Владимир<br>Кузнецов</span><img class="speakers__picture" data-src="/speakers/vladimir-kuznetsov.jpg" alt="Владимир Кузнецов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Кузнецов</span><img class="speakers__picture" data-src="/speakers/dmitry-kuznecov.jpg" alt="Дмитрий Кузнецов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Купченко</span><img class="speakers__picture" data-src="/speakers/andrey-kupchenko.jpg" alt="Андрей Купченко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Патрик<br>Лауке</span><img class="speakers__picture" data-src="/speakers/patrick-lauke.jpg" alt="Патрик Лауке"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Ирина<br>Левина</span><img class="speakers__picture" data-src="/speakers/irina-levina.jpg" alt="Ирина Левина"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Листочкин</span><img class="speakers__picture" data-src="/speakers/andrey-listochkin.jpg" alt="Андрей Листочкин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Александр<br>Лобашёв</span><img class="speakers__picture" data-src="/speakers/alexander-lobashev.jpg" alt="Александр Лобашёв"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Павел<br>Ловцевич</span><img class="speakers__picture" data-src="/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артемий<br>Ломов</span><img class="speakers__picture" data-src="/speakers/artemy-lomov.jpg" alt="Артемий Ломов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Брюс<br>Лоусон</span><img class="speakers__picture" data-src="/speakers/bruce-lawson.jpg" alt="Брюс Лоусон"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Лютиков</span><img class="speakers__picture" data-src="/speakers/roman-liutikov.jpg" alt="Роман Лютиков"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Ляпунов</span><img class="speakers__picture" data-src="/speakers/dmitry-lapynov.jpg" alt="Дмитрий Ляпунов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вадим<br>Макеев</span><img class="speakers__picture" data-src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дима<br>Малеев</span><img class="speakers__picture" data-src="/speakers/dima-maleev.jpg" alt="Дима Малеев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вадим<br>Макишвили</span><img class="speakers__picture" data-src="/speakers/vadim-makishvili.jpg" alt="Вадим Макишвили"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Чарльз<br>МакКетиНевил</span><img class="speakers__picture" data-src="/speakers/charles-mccathienevile.jpg" alt="Чарльз МакКетиНевил"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Даниил<br>Малых</span><img class="speakers__picture" data-src="/speakers/daniil-malykh.jpg" alt="Даниил Малых"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Анатолий<br>Матов</span><img class="speakers__picture" data-src="/speakers/anatoly-matov.jpg" alt="Анатолий Матов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Махнев</span><img class="speakers__picture" data-src="/speakers/dmitry-makhnev.jpg" alt="Дмитрий Махнев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Николай<br>Мациевский</span><img class="speakers__picture" data-src="/speakers/nikolay-matsievsky.jpg" alt="Николай Мациевский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Айгарс<br>Мачинс</span><img class="speakers__picture" data-src="/speakers/aigars-macins.jpg" alt="Айгарс Мачинс"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Мезенцев</span><img class="speakers__picture" data-src="/speakers/sergey-mezentsev.jpg" alt="Сергей Мезенцев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Мезин</span><img class="speakers__picture" data-src="/speakers/artem-mezin.jpg" alt="Артём Мезин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Марина<br>Миронович</span><img class="speakers__picture" data-src="/speakers/marina-mironovich.jpg" alt="Марина Миронович"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Митасов</span><img class="speakers__picture" data-src="/speakers/roman-mitasov.jpg" alt="Роман Митасов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Никита<br>Мостовой</span><img class="speakers__picture" data-src="/speakers/nikita-mostovoy.jpg" alt="Никита Мостовой"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Мотошин</span><img class="speakers__picture" data-src="/speakers/andrew-motoshin.jpg" alt="Андрей Мотошин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Олег<br>Мохов</span><img class="speakers__picture" data-src="/speakers/oleg-mokhov.jpg" alt="Олег Мохов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Антон<br>Немцев</span><img class="speakers__picture" data-src="/speakers/anton-nemcev.jpg" alt="Антон Немцев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вячеслав<br>Олиянчук</span><img class="speakers__picture" data-src="/speakers/viacheslav-oliyanchuk.jpg" alt="Вячеслав Олиянчук"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Охрименко</span><img class="speakers__picture" data-src="/speakers/oleksii-okhrymenko.jpg" alt="Алексей Охрименко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артур<br>Пархисенко</span><img class="speakers__picture" data-src="/speakers/artur-parkhisenko.jpg" alt="Артур Пархисенко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Пархоменко</span><img class="speakers__picture" data-src="/speakers/artem-parhomenko.jpg" alt="Артём Пархоменко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вадим<br>Пацев</span><img class="speakers__picture" data-src="/speakers/vadim-pacev.jpg" alt="Вадим Пацев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Александр<br>Першин</span><img class="speakers__picture" src="/speakers/alexander-pershin.jpg" alt="Александр Першин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Петров</span><img class="speakers__picture" data-src="/speakers/dmitry-petrov.jpg" alt="Дмитрий Петров"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Виталий<br>Потапов</span><img class="speakers__picture" data-src="/speakers/vitaly-potapov.jpg" alt="Виталий Потапов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Поликарпов</span><img class="speakers__picture" data-src="/speakers/artem-polikarpov.jpg" alt="Артём Поликарпов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Попов</span><img class="speakers__picture" data-src="/speakers/dmitro-popov.jpg" alt="Дмитрий Попов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Попов</span><img class="speakers__picture" data-src="/speakers/sergey-popov.jpg" alt="Сергей Попов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Прохацкий</span><img class="speakers__picture" data-src="/speakers/artem-prokhatskyi.jpg" alt="Артём Прохацкий"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Прудников</span><img class="speakers__picture" data-src="/speakers/roman-prudnikov.jpg" alt="Роман Прудников"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Пузанков</span><img class="speakers__picture" data-src="/speakers/sergey-puzankov.jpg" alt="Сергей Пузанков"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Юрис<br>Пукитис</span><img class="speakers__picture" data-src="/speakers/juris-pukitis.jpg" alt="Юрис Пукитис"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Илья<br>Пухальский</span><img class="speakers__picture" data-src="/speakers/ilya-pukhalski.jpg" alt="Илья Пухальский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Распопов</span><img class="speakers__picture" data-src="/speakers/alexey-raspopov.jpg" alt="Алексей Распопов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Мурад<br>Рогожников</span><img class="speakers__picture" data-src="/speakers/murad-rogozhnikov.jpg" alt="Мурад Рогожников"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Ирина<br>Руденко</span><img class="speakers__picture" data-src="/speakers/iryna-rudenko.jpg" alt="Ирина Руденко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дэвид<br>Руссе</span><img class="speakers__picture" data-src="/speakers/david-rousset.jpg" alt="Дэвид Руссе"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Виталий<br>Рыбалка</span><img class="speakers__picture" data-src="/speakers/vitaly-rybalka.jpg" alt="Виталий Рыбалка"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Виталий<br>Рыбка</span><img class="speakers__picture" data-src="/speakers/vitaly-rybka.jpg" alt="Виталий Рыбка"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Сапегин</span><img class="speakers__picture" data-src="/speakers/artem-sapegin.jpg" alt="Артём Сапегин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Феликс<br>Сасаки</span><img class="speakers__picture" data-src="/speakers/felix-sasaki.jpg" alt="Феликс Сасаки"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Артём<br>Свительский</span><img class="speakers__picture" data-src="/speakers/artem-svitelskyi.jpg" alt="Артём Свительский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Анна<br>Селезнёва</span><img class="speakers__picture" data-src="/speakers/anna-selezneva.jpg" alt="Анна Селезнёва"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Никита<br>Селецкий</span><img class="speakers__picture" data-src="/speakers/nikita-seletsky.jpg" alt="Никита Селецкий"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Елизавета<br>Селиванова</span><img class="speakers__picture" data-src="/speakers/elizaveta-selivanova.jpg" alt="Елизавета Селиванова"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Симоненко</span><img class="speakers__picture" src="/speakers/alexey-simonenko.jpg" alt="Алексей Симоненко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Лев<br>Солнцев</span><img class="speakers__picture" src="/speakers/lev-solntsev.jpg" alt="Лев Солнцев"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Ситник</span><img class="speakers__picture" data-src="/speakers/andrey-sitnik.jpg" alt="Андрей Ситник"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Варя<br>Степанова</span><img class="speakers__picture" data-src="/speakers/varya-stepanova.jpg" alt="Варя Степанова"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Владимир<br>Столяров</span><img class="speakers__picture" data-src="/speakers/uladzimir-staliarou.jpg" alt="Владимир Столяров"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Всеволод<br>Струкчинский</span><img class="speakers__picture" src="/speakers/vsevolod-strukchinsky.jpg" alt="Всеволод Струкчинский"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Сумин</span><img class="speakers__picture" data-src="/speakers/andrew-sumin.jpg" alt="Андрей Сумин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Сергей<br>Сыркин</span><img class="speakers__picture" data-src="/speakers/sergey-syrkin.jpg" alt="Сергей Сыркин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Евгений<br>Тихонов</span><img class="speakers__picture" src="/speakers/evgeny-tihonov.jpg" alt="Евгений Тихонов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Юра<br>Ткаченко</span><img class="speakers__picture" data-src="/speakers/yuri-tkachenko.jpg" alt="Юра Ткаченко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Денис<br>Тужик</span><img class="speakers__picture" data-src="/speakers/denis-tuzhik.jpg" alt="Денис Тужик"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Уколов</span><img class="speakers__picture" src="/speakers/alexey-ukolov.jpg" alt="Алексей Уколов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Александр<br>Феоктистов</span><img class="speakers__picture" data-src="/speakers/alexander-feoktistov.jpg" alt="Александр Феоктистов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Денис<br>Хананеин</span><img class="speakers__picture" data-src="/speakers/denis-hananein.jpg" alt="Денис Хананеин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роберт<br>Харитонов</span><img class="speakers__picture" data-src="/speakers/robert-haritonov.jpg" alt="Роберт Харитонов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алёна<br>Царёва</span><img class="speakers__picture" data-src="/speakers/alena-tsareva.jpg" alt="Алёна Царёва"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Тим<br>Чаптыков</span><img class="speakers__picture" data-src="/speakers/tim-chaptykov.jpg" alt="Тим Чаптыков"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Иван<br>Чашкин</span><img class="speakers__picture" data-src="/speakers/ivan-chashkin.jpg" alt="Иван Чашкин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Максим<br>Червонный</span><img class="speakers__picture" data-src="/speakers/maxim-chervonny.jpg" alt="Максим Червонный"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вадим<br>Черненко</span><img class="speakers__picture" data-src="/speakers/vadim-chernenko.jpg" alt="Вадим Черненко"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Евгений<br>Чечурин</span><img class="speakers__picture" data-src="/speakers/eugeny-chechurin.jpg" alt="Евгений Чечурин"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Алексей<br>Швайка</span><img class="speakers__picture" data-src="/speakers/alexey-shvaika.jpg" alt="Алексей Швайка"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Вячеслав<br>Шебанов</span><img class="speakers__picture" data-src="/speakers/vyacheslav-shebanov.jpg" alt="Вячеслав Шебанов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Григорий<br>Шехет</span><img class="speakers__picture" data-src="/speakers/gregory-shehet.jpg" alt="Григорий Шехет"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Дмитрий<br>Шильников</span><img class="speakers__picture" data-src="/speakers/dmitriy-shilnikov.jpg" alt="Дмитрий Шильников"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Александра<br>Шинкевич</span><img class="speakers__picture" data-src="/speakers/alexandra-shinkevich.jpg" alt="Александра Шинкевич"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Андрей<br>Шитов</span><img class="speakers__picture" data-src="/speakers/andrew-shitov.jpg" alt="Андрей Шитов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Всеволод<br>Шмыров</span><img class="speakers__picture" data-src="/speakers/vsevolod-shmyrov.jpg" alt="Всеволод Шмыров"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Антон<br>Шувалов</span><img class="speakers__picture" data-src="/speakers/anton-shuvalov.jpg" alt="Антон Шувалов"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Максим<br>Юзва</span><img class="speakers__picture" data-src="/speakers/maksim-yuzva.jpg" alt="Максим Юзва"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Якобчук</span><img class="speakers__picture" data-src="/speakers/roman-iakobchuk.jpg" alt="Роман Якобчук"></li>
+					<li class="speakers__speaker speakers__speaker--hidden"><span class="speakers__name">Роман<br>Янке</span><img class="speakers__picture" data-src="/speakers/roman-yanke.jpg" alt="Роман Янке"></li>
 				</ul>
-				<button block="button" mod="full" id="more">Ещё…</button>
+				<button class="button button--full" id="more">Ещё…</button>
 			</div>
-			<div elem="box" mix="block:content">
+			<div class="section__box content">
 				<p>Хотите стать докладчиком?<br>Пишите <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 			</div>
 		</section>
-		<section block="section" mod="open" id="video">
-			<div elem="box" mix="block:content">
-				<h2 elem="title">
+		<section class="section section--open" id="video">
+			<div class="section__box content">
+				<h2 class="section__title">
 					Видео
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 				<p>Больше 80 видео с наших конференций <a href="https://www.youtube.com/user/wstdays">на Ютубе</a>.</p>
 			</div>
-			<figure block="video">
-				<div elem="wrapper">
-					<iframe elem="media" allowfullscreen src="https://www.youtube.com/embed/Y70JypQCy08"></iframe>
+			<figure class="video">
+				<div class="video__wrapper">
+					<iframe class="video__media" allowfullscreen src="https://www.youtube.com/embed/Y70JypQCy08"></iframe>
 				</div>
-				<figcaption elem="caption">Зачем Опере Вебкит, или Опиум для народа — Вадим Макеев</figcaption>
+				<figcaption class="video__caption">Зачем Опере Вебкит, или Опиум для народа — Вадим Макеев</figcaption>
 			</figure>
-			<figure block="video">
-				<div elem="wrapper">
-					<iframe elem="media" allowfullscreen src="https://www.youtube.com/embed/3HNW5Bru0Ws"></iframe>
+			<figure class="video">
+				<div class="video__wrapper">
+					<iframe class="video__media" allowfullscreen src="https://www.youtube.com/embed/3HNW5Bru0Ws"></iframe>
 				</div>
-				<figcaption elem="caption">Документирование вёрстки по-взрослому — Роберт Харитонов</figcaption>
+				<figcaption class="video__caption">Документирование вёрстки по-взрослому — Роберт Харитонов</figcaption>
 			</figure>
-			<figure block="video">
-				<div elem="wrapper">
-					<iframe elem="media" allowfullscreen src="https://www.youtube.com/embed/bklnz8j7l6U"></iframe>
+			<figure class="video">
+				<div class="video__wrapper">
+					<iframe class="video__media" allowfullscreen src="https://www.youtube.com/embed/bklnz8j7l6U"></iframe>
 				</div>
-				<figcaption elem="caption">Lazy Game Dev — Антон Немцев</figcaption>
+				<figcaption class="video__caption">Lazy Game Dev — Антон Немцев</figcaption>
 			</figure>
 		</section>
 	</main>
