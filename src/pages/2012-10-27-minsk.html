@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html block="page" lang="ru">
+<html class="page" lang="ru">
 <head>
 	<title>WSD в Минске 26 октября 2012</title>
 	<meta charset="utf-8">
@@ -14,347 +14,344 @@
 	<script>(function(d){var f=function(){var h=d.getElementsByTagName('head')[0],l=d.createElement('link');l.rel='stylesheet';l.href='/styles/ubuntu.css';h.appendChild(l)},r=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(r){r(f)}else{window.addEventListener('load',f)}})(document)</script>
 	<noscript><link rel="stylesheet" href="/styles/ubuntu.css"></noscript>
 </head>
-<body elem="body">
-	<header block="header" id="header">
-		<a block="title" href="/">
-			<span elem="text">
+<body class="page__body">
+	<header class="header" id="header">
+		<a class="title" href="/">
+			<span class="title__text">
 				Web<br>
 				Standards<br>
 				Days
 			</span>
 		</a>
-		<nav block="section" mod="open" id="navigation">
-			<div elem="box">
-				<ul block="navigation">
-					<li><a elem="link" href="#schedule">Программа</a></li>
-					<li><a elem="link" href="#speakers">Докладчики</a></li>
-					<li><a elem="link" href="#organisers">Организаторы</a></li>
-					<li><a elem="link" href="#venue">Площадка</a></li>
+		<nav class="section section--open" id="navigation">
+			<div class="section__box">
+				<ul class="navigation">
+					<li><a class="navigation__link" href="#schedule">Программа</a></li>
+					<li><a class="navigation__link" href="#speakers">Докладчики</a></li>
+					<li><a class="navigation__link" href="#organisers">Организаторы</a></li>
+					<li><a class="navigation__link" href="#venue">Площадка</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div block="social">
-			<a elem="link" mod="twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span elem="text">Твиттер</span></a>
-			<a elem="link" mod="vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span elem="text">ВКонтакте</span></a>
-			<a elem="link" mod="github" href="https://github.com/web-standards-ru" title="Гитхаб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span elem="text">Фейсбук</span></a>
-			<a elem="link" mod="youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="slack" href="http://slack.web-standards.ru" title="Слак"><span elem="text">Слак</span></a>
-			<a elem="link" mod="telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span elem="text">Телеграм</span></a>
+		<div class="social">
+			<a class="social__link social__link--twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span class="social__text">Твиттер</span></a>
+			<a class="social__link social__link--vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span class="social__text">ВКонтакте</span></a>
+			<a class="social__link social__link--github" href="https://github.com/web-standards-ru" title="Гитхаб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span class="social__text">Фейсбук</span></a>
+			<a class="social__link social__link--youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--slack" href="http://slack.web-standards.ru" title="Слак"><span class="social__text">Слак</span></a>
+			<a class="social__link social__link--telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span class="social__text">Телеграм</span></a>
 		</div>
 	</header>
-	<main block="main" id="main">
-		<div block="section" id="intro">
-			<div elem="box" mix="block:content">
-				<h1 elem="title">Минск, 26 октября 2012</h1>
+	<main class="main" id="main">
+		<div class="section" id="intro">
+			<div class="section__box content">
+				<h1 class="section__title">Минск, 26 октября 2012</h1>
 				<p>Конференция прошла в конференц-зале <a href="http://ibb.by/">Минского международного образовательного центра имени Йоханнеса Рау</a> на пр. Газеты Правда, 11. Остались вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Понравилась конференция?</p>
-				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+				<form class="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
 					<input type="hidden" name="receiver" value="41001119329753">
 					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
 					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="quickpay-form" value="donate">
 					<input type="hidden" name="paymentType" value="AC">
-					<input elem="amount" name="sum" value="500" size="4" required type="text">
-					<button elem="button" mix="block:button">Поддержать</button>
+					<input class="support__amount" name="sum" value="500" size="4" required type="text">
+					<button class="support__button button">Поддержать</button>
 				</form>
 			</div>
 		</div>
-		<section block="section" mod="open" id="schedule">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="schedule">
+			<div class="section__box">
+				<h2 class="section__title">
 					Программа
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<ol block="calendar">
-				<li elem="event" mod="break">
-					<time elem="time">10:00</time> Регистрация
+			<ol class="calendar">
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">10:00</time> Регистрация
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">10:30</time> Открытие
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">10:30</time> Открытие
 				</li>
-				<li elem="event">
-					<time elem="time">10:40</time>
-					<div block="content" mod="inline" id="die-photoshop">
+				<li class="calendar__event">
+					<time class="calendar__time">10:40</time>
+					<div class="content content--inline" id="die-photoshop">
 						<h3>Die Photoshop, die! Или стоит ли пропускать Photoshop в процессе разработки веб-дизайна?</h3>
 						<p>Современные технологии позволяют разработчикам создавать удивительные отзывчивые сайты, браузерные и даже мобильные приложения. Как же запечатлеть всю эту динамику на статичном холсте? И стоит ли? Почему дизайнеру важно знать хотя бы немного о верстке, а верстальщику иметь представление о процессе дизайна? Ответы на все вопросы в рассказ об актуальном подходе «Без фотошопа». <a href="/2012/10/27/pres/die-photoshop.pdf">Презентация в PDF</a>.</p>
-						<p><a href="#ilya-pukhalski" block="anchor">Илья Пухальский</a></p>
+						<p><a class="anchor" href="#ilya-pukhalski">Илья Пухальский</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">11:20</time>
-					<div block="content" mod="inline" id="retina">
+				<li class="calendar__event">
+					<time class="calendar__time">11:20</time>
+					<div class="content content--inline" id="retina">
 						<h3>Чётко и резко. Новая графика для экранов с высоким разрешением</h3>
 						<p>Вряд ли кто обрадуется, если увидит вместо красивого и с пиксельной точностью отрисованного дизайна расплывшийся кусок мыла. Но именно так выглядят сегодня большинство сайтов на устройствах с экранами высокого разрешения. Меры, полумеры и просто трюки, чтобы ваш сайт выглядел безупречно — в этом докладе. <a href="/2012/10/27/pres/retina/">Презентация в HTML</a>.</p>
-						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
+						<p><a class="anchor" href="#vadim-makeev">Вадим Макеев</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">12:00</time>
-					<div block="content" mod="inline" id="adaptive-design">
+				<li class="calendar__event">
+					<time class="calendar__time">12:00</time>
+					<div class="content content--inline" id="adaptive-design">
 						<h3>Адаптивный веб-дизайн — Что? Где? Когда?</h3>
 						<p>Рассказ о том, что такое адаптивный веб-дизайн, как и где его можно применять, что нужно учитывать при его создании и почему пора начать делать адаптивные сайты. <a href="/2012/10/27/pres/adaptive-design/">Презентация в HTML</a>.</p>
-						<p><a href="#anna-selezneva" block="anchor">Анна Селезнёва</a></p>
+						<p><a class="anchor" href="#anna-selezneva">Анна Селезнёва</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">12:40</time>
-					<div block="content" mod="inline" id="adaptive-images">
+				<li class="calendar__event">
+					<time class="calendar__time">12:40</time>
+					<div class="content content--inline" id="adaptive-images">
 						<h3>Всем сестрам по серьгам. Адаптивные изображения</h3>
 						<p><a href="/2012/10/27/pres/adaptive-images/">Презентация в HTML</a>.</p>
-						<p><a href="#pavel-lovtsevich" block="anchor">Павел Ловцевич</a></p>
+						<p><a class="anchor" href="#pavel-lovtsevich">Павел Ловцевич</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">13:40</time> Обед
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">13:40</time> Обед
 				</li>
-				<li elem="event">
-					<time elem="time">14:20</time>
-					<div block="content" mod="inline" id="mcss">
+				<li class="calendar__event">
+					<time class="calendar__time">14:20</time>
+					<div class="content content--inline" id="mcss">
 						<h3>Многослойный CSS</h3>
 						<p>Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа. <a href="/2012/10/27/pres/mcss/">Презентация в HTML</a>.</p>
-						<p><a href="#robert-haritonov" block="anchor">Роберт Харитонов</a></p>
+						<p><a class="anchor" href="#robert-haritonov">Роберт Харитонов</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">15:00</time>
-					<div block="content" mod="inline" id="jquery-ext">
+				<li class="calendar__event">
+					<time class="calendar__time">15:00</time>
+					<div class="content content--inline" id="jquery-ext">
 						<h3>Способы расширения функциональности jQuery</h3>
 						<p>Как и зачем писать расширения для jQuery, с примерами на CoffeeScript. <a href="/2012/10/27/pres/jquery-ext/">Презентация в HTML</a>.</p>
-						<p><a href="#dmitry-petrov" block="anchor">Дмитрий Петров</a></p>
+						<p><a class="anchor" href="#dmitry-petrov">Дмитрий Петров</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">15:40</time>
-					<div block="content" mod="inline" id="webapps">
+				<li class="calendar__event">
+					<time class="calendar__time">15:40</time>
+					<div class="content content--inline" id="webapps">
 						<h3>Современные веб-приложения</h3>
 						<p>Применение принципа постепенной деградации на примере тач-почты Mail.Ru. <a href="/2012/10/27/pres/webapps.pdf">Презентация в PDF</a>.</p>
-						<p><a href="#ivan-chashkin" block="anchor">Иван Чашкин</a></p>
+						<p><a class="anchor" href="#ivan-chashkin">Иван Чашкин</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">16:20</time>
-					<div block="content" mod="inline" id="webstorage">
+				<li class="calendar__event">
+					<time class="calendar__time">16:20</time>
+					<div class="content content--inline" id="webstorage">
 						<h3>WebStorage и его применение для связи окон</h3>
 						<p>Веб-клиент для Mail.ru Agent. Особенности разработки месенджера для веба. Плюсы, минусы и подводные камни клиентского хранения данных. Синхронизация интерфейса, межоконный роутер, одно соединения на все окна пользователя. <a href="/2012/10/27/pres/webstorage.pdf">Презентация в PDF</a>.</p>
-						<p><a href="#roman-mitasov" block="anchor">Роман Митасов</a></p>
+						<p><a class="anchor" href="#roman-mitasov">Роман Митасов</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">17:00</time> Закрытие
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">17:00</time> Закрытие
 				</li>
 			</ol>
 		</section>
-		<section block="section" id="speakers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="speakers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Докладчики
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="pavel-lovtsevich">
-				<div elem="description" mix="block:content">
+			<div class="card" id="pavel-lovtsevich">
+				<div class="card__description content">
 					<h3>Павел Ловцевич <a href="https://twitter.com/zigzag_mcquack">@zigzag_mcquack</a></h3>
 					<p>Технический директор компании <a href="http://lovata.com/">LOVATA Group</a> и руководитель минской frontend-группы компании HeadHunter. Участник объединения разработчиков «Веб-стандарты». Организатор, докладчик и участник ряда отраслевых конференций и образовательных мероприятий.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/pavel-lovtsevich.jpg" alt="Павел Ловцевич">
 				</div>
 			</div>
-			<div block="card" id="vadim-makeev">
-				<div elem="description" mix="block:content">
+			<div class="card" id="vadim-makeev">
+				<div class="card__description content">
 					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
 					<p>Веб-евангелист в компании <a href="http://opera.com/">Opera</a>. Веб-разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
 				</div>
 			</div>
-			<div block="card" id="roman-mitasov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="roman-mitasov">
+				<div class="card__description content">
 					<h3>Роман Митасов</h3>
 					<p>Фронтенд-разработчик, Mail.Ru Group, работает в компании с 2007 года, занимается разработкой веб-клиентов месенджеров Агент и ICQ. В 2006 г. закончил факультет программного обеспечения МТУСИ (Московский технический университет связи и информатики), где ещё во время учебы получил опыт работы в нескольких крупных компаниях на должностях PHP-программиста.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/roman-mitasov.jpg" alt="Роман Митасов">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/roman-mitasov.jpg" alt="Роман Митасов">
 				</div>
 			</div>
-			<div block="card" id="dmitry-petrov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="dmitry-petrov">
+				<div class="card__description content">
 					<h3>Дмитрий Петров <a href="https://twitter.com/can3p">@can3p</a></h3>
 					<p>JavaScript-программист в Skype, ранее участвовал в редизайне LiveJournal в Суп Фабрик, ведёт блог <a href="http://jsnotes.ru/">jsnotes.ru</a>. Морально устойчив, любит котов.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/dmitry-petrov.jpg" alt="Дмитрий Петров">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/dmitry-petrov.jpg" alt="Дмитрий Петров">
 				</div>
 			</div>
-			<div block="card" id="ilya-pukhalski">
-				<div elem="description" mix="block:content">
+			<div class="card" id="ilya-pukhalski">
+				<div class="card__description content">
 					<h3>Илья Пухальский <a href="https://twitter.com/pukhalski">@pukhalski</a></h3>
 					<p>Solution Architect в компании <a href="http://www.epam-group.ru/">EPAM Systems</a>. Веб-разработчик с более чем шестилетним опытом, JavaScript-lover. Текущая страсть — разработка мобильных приложений и сайтов.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/ilya-pukhalski.jpg" alt="Илья Пухальский">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/ilya-pukhalski.jpg" alt="Илья Пухальский">
 				</div>
 			</div>
-			<div block="card" id="anna-selezneva">
-				<div elem="description" mix="block:content">
+			<div class="card" id="anna-selezneva">
+				<div class="card__description content">
 					<h3>Анна Селезнёва <a href="https://twitter.com/asktwi">@asktwi</a></h3>
 					<p>Креативный технолог из компании <a href="http://cpeople.ru/">CreativePeople</a>, Москва.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/anna-selezneva.jpg" alt="Анна Селезнёва">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/anna-selezneva.jpg" alt="Анна Селезнёва">
 				</div>
 			</div>
-			<div block="card" id="robert-haritonov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="robert-haritonov">
+				<div class="card__description content">
 					<h3>Роберт Харитонов <a href="https://twitter.com/operatino">@operatino</a></h3>
 					<p>Ведущий верстальщик в компании <a href="http://odnoklassniki.ru">Одноклассники.ru</a>, занимается разработкой внутренних стандартов вёрстки, спецификациями и созданием гибких клиентских интерфейсов. Проживает в Риге, автор блога <a href="http://tohtml.it">ToHTML.it</a></p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/robert-haritonov.jpg" alt="Роберт Харитонов">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/robert-haritonov.jpg" alt="Роберт Харитонов">
 				</div>
 			</div>
-			<div block="card" id="ivan-chashkin">
-				<div elem="description" mix="block:content">
+			<div class="card" id="ivan-chashkin">
+				<div class="card__description content">
 					<h3>Иван Чашкин <a href="https://twitter.com/chizh73">@chizh73</a></h3>
 					<p>Программист, Mail.Ru Group, работает в Mail.Ru с февраля 2011 года, занимается разработкой мобильной почты для тач-устройств. До Mail.Ru работал в стартапе Дзен-мани. Окончил Ульяновский Государственный Университет, факультет математики и информационных технологий.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/ivan-chashkin.jpg" alt="Иван Чашкин">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/ivan-chashkin.jpg" alt="Иван Чашкин">
 				</div>
 			</div>
 		</section>
-		<section block="section" id="organisers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="organisers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Организаторы
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="opera">
-				<div elem="description" mix="block:content">
+			<div class="card" id="opera">
+				<div class="card__description content">
 					<h3>Opera</h3>
 					<p>Норвежская компания, известная своими браузерами: <a href="http://www.opera.com/computer">Opera для компьютеров</a>, <a href="http://www.opera.com/mobile/android">Opera для Android</a>, <a href="http://www.opera.com/mobile/mini">Opera Mini</a>. Участвует в разработке движков Chromium и Blink, подробнее о технологиях на <a href="https://dev.opera.com/">Dev.Opera</a>.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://opera.com/">
-						<img elem="picture" src="/partners/opera.svg" alt="Opera">
+						<img class="card__picture" src="/partners/opera.svg" alt="Opera">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="lovata">
-				<div elem="description" mix="block:content">
+			<div class="card" id="lovata">
+				<div class="card__description content">
 					<h3>LOVATA Group</h3>
 					<p>Компания занимается разработкой веб-проектов для широкого круга клиентов из Беларуси, стран ближнего и дальнего зарубежья. Активное инвестирование в инновационные технологии, постоянное совершенствование методик работы и следование веб-стандартам позволяет компании выполнять проекты любого уровня сложности.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://lovata.com/">
-						<img elem="picture" src="/partners/lovata.svg" alt="LOVATA Group">
+						<img class="card__picture" src="/partners/lovata.svg" alt="LOVATA Group">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="oz-by">
-				<div elem="description" mix="block:content">
+			<div class="card" id="oz-by">
+				<div class="card__description content">
 					<h3>Интернет-магазин OZ.by</h3>
 					<p>Крупнейший интернет-магазин Беларуси. На сайте вы можете не только заказать необходимые книги, но и увидеть отзывы и рекомендации. В каталоге OZ.by представлено более 7 000 изданий <a href="http://oz.by/books/topic.html?topic=1&amp;sortby=bestseller">IT-тематики</a>, от проверенных временем книг до самых свежих новинок. Доставка — в любую точку Беларуси.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://oz.by/">
-						<img elem="picture" src="/partners/oz-by.svg" alt="Интернет-магазин OZ.by">
+						<img class="card__picture" src="/partners/oz-by.svg" alt="Интернет-магазин OZ.by">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="tut-by">
-				<div elem="description" mix="block:content">
+			<div class="card" id="tut-by">
+				<div class="card__description content">
 					<h3>Белорусский портал TUT.BY</h3>
 					<p>Начал свою работу 5 октября 2000 г. и уже в первые месяцы стал самым посещаемым сайтом белорусского интернета. Сегодня белорусский портал TUT.BY бесплатно обслуживает более 2 млн. белорусов. На титульной странице портала ежедневно бывает более 500 тысяч уникальных посетителей, благодаря чему TUT.BY является крупнейшей рекламной площадкой белорусского интернета.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://tut.by/">
-						<img elem="picture" src="/partners/tut-by.svg" alt="Белорусский портал TUT.BY">
+						<img class="card__picture" src="/partners/tut-by.svg" alt="Белорусский портал TUT.BY">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="kv">
-				<div elem="description" mix="block:content">
+			<div class="card" id="kv">
+				<div class="card__description content">
 					<h3>Компьютерные вести</h3>
 					<p>Электронное СМИ, объединяющее вокруг себя ИТ-специалистов, бизнесменов, руководителей, студентов, и просто всех тех, кто интересуется жизнью мира информационных технологий и электроники.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://kv.by/">
-						<img elem="picture" src="/partners/kv.svg" alt="Компьютерные вести">
+						<img class="card__picture" src="/partners/kv.svg" alt="Компьютерные вести">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="dev-by">
-				<div elem="description" mix="block:content">
+			<div class="card" id="dev-by">
+				<div class="card__description content">
 					<h3>Dev.by</h3>
 					<p>Ведущий и наиболее популярный портал, посвященный работе в белорусской ИТ-индустрии. Новости, аналитические статьи и уникальные обзоры белорусского ИТ-рынка. Специализированный сервис ИТ-вакансий, блог о работе ИТ-специалистов, рейтинг компаний, подробная статистика зарплат в ИТ по специальностям и платформам, анонсы основных событий в сфере информационных технологий.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://dev.by/">
-						<img elem="picture" src="/partners/dev-by.svg" alt="Dev.by">
+						<img class="card__picture" src="/partners/dev-by.svg" alt="Dev.by">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="atlant-telecom">
-				<div elem="description" mix="block:content">
+			<div class="card" id="atlant-telecom">
+				<div class="card__description content">
 					<h3>Атлант Телеком</h3>
 					<p>Крупнейший коммерческий интернет-провайдер в Беларуси, скорость передачи данных которого достигает 100 Мбит/сек по технологии Ethernet. Компания представлена во всех областных центрах республики. Суммарная скорость внешнего канала связи составляет около 6 Гбит/сек.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://telecom.by/">
-						<img elem="picture" src="/partners/atlant-telecom.svg" alt="Атлант Телеком">
+						<img class="card__picture" src="/partners/atlant-telecom.svg" alt="Атлант Телеком">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="hoster-by">
-				<div elem="description" mix="block:content">
+			<div class="card" id="hoster-by">
+				<div class="card__description content">
 					<h3>Hoster.by</h3>
 					<p>Белорусский хостинг-провайдер и крупнейший в стране регистратор доменов BY. С 2012 года является техническим администратором национальной доменной зоны sBY. Компания предоставляет профессиональные услуги хостинга, регистрации доменов в более чем 70 доменных зонах и ряд сопутствующих сервисов. Провайдер Hoster.by уполномочен оказывать услуги хостинга государственным организациям и учреждениям, использующим в своей деятельности гостайну.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://hoster.by/">
-						<img elem="picture" src="/partners/hoster-by.svg" alt="Hoster.by">
+						<img class="card__picture" src="/partners/hoster-by.svg" alt="Hoster.by">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="rabota-tut-by">
-				<div elem="description" mix="block:content">
+			<div class="card" id="rabota-tut-by">
+				<div class="card__description content">
 					<h3>Работа.TUT.BY</h3>
 					<p>Сайт по поиску работы и персонала в Беларуси. Сегодня на сайте зарегистрировано более 12 000 прямых работодателей и около 160 000 резюме специалистов всех категорий: от домашнего персонала до топ-менеджмента компаний. Ежемесячно сайт просматривает 460 000 уникальных посетителей.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://jobs.tut.by/">
-						<img elem="picture" src="/partners/rabota-tut-by.svg" alt="Работа.TUT.BY">
+						<img class="card__picture" src="/partners/rabota-tut-by.svg" alt="Работа.TUT.BY">
 					</a>
 				</div>
 			</div>
 		</section>
-		<section block="section" mod="open" id="venue">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="venue">
+			<div class="section__box">
+				<h2 class="section__title">
 					Площадка
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"
-				data-latitude="53.86912"
-				data-longitude="27.48719"
-				data-zoom="17">
+			<div class="map" id="map" data-latitude="53.86912" data-longitude="27.48719" data-zoom="17">
 			</div>
-			<div elem="box" mix="block:content">
+			<div class="section__box content">
 				<p>Минск, конференц-зал <a href="http://ibb.by/">Минского международного образовательного центра имени Йоханнеса Рау</a> на пр. Газеты Правда, 11.</p>
 			</div>
 		</section>

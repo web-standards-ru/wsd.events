@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html block="page" lang="ru">
+<html class="page" lang="ru">
 <head>
 	<title>WSD в Екатеринбурге 25 июня 2016</title>
 	<meta charset="utf-8">
@@ -14,323 +14,320 @@
 	<script>(function(d){var f=function(){var h=d.getElementsByTagName('head')[0],l=d.createElement('link');l.rel='stylesheet';l.href='/styles/ubuntu.css';h.appendChild(l)},r=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(r){r(f)}else{window.addEventListener('load',f)}})(document)</script>
 	<noscript><link rel="stylesheet" href="/styles/ubuntu.css"></noscript>
 </head>
-<body elem="body">
-	<header block="header" id="header">
-		<a block="title" href="/">
-			<span elem="text">
+<body class="page__body">
+	<header class="header" id="header">
+		<a class="title" href="/">
+			<span class="title__text">
 				Web<br>
 				Standards<br>
 				Days
 			</span>
 		</a>
-		<nav block="section" mod="open" id="navigation">
-			<div elem="box">
-				<ul block="navigation">
-					<li><a elem="link" href="#schedule">Программа</a></li>
-					<li><a elem="link" href="#speakers">Докладчики</a></li>
-					<li><a elem="link" href="#organisers">Организаторы</a></li>
-					<li><a elem="link" href="#venue">Площадка</a></li>
+		<nav class="section section--open" id="navigation">
+			<div class="section__box">
+				<ul class="navigation">
+					<li><a class="navigation__link" href="#schedule">Программа</a></li>
+					<li><a class="navigation__link" href="#speakers">Докладчики</a></li>
+					<li><a class="navigation__link" href="#organisers">Организаторы</a></li>
+					<li><a class="navigation__link" href="#venue">Площадка</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div block="social">
-			<a elem="link" mod="twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span elem="text">Твиттер</span></a>
-			<a elem="link" mod="vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span elem="text">ВКонтакте</span></a>
-			<a elem="link" mod="github" href="https://github.com/web-standards-ru" title="Гитхаб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span elem="text">Фейсбук</span></a>
-			<a elem="link" mod="youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="slack" href="http://slack.web-standards.ru" title="Слак"><span elem="text">Слак</span></a>
-			<a elem="link" mod="telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span elem="text">Телеграм</span></a>
+		<div class="social">
+			<a class="social__link social__link--twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span class="social__text">Твиттер</span></a>
+			<a class="social__link social__link--vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span class="social__text">ВКонтакте</span></a>
+			<a class="social__link social__link--github" href="https://github.com/web-standards-ru" title="Гитхаб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span class="social__text">Фейсбук</span></a>
+			<a class="social__link social__link--youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--slack" href="http://slack.web-standards.ru" title="Слак"><span class="social__text">Слак</span></a>
+			<a class="social__link social__link--telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span class="social__text">Телеграм</span></a>
 		</div>
 	</header>
-	<main block="main" id="main">
-		<div block="section" id="intro">
-			<div elem="box" mix="block:content">
-				<h1 elem="title">Екатеринбург, 25 июня 2016</h1>
+	<main class="main" id="main">
+		<div class="section" id="intro">
+			<div class="section__box content">
+				<h1 class="section__title">Екатеринбург, 25 июня 2016</h1>
 				<p>Конференция прошла в отеле «<a href="http://www.mosgorka.ru/">Московская горка</a>» на Московской, 131. Есть интересный опыт или идея для доклада? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Понравилась конференция?</p>
-				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+				<form class="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
 					<input type="hidden" name="receiver" value="41001119329753">
 					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
 					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="quickpay-form" value="donate">
 					<input type="hidden" name="paymentType" value="AC">
-					<input elem="amount" name="sum" value="500" size="4" required type="text">
-					<button elem="button" mix="block:button">Поддержать</button>
+					<input class="support__amount" name="sum" value="500" size="4" required type="text">
+					<button class="support__button button">Поддержать</button>
 				</form>
 			</div>
 		</div>
-		<section block="section" mod="open" id="schedule">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="schedule">
+			<div class="section__box">
+				<h2 class="section__title">
 					Программа
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<ol block="calendar">
-				<li elem="event" mod="break">
-					<time elem="time">10:00</time> Регистрация
+			<ol class="calendar">
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">10:00</time> Регистрация
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">11:00</time> Открытие
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">11:00</time> Открытие
 				</li>
-				<li elem="event">
-					<time elem="time">11:10</time>
-					<div block="content" mod="inline" id="tech-trust">
+				<li class="calendar__event">
+					<time class="calendar__time">11:10</time>
+					<div class="content content--inline" id="tech-trust">
 						<h3>Как я перестал верить технологиям</h3>
-						<p><a href="#alexey-simonenko" block="anchor">Алексей Симоненко</a></p>
+						<p><a class="anchor" href="#alexey-simonenko">Алексей Симоненко</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">11:50</time>
-					<div block="content" mod="inline" id="react-noodle">
+				<li class="calendar__event">
+					<time class="calendar__time">11:50</time>
+					<div class="content content--inline" id="react-noodle">
 						<h3>Готовим бизнес-лапшу на React и Redux</h3>
 						<p>Связка React и Redux стала практически стандартом. Да, все научились писать Counter. Приложения, которые показывают данные, тоже не вызывают вопросов. Однако когда речь заходит о сложных приложениях с массой форм и диалоговых окон, заправленных тонной бизнес-лапши, всё становится не так однозначно. Бизнес-логика одной конкретной фичи стремится занять всё доступное пространство и никак не хочет собираться в положенном месте. Как писать изолированные компоненты, делать композицию сложных компонентов и управлять сайд-эффектами? Думаете, что знаете ответ?</p>
-						<p><a href="#evgeny-tihonov" block="anchor">Евгений Тихонов</a></p>
+						<p><a class="anchor" href="#evgeny-tihonov">Евгений Тихонов</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">12:30</time> Перерыв
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">12:30</time> Перерыв
 				</li>
-				<li elem="event">
-					<time elem="time">12:40</time>
-					<div block="content" mod="inline" id="data-mri">
+				<li class="calendar__event">
+					<time class="calendar__time">12:40</time>
+					<div class="content content--inline" id="data-mri">
 						<h3>МРТ для данных</h3>
 						<p>Человеческий мозг устроен сложно. Если с ним что-то не так, то для диагностики используют магнитно-резонансный томограф. Большие одностраничные приложения тоже устроены сложно. Чтобы их починить или обвесить новой функциональностью, требуется вникнуть в их устройство. Для этого нередко приходится засучивать рукава и с головой погружаться в самую глубь проекта. И немалая часть проблем связана именно с бизнес-логикой и потоками данных. Но что, если у нас будет возможность проникнуть в структуру данных, способ увидеть связи между ними и отслеживать то, как они влияют друг на друга? Такой способ, чтобы не требовалось вскрытия черепной коробки — всё как с МРТ.</p>
-						<p><a href="#anastasia-goryacheva" block="anchor">Анастасия Горячева</a></p>
+						<p><a class="anchor" href="#anastasia-goryacheva">Анастасия Горячева</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">13:20</time>
-					<div block="content" mod="inline" id="changing-js">
+				<li class="calendar__event">
+					<time class="calendar__time">13:20</time>
+					<div class="content content--inline" id="changing-js">
 						<h3>Меняем JavaScript с помощью JavaScript</h3>
 						<p>Если распарсить код, то можно сделать с ним много полезных вещей. Поддерживать здоровье огромной вечнорастущей кодовой базы и постепенно переводить весь код на новые практики с помощью автоматических трансформаций. Распутать запутанную структуру старого кода и перевести его на новую систему модулей. Сгенерировать документацию. И всё это прямо во время доклада.</p>
-						<p><a href="#pavel-volokitin" block="anchor">Павел Волокитин</a></p>
+						<p><a class="anchor" href="#pavel-volokitin">Павел Волокитин</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">14:00</time> Обед
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">14:00</time> Обед
 				</li>
-				<li elem="event">
-					<time elem="time">15:00</time>
-					<div block="content" mod="inline" id="push-it">
+				<li class="calendar__event">
+					<time class="calendar__time">15:00</time>
+					<div class="content content--inline" id="push-it">
 						<h3>Жми сюда!</h3>
 						<p>Все наши интерфейсы бесполезны без интерактивных элементов. Кнопки, ссылки, псевдоссылки — да какая разница? Див с онкликом и поехали. Как правильно выбрать, сверстать и не наделать глупостей. Куда делась мышка и кому вообще нужна навигация с клавиатуры.</p>
-						<p><a href="#vadim-makeev" block="anchor">Вадим Макеев</a></p>
+						<p><a class="anchor" href="#vadim-makeev">Вадим Макеев</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">15:40</time>
-					<div block="content" mod="inline" id="content-transform">
+				<li class="calendar__event">
+					<time class="calendar__time">15:40</time>
+					<div class="content content--inline" id="content-transform">
 						<h3>Дружим с контентом пользователя</h3>
 						<p>WYSIWG-редакторы не дают настоящего представления о том, как оформленный текст будет выглядеть на сайте, и не всегда генерируют ожидаемую разметку. Такой контент, созданный пользователем, можно взять под контроль и подружить с вёрсткой, применив для него цепочку заранее приготовленных трансформаций. Как сделать <code>&lt;h3&gt;</code> из <code>&lt;p&gt;&lt;b&gt;&lt;span style="font-size:20px"&gt;</code>, параграфы из <code>&lt;br&gt;&lt;br&gt;</code>, а из одного тега <code>&lt;img&gt;</code> — <code>&lt;picture&gt;</code> с набором картинок для разных размеров экрана.</p>
-						<p><a href="#vladimir-kuznetsov" block="anchor">Владимир Кузнецов</a></p>
+						<p><a class="anchor" href="#vladimir-kuznetsov">Владимир Кузнецов</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">16:20</time> Перерыв
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">16:20</time> Перерыв
 				</li>
-				<li elem="event">
-					<time elem="time">16:30</time>
-					<div block="content" mod="inline" id="npm-guide">
+				<li class="calendar__event">
+					<time class="calendar__time">16:30</time>
+					<div class="content content--inline" id="npm-guide">
 						<h3>npm — найдётся подходящий модуль</h3>
 						<p>Универсальное хранилище самого разного добра: модули Node.js, CSS-фреймворки, WYSIWIG-редакторы и AST-преобразователи — всё это публикуется в npm. Как правильно и удобно пользоваться npm и как им пользуются в Яндексе.</p>
-						<p><a href="#vsevolod-strukchinsky" block="anchor">Всеволод Струкчинский</a></p>
+						<p><a class="anchor" href="#vsevolod-strukchinsky">Всеволод Струкчинский</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">17:10</time>
-					<div block="content" mod="inline" id="html-ios">
+				<li class="calendar__event">
+					<time class="calendar__time">17:10</time>
+					<div class="content content--inline" id="html-ios">
 						<h3>Жизнь HTML в 2ГИС под iOS</h3>
 						<p>Когда и для чего нативному приложению использовать веб-технологии. Что делается хорошо, а что нельзя ни в коем случае делать с веб-вью в приложении. Как в 2ГИС проходит разработка для мобильного приложения и чем она отличается от привычного процесса фронтенд-разработки. Как сделать HTML-страницу похожей на приложение, чтобы сохранить чувство «нативности».</p>
-						<p><a href="#roman-yanke" block="anchor">Роман Янке</a></p>
+						<p><a class="anchor" href="#roman-yanke">Роман Янке</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">17:50</time> Перерыв
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">17:50</time> Перерыв
 				</li>
-				<li elem="event">
-					<time elem="time">18:00</time>
-					<div block="content" mod="inline" id="beware-cached">
+				<li class="calendar__event">
+					<time class="calendar__time">18:00</time>
+					<div class="content content--inline" id="beware-cached">
 						<h3>Осторожно, закэшировано!</h3>
 						<p>Иногда нужно остановиться, отдышаться, оглянуться назад… и заняться оптимизацией производительности! Несколько простых рецептов с чего начать, как и где использовать кэширование. Инструменты для внедрения, советы, которые помогут <del>не выстрелить в ногу</del> использовать кэш максимально эффективно.</p>
-						<p><a href="#sergey-zhigalov" block="anchor">Сергей Жигалов</a></p>
+						<p><a class="anchor" href="#sergey-zhigalov">Сергей Жигалов</a></p>
 					</div>
 				</li>
-				<li elem="event">
-					<time elem="time">18:40</time>
-					<div block="content" mod="inline" id="production">
+				<li class="calendar__event">
+					<time class="calendar__time">18:40</time>
+					<div class="content content--inline" id="production">
 						<h3>Как отвечать за продакшен</h3>
 						<p>Вы — разработчик. Что у вас есть? В худшем случае, компьютер, на котором вы всё тестируете перед выкаткой. Проверяете во всех браузерах, запускаете автоматические тесты, возможно, нагрузочные. В хорошем случае — есть ферма машин или даже отдел тестирования. Стандартные практики по соблюдению качества продукта. Но это только малая часть. Логирование, мониторинг, алертинг, бета-пользователи, поддержка, плагины, антивирусы — что ещё можно сделать, чтобы улучшить техническое качество продукта.</p>
-						<p><a href="#andrew-sumin" block="anchor">Андрей Сумин</a></p>
+						<p><a class="anchor" href="#andrew-sumin">Андрей Сумин</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">19:20</time> Закрытие
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">19:20</time> Закрытие
 				</li>
 			</ol>
 		</section>
-		<section block="section" id="speakers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="speakers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Докладчики
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="pavel-volokitin">
-				<div elem="description" mix="block:content">
+			<div class="card" id="pavel-volokitin">
+				<div class="card__description content">
 					<h3>Павел Волокитин <a href="https://twitter.com/pavelvolok">@pavelvolok</a></h3>
 					<p>Разработчик библиотеки UI-компонентов на React в Контуре. Экспериментирует с Relay и GraphQL.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/pavel-volokitin.jpg" alt="Павел Волокитин">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/pavel-volokitin.jpg" alt="Павел Волокитин">
 				</div>
 			</div>
-			<div block="card" id="anastasia-goryacheva">
-				<div elem="description" mix="block:content">
+			<div class="card" id="anastasia-goryacheva">
+				<div class="card__description content">
 					<h3>Анастасия Горячева <a href="https://twitter.com/negoryacheva">@negoryacheva</a></h3>
 					<p>Разрабатывает большое одностраничное приложение для профессиональных пользователей Avito, участвует в разработке инструментов для фреймворка Basis.js.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/anastasia-goryacheva.jpg" alt="Анастасия Горячева">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/anastasia-goryacheva.jpg" alt="Анастасия Горячева">
 				</div>
 			</div>
-			<div block="card" id="sergey-zhigalov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="sergey-zhigalov">
+				<div class="card__description content">
 					<h3>Сергей Жигалов <a href="https://twitter.com/sergey_zhigalov‬">@sergey_zhigalov‬</a></h3>
 					<p>Занимается фронтенд-разработкой в Яндексе уже три года, путь в веб начал издалека: программировал роботов и выпускал электронно-цифровые подписи. Но любовь к JavaScript взяла своё и… завертелось.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/sergey-zhigalov.jpg" alt="Сергей Жигалов">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/sergey-zhigalov.jpg" alt="Сергей Жигалов">
 				</div>
 			</div>
-			<div block="card" id="vladimir-kuznetsov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="vladimir-kuznetsov">
+				<div class="card__description content">
 					<h3>Владимир Кузнецов <a href="https://twitter.com/mista_k">@mista_k</a></h3>
 					<p>Фронтенд-разработчик в Graph. Апологет компонентного подхода при разработке сайтов. Любит автоматизировать рабочие процессы. Ведёт технический блог «<a href="http://noteskeeper.ru">Хранитель заметок</a>».</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/vladimir-kuznetsov.jpg" alt="Владимир Кузнецов">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vladimir-kuznetsov.jpg" alt="Владимир Кузнецов">
 				</div>
 			</div>
-			<div block="card" id="vadim-makeev">
-				<div elem="description" mix="block:content">
+			<div class="card" id="vadim-makeev">
+				<div class="card__description content">
 					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
 					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
 				</div>
 			</div>
-			<div block="card" id="alexey-simonenko">
-				<div elem="description" mix="block:content">
+			<div class="card" id="alexey-simonenko">
+				<div class="card__description content">
 					<h3>Алексей Симоненко <a href="https://twitter.com/simonenko">@simonenko</a></h3>
 					<p>Веб-евангелист и сооснователь <a href="https://htmlacademy.ru">Академии HTML</a>. Обучает тысячи людей фронтенду и влияет на невинные умы новичков.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/alexey-simonenko.jpg" alt="Алексей Симоненко">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/alexey-simonenko.jpg" alt="Алексей Симоненко">
 				</div>
 			</div>
-			<div block="card" id="vsevolod-strukchinsky">
-				<div elem="description" mix="block:content">
+			<div class="card" id="vsevolod-strukchinsky">
+				<div class="card__description content">
 					<h3>Всеволод Струкчинский <a href="https://twitter.com/floatdrop">@floatdrop</a></h3>
 					<p>Разработчик интерфейсов в Яндексе, занимается разработкой на JavaScript фронтенд- и бэкенд-компонентов. Опубликовал больше 100 npm-модулей, скачанных 270 миллионов раз.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/vsevolod-strukchinsky.jpg" alt="Всеволод Струкчинский">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vsevolod-strukchinsky.jpg" alt="Всеволод Струкчинский">
 				</div>
 			</div>
-			<div block="card" id="andrew-sumin">
-				<div elem="description" mix="block:content">
+			<div class="card" id="andrew-sumin">
+				<div class="card__description content">
 					<h3>Андрей Сумин <a href="https://twitter.com/andrewsumin">@andrewsumin</a></h3>
 					<p>Заместитель технического директора почтовой службы <a href="https://mail.ru/">Mail.Ru</a>.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/andrew-sumin.jpg" alt="Андрей Сумин">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/andrew-sumin.jpg" alt="Андрей Сумин">
 				</div>
 			</div>
-			<div block="card" id="evgeny-tihonov">
-				<div elem="description" mix="block:content">
+			<div class="card" id="evgeny-tihonov">
+				<div class="card__description content">
 					<h3>Евгений Тихонов</h3>
 					<p>Фулстек-разработчик из команды Контур.Ритейл. Фанат SOLID, GoF и TDD.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/evgeny-tihonov.jpg" alt="Евгений Тихонов">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/evgeny-tihonov.jpg" alt="Евгений Тихонов">
 				</div>
 			</div>
-			<div block="card" id="roman-yanke">
-				<div elem="description" mix="block:content">
+			<div class="card" id="roman-yanke">
+				<div class="card__description content">
 					<h3>Роман Янке <a href="https://twitter.com/romanyanke">@romanyanke</a></h3>
 					<p>Занимается фронтендом более пяти лет, в последнее время сосредоточился на мобильных платформах. Делает интерфейсы мобильного приложения 2ГИС на iOS лучше нативного на стеке веб-технологий. Пишет <a href="http://notes.yanke.ru/">заметки про веб-интерфейсы</a>.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/roman-yanke.jpg" alt="Роман Янке">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/roman-yanke.jpg" alt="Роман Янке">
 				</div>
 			</div>
 		</section>
-		<section block="section" id="organisers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="organisers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Организаторы
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="opera">
-				<div elem="description" mix="block:content">
+			<div class="card" id="opera">
+				<div class="card__description content">
 					<h3>Opera</h3>
 					<p>Норвежская компания, известная своими браузерами: <a href="http://www.opera.com/computer">Opera для компьютеров</a>, <a href="http://www.opera.com/mobile/android">Opera для Android</a>, <a href="http://www.opera.com/mobile/mini">Opera Mini</a>. Участвует в разработке движков Chromium и Blink, подробнее о технологиях на <a href="https://dev.opera.com/">Dev.Opera</a>.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://opera.com/">
-						<img elem="picture" src="/partners/opera.svg" alt="Opera">
+						<img class="card__picture" src="/partners/opera.svg" alt="Opera">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="kontur">
-				<div elem="description" mix="block:content">
+			<div class="card" id="kontur">
+				<div class="card__description content">
 					<h3>СКБ Контур</h3>
 					<p>Екатеринбургская IT-компания, разрабатывающая программное обеспечение и веб-сервисы для успешного ведения бизнеса. Продукты компании востребованы по всей России. Наиболее известные из них — система для отправки отчетности через интернет <a href="http://kontur-extern.ru/">Контур-Экстерн</a>, электронный бухгалтер <a href="http://e-kontur.ru/">Эльба</a> и сервис обмена электронными юридически значимыми документами <a href="http://diadoc.ru/">Диадок</a>.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://skbkontur.ru/">
-						<img elem="picture" src="/partners/kontur.svg" alt="СКБ Контур">
+						<img class="card__picture" src="/partners/kontur.svg" alt="СКБ Контур">
 					</a>
 				</div>
 			</div>
-			<div block="card" id="frontendfellows">
-				<div elem="description" mix="block:content">
+			<div class="card" id="frontendfellows">
+				<div class="card__description content">
 					<h3>FrontendFellows</h3>
 					<p>Сообщество фронтенд-разработчиков, объединяющее разные регионы.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="https://twitter.com/frontendfellows">
-						<img elem="picture" src="/partners/frontendfellows.svg" alt="FrontendFellows">
+						<img class="card__picture" src="/partners/frontendfellows.svg" alt="FrontendFellows">
 					</a>
 				</div>
 			</div>
 		</section>
-		<section block="section" mod="open" id="venue">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="venue">
+			<div class="section__box">
+				<h2 class="section__title">
 					Площадка
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"
-				data-latitude="56.822755"
-				data-longitude="60.588155"
-				data-zoom="16">
+			<div class="map" id="map" data-latitude="56.822755" data-longitude="60.588155" data-zoom="16">
 			</div>
-			<div elem="box" mix="block:content">
+			<div class="section__box content">
 				<p>Екатеринбург, отель «<a href="http://www.mosgorka.ru/">Московская горка</a>» на Московской, 131.</p>
 			</div>
 		</section>

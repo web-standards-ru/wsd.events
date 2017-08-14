@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const beml = require('gulp-beml');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const sync = require('browser-sync').get('sync');
@@ -7,10 +6,6 @@ const sync = require('browser-sync').get('sync');
 gulp.task('html', () => {
 	// Building all HTML pages
 	return gulp.src('src/pages/**/*.html')
-		// Applying BEML preprocessor
-		.pipe(beml({
-			elemPrefix: '__',
-			modPrefix: '--' }))
 		// Compressing HTML
 		.pipe(htmlmin({
 			removeComments: true,

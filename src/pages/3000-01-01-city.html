@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html block="page" lang="ru">
+<html class="page" lang="ru">
 <head>
 	<title>WSD в CITY DD MONTH YEAR</title>
 	<meta charset="utf-8">
@@ -14,193 +14,190 @@
 	<script>(function(d){var f=function(){var h=d.getElementsByTagName('head')[0],l=d.createElement('link');l.rel='stylesheet';l.href='/styles/ubuntu.css';h.appendChild(l)},r=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(r){r(f)}else{window.addEventListener('load',f)}})(document)</script>
 	<noscript><link rel="stylesheet" href="/styles/ubuntu.css"></noscript>
 </head>
-<body elem="body">
-	<header block="header" id="header">
-		<a block="title" href="/">
-			<span elem="text">
+<body class="page__body">
+	<header class="header" id="header">
+		<a class="title" href="/">
+			<span class="title__text">
 				Web<br>
 				Standards<br>
 				Days
 			</span>
 		</a>
-		<nav block="section" mod="open" id="navigation">
-			<div elem="box">
-				<ul block="navigation">
-					<li><a elem="link" href="#proposal">Заявка на доклад</a></li>
-					<li><a elem="link" href="#register">Регистрация</a></li>
-					<li><a elem="link" href="#schedule">Программа</a></li>
-					<li><a elem="link" href="#speakers">Докладчики</a></li>
-					<li><a elem="link" href="#organisers">Организаторы</a></li>
-					<li><a elem="link" href="#venue">Площадка</a></li>
+		<nav class="section section--open" id="navigation">
+			<div class="section__box">
+				<ul class="navigation">
+					<li><a class="navigation__link" href="#proposal">Заявка на доклад</a></li>
+					<li><a class="navigation__link" href="#register">Регистрация</a></li>
+					<li><a class="navigation__link" href="#schedule">Программа</a></li>
+					<li><a class="navigation__link" href="#speakers">Докладчики</a></li>
+					<li><a class="navigation__link" href="#organisers">Организаторы</a></li>
+					<li><a class="navigation__link" href="#venue">Площадка</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div block="social">
-			<a elem="link" mod="twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span elem="text">Твиттер</span></a>
-			<a elem="link" mod="vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span elem="text">ВКонтакте</span></a>
-			<a elem="link" mod="github" href="https://github.com/web-standards-ru" title="Гитхаб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span elem="text">Фейсбук</span></a>
-			<a elem="link" mod="youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span elem="text">Ютуб</span></a>
-			<a elem="link" mod="slack" href="http://slack.web-standards.ru" title="Слак"><span elem="text">Слак</span></a>
-			<a elem="link" mod="telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span elem="text">Телеграм</span></a>
+		<div class="social">
+			<a class="social__link social__link--twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span class="social__text">Твиттер</span></a>
+			<a class="social__link social__link--vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span class="social__text">ВКонтакте</span></a>
+			<a class="social__link social__link--github" href="https://github.com/web-standards-ru" title="Гитхаб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span class="social__text">Фейсбук</span></a>
+			<a class="social__link social__link--youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span class="social__text">Ютуб</span></a>
+			<a class="social__link social__link--slack" href="http://slack.web-standards.ru" title="Слак"><span class="social__text">Слак</span></a>
+			<a class="social__link social__link--telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span class="social__text">Телеграм</span></a>
 		</div>
 	</header>
-	<main block="main" id="main">
-		<div block="section" id="intro">
-			<div elem="box" mix="block:content">
-				<h1 elem="title">CITY, DD MONTH YEAR</h1>
+	<main class="main" id="main">
+		<div class="section" id="intro">
+			<div class="section__box content">
+				<h1 class="section__title">CITY, DD MONTH YEAR</h1>
 				<p>Конференция пройдёт в VENUE на STREET. Есть вопросы? Пишите: <a href="mailto:wst@web-standards.ru">wst@web-standards.ru</a>.</p>
 				<p>Нравится конференция?</p>
-				<form block="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+				<form class="support" method="post" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
 					<input type="hidden" name="receiver" value="41001119329753">
 					<input type="hidden" name="formcomment" value="Сообщество «Веб-стандарты»">
 					<input type="hidden" name="short-dest" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="targets" value="Поддержка «Веб-стандартов»">
 					<input type="hidden" name="quickpay-form" value="donate">
 					<input type="hidden" name="paymentType" value="AC">
-					<input elem="amount" name="sum" value="500" size="4" required type="text">
-					<button elem="button" mix="block:button">Поддержать</button>
+					<input class="support__amount" name="sum" value="500" size="4" required type="text">
+					<button class="support__button button">Поддержать</button>
 				</form>
 			</div>
 		</div>
-		<section block="section" mod="open" id="proposal">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="proposal">
+			<div class="section__box">
+				<h2 class="section__title">
 					Заявка на доклад
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<form block="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
-				<div elem="box">
-					<input elem="field" mod="line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="TODO">
-					<label elem="label" for="proposal-name">Как вас зовут</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="proposal-email" name="TODO">
-					<label elem="label" for="proposal-email">Эл. почта</label>
-					<textarea elem="field" mod="text" rows="7" required id="proposal-description" name="TODO"></textarea>
-					<label elem="label" for="proposal-description">Название, описание или идея доклада</label>
+			<form class="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
+				<div class="badge__box">
+					<input class="badge__field badge__field--line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="TODO">
+					<label class="badge__label" for="proposal-name">Как вас зовут</label>
+					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="proposal-email" name="TODO">
+					<label class="badge__label" for="proposal-email">Эл. почта</label>
+					<textarea class="badge__field badge__field--text" rows="7" required id="proposal-description" name="TODO"></textarea>
+					<label class="badge__label" for="proposal-description">Название, описание или идея доклада</label>
 				</div>
-				<button type="submit" block="button" mod="full">Подать</button>
+				<button class="button button--full" type="submit">Подать</button>
 			</form>
 		</section>
-		<section block="section" mod="open" id="register">
-			<div elem="box" mod="hidden">
-				<h2 elem="title">
+		<section class="section section--open" id="register">
+			<div class="section__box section__box--hidden">
+				<h2 class="section__title">
 					Регистрация
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<form block="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
-				<div elem="box" mod="hole">
-					<input elem="field" mod="line" placeholder="Имя" type="text" required id="first-name" name="TODO">
-					<label elem="label" for="first-name">Имя</label>
-					<input elem="field" mod="line" placeholder="Фамилия" type="text" required id="second-name" name="TODO">
-					<label elem="label" for="second-name">Фамилия</label>
-					<input elem="field" mod="line" placeholder="email@example.com" type="email" required id="email" name="TODO">
-					<label elem="label" for="email">Эл. почта</label>
-					<input elem="field" mod="line" placeholder="nick_name" type="text" id="twitter" name="TODO">
-					<label elem="label" for="twitter">Ник в Твиттере, если есть</label>
-					<textarea elem="field" mod="text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about" name="TODO"></textarea>
-					<label elem="label" for="about">Пара слов о вас и ваших интересах</label>
+			<form class="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
+				<div class="badge__box badge__box--hole">
+					<input class="badge__field badge__field--line" placeholder="Имя" type="text" required id="first-name" name="TODO">
+					<label class="badge__label" for="first-name">Имя</label>
+					<input class="badge__field badge__field--line" placeholder="Фамилия" type="text" required id="second-name" name="TODO">
+					<label class="badge__label" for="second-name">Фамилия</label>
+					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="email" name="TODO">
+					<label class="badge__label" for="email">Эл. почта</label>
+					<input class="badge__field badge__field--line" placeholder="nick_name" type="text" id="twitter" name="TODO">
+					<label class="badge__label" for="twitter">Ник в Твиттере, если есть</label>
+					<textarea class="badge__field badge__field--text" placeholder="Работаю, учусь, интересуюсь" rows="7" id="about" name="TODO"></textarea>
+					<label class="badge__label" for="about">Пара слов о вас и ваших интересах</label>
 				</div>
-				<button block="button" mod="full">Зарегистрироваться</button>
+				<button class="button button--full">Зарегистрироваться</button>
 			</form>
 		</section>
-		<section block="section" mod="open" id="schedule">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="schedule">
+			<div class="section__box">
+				<h2 class="section__title">
 					Программа
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<ol block="calendar">
-				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Открытие
+			<ol class="calendar">
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">00:00</time> Открытие
 				</li>
-				<li elem="event">
-					<time elem="time">00:00</time>
-					<div block="content" mod="inline" id="ID">
+				<li class="calendar__event">
+					<time class="calendar__time">00:00</time>
+					<div class="content content--inline" id="ID">
 						<h3>TITLE</h3>
 						<p>DESC</p>
-						<p><a href="#SLUG" block="anchor">NAME</a></p>
+						<p><a class="anchor" href="#SLUG">NAME</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Перерыв
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">00:00</time> Перерыв
 				</li>
-				<li elem="event">
-					<time elem="time">00:00</time>
-					<div block="content" mod="inline" id="ID">
+				<li class="calendar__event">
+					<time class="calendar__time">00:00</time>
+					<div class="content content--inline" id="ID">
 						<h3>TITLE</h3>
 						<p>DESC</p>
-						<p><a href="#SLUG" block="anchor">NAME</a></p>
+						<p><a class="anchor" href="#SLUG">NAME</a></p>
 					</div>
 				</li>
-				<li elem="event" mod="break">
-					<time elem="time">00:00</time> Закрытие
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">00:00</time> Закрытие
 				</li>
 			</ol>
 		</section>
-		<section block="section" id="speakers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="speakers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Докладчики
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="vadim-makeev">
-				<div elem="description" mix="block:content">
+			<div class="card" id="vadim-makeev">
+				<div class="card__description content">
 					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
 					<p>Веб-евангелист в <a href="http://opera.com/">Opera</a>, основатель сообщества «Веб-стандарты», автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, автор блога <a href="http://pepelsbey.net/">Пепелсбей.net</a>, пропагандист веб-стандартов.</p>
 				</div>
-				<div elem="column">
-					<img elem="picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vadim-makeev.jpg" alt="Вадим Макеев">
 				</div>
 			</div>
 		</section>
-		<section block="section" id="organisers">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section" id="organisers">
+			<div class="section__box">
+				<h2 class="section__title">
 					Организаторы
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="card" id="opera">
-				<div elem="description" mix="block:content">
+			<div class="card" id="opera">
+				<div class="card__description content">
 					<h3>Opera</h3>
 					<p>Норвежская компания, известная своими браузерами: <a href="http://www.opera.com/computer">Opera для компьютеров</a>, <a href="http://www.opera.com/mobile/android">Opera для Android</a>, <a href="http://www.opera.com/mobile/mini">Opera Mini</a>. Участвует в разработке движков Chromium и Blink, подробнее о технологиях на <a href="https://dev.opera.com/">Dev.Opera</a>.</p>
 				</div>
-				<div elem="column" mod="logo">
+				<div class="card__column card__column--logo">
 					<a href="http://opera.com/">
-						<img elem="picture" src="/partners/opera.svg" alt="Opera">
+						<img class="card__picture" src="/partners/opera.svg" alt="Opera">
 					</a>
 				</div>
 			</div>
 		</section>
-		<section block="section" mod="open" id="venue">
-			<div elem="box">
-				<h2 elem="title">
+		<section class="section section--open" id="venue">
+			<div class="section__box">
+				<h2 class="section__title">
 					Площадка
-					<a block="up" href="#navigation" title="Наверх">
-						<span elem="text">Наверх</span>
+					<a class="up" href="#navigation" title="Наверх">
+						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
 			</div>
-			<div block="map" id="map"
-				data-latitude="59.931590"
-				data-longitude="30.299400"
-				data-zoom="16">
+			<div class="map" id="map" data-latitude="59.931590" data-longitude="30.299400" data-zoom="16">
 			</div>
-			<div elem="box" mix="block:content">
+			<div class="section__box content">
 				<p>CITY, VENUE на STREET.</p>
 			</div>
 		</section>
