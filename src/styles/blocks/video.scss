@@ -9,6 +9,14 @@
 	&__wrapper {
 		position: relative;
 		background: black;
+		height: 360px;
+		}
+
+	// Iframe
+
+	&__iframe {
+		height: 100%;
+		width: 100%;
 		}
 
 	// Media
