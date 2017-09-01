@@ -57,3 +57,37 @@ function map() {
 		}));
 	});
 }
+
+// Iframe lazy loading
+
+(function(document){
+
+	addIframeLazyLoading();
+
+	function addIframeLazyLoading() {
+		var videoElements = document.querySelectorAll('.video');
+
+		for (var i = 0; i < videoElements.length; i++) {
+			var playButton = videoElements[i].querySelector('.video__icon');
+			var videoWrapper = videoElements[i].querySelector('.video__wrapper');
+			var iframeSrc = 'https://www.youtube.com/embed/' + videoElements[i].dataset.videoSrc +
+			'?rel=0&showinfo=0&autoplay=1';
+
+			addEventListener(playButton, videoWrapper, iframeSrc);
+		}
+	}
+
+	function addEventListener(playButton, videoWrapper, iframeSrc) {
+		playButton.addEventListener('click', function() {
+			var iframe = document.createElement('iframe') ;
+
+			iframe.setAttribute('frameborder', '0');
+			iframe.setAttribute('allowfullscreen', '');
+			iframe.setAttribute('src',  iframeSrc);
+			iframe.classList.add('video__iframe');
+
+			videoWrapper.innerHTML = '';
+			videoWrapper.appendChild(iframe);
+		});
+	}
+})(document);
