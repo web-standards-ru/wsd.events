@@ -4,12 +4,12 @@
     "node": ">=4.1"
   },
   "scripts": {
-    "pretest": "gulp build:prod",
-    "test": "ls dest",
-    "server": "gulp",
+    "start": "gulp",
     "build:dev": "gulp build:dev",
     "build:prod": "gulp build:prod",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "test": "ls dest",
+    "pretest": "gulp build:prod"
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",
