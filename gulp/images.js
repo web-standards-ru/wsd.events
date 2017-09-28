@@ -36,8 +36,8 @@ gulp.task('images:replace', () => {
 			'<img class="speakers__picture" src="/speakers/128/$1" alt="$2">'
 		))
 		.pipe(replace(
-			/<img class="card__picture" src="\/speakers\/([a-z-.]+)" alt="([^".*]+)">/g
+			/<img class="card__picture" src="\/speakers\/([a-z-.]+)" alt="([^".*]+)">/g,
 			'<img class="card__picture" src="/speakers/192/$1" srcset="/speakers/256/$1 2x" alt="$2">'
 		))
-		.pipe(gulp.dest('dest'))
+		.pipe(gulp.dest('dest'));
 });
