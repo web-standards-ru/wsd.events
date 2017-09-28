@@ -1,8 +1,9 @@
-const gulp = require('gulp');
-const rev = require('gulp-rev');
-const replace = require('gulp-rev-replace');
-const paths = require('vinyl-paths');
 const del = require('del');
+const gulp = require('gulp');
+const paths = require('vinyl-paths');
+const replace = require('gulp-rev-replace');
+const rev = require('gulp-rev');
+const sequence = require('run-sequence').use(gulp);
 
 gulp.task('cache:hash', () => {
 	return gulp.src([
@@ -24,4 +25,8 @@ gulp.task('cache:replace', () => {
 			manifest: gulp.src('dest/rev-manifest.json').pipe(paths(del))
 		}))
 		.pipe(gulp.dest('dest'));
+});
+
+gulp.task('cache', (callback) => {
+	sequence('cache:hash', 'cache:replace', callback);
 });

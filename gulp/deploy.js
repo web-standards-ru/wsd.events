@@ -1,9 +1,6 @@
 const gulp = require('gulp');
 const rsync = require('gulp-rsync');
 
-// Deploying all files
-// from dest folder to server
-
 gulp.task('deploy', () => {
 	return gulp.src('dest/**')
 		.pipe(rsync({
