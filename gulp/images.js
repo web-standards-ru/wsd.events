@@ -3,7 +3,7 @@ const resize = require('gulp-responsive');
 const replace = require('gulp-replace');
 
 gulp.task('images:resize', () => {
-	return gulp.src('src/speakers/*.jpg')
+	return gulp.src('src/assets/speakers/*.jpg')
 		.pipe(resize({
 			'*': [{
 				width: 256, rename: { dirname: '256' }
