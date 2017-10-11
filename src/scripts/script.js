@@ -126,7 +126,7 @@ function googleMap() {
 	}
 
 	function preloadVideo(videoElement) {
-		var playButton = videoElement.querySelector('.video__icon');
+		var playButton = videoElement.querySelector('.video__button');
 		var cover = videoElement.querySelector('.video__media');
 		var videoId = parseCoverURL(cover);
 		var videoWrapper = videoElement.querySelector('.video__wrapper');
