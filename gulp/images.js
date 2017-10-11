@@ -23,11 +23,11 @@ gulp.task('images:resize', () => {
 gulp.task('images:replace', () => {
 	return gulp.src('dest/**/*.html')
 		.pipe(replace(
-			/<img class="speakers__picture" (src|data-src)="\/assets\/speakers\/([^"]+)" alt="([^"]+)">/g,
+			/<img class="speakers__picture" (src|data-src)="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="speakers__picture" $1="/speakers/128/$2" alt="$3">'
 		))
 		.pipe(replace(
-			/<img class="card__picture" src="\/assets\/speakers\/([^"]+)" alt="([^"]+)">/g,
+			/<img class="card__picture" src="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="card__picture" src="/speakers/192/$1" srcset="/speakers/256/$1 2x" alt="$2">'
 		))
 		.pipe(gulp.dest('dest'));
