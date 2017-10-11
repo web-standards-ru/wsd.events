@@ -61,33 +61,50 @@ function map() {
 // Iframe lazy loading
 
 (function(document){
+	setupVideoPreload();
 
-	addIframeLazyLoading();
-
-	function addIframeLazyLoading() {
+	function setupVideoPreload() {
 		var videoElements = document.querySelectorAll('.video');
 
-		for (var i = 0; i < videoElements.length; i++) {
-			var playButton = videoElements[i].querySelector('.video__icon');
-			var videoWrapper = videoElements[i].querySelector('.video__wrapper');
-			var iframeSrc = 'https://www.youtube.com/embed/' + videoElements[i].dataset.videoSrc +
-			'?rel=0&showinfo=0&autoplay=1';
-
-			addEventListener(playButton, videoWrapper, iframeSrc);
-		}
+		videoElements.forEach(preloadVideo);
 	}
 
-	function addEventListener(playButton, videoWrapper, iframeSrc) {
-		playButton.addEventListener('click', function() {
-			var iframe = document.createElement('iframe') ;
+	function preloadVideo(videoElement) {
+		var playButton = videoElement.querySelector('.video__icon');
+		var cover = videoElement.querySelector('.video__media');
+		var videoId = parseCoverURL(cover);
+		var videoWrapper = videoElement.querySelector('.video__wrapper');
 
-			iframe.setAttribute('frameborder', '0');
-			iframe.setAttribute('allowfullscreen', '');
-			iframe.setAttribute('src',  iframeSrc);
-			iframe.classList.add('video__iframe');
+		playButton.addEventListener('click', function() {
+			var iframe = makeIframe(videoId);
 
 			videoWrapper.innerHTML = '';
 			videoWrapper.appendChild(iframe);
 		});
+	}
+
+	function parseCoverURL(coverElement) {
+		var urlRegExp = /https:\/\/img\.youtube\.com\/vi\/([a-z0-9_]+)\/mqdefault\.jpg/i;
+		var url = coverElement.src;
+		var match = url.match(re);
+
+		return match[1];
+	}
+
+	function makeIframe(videoId) {
+		var iframe = document.createElement('iframe');
+
+		iframe.setAttribute('frameborder', '0');
+		iframe.setAttribute('allowfullscreen', '');
+		iframe.setAttribute('src',  generateIframeUrl(videoId));
+		iframe.classList.add('video__iframe');
+
+		return iframe;
+	}
+
+	function generateIframeUrl(videoId) {
+		var query = '?rel=0&showinfo=0&autoplay=1';
+
+		return 'https://www.youtube.com/embed/' + videoId + query;
 	}
 })(document);
