@@ -142,7 +142,7 @@ function googleMap() {
 	function parseCoverURL(coverElement) {
 		var urlRegExp = /https:\/\/img\.youtube\.com\/vi\/([a-z0-9_]+)\/mqdefault\.jpg/i;
 		var url = coverElement.src;
-		var match = url.match(re);
+		var match = url.match(urlRegExp);
 
 		return match[1];
 	}
