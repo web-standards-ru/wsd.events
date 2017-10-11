@@ -113,3 +113,54 @@ function googleMap() {
 
 	data.map.classList.add('map--google');
 }
+
+// Iframe lazy loading
+
+(function(document){
+	setupVideoPreload();
+
+	function setupVideoPreload() {
+		var videoElements = document.querySelectorAll('.video');
+
+		videoElements.forEach(preloadVideo);
+	}
+
+	function preloadVideo(videoElement) {
+		var playButton = videoElement.querySelector('.video__icon');
+		var cover = videoElement.querySelector('.video__media');
+		var videoId = parseCoverURL(cover);
+		var videoWrapper = videoElement.querySelector('.video__wrapper');
+
+		playButton.addEventListener('click', function() {
+			var iframe = makeIframe(videoId);
+
+			videoWrapper.innerHTML = '';
+			videoWrapper.appendChild(iframe);
+		});
+	}
+
+	function parseCoverURL(coverElement) {
+		var urlRegExp = /https:\/\/img\.youtube\.com\/vi\/([a-z0-9_]+)\/mqdefault\.jpg/i;
+		var url = coverElement.src;
+		var match = url.match(re);
+
+		return match[1];
+	}
+
+	function makeIframe(videoId) {
+		var iframe = document.createElement('iframe');
+
+		iframe.setAttribute('frameborder', '0');
+		iframe.setAttribute('allowfullscreen', '');
+		iframe.setAttribute('src',  generateIframeUrl(videoId));
+		iframe.classList.add('video__iframe');
+
+		return iframe;
+	}
+
+	function generateIframeUrl(videoId) {
+		var query = '?rel=0&showinfo=0&autoplay=1';
+
+		return 'https://www.youtube.com/embed/' + videoId + query;
+	}
+})(document);
