@@ -6,18 +6,21 @@
 
 	if (more) {
 		more.addEventListener('click', function() {
-		    var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden'),
-			    group = 20;
+		    var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden');
+			var group = 20;
 
 		    if (speakers.length) {
 		        for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
-		            var speaker = speakers[i],
-		            	picture = speaker.querySelector('.speakers__picture'),
-		            	data = picture.dataset.src;
+		            var speaker = speakers[i];
+		            var picture = speaker.querySelector('.speakers__picture');
 
-		            if (data) {
-		                picture.src = data;
-		            }
+					if (picture.dataset.src) {
+						picture.src =  picture.dataset.src;
+					}
+
+					if (picture.dataset.srcset) {
+						picture.srcset =  picture.dataset.srcset;
+					}
 
 		            speaker.classList.remove('speakers__speaker--hidden');
 		        }
