@@ -125,7 +125,9 @@ function googleMap() {
 	function setupVideoPreload() {
 		var videoElements = document.querySelectorAll('.video');
 
-		videoElements.forEach(preloadVideo);
+		for (var i = 0; i < videoElements.length; i++) {
+				preloadVideo(videoElements[i]);
+		}
 	}
 
 	function preloadVideo(videoElement) {
