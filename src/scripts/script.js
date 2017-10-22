@@ -158,7 +158,7 @@ function googleMap() {
 		iframe.setAttribute('frameborder', '0');
 		iframe.setAttribute('allowfullscreen', '');
 		iframe.setAttribute('src',  generateIframeUrl(videoId));
-		iframe.classList.add('video__iframe');
+		iframe.classList.add('video__media');
 
 		return iframe;
 	}
