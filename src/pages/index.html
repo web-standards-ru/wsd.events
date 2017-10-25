@@ -32,13 +32,18 @@
 			</div>
 		</nav>
 		<div class="social">
-			<a class="social__link social__link--twitter" href="https://twitter.com/webstandards_ru" title="Твиттер"><span class="social__text">Твиттер</span></a>
-			<a class="social__link social__link--vkontakte" href="https://vk.com/webstandards_ru" title="ВКонтакте"><span class="social__text">ВКонтакте</span></a>
-			<a class="social__link social__link--github" href="https://github.com/web-standards-ru" title="Гитхаб"><span class="social__text">Ютуб</span></a>
-			<a class="social__link social__link--facebook" href="https://fb.com/webstandardsru" title="Фейсбук"><span class="social__text">Фейсбук</span></a>
-			<a class="social__link social__link--youtube" href="https://www.youtube.com/user/wstdays" title="Ютуб"><span class="social__text">Ютуб</span></a>
-			<a class="social__link social__link--slack" href="http://slack.web-standards.ru" title="Слак"><span class="social__text">Слак</span></a>
-			<a class="social__link social__link--telegram" href="https://telegram.me/webstandards_ru" title="Телеграм"><span class="social__text">Телеграм</span></a>
+			{% set socialItems = [
+				{url: 'https://twitter.com/webstandards_ru',  text: 'Твиттер',   mod: 'twitter'},
+				{url: 'https://vk.com/webstandards_ru',       text: 'ВКонтакте', mod: 'vkontakte'},
+				{url: 'https://github.com/web-standards-ru',  text: 'Гитхаб',    mod: 'github'},
+				{url: 'https://fb.com/webstandardsru',        text: 'Фейсбук',   mod: 'facebook'},
+				{url: 'https://www.youtube.com/user/wstdays', text: 'Ютуб',      mod: 'youtube'},
+				{url: 'http://slack.web-standards.ru',        text: 'Слак',      mod: 'slack'},
+				{url: 'https://telegram.me/webstandards_ru',  text: 'Телеграм',  mod: 'telegram'}
+			] %}
+			{% for item in socialItems %}
+				<a class="social__link social__link--{{ item.mod }}" href="{{ item.url }}" title="{{ item.text }}"><span class="social__text">{{ item.text }}</span></a>
+			{% endfor %}
 		</div>
 	</header>
 	<main class="main" id="main">
