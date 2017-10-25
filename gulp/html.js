@@ -2,9 +2,11 @@ const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const rename = require('gulp-rename');
 const sync = require('browser-sync').get('sync');
+const twig = require('gulp-twig');
 
 gulp.task('html', () => {
 	return gulp.src('src/pages/**/*.html')
+		.pipe(twig())
 		.pipe(htmlmin({
 			removeComments: true,
 			collapseWhitespace: true
