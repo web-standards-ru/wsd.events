@@ -17,7 +17,7 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-csso": "^3.0.0",
-    "gulp-htmlmin": "^3.0.0",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
@@ -30,7 +30,7 @@
     "postcss-inline-svg": "^3.0.0",
     "require-dir": "^0.3.1",
     "run-sequence": "^2.1.0",
-    "sass-mq": "^3.3.1",
+    "sass-mq": "^4.0.2",
     "vinyl-paths": "^2.1.0"
   }
 }
