@@ -1,6 +1,5 @@
+// More speakers
 (function(document){
-
-	// More
 
 	var more = document.getElementById('more');
 
@@ -168,4 +167,56 @@ function googleMap() {
 
 		return 'https://www.youtube.com/embed/' + videoId + query;
 	}
+})(document);
+
+
+
+// Toggle events
+(function(document){
+
+	var container = document.querySelector('#calendar');
+    var events = container.querySelectorAll('.calendar__item');
+    var button = container.querySelector('#toggle-events');
+    var limit = 3; // При изменении поменять классы в html
+    var isOpen = false;
+
+    if(events.length <= limit) {
+        button.style.display = 'block';
+	} else {
+        button.innerText = 'Показать все';
+        hideElements(events);
+
+        button.addEventListener('click', function() {
+		if(isOpen){
+                hideElements(events);
+                location.hash = "#calendar";
+                isOpen = false;
+                button.innerText = "Показать все";
+			} else {
+                showElements(events);
+                removeHash();
+                isOpen = true;
+                button.innerText = "Меньше событий";
+			}
+        });
+	}
+
+    function hideElements(elements) {
+        elements.forEach(function (element, i) {
+            if(i >= limit){
+                element.classList.add('calendar__item--hidden');
+            }
+        });
+    }
+
+    function showElements(elements) {
+        elements.forEach(function (element, i) {
+                element.classList.remove('calendar__item--hidden');
+        });
+    }
+
+    function removeHash () {
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
 })(document);

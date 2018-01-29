@@ -8,6 +8,14 @@
 
 	// Year
 
+	&__item--hidden{
+		display: none;
+	}
+
+	&__btn{
+		display: none;
+	}
+
 	&__year {
 
 		position: absolute;
