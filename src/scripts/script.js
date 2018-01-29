@@ -174,10 +174,12 @@ function googleMap() {
 // Toggle events
 (function(document){
 
-	var container = document.querySelector('#calendar');
-    var events = container.querySelectorAll('.calendar__item');
-    var button = container.querySelector('#toggle-events');
-    var limit = 3; // При изменении поменять классы в html
+	var calendar = document.querySelector('.calendar');
+    var events = calendar.querySelectorAll('.calendar__item');
+    var events_disabled = calendar.querySelectorAll('.calendar__item--hidden');
+
+    var button = document.querySelector('#toggle-events');
+    var limit = events.length - events_disabled.length;
     var isOpen = false;
 
     if(events.length <= limit) {
@@ -212,6 +214,9 @@ function googleMap() {
     function showElements(elements) {
         elements.forEach(function (element, i) {
                 element.classList.remove('calendar__item--hidden');
+				if(i === limit){
+					element.querySelector('a').focus();
+				}
         });
     }
 
