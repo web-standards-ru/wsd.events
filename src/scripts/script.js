@@ -185,7 +185,7 @@ function googleMap() {
     if(events.length <= limit) {
         button.style.display = 'block';
 	} else {
-        button.innerText = 'Показать все';
+        button.innerText = 'Показать больше событий';
         hideElements(events);
 
         button.addEventListener('click', function() {
@@ -193,12 +193,12 @@ function googleMap() {
                 hideElements(events);
                 location.hash = "#calendar";
                 isOpen = false;
-                button.innerText = "Показать все";
+                button.innerText = "Показать больше событий";
 			} else {
                 showElements(events);
                 removeHash();
                 isOpen = true;
-                button.innerText = "Меньше событий";
+                button.innerText = "Скрыть часть событий";
 			}
         });
 	}
