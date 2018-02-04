@@ -5,13 +5,13 @@
 
 	if (more) {
 		more.addEventListener('click', function() {
-		    var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden');
+			var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden');
 			var group = 20;
 
-		    if (speakers.length) {
-		        for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
-		            var speaker = speakers[i];
-		            var picture = speaker.querySelector('.speakers__picture');
+			if (speakers.length) {
+				for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
+					var speaker = speakers[i];
+					var picture = speaker.querySelector('.speakers__picture');
 
 					if (picture.dataset.src) {
 						picture.src =  picture.dataset.src;
@@ -21,13 +21,13 @@
 						picture.srcset =  picture.dataset.srcset;
 					}
 
-		            speaker.classList.remove('speakers__speaker--hidden');
-		        }
+					speaker.classList.remove('speakers__speaker--hidden');
+				}
 
-		        if (speakers.length <= group) {
-		            more.parentNode.removeChild(more);
-		        }
-		    }
+				if (speakers.length <= group) {
+					more.parentNode.removeChild(more);
+				}
+			}
 		});
 
 	}
@@ -175,53 +175,57 @@ function googleMap() {
 (function(document){
 
 	var calendar = document.querySelector('.calendar');
-    var events = calendar.querySelectorAll('.calendar__item');
-    var events_disabled = calendar.querySelectorAll('.calendar__item--hidden');
 
-    var button = document.querySelector('#toggle-events');
-    var limit = events.length - events_disabled.length;
-    var isOpen = false;
+	if(calendar){
+		var events = calendar.querySelectorAll('.calendar__item');
+		var eventsDisabled = calendar.querySelectorAll('.calendar__item--hidden');
 
-    if(events.length <= limit) {
-        button.style.display = 'block';
-	} else {
-        button.innerText = 'Показать больше событий';
-        hideElements(events);
+		var button = document.querySelector('#toggle-events');
+		var limit = events.length - eventsDisabled.length;
+		var isOpen = false;
 
-        button.addEventListener('click', function() {
-		if(isOpen){
-                hideElements(events);
-                location.hash = "#calendar";
-                isOpen = false;
-                button.innerText = "Показать больше событий";
-			} else {
-                showElements(events);
-                removeHash();
-                isOpen = true;
-                button.innerText = "Скрыть часть событий";
-			}
-        });
+		if(events.length <= limit) {
+			button.style.display = 'block';
+		} else {
+			button.innerText = 'Показать больше событий';
+			hideElements(events);
+
+			button.addEventListener('click', function() {
+				if(isOpen){
+					hideElements(events);
+					location.hash = '#calendar';
+					isOpen = false;
+					button.innerText = 'Показать больше событий';
+				} else {
+					showElements(events);
+					removeHash();
+					isOpen = true;
+					button.innerText = 'Скрыть часть событий';
+				}
+			});
+		}
 	}
 
-    function hideElements(elements) {
-        elements.forEach(function (element, i) {
-            if(i >= limit){
-                element.classList.add('calendar__item--hidden');
-            }
-        });
-    }
 
-    function showElements(elements) {
-        elements.forEach(function (element, i) {
-                element.classList.remove('calendar__item--hidden');
-				if(i === limit){
-					element.querySelector('a').focus();
-				}
-        });
-    }
+	function hideElements(elements) {
+		elements.forEach(function (element, i) {
+			if(i >= limit){
+				element.classList.add('calendar__item--hidden');
+			}
+		});
+	}
 
-    function removeHash () {
-        history.pushState("", document.title, window.location.pathname + window.location.search);
-    }
+	function showElements(elements) {
+		elements.forEach(function (element, i) {
+			element.classList.remove('calendar__item--hidden');
+			if(i === limit){
+				element.querySelector('a').focus();
+			}
+		});
+	}
+
+	function removeHash () {
+		history.pushState('', document.title, window.location.pathname + window.location.search);
+	}
 
 })(document);
