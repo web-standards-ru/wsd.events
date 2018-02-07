@@ -1,4 +1,5 @@
-// More speakers
+// Expand Speakers
+
 (function(document){
 
 	var more = document.getElementById('more');
@@ -118,7 +119,7 @@ function googleMap() {
 
 // Iframe lazy loading
 
-(function(document){
+(function(document) {
 	setupVideoPreload();
 
 	function setupVideoPreload() {
@@ -169,63 +170,106 @@ function googleMap() {
 	}
 })(document);
 
+// Calendar Expander
 
-
-// Toggle events
-(function(document){
+(function(document) {
 
 	var calendar = document.querySelector('.calendar');
+	var button = document.querySelector('.calendar__button');
+	var years = document.querySelectorAll('.calendar__item');
+	var limit = 3;
+	var open = false;
 
-	if(calendar){
-		var events = calendar.querySelectorAll('.calendar__item');
-		var eventsDisabled = calendar.querySelectorAll('.calendar__item--hidden');
+	if (calendar) {
+		for (var i = 0; i < years.length; i++) {
+			if (i >= limit) {
+				years[i].classList.add('calendar__item--hidden');
+			}
+		}
 
-		var button = document.querySelector('#toggle-events');
-		var limit = events.length - eventsDisabled.length;
-		var isOpen = false;
+		button.classList.add('calendar__button--active');
+		button.dataset.more = button.innerText;
 
-		if(events.length <= limit) {
-			button.style.display = 'block';
-		} else {
-			button.innerText = 'Показать больше событий';
-			hideElements(events);
+		button.addEventListener('click', function() {
+			if (open) {
+				this.innerText = button.dataset.more;
+				toggleYears();
+				open = false;
+			} else {
+				this.innerText = button.dataset.less;
+				toggleYears();
+				open = true;
+			}
+		});
 
-			button.addEventListener('click', function() {
-				if(isOpen){
-					hideElements(events);
-					location.hash = '#calendar';
-					isOpen = false;
-					button.innerText = 'Показать больше событий';
-				} else {
-					showElements(events);
-					removeHash();
-					isOpen = true;
-					button.innerText = 'Скрыть часть событий';
+		function toggleYears(open) {
+			for (var i = 0; i < years.length; i++) {
+				if (i >= limit) {
+					years[i].classList.toggle('calendar__item--hidden');
 				}
-			});
+			}
 		}
 	}
 
-
-	function hideElements(elements) {
-		elements.forEach(function (element, i) {
-			if(i >= limit){
-				element.classList.add('calendar__item--hidden');
-			}
-		});
-	}
-
-	function showElements(elements) {
-		elements.forEach(function (element, i) {
-			element.classList.remove('calendar__item--hidden');
-			if(i === limit){
-				element.querySelector('a').focus();
-			}
-		});
-	}
-
-	function removeHash () {
-		history.pushState('', document.title, window.location.pathname + window.location.search);
-	}
-
 })(document);
+
+// (function(document) {
+//
+// 	var calendar = document.querySelector('.calendar');
+//
+// 	if (calendar) {
+// 		var events = calendar.querySelectorAll('.calendar__item');
+// 		// var eventsDisabled = calendar.querySelectorAll('.calendar__item--hidden');
+//
+// 		var button = document.querySelector('.calendar__button');
+// 		var limit = events.length - eventsDisabled.length;
+// 		var isOpen = false;
+//
+// 		if (events.length <= limit) {
+// 			button.style.display = 'block';
+// 		} else {
+// 			button.innerText = 'Показать больше';
+// 			hideElements(events);
+//
+// 			button.addEventListener('click', function() {
+// 				if(isOpen){
+// 					hideElements(events);
+// 					location.hash = '#calendar';
+// 					isOpen = false;
+// 					button.innerText = 'Показать больше';
+// 				} else {
+// 					showElements(events);
+// 					removeHash();
+// 					isOpen = true;
+// 					button.innerText = 'Показать меньше';
+// 				}
+// 			});
+// 		}
+// 	}
+//
+// 	function hideElements(elements) {
+// 		elements.forEach(function (element, i) {
+// 			if(i >= limit){
+// 				element.classList.add('calendar__item--hidden');
+// 			}
+// 		});
+// 	}
+//
+// 	function showElements(elements) {
+// 		elements.forEach(function (element, i) {
+// 			element.classList.remove('calendar__item--hidden');
+// 			if(i === limit){
+// 				element.querySelector('a').focus();
+// 			}
+// 		});
+// 	}
+//
+// 	function removeHash () {
+// 		history.pushState(
+// 			'',
+// 			document.title,
+// 			window.location.pathname + window.location.search
+// 		);
+// 	}
+//
+// })(document);
