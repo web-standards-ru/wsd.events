@@ -172,47 +172,6 @@ function googleMap() {
 
 // Calendar Expander
 
-(function(document) {
-
-	var calendar = document.querySelector('.calendar');
-	var button = document.querySelector('.calendar__button');
-	var years = document.querySelectorAll('.calendar__item');
-	var limit = 3;
-	var open = false;
-
-	if (calendar) {
-		for (var i = 0; i < years.length; i++) {
-			if (i >= limit) {
-				years[i].classList.add('calendar__item--hidden');
-			}
-		}
-
-		button.classList.add('calendar__button--active');
-		button.dataset.more = button.innerText;
-
-		button.addEventListener('click', function() {
-			if (open) {
-				this.innerText = button.dataset.more;
-				toggleYears();
-				open = false;
-			} else {
-				this.innerText = button.dataset.less;
-				toggleYears();
-				open = true;
-			}
-		});
-
-		function toggleYears(open) {
-			for (var i = 0; i < years.length; i++) {
-				if (i >= limit) {
-					years[i].classList.toggle('calendar__item--hidden');
-				}
-			}
-		}
-	}
-
-})(document);
-
 // (function(document) {
 //
 // 	var calendar = document.querySelector('.calendar');
