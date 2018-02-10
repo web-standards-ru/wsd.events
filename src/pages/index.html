@@ -272,8 +272,8 @@
 					</ol>
 				</li>
 			</ol>
-			<button type="button" data-less="Показать меньше"
-				class="button button--full calendar__button">
+			<button type="button" data-message-less="Показать меньше"
+					class="button button--full calendar__button">
 				Показать больше
 			</button>
 			<script>
@@ -289,15 +289,17 @@
 						toggleYears();
 
 						button.classList.add('calendar__button--active');
-						button.dataset.more = button.innerText;
+						button.dataset.messageMore = button.innerText;
 
 						button.addEventListener('click', function() {
 							if (open) {
-								this.innerText = button.dataset.more;
+								this.innerText = button.dataset.messageMore;
 								toggleYears();
+								location.hash = '#calendar';
 								open = false;
 							} else {
-								this.innerText = button.dataset.less;
+								this.innerText = button.dataset.messageLess;
+								removeHash();
 								toggleYears();
 								open = true;
 							}
@@ -308,7 +310,18 @@
 								if (i >= limit) {
 									years[i].classList.toggle('calendar__item--hidden');
 								}
+								if (i === limit && !open) {
+									years[i].querySelector('a').focus();
+								}
 							}
+						}
+
+						function removeHash () {
+							history.pushState(
+								'',
+								document.title,
+								window.location.pathname + window.location.search
+							);
 						}
 					}
 
