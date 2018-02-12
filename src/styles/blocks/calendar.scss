@@ -3,62 +3,69 @@
 // ------------------------------------------------------------------
 
 .calendar {
-
 	position: relative;
+}
 
-	// Year
+// Item
 
-	&__year {
+.calendar__item--hidden {
+	display: none;
+}
 
-		position: absolute;
-		right: 0;
-		padding: 12px 24px;
-		color: $dark;
+// Year
 
-		@include mq($from: palm) {
-			padding: 18px 36px;
-			}
+.calendar__year {
+	position: absolute;
+	right: 0;
+	padding: 12px 24px;
+	color: $dark;
 
-		}
-
-	// Event
-
-	&__event {
-
-		display: flex;
-		padding: 12px 24px;
-		border-bottom: solid 1px lighten($dark, 50%);
-
-		@include mq($from: palm) {
-			padding: 18px 36px;
-			}
-
-		// Current
-
-		&--current {
-			border-color: lighten($green, 10%);
-			background: lighten($green, 30%);
-			color: darken($green, 10%);
-			}
-
-		// Break
-
-		&--break {
-			background: lighten($blue, 45%);
-			}
-
-		}
-
-	// Time
-
-	&__time {
-
-		min-width: 60px;
-
-		&--date {
-			min-width: 108px;
-			}
-
-		}
-
+	@include mq($from: palm) {
+		padding: 18px 36px;
 	}
+}
+
+// Event
+
+.calendar__event {
+	display: flex;
+	padding: 12px 24px;
+	border-bottom: solid 1px lighten($dark, 50%);
+
+	@include mq($from: palm) {
+		padding: 18px 36px;
+	}
+
+	// Current
+	&--current {
+		border-color: lighten($green, 10%);
+		background: lighten($green, 30%);
+		color: darken($green, 10%);
+	}
+
+	// Break
+	&--break {
+		background: lighten($blue, 45%);
+	}
+
+}
+
+// Time
+
+.calendar__time {
+	min-width: 60px;
+
+	&--date {
+		min-width: 108px;
+	}
+}
+
+// Button
+
+.calendar__button {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}

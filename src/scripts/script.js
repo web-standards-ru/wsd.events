@@ -1,18 +1,18 @@
-(function(document){
+// Expand Speakers
 
-	// More
+(function(document){
 
 	var more = document.getElementById('more');
 
 	if (more) {
 		more.addEventListener('click', function() {
-		    var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden');
+			var speakers = more.parentNode.querySelectorAll('.speakers__speaker--hidden');
 			var group = 20;
 
-		    if (speakers.length) {
-		        for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
-		            var speaker = speakers[i];
-		            var picture = speaker.querySelector('.speakers__picture');
+			if (speakers.length) {
+				for (var i = 0, l = Math.min(speakers.length, group); i < l; i++) {
+					var speaker = speakers[i];
+					var picture = speaker.querySelector('.speakers__picture');
 
 					if (picture.dataset.src) {
 						picture.src =  picture.dataset.src;
@@ -22,13 +22,13 @@
 						picture.srcset =  picture.dataset.srcset;
 					}
 
-		            speaker.classList.remove('speakers__speaker--hidden');
-		        }
+					speaker.classList.remove('speakers__speaker--hidden');
+				}
 
-		        if (speakers.length <= group) {
-		            more.parentNode.removeChild(more);
-		        }
-		    }
+				if (speakers.length <= group) {
+					more.parentNode.removeChild(more);
+				}
+			}
 		});
 
 	}
@@ -119,7 +119,7 @@ function googleMap() {
 
 // Iframe lazy loading
 
-(function(document){
+(function(document) {
 	setupVideoPreload();
 
 	function setupVideoPreload() {
@@ -169,3 +169,66 @@ function googleMap() {
 		return 'https://www.youtube.com/embed/' + videoId + query;
 	}
 })(document);
+
+// Calendar Expander
+
+// (function(document) {
+//
+// 	var calendar = document.querySelector('.calendar');
+//
+// 	if (calendar) {
+// 		var events = calendar.querySelectorAll('.calendar__item');
+// 		// var eventsDisabled = calendar.querySelectorAll('.calendar__item--hidden');
+//
+// 		var button = document.querySelector('.calendar__button');
+// 		var limit = events.length - eventsDisabled.length;
+// 		var isOpen = false;
+//
+// 		if (events.length <= limit) {
+// 			button.style.display = 'block';
+// 		} else {
+// 			button.innerText = 'Показать больше';
+// 			hideElements(events);
+//
+// 			button.addEventListener('click', function() {
+// 				if(isOpen){
+// 					hideElements(events);
+// 					location.hash = '#calendar';
+// 					isOpen = false;
+// 					button.innerText = 'Показать больше';
+// 				} else {
+// 					showElements(events);
+// 					removeHash();
+// 					isOpen = true;
+// 					button.innerText = 'Показать меньше';
+// 				}
+// 			});
+// 		}
+// 	}
+//
+// 	function hideElements(elements) {
+// 		elements.forEach(function (element, i) {
+// 			if(i >= limit){
+// 				element.classList.add('calendar__item--hidden');
+// 			}
+// 		});
+// 	}
+//
+// 	function showElements(elements) {
+// 		elements.forEach(function (element, i) {
+// 			element.classList.remove('calendar__item--hidden');
+// 			if(i === limit){
+// 				element.querySelector('a').focus();
+// 			}
+// 		});
+// 	}
+//
+// 	function removeHash () {
+// 		history.pushState(
+// 			'',
+// 			document.title,
+// 			window.location.pathname + window.location.search
+// 		);
+// 	}
+//
+// })(document);

@@ -69,7 +69,7 @@
 				</h2>
 			</div>
 			<ol class="calendar content">
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2018</time>
 					<ol>
 						<li class="calendar__event calendar__event--current">
@@ -90,7 +90,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2017</time>
 					<ol>
 						<li class="calendar__event">
@@ -107,7 +107,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2016</time>
 					<ol>
 						<li class="calendar__event">
@@ -128,7 +128,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2015</time>
 					<ol>
 						<li class="calendar__event">
@@ -149,7 +149,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2014</time>
 					<ol>
 						<li class="calendar__event">
@@ -174,7 +174,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2013</time>
 					<ol>
 						<li class="calendar__event">
@@ -195,7 +195,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2012</time>
 					<ol>
 						<li class="calendar__event">
@@ -220,7 +220,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2011</time>
 					<ol>
 						<li class="calendar__event">
@@ -237,7 +237,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2010</time>
 					<ol>
 						<li class="calendar__event">
@@ -258,7 +258,7 @@
 						</li>
 					</ol>
 				</li>
-				<li>
+				<li class="calendar__item">
 					<time class="calendar__year">2009</time>
 					<ol>
 						<li class="calendar__event">
@@ -272,6 +272,61 @@
 					</ol>
 				</li>
 			</ol>
+			<button type="button" data-message-less="Показать меньше"
+					class="button button--full calendar__button">
+				Показать больше
+			</button>
+			<script>
+				(function(document) {
+
+					var calendar = document.querySelector('.calendar');
+					var button = document.querySelector('.calendar__button');
+					var years = document.querySelectorAll('.calendar__item');
+					var limit = 3;
+					var open = false;
+
+					if (calendar) {
+						toggleYears();
+
+						button.classList.add('calendar__button--active');
+						button.dataset.messageMore = button.innerText;
+
+						button.addEventListener('click', function() {
+							if (open) {
+								this.innerText = button.dataset.messageMore;
+								toggleYears();
+								location.hash = '#calendar';
+								open = false;
+							} else {
+								this.innerText = button.dataset.messageLess;
+								removeHash();
+								toggleYears();
+								open = true;
+							}
+						});
+
+						function toggleYears() {
+							for (var i = 0; i < years.length; i++) {
+								if (i >= limit) {
+									years[i].classList.toggle('calendar__item--hidden');
+								}
+								if (i === limit && !open) {
+									years[i].querySelector('a').focus();
+								}
+							}
+						}
+
+						function removeHash () {
+							history.pushState(
+								'',
+								document.title,
+								window.location.pathname + window.location.search
+							);
+						}
+					}
+
+				})(document);
+			</script>
 		</section>
 		<section class="section" id="speakers">
 			<div class="section__box">
