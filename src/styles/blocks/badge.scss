@@ -89,13 +89,50 @@
 
 		}
 
+	// Checkbox
+
+	&__hidden {
+		position: absolute;
+		clip: rect(0 0 0 0);
+		}
+	&__checkbox {
+		position: relative;
+		margin-right: 0.4em;
+		margin-bottom: -0.15em;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		box-shadow: 0 0 0 0.2em currentColor;
+		color: $green;
+		}
+	&__hidden:checked + &__checkbox::before,
+	&__hidden:checked + &__checkbox::after {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -0.1em;
+		width: 0.2em;
+		height: 100%;
+		background-color: currentColor;
+		transform-origin: 50% 50%;
+		content: '';
+		}
+	&__hidden:checked + &__checkbox::before {
+		transform: rotate(45deg);
+		}
+	&__hidden:checked + &__checkbox::after {
+		transform: rotate(-45deg);
+		}
+	&__hidden:focus + &__checkbox {
+		color: $blue;
+		}
+
 	// Label
 
 	&__label {
 		display: block;
 		margin-bottom: 24px;
 		color: $dark;
-		text-transform: lowercase;
 		}
 
 	// Required
