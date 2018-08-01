@@ -127,10 +127,10 @@
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">12:30</time> Перерыв
+					<time class="calendar__time">12:30</time> Перерыв 20 минут
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">12:40</time>
+					<time class="calendar__time">12:50</time>
 					<div class="content content--inline">
 						<h3>Магия CSS вне Хогвартса</h3>
 						<p>«Играться со шрифтами» и двигать однотипные блоки на одинаковых страницах рано или поздно надоедает. Чтобы не погрязнуть в рутине, нужно давать себе встряску. Как? Создавать крутые демки! Ещё лучше — с попаданием на главную страницу CodePen.</p>
@@ -138,7 +138,7 @@
 					</div>
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">13:20</time>
+					<time class="calendar__time">13:30</time>
 					<div class="content content--inline">
 						<h3>Закэшируй это!</h3>
 						<p>Все сталкивались с задачами кэширования данных. Кто-то делает вечный кэш на статику, кто-то борется с кэшем во внутренней админке. Сейчас в браузере есть очень много механизмов кэширования. Анализ всех доступных сейчас средств — в этом докладе.</p>
@@ -146,56 +146,54 @@
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">14:00</time> Обед
+					<time class="calendar__time">14:10</time> Обед 60 минут
 				</li>
-				<li class="calendar__event">
-					<time class="calendar__time">15:00</time>
+				<li class="calendar__event" id="redux-angular">
+					<time class="calendar__time">15:10</time>
 					<div class="content content--inline">
-						<p>Доклад уточняется</p>
+						<h3>Redux в Angular: NGRX, NGXS, Akita</h3>
+						<p>Управления состоянием в приложениях на Angular из коробки: зачем нам Redux, какие есть реализации, похожие на Redux, и кто быстрее в работе и проще во внедрении: NGRX, NGXS или Akita.</p>
+						<p>
+							<a class="anchor" href="#maxim-ivanov">Максим Иванов</a> и <a class="anchor" href="#kirill-yusupov">Кирилл Юсупов</a>
+						</p>
 					</div>
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">15:40</time>
-					<div class="content content--inline">
-						<p>Доклад уточняется</p>
-					</div>
-				</li>
-				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">16:20</time> Перерыв
-				</li>
-				<li class="calendar__event">
-					<time class="calendar__time">16:30</time>
-					<div class="content content--inline">
-						<p>Доклад уточняется</p>
-					</div>
-				</li>
-				<li class="calendar__event">
-					<time class="calendar__time">17:10</time>
+					<time class="calendar__time">15:50</time>
 					<div class="content content--inline">
 						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">17:50</time> Перерыв
+					<time class="calendar__time">16:30</time> Перерыв 20 минут
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">18:00</time>
+					<time class="calendar__time">16:50</time>
 					<div class="content content--inline">
 						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">18:40</time>
+					<time class="calendar__time">17:30</time>
 					<div class="content content--inline">
 						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">19:20</time> Закрытие
+					<time class="calendar__time">18:10</time> Перерыв 10 минут
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">18:20</time>
+					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">19:00</time> Закрытие
 				</li>
 			</ol>
 			<div class="section__box content">
-				<p>Мы продолжаем принимать доклады: <a href="https://docs.google.com/forms/d/e/1FAIpQLScYBcHZrsLVtJVHe_CAiIkjFVy9L3uoPGfrNd-va6FVzUAndw/viewform">подать заявку</a>.</p>
+				<p>Мы продолжаем принимать доклады до 3 августа: <a href="https://docs.google.com/forms/d/e/1FAIpQLScYBcHZrsLVtJVHe_CAiIkjFVy9L3uoPGfrNd-va6FVzUAndw/viewform">подать заявку</a>.</p>
 			</div>
 		</section>
 		<section class="section" id="speakers">
@@ -225,6 +223,15 @@
 					<img class="card__picture" src="/speakers/nikita-dubko.jpg" alt="Никита Дубко">
 				</div>
 			</div>
+			<div class="card" id="maxim-ivanov">
+				<div class="card__description content">
+					<h3>Максим Иванов <a href="https://twitter.com/splincodewd">@splincodewd</a></h3>
+					<p>Фронтенд-разработчик, создатель организации <a href="https://github.com/Angular-RU">Angular-RU</a> на Гитхабе, контрибьютор Angular и NGXS, автор канала <a href="https://www.youtube.com/splincodewd">splincode wd</a> на Ютубе.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/maxim-ivanov.jpg" alt="Максим Иванов">
+				</div>
+			</div>
 			<div class="card" id="katerina-pavlenko">
 				<div class="card__description content">
 					<h3>Катерина Павленко <a href="https://twitter.com/cakeinpanic">@cakeinpanic</a></h3>
@@ -241,6 +248,15 @@
 				</div>
 				<div class="card__column">
 					<img class="card__picture" src="/speakers/vsevolod-shmyrov.jpg" alt="Всеволод Шмыров">
+				</div>
+			</div>
+			<div class="card" id="kirill-yusupov">
+				<div class="card__description content">
+					<h3>Кирилл Юсупов <a href="https://twitter.com/kirill_y33">@kirill_y33</a></h3>
+					<p>Фронтенд-разработчик, контрибьютор NGXS.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/kirill-yusupov.jpg" alt="Кирилл Юсупов">
 				</div>
 			</div>
 		</section>
