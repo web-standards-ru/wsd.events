@@ -112,7 +112,7 @@
 				</li>
 				<li class="calendar__event" id="perf-driven">
 					<time class="calendar__time">11:10</time>
-					<div class="content content--inline" id="pdd">
+					<div class="content content--inline" id="performance">
 						<h3>Перфоманс-дривен-девелопмент</h3>
 						<p>Разработка быстрого приложения не должна быть быстрой. Ведь мы хотим получить качественное приложение, которое одинаково привлекательно на любой платформе или устройстве. Добиться этого возможно только заботясь о приложении с первых дней разработки. Как это сделать? Встать на место пользователей. Перформанс-метрики, библиотеки и конечно же наше желание сделать лучше.</p>
 						<p><a class="anchor" href="#artem-denysov">Артём Денисов</a></p>
@@ -120,7 +120,7 @@
 				</li>
 				<li class="calendar__event" id="unit-tests">
 					<time class="calendar__time">11:50</time>
-					<div class="content content--inline" id="katerina-pavlenko">
+					<div class="content content--inline" id="unit-testing">
 						<h3>Распространенные ошибки при написании юнит-тестов</h3>
 						<p>Все знают, что писать юнит-тесты нужно. Но иногда слишком сложно: код пишешь десять минут, а тесты все два часа. А когда дело доходит до поддержки и расширения старых тестов, иногда проще удалить их и написать всё заново. Рассмотрим частые ошибки, приводящие к этому, их причины и способы избежать.</p>
 						<p><a class="anchor" href="#katerina-pavlenko">Катерина Павленко</a></p>
@@ -129,28 +129,17 @@
 				<li class="calendar__event calendar__event--break">
 					<time class="calendar__time">12:30</time> Перерыв 20 минут
 				</li>
-				<li class="calendar__event" id="css-magic">
+				<li class="calendar__event">
 					<time class="calendar__time">12:50</time>
-					<div class="content content--inline">
-						<h3>Магия CSS вне Хогвартса</h3>
-						<p>«Играться со шрифтами» и двигать однотипные блоки на одинаковых страницах рано или поздно надоедает. Чтобы не погрязнуть в рутине, нужно давать себе встряску. Как? Создавать крутые демки! Ещё лучше — с попаданием на главную страницу CodePen.</p>
-						<p><a class="anchor" href="#nikita-dubko">Никита Дубко</a></p>
-					</div>
-				</li>
-				<li class="calendar__event" id="cache-it">
-					<time class="calendar__time">13:30</time>
-					<div class="content content--inline">
+					<div class="content content--inline" id="cache-it">
 						<h3>Закэшируй это!</h3>
 						<p>Все сталкивались с задачами кэширования данных. Кто-то делает вечный кэш на статику, кто-то борется с кэшем во внутренней админке. Сейчас в браузере есть очень много механизмов кэширования. Анализ всех доступных сейчас средств — в этом докладе.</p>
 						<p><a class="anchor" href="#vsevolod-shmyrov">Всеволод Шмыров</a></p>
 					</div>
 				</li>
-				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">14:10</time> Обед 60 минут
-				</li>
-				<li class="calendar__event" id="redux-angular">
-					<time class="calendar__time">15:10</time>
-					<div class="content content--inline">
+				<li class="calendar__event">
+					<time class="calendar__time">13:30</time>
+					<div class="content content--inline" id="redux-angular">
 						<h3>Redux в Angular: NGRX, NGXS, Akita</h3>
 						<p>Управление состоянием в приложениях на Angular из коробки: зачем нам Redux, какие есть реализации, похожие на Redux, и кто быстрее в работе и проще во внедрении: NGRX, NGXS или Akita.</p>
 						<p>
@@ -158,42 +147,53 @@
 						</p>
 					</div>
 				</li>
-				<li class="calendar__event" id="site-talking">
-					<time class="calendar__time">15:50</time>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">14:10</time> Обед 1,5 часа
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">15:40</time>
+					<div class="content content--inline" id="css-magic">
+						<h3>Магия CSS вне Хогвартса</h3>
+						<p>«Играться со шрифтами» и двигать однотипные блоки на одинаковых страницах рано или поздно надоедает. Чтобы не погрязнуть в рутине, нужно давать себе встряску. Как? Создавать крутые демки! Ещё лучше — с попаданием на главную страницу CodePen.</p>
+						<p><a class="anchor" href="#nikita-dubko">Никита Дубко</a></p>
+					</div>
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">16:20</time>
+					<time class="calendar__time">17:20</time>
 					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">17:00</time> Перерыв 20 минут
+				</li>
+				<li class="calendar__event">
+					<div class="content content--inline" id="site-talking">
 						<h3>Мне нечего тебе сказать!</h3>
 						<p>Как взаимодействовать с сайтом голосом, а главное зачем? Как это делается сейчас, что такое скринридеры и как они помогают делать сайты доступнее. Какие спецификации и API для синтеза и распознавания голоса уже есть. Как это может работать — на примере крутой демки с Google Home, Firebase и DialogFlow. После доклада вы тоже сможете научить сайт понимать голос, но просто не будет — даже не найдейтесь.</p>
 						<p><a class="anchor" href="#oleksii-okhrymenko">Алексей Охрименко</a></p>
 					</div>
 				</li>
-				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">16:30</time> Перерыв 20 минут
-				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">16:50</time>
-					<div class="content content--inline">
-						<p>Доклад уточняется</p>
-					</div>
-				</li>
-				<li class="calendar__event">
-					<time class="calendar__time">17:30</time>
+					<time class="calendar__time">18:00</time>
 					<div class="content content--inline">
 						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">18:10</time> Перерыв 10 минут
+					<time class="calendar__time">18:40</time> Перерыв 10 минут
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">18:20</time>
-					<div class="content content--inline">
+					<time class="calendar__time">18:50</time>
+					<div class="content content--inline" id="perfect-talk">
 						<h3>Идеальный доклад. Голая правда</h3>
 						<p>Что делает доклад интересным и запоминающимся? Полезная тема, харизматичный спикер, весёлые гифки на слайдах? Да, но список требований гораздо шире. Может показаться, что готовить доклады сложно. К тому же непонятно, зачем это нужно лично вам. Плюсы и минусы выступлений для карьеры и личностного роста, как подготовить тот самый, «идеальный» доклад — от опытных докладчиков и организаторов конференций и митапов.</p>
 						<p><a class="anchor" href="#nikita-dubko">Никита Дубко</a> и <a class="anchor" href="#alexandra-shinkevich">Александра Шинкевич</a></p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">19:00</time> Закрытие
+					<time class="calendar__time">19:30</time> Закрытие
 				</li>
 			</ol>
 		</section>
