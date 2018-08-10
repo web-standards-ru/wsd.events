@@ -11,6 +11,12 @@
 		margin-bottom: 18px;
 		}
 
+	// Label
+
+	&__label {
+		@include offscreen;
+	}
+
 	// Amount
 
 	&__amount {
