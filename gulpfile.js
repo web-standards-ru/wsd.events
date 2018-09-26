@@ -6,7 +6,8 @@ const htmlmin = require('gulp-htmlmin');
 const paths = require('vinyl-paths');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
-const replace = require('gulp-rev-replace');
+const replace = require('gulp-replace');
+const revision = require('gulp-rev-replace');
 const resize = require('gulp-responsive');
 const rev = require('gulp-rev');
 const rsync = require('gulp-rsync');
@@ -82,7 +83,7 @@ gulp.task('images:resize', () => {
 });
 
 gulp.task('images:replace', () => {
-	return gulp.src('dest/**/*.html')
+	return gulp.src('dest/index.html')
 		.pipe(replace(
 			/<img class="speakers__picture" (src|data-src)="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="speakers__picture" $1="/speakers/128/$2" $1set="/speakers/256/$2 2x" alt="$3">'
@@ -117,7 +118,7 @@ gulp.task('cache:hash', () => {
 
 gulp.task('cache:replace', () => {
 	return gulp.src('dest/**/*.html')
-		.pipe(replace({
+		.pipe(revision({
 			manifest: gulp.src('dest/rev-manifest.json').pipe(paths(del))
 		}))
 		.pipe(gulp.dest('dest'));
