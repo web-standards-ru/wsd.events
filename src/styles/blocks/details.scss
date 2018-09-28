@@ -1,0 +1,27 @@
+// ------------------------------------------------------------------
+// Details
+// ------------------------------------------------------------------
+
+.details__summary {
+	color: $dark;
+	font-weight: 500;
+	outline: none;
+}
+
+.details__summary:focus {
+	color: $green;
+}
+
+.details__summary::-webkit-details-marker {
+	display: none;
+}
+
+.details__marker {
+	fill: currentColor;
+	transform-origin: 3px 5px;
+	transition: transform 0.2s;
+}
+
+.details[open] .details__marker {
+	transform: rotate(90deg);
+}
