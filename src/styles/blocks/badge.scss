@@ -119,13 +119,26 @@
 		}
 	&__hidden:checked + &__checkbox::before {
 		transform: rotate(45deg);
+		height: 80%;
+		left: 60%;
+		top: 10%;
 		}
 	&__hidden:checked + &__checkbox::after {
 		transform: rotate(-45deg);
+		top: 50%;
+		height: 40%;
+		left: 30%;
 		}
 	&__hidden:focus + &__checkbox {
 		color: $blue;
 		}
+	&__checkbox-label::after {
+		position: absolute;
+		margin-top: 0.25em;
+		margin-left: 0.25em;
+		color: #c00;
+		content: '*';
+	}
 
 	// Label
 
