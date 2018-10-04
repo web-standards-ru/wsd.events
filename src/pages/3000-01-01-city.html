@@ -74,9 +74,9 @@
 			</div>
 			<form class="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
 				<div class="badge__box">
-					<input class="badge__field badge__field--line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="TODO">
+					<input class="badge__field badge__field--line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="TODO" autocomplete="name">
 					<label class="badge__label" for="proposal-name">Как вас зовут</label>
-					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="proposal-email" name="TODO">
+					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="proposal-email" name="TODO" autocomplete="email">
 					<label class="badge__label" for="proposal-email">Эл. почта</label>
 					<textarea class="badge__field badge__field--text" rows="7" required id="proposal-description" name="TODO"></textarea>
 					<label class="badge__label" for="proposal-description">Название, описание или идея доклада.</label>
@@ -95,16 +95,21 @@
 			</div>
 			<form class="badge" action="https://docs.google.com/forms/d/e/TODO/formResponse" method="post">
 				<div class="badge__box badge__box--hole">
-					<input class="badge__field badge__field--line" placeholder="Имя" type="text" required id="first-name" name="TODO">
+					<input class="badge__field badge__field--line" placeholder="Имя" type="text" required id="first-name" name="TODO" autocomplete="given-name">
 					<label class="badge__label" for="first-name">Имя</label>
-					<input class="badge__field badge__field--line" placeholder="Фамилия" type="text" required id="second-name" name="TODO">
+					<input class="badge__field badge__field--line" placeholder="Фамилия" type="text" required id="second-name" name="TODO" autocomplete="family-name">
 					<label class="badge__label" for="second-name">Фамилия</label>
-					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="email" name="TODO">
+					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="email" name="TODO" autocomplete="email">
 					<label class="badge__label" for="email">Эл. почта</label>
 					<input class="badge__field badge__field--line" placeholder="nick_name" type="text" id="twitter" name="TODO">
 					<label class="badge__label" for="twitter">Ник в Твиттере, если есть</label>
 					<textarea class="badge__field badge__field--text" placeholder="Работаю, учусь, интересуюсь." rows="7" id="about" name="TODO"></textarea>
 					<label class="badge__label" for="about">Пара слов о вас и ваших интересах</label>
+					<label class="badge__label">
+						<input class="badge__hidden" type="checkbox" required name="entry.1823631415">
+						<span class="badge__checkbox"></span>
+						<span class="content badge__checkbox-label">Буду соблюдать <a href="https://wsd.events/rules/">правила поведения</a></span>
+					</label>
 				</div>
 				<button class="button button--full">Зарегистрироваться</button>
 			</form>
