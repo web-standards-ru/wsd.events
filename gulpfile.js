@@ -83,7 +83,7 @@ gulp.task('images:resize', () => {
 });
 
 gulp.task('images:replace', () => {
-	return gulp.src('dest/index.html')
+	return gulp.src('dest/**/index.html')
 		.pipe(replace(
 			/<img class="speakers__picture" (src|data-src)="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="speakers__picture" $1="/speakers/128/$2" $1set="/speakers/256/$2 2x" alt="$3">'
