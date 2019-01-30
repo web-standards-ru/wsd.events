@@ -4,8 +4,9 @@
 
 .support {
 	display: inline-block;
-	padding: 0.4em 0.8em;
+	padding: 0.75em;
 	background: $green;
+	line-height: 1;
 	font-size: 18px;
 
 	@include mq($from: palm) {
