@@ -65,7 +65,7 @@ gulp.task('scripts', () => {
 // Images
 
 gulp.task('images:resize', () => {
-	return gulp.src('src/assets/speakers/*.jpg')
+	return gulp.src('src/assets/speakers/*.jpeg')
 		.pipe(resize({
 			'*': [{
 				width: 256, rename: { dirname: '256' }
