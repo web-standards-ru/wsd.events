@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "autoprefixer": "^9.0.1",
-    "browser-sync": "^2.26.5",
-    "del": "^4.0.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
     "gulp": "^4.0.0",
     "gulp-csso": "^3.0.0",
     "gulp-htmlmin": "^5.0.1",
@@ -27,7 +27,7 @@
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "postcss-inline-svg": "^3.0.0",
+    "postcss-inline-svg": "^4.1.0",
     "require-dir": "^1.0.0",
     "sass-mq": "^5.0.0",
     "vinyl-paths": "^2.1.0"
