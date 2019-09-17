@@ -14,41 +14,6 @@
 			padding: 0 36px 18px;
 			}
 
-		// Hole
-
-		&--hole {
-
-			padding-top: 24px;
-
-			@include mq($from: palm) {
-				padding-top: 36px;
-				}
-
-			&::before {
-
-				display: block;
-				margin: auto;
-				background: $dark;
-				content: '';
-
-				@mixin sizing($size) {
-					margin-top: $size / 2;
-					margin-bottom: $size;
-					width: $size * 4;
-					height: $size;
-					border-radius: $size;
-					}
-
-				@include sizing(18px);
-
-				@include mq($from: palm) {
-					@include sizing(24px);
-					}
-
-				}
-
-			}
-
 		}
 
 	// Field
