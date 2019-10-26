@@ -37,15 +37,24 @@
 
 // Maps
 
-function getMapData() {
+function getMapData(allowedHostname) {
 	var map = document.getElementById('map');
-	var src = map.firstChild.src.split('?')[1].split('&');
+
+	if (!allowedHostname || !map) return;
+
+	var rawSrc = map.firstChild.src;
+	var srcPrefix = rawSrc.split('?')[0];
+	var srcSuffix = rawSrc.split('?')[1];
+	var srcParams = srcSuffix.split('&');
+
+	if (srcPrefix.indexOf(allowedHostname) === -1) return;
+
 	var data = {
 		map: map
 	};
 
-	for (var i = 0; i < src.length; i++) {
-		var item = src[i].split('=');
+	for (var i = 0; i < srcParams.length; i++) {
+		var item = srcParams[i].split('=');
 		data[item[0]] = item[1];
 	}
 
@@ -53,7 +62,9 @@ function getMapData() {
 }
 
 function yandexMap() {
-	var data = getMapData();
+	var data = getMapData('api-maps.yandex.ru');
+
+	if (!data) return;
 
 	data.ll = data.ll.split(',');
 	data.latitude = parseFloat(data.ll[0]);
@@ -84,7 +95,9 @@ function yandexMap() {
 }
 
 function googleMap() {
-	var data = getMapData();
+	var data = getMapData('maps.googleapis.com');
+
+	if (!data) return;
 
 	data.center = data.center.split(',');
 	data.latitude = parseFloat(data.center[0]);
@@ -102,7 +115,7 @@ function googleMap() {
 		center: coordinates
 	});
 
-	var marker = new google.maps.Marker({
+	new google.maps.Marker({
 		position: coordinates,
 		icon: {
 			url: '/images/icon.svg',
