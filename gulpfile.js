@@ -19,7 +19,9 @@ const uglify = require('gulp-uglify');
 // HTML
 
 gulp.task('html', () => {
-	return gulp.src('src/pages/*.html')
+	return gulp.src('src/pages/*.html', {
+			ignore: 'src/pages/3000-01-01-city.html'
+		})
 		.pipe(htmlmin({
 			removeComments: true,
 			collapseWhitespace: true
