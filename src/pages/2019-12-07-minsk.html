@@ -25,7 +25,6 @@
 		<nav class="section section--open" id="navigation">
 			<div class="section__box">
 				<ul class="navigation">
-					<li><a class="navigation__link" href="#proposal">Заявка на доклад</a></li>
 					<li><a class="navigation__link" href="#register">Регистрация</a></li>
 					<!-- <li><a class="navigation__link" href="#schedule">Программа</a></li> -->
 					<!-- <li><a class="navigation__link" href="#speakers">Докладчики</a></li> -->
@@ -57,28 +56,7 @@
 				</p>
 			</div>
 		</div>
-		<section class="section section--open" id="proposal">
-			<div class="section__box">
-				<h2 class="section__title">
-					Заявка на доклад
-					<a class="up" href="#navigation">
-						<span class="up__text">Наверх</span>
-					</a>
-				</h2>
-			</div>
-			<form class="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSctVVvnJnltHSbTJhjKffeWW4ytH7-YL1GQpifqm1ekShhX9Q/formResponse" method="post">
-				<div class="badge__box">
-					<input class="badge__field badge__field--line" placeholder="Имя Фамилия" type="text" required id="proposal-name" name="entry.1474120643" autocomplete="name">
-					<label class="badge__label" for="proposal-name">Как вас зовут</label>
-					<input class="badge__field badge__field--line" placeholder="email@example.com" type="email" required id="proposal-email" name="entry.712783711" autocomplete="email">
-					<label class="badge__label" for="proposal-email">Эл. почта</label>
-					<textarea class="badge__field badge__field--text" rows="7" required id="proposal-description" name="entry.2037158443"></textarea>
-					<label class="badge__label" for="proposal-description">Название, описание или идея доклада.</label>
-				</div>
-				<button class="button button--full" type="submit">Подать</button>
-			</form>
-		</section>
-		<section class="section" id="register">
+		<section class="section section--open" id="register">
 			<div class="section__box">
 				<h2 class="section__title">
 					Регистрация
@@ -86,11 +64,11 @@
 						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
-				<div class="content">
+				<!-- <div class="content">
 					<p>Первая партия мест закончилась. Следующая откроется вместе в понедельник 11 ноября с анонсом первых докладов. Следите за новостями в соцсетях!</p>
-				</div>
+				</div> -->
 			</div>
-			<!-- <form class="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSeQci2PaPStvBLvbym3oUZNcLsEotSxHbVFmaQc-aNgHOR9FQ/formResponse" method="post">
+			<form class="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSeQci2PaPStvBLvbym3oUZNcLsEotSxHbVFmaQc-aNgHOR9FQ/formResponse" method="post">
 				<div class="badge__box">
 					<input class="badge__field badge__field--line" placeholder="Имя" type="text" required id="first-name" name="entry.1506289892" autocomplete="given-name">
 					<label class="badge__label" for="first-name">Имя</label>
@@ -109,9 +87,9 @@
 					</label>
 				</div>
 				<button class="button button--full">Зарегистрироваться</button>
-			</form> -->
+			</form>
 		</section>
-		<!-- <section class="section section--open" id="schedule">
+		<section class="section section--open" id="schedule">
 			<div class="section__box">
 				<h2 class="section__title">
 					Программа
@@ -122,33 +100,80 @@
 			</div>
 			<ol class="calendar">
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">00:00</time> Открытие
+					<time class="calendar__time">10:00</time> Начало регистрации
+				</li>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">11:00</time> Открытие
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">00:00</time>
-					<div class="content content--inline">
-						<h3>TITLE</h3>
-						<p>DESC</p>
-						<p><a class="anchor" href="#FIRST-LAST">FIRST LAST</a></p>
+					<time class="calendar__time">11:10</time>
+					<div class="content content--inline" id="anchor">
+						<h3><code>&lt;a&gt;</code></h3>
+						<p>Что такое поисковая выдача? По факту — страница с десятками ссылок. Поэтому поисковики довольно трепетно относятся к тому, как отдавать ценный тег <code>&lt;a&gt;</code> пользователю. Давайте разберёмся, какие тайны в себе хранит этот тег, который с нами ещё с самого первого стандарта HTML.</p>
+						<p><a class="anchor" href="#nikita-dubko">Никита Дубко</a></p>
+					</div>
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">11:50</time>
+					<div class="content content--inline" id="frontops-really">
+						<h3>Фронтопс? Серьёзно?</h3>
+						<p>Фронтенд стремительно развивается, и рядовому фронтенд-разработчику нужно осваивать всё больше новых технологий, не связанных с разработкой напрямую. К сожалению, не всегда можно найти на это время, и это сказывается на качестве продукта не самым лучшим образом. О чём можно забыть, разрабатывая проект с нуля и поддерживая его во время активного использования, и кто тот супергерой, который поможет облегчить его разработку, обеспечить успешный запуск и гарантировать длительное существование?</p>
+						<p><a class="anchor" href="#anna-selezneva">Анна Селезнёва</a></p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">00:00</time> Перерыв
+					<time class="calendar__time">12:30</time> Перерыв 20 минут
 				</li>
 				<li class="calendar__event">
-					<time class="calendar__time">00:00</time>
+					<time class="calendar__time">12:50</time>
+					<div class="content content--inline" id="where-are-fonts">
+						<h3>_ ___ ______?</h3>
+						<p>Десять лет назад в вебе появились шрифты. Ну и как? Когда загружаются, даже красиво! И немного дорого для пользователей, конечно. И ещё дороже для клиентов. Местами дыряво, иногда криво — но это, думаю, Белка чудит. Но если прыгнуло, то значит точно будет красиво. Хотя может ну их? Подключим системные и будем как все, нет? Нет, давайте разбираться. <a href="https://wsd.events/2019/10/19/pres/where-are-fonts/">Слайды в HTML</a></p>
+						<p><a class="anchor" href="#vadim-makeev">Вадим Макеев</a></p>
+					</div>
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">13:30</time>
 					<div class="content content--inline">
-						<h3>TITLE</h3>
-						<p>DESC</p>
-						<p><a class="anchor" href="#FIRST-LAST">FIRST LAST</a></p>
+						<p>Доклад уточняется</p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
-					<time class="calendar__time">00:00</time> Закрытие
+					<time class="calendar__time">14:10</time> Обед 1,5 часа
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">15:40</time>
+					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">16:20</time>
+					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">17:00</time> Перерыв 20 минут
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">17:20</time>
+					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event">
+					<time class="calendar__time">18:00</time>
+					<div class="content content--inline">
+						<p>Доклад уточняется</p>
+					</div>
+				</li>
+				<li class="calendar__event calendar__event--break">
+					<time class="calendar__time">18:40</time> Закрытие
 				</li>
 			</ol>
-		</section> -->
-		<!-- <section class="section" id="speakers">
+		</section>
+		<section class="section" id="speakers">
 			<div class="section__box">
 				<h2 class="section__title">
 					Докладчики
@@ -157,16 +182,34 @@
 					</a>
 				</h2>
 			</div>
-			<div class="card" id="FIRST-LAST">
+			<div class="card" id="nikita-dubko">
 				<div class="card__description content">
-					<h3>FIRST LAST <a href="https://twitter.com/TWITTER">@TWITTER</a></h3>
-					<p>BIO</p>
+					<h3>Никита Дубко <a href="https://twitter.com/dark_mefody">@dark_mefody</a></h3>
+					<p>Разработчик интерфейсов в Яндексе. Дружелюбный бородач. Организатор митапов <a href="https://twitter.com/minskcss">MinskCSS</a> и <a href="https://twitter.com/minskjs">MinskJS</a> и международной конференции <a href="https://css-minsk-js.by/">CSS-Minsk-JS</a>. Редактор Веб-стандартов.</p>
 				</div>
 				<div class="card__column">
-					<img class="card__picture" src="/speakers/FIRST-LAST.jpeg" alt="FIRST LAST">
+					<img class="card__picture" src="/speakers/nikita-dubko.jpeg" alt="Никита Дубко">
 				</div>
 			</div>
-		</section> -->
+			<div class="card" id="vadim-makeev">
+				<div class="card__description content">
+					<h3>Вадим Макеев <a href="https://twitter.com/pepelsbey">@pepelsbey</a></h3>
+					<p>Веб-евангелист в <a href="https://htmlacademy.ru/">HTML Academy</a>, основатель сообщества «Веб-стандарты», ведущий <a href="https://itunes.apple.com/podcast/id1080500016">одноимённого подкаста</a>, автор движка для презентаций <a href="http://shwr.me/">Shower</a>, разработчик, организатор и участник IT-конференций, пропагандист веб-стандартов.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/vadim-makeev.jpeg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div class="card" id="anna-selezneva">
+				<div class="card__description content">
+					<h3>Анна Селезнёва <a href="https://twitter.com/asktwi">@asktwi</a></h3>
+					<p>Ведущий фронтенд-разработчик в <a href="https://spiralscout.com/">SpiralScout</a>, спикер, соорганизатор сообществ <a href="https://twitter.com/minskcss">MinskCSS</a> и <a href="https://twitter.com/minskjs">MinskJS</a>. Любит вдохновлять и мотивировать людей. Free hugs.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/anna-selezneva.jpeg" alt="Анна Селезнёва">
+				</div>
+			</div>
+		</section>
 		<!-- <section class="section" id="organizers">
 			<div class="section__box">
 				<h2 class="section__title">
