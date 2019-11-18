@@ -26,8 +26,8 @@
 			<div class="section__box">
 				<ul class="navigation">
 					<li><a class="navigation__link" href="#register">Регистрация</a></li>
-					<!-- <li><a class="navigation__link" href="#schedule">Программа</a></li> -->
-					<!-- <li><a class="navigation__link" href="#speakers">Докладчики</a></li> -->
+					<li><a class="navigation__link" href="#schedule">Программа</a></li>
+					<li><a class="navigation__link" href="#speakers">Докладчики</a></li>
 					<!-- <li><a class="navigation__link" href="#organizers">Организаторы</a></li> -->
 					<li><a class="navigation__link" href="#venue">Площадка</a></li>
 				</ul>
@@ -56,8 +56,8 @@
 				</p>
 			</div>
 		</div>
-		<!-- <section class="section section--open" id="register"> -->
-		<section class="section" id="register">
+		<section class="section section--open" id="register">
+		<!-- <section class="section" id="register"> -->
 			<div class="section__box">
 				<h2 class="section__title">
 					Регистрация
@@ -65,11 +65,11 @@
 						<span class="up__text">Наверх</span>
 					</a>
 				</h2>
-				<div class="content">
+				<!-- <div class="content">
 					<p>Вторая партия мест закончилась. Третья и последняя откроется в понедельник 18 ноября с анонсом докладов. Следите за новостями в соцсетях!</p>
-				</div>
+				</div> -->
 			</div>
-			<!-- <form class="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSeQci2PaPStvBLvbym3oUZNcLsEotSxHbVFmaQc-aNgHOR9FQ/formResponse" method="post">
+			<form class="badge" action="https://docs.google.com/forms/d/e/1FAIpQLSeQci2PaPStvBLvbym3oUZNcLsEotSxHbVFmaQc-aNgHOR9FQ/formResponse" method="post">
 				<div class="badge__box">
 					<input class="badge__field badge__field--line" placeholder="Имя" type="text" required id="first-name" name="entry.1506289892" autocomplete="given-name">
 					<label class="badge__label" for="first-name">Имя</label>
@@ -88,7 +88,7 @@
 					</label>
 				</div>
 				<button class="button button--full">Зарегистрироваться</button>
-			</form> -->
+			</form>
 		</section>
 		<section class="section section--open" id="schedule">
 			<div class="section__box">
@@ -116,10 +116,10 @@
 				</li>
 				<li class="calendar__event">
 					<time class="calendar__time">11:50</time>
-					<div class="content content--inline" id="frontops-really">
-						<h3>Фронтопс? Серьёзно?</h3>
-						<p>Фронтенд стремительно развивается, и рядовому фронтенд-разработчику нужно осваивать всё больше новых технологий, не связанных с разработкой напрямую. К сожалению, не всегда можно найти на это время, и это сказывается на качестве продукта не самым лучшим образом. О чём можно забыть, разрабатывая проект с нуля и поддерживая его во время активного использования, и кто тот супергерой, который поможет облегчить его разработку, обеспечить успешный запуск и гарантировать длительное существование?</p>
-						<p><a class="anchor" href="#anna-selezneva">Анна Селезнёва</a></p>
+					<div class="content content--inline" id="fake-loading">
+						<h3>Пусть всем кажется, что всё грузится быстро — скелетоны экономят время</h3>
+						<p>Вы сделали хорошее приложение: красивое и сложное, но дедлайн подвёл и API работает медленно. Решение выбрали простое: оверлей со спиннером, пока бэкенд не ответит. Можно ли лучше? Да! Скелетоны спешат на помощь. Ускорять API и трогать дизайнера не будем, обойдемся силами фронтендера.</p>
+						<p><a class="anchor" href="#victor-rusakovich">Виктор Русакович</a></p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
@@ -127,10 +127,10 @@
 				</li>
 				<li class="calendar__event">
 					<time class="calendar__time">12:50</time>
-					<div class="content content--inline" id="where-are-fonts">
-						<h3>_ ___ ______?</h3>
-						<p>Десять лет назад в вебе появились шрифты. Ну и как? Когда загружаются, даже красиво! И немного дорого для пользователей, конечно. И ещё дороже для клиентов. Местами дыряво, иногда криво — но это, думаю, Белка чудит. Но если прыгнуло, то значит точно будет красиво. Хотя может ну их? Подключим системные и будем как все, нет? Нет, давайте разбираться.</p>
-						<p><a class="anchor" href="#vadim-makeev">Вадим Макеев</a></p>
+					<div class="content content--inline" id="frontops-really">
+						<h3>Фронтопс? Серьёзно?</h3>
+						<p>Фронтенд стремительно развивается, и рядовому фронтенд-разработчику нужно осваивать всё больше новых технологий, не связанных с разработкой напрямую. К сожалению, не всегда можно найти на это время, и это сказывается на качестве продукта не самым лучшим образом. О чём можно забыть, разрабатывая проект с нуля и поддерживая его во время активного использования, и кто тот супергерой, который поможет облегчить его разработку, обеспечить успешный запуск и гарантировать длительное существование?</p>
+						<p><a class="anchor" href="#anna-selezneva">Анна Селезнёва</a></p>
 					</div>
 				</li>
 				<li class="calendar__event">
@@ -144,14 +144,18 @@
 				</li>
 				<li class="calendar__event">
 					<time class="calendar__time">15:40</time>
-					<div class="content content--inline">
-						<p>Доклад уточняется</p>
+					<div class="content content--inline" id="where-are-fonts">
+						<h3>_ ___ ______?</h3>
+						<p>Десять лет назад в вебе появились шрифты. Ну и как? Когда загружаются, даже красиво! И немного дорого для пользователей, конечно. И ещё дороже для клиентов. Местами дыряво, иногда криво — но это, думаю, Белка чудит. Но если прыгнуло, то значит точно будет красиво. Хотя может ну их? Подключим системные и будем как все, нет? Нет, давайте разбираться.</p>
+						<p><a class="anchor" href="#vadim-makeev">Вадим Макеев</a></p>
 					</div>
 				</li>
 				<li class="calendar__event">
 					<time class="calendar__time">16:20</time>
-					<div class="content content--inline">
-						<p>Доклад уточняется</p>
+					<div class="content content--inline" id="non-square-web">
+						<h3>Неквадратный веб</h3>
+						<p>По умолчанию все элементы на странице прямоугольные, как мы можем это изменить? В докладе будут рассмотрены все способы сделать непрямоугольный элемент и разнообразить раскладку: от градиентов и теней до SVG-масок и CSS-фигур.</p>
+						<p><a class="anchor" href="#julia-buhvalova">Юлия Бухвалова</a></p>
 					</div>
 				</li>
 				<li class="calendar__event calendar__event--break">
@@ -183,6 +187,15 @@
 					</a>
 				</h2>
 			</div>
+			<div class="card" id="julia-buhvalova">
+				<div class="card__description content">
+					<h3>Юлия Бухвалова <a href="https://twitter.com/yoksel">@yoksel</a></h3>
+					<p>Разработчица в LiveJournal, автор блога <a href="http://css.yoksel.ru/">Про CSS</a>. Любит экспериментировать, открывать новое в SVG и создавать инструменты.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/julia-buhvalova.jpeg" alt="Юлия Бухвалова">
+				</div>
+			</div>
 			<div class="card" id="nikita-dubko">
 				<div class="card__description content">
 					<h3>Никита Дубко <a href="https://twitter.com/dark_mefody">@dark_mefody</a></h3>
@@ -199,6 +212,15 @@
 				</div>
 				<div class="card__column">
 					<img class="card__picture" src="/speakers/vadim-makeev.jpeg" alt="Вадим Макеев">
+				</div>
+			</div>
+			<div class="card" id="victor-rusakovich">
+				<div class="card__description content">
+					<h3>Виктор Русакович <a href="https://twitter.com/the_ghost_minsk">@the_ghost_minsk</a></h3>
+					<p>12 лет в веб-разработке, последние восемь во фронтенде в компании <a href="https://gpsolutions.com/">GP Solutions</a>. Повидал множество фреймворков и библиотек, некоторые даже сумел пережить (RIP Mootools). Помимо веб-технологий, увлекается IoT, BMW и путешествиями.</p>
+				</div>
+				<div class="card__column">
+					<img class="card__picture" src="/speakers/victor-rusakovich.jpeg" alt="Виктор Русакович">
 				</div>
 			</div>
 			<div class="card" id="anna-selezneva">
