@@ -23,4 +23,4 @@
 
 - [Canonical](http://www.canonical.com/) за шрифт [Ubuntu](http://font.ubuntu.com/).
 - [Злым марсианам](https://evilmartians.com/) за [Evil Icons](http://evil-icons.io/).
-- [Михаилу Баранову](http://designnotfound.ru/) за настройку и поддержку сервера.
+- Михаилу Баранову за настройку и поддержку сервера.
