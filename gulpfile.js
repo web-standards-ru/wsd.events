@@ -10,7 +10,6 @@ const replace = require('gulp-replace');
 const revision = require('gulp-rev-replace');
 const resize = require('gulp-responsive');
 const rev = require('gulp-rev');
-const rsync = require('gulp-rsync');
 const sass = require('gulp-sass');
 const svg = require('postcss-inline-svg');
 const sync = require('browser-sync').create();
@@ -37,7 +36,7 @@ gulp.task('html', () => {
 				path.basename = 'index';
 			}
 		}))
-		.pipe(gulp.dest('dest'))
+		.pipe(gulp.dest('dist'))
 		.pipe(sync.stream({ once: true }));
 });
 
@@ -51,7 +50,7 @@ gulp.task('styles', () => {
 			svg
 		]))
 		.pipe(csso())
-		.pipe(gulp.dest('dest/styles'))
+		.pipe(gulp.dest('dist/styles'))
 		.pipe(sync.stream());
 });
 
@@ -60,7 +59,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
 	return gulp.src('src/scripts/script.js')
 		.pipe(uglify())
-		.pipe(gulp.dest('dest/scripts'))
+		.pipe(gulp.dest('dist/scripts'))
 		.pipe(sync.stream());
 });
 
@@ -81,11 +80,11 @@ gulp.task('images:resize', () => {
 			silent: true,
 			errorOnEnlargement: false
 		}))
-		.pipe(gulp.dest('dest/speakers'));
+		.pipe(gulp.dest('dist/speakers'));
 });
 
 gulp.task('images:replace', () => {
-	return gulp.src('dest/**/index.html')
+	return gulp.src('dist/**/index.html')
 		.pipe(replace(
 			/<img class="speakers__picture" (src|data-src)="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="speakers__picture" $1="/speakers/128/$2" $1set="/speakers/256/$2 2x" alt="$3">'
@@ -94,7 +93,7 @@ gulp.task('images:replace', () => {
 			/<img class="card__picture" src="\/speakers\/([^"]+)" alt="([^"]+)">/g,
 			'<img class="card__picture" src="/speakers/192/$1" srcset="/speakers/256/$1 2x" alt="$2">'
 		))
-		.pipe(gulp.dest('dest'));
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', gulp.parallel(
@@ -106,24 +105,24 @@ gulp.task('images', gulp.parallel(
 
 gulp.task('cache:hash', () => {
 	return gulp.src([
-			'dest/styles/*.css',
-			'dest/scripts/*.js'
+			'dist/styles/*.css',
+			'dist/scripts/*.js'
 		], {
-			base: 'dest'
+			base: 'dist'
 		})
 		.pipe(paths(del))
 		.pipe(rev())
-		.pipe(gulp.dest('dest'))
+		.pipe(gulp.dest('dist'))
 		.pipe(rev.manifest())
-		.pipe(gulp.dest('dest'));
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('cache:replace', () => {
-	return gulp.src('dest/**/*.html')
+	return gulp.src('dist/**/*.html')
 		.pipe(revision({
-			manifest: gulp.src('dest/rev-manifest.json').pipe(paths(del))
+			manifest: gulp.src('dist/rev-manifest.json').pipe(paths(del))
 		}))
-		.pipe(gulp.dest('dest'));
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('cache', gulp.series(
@@ -134,32 +133,16 @@ gulp.task('cache', gulp.series(
 // Clean
 
 gulp.task('clean', () => {
-	return del('dest/**');
+	return del('dist/**');
 });
 
 // Copy
 
 gulp.task('copy', () => {
 	return gulp.src('src/assets/**')
-		.pipe(gulp.dest('dest'))
+		.pipe(gulp.dest('dist'))
 		.pipe(sync.stream({
 			once: true
-		}));
-});
-
-// Deploy
-
-gulp.task('deploy', () => {
-	return gulp.src('dest/**')
-		.pipe(rsync({
-			root: 'dest',
-			username: 'travis',
-			hostname: 'web-standards.ru',
-			destination: '/var/www/wsd.events/html/',
-			recursive: true,
-			clean: true,
-			incremental: true,
-			exclude: '.DS_Store'
 		}));
 });
 
@@ -170,7 +153,7 @@ gulp.task('server', () => {
 		ui: false,
 		notify: false,
 		server: {
-			baseDir: 'dest'
+			baseDir: 'dist'
 		}
 	});
 	gulp.watch('index.html').on('change', () => {

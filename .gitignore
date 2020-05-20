@@ -1,5 +1,2 @@
-.travis/deploy_key
-.travis/deploy_key.pub
-.travis/deploy_key.enc
 node_modules
-dest
+dist

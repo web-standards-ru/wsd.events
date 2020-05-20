@@ -1,6 +1,5 @@
 # Web Standards Days
-
-[![Build Status](https://travis-ci.org/web-standards-ru/web-standards-days.svg?branch=master)](https://travis-ci.org/web-standards-ru/web-standards-days)
+[![](https://github.com/web-standards-ru/wsd.events/workflows/Deploy/badge.svg)](https://github.com/web-standards-ru/wsd.events/actions?query=workflow%3ADeploy)
 
 ## Установка и запуск окружения
 
