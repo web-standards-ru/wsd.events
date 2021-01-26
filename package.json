@@ -9,13 +9,13 @@
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/wsd.events/html/"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.0",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
+    "autoprefixer": "^10.2.3",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-responsive": "^3.0.1",
@@ -24,7 +24,8 @@
     "gulp-rsync": "0.0.9",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "postcss-inline-svg": "^4.1.0",
+    "postcss": "^8.2.4",
+    "postcss-inline-svg": "^5.0.0",
     "require-dir": "^1.2.0",
     "sass-mq": "^5.0.1",
     "vinyl-paths": "^3.0.1"
