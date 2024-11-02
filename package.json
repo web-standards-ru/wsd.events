@@ -8,6 +8,9 @@
     "build:prod": "gulp build:prod",
     "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/wsd.events/html/"
   },
+  "engines": {
+    "node": "12"
+  },
   "dependencies": {
     "autoprefixer": "^10.2.3",
     "browser-sync": "^2.26.14",
